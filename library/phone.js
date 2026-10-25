@@ -2,7 +2,7 @@
 // QR code, see and forget paired phones (scripts/phone-access.mjs); away from home, keep a
 // copy of your library where your phone can reach it (scripts/phone-copy.mjs) and set up the
 // phone app. In the phone app itself, this page is Your copy (copy-app.js).
-import { escapeHtml as esc, copyApp } from '../lib.js';
+import { escapeHtml as esc, copyApp, demoHome, demoNote } from '../lib.js';
 import { pageReady } from '../navigation.js';
 
 const $ = id => document.getElementById(id);
@@ -132,7 +132,7 @@ let tick = 0;
 setInterval(async () => {
   if (pairing && Date.parse(pairing.expiresAt) <= Date.now()) { pairing = null; render(); }
   else if (pairing) { const node = $('phoneExpiry'); if (node) node.innerHTML = `Works once, for <strong>${left()}</strong> more.`; }
-  if (copyApp() || ++tick % 5 || document.visibilityState !== 'visible' || busy) return;
+  if (copyApp() || demoHome() || ++tick % 5 || document.visibilityState !== 'visible' || busy) return;
   copyApi().then(next => { if (JSON.stringify(next) !== JSON.stringify(copy)) { copy = next; render(); } }).catch(() => {});
   try {
     const next = await api();
@@ -142,6 +142,8 @@ setInterval(async () => {
 }, 1000);
 
 if (copyApp()) { const { mountCopyApp } = await import('./copy-app.js'); await mountCopyApp(body); }
+// The live demo has no app behind it: what the page does, instead of asking.
+else if (demoHome()) body.innerHTML = `<p class="source-blocked">${demoNote('Phone access')} At home, scan a QR code to browse your library on your phone over your Wi-Fi. Away from home, keep a copy in your own iCloud Drive, Google Drive or Dropbox and open it in the phone app. No account, no Level Select server.</p>`;
 else {
   try {
     [status, copy] = await Promise.all([api(), copyApi().catch(() => null)]);
