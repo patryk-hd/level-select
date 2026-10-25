@@ -141,8 +141,11 @@ export const openGuide = () => import('./welcome.js').then(guide => guide.openGu
 // phone (in its browser, or added to the home screen, which has storage of its own) would
 // otherwise always look like a first visit.
 const onPhone = Boolean(document.querySelector('meta[name="level-select-phone"]'));
+// Nor does the live demo on the project's site (npm run build -- --demo): a visitor came to look
+// around, and there's nothing of theirs to set up. Every page links back to the site instead.
+const demoHome = document.querySelector('meta[name="level-select-demo"]')?.getAttribute('content') ?? null;
 function guideDue() {
-  if (onPhone) return false;
+  if (onPhone || demoHome != null) return false;
   try {
     const saved = localStorage.getItem(GUIDE_KEY);
     if (saved) return JSON.parse(saved)?.state === 'open';
@@ -160,6 +163,11 @@ if (onPhone) {
   // The phone app keeps the page, as Your copy (open or update the copy of your library).
   if (document.querySelector('meta[name="level-select-copy-app"]')) { if (link) link.textContent = 'Your copy'; }
   else link?.remove();
+}
+if (demoHome != null) {
+  const back = (className, label) => Object.assign(document.createElement('a'), { className, href: demoHome, innerHTML: `<span aria-hidden="true">←</span> ${label}` });
+  document.querySelector('.site-sidebar .site-brand')?.before(back('site-demo-back', 'Back to the website'));
+  document.querySelector('.site-mobile-header .site-brand')?.after(back('site-demo-back site-demo-back-short', 'Website'));
 }
 // The phone app works offline: its service worker keeps the app and your copy on the phone.
 if (document.querySelector('meta[name="level-select-copy-app"]') && 'serviceWorker' in navigator) navigator.serviceWorker.register(new URL('./sw.js', import.meta.url)).catch(() => {});

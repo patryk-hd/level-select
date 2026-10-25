@@ -32,6 +32,8 @@ function load() { try { const saved = JSON.parse(localStorage.getItem(GUIDE_KEY)
 // What's already on this computer or connected. Only the local app server knows; a shared
 // copy of the site has no server, so the step simply shows no "found" notes.
 async function detect() {
+  // The live demo has no server to ask (see navigation.js demoHome).
+  if (document.querySelector('meta[name="level-select-demo"]')) return null;
   try {
     const response = await fetch(page('__retro_library/sources'), { signal: AbortSignal.timeout(4000) });
     if (!response.ok) return null;

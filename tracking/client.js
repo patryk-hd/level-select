@@ -44,7 +44,7 @@ async function initialize() {
   const ownedPage = /\/library\/(?:index\.html)?$/.test(location.pathname);
   const wishPage = location.pathname.endsWith('/library/wishlist.html');
   // The public demo has no personal workspace: every page shows its sample library.
-  const demo = Boolean(document.querySelector('meta[name="level-select-demo"]')) && ownedSample;
+  const demoPage = Boolean(document.querySelector('meta[name="level-select-demo"]')), demo = demoPage && ownedSample;
   const namespace = (demo || (ownedPage ? ownedSample : wishPage ? wishSample : new URLSearchParams(location.search).get('workspace') === 'sample')) ? 'sample' : 'personal';
   const library = (ownedSample === (namespace === 'sample') ? window.PLAYNITE_LIBRARY : []) ?? [];
   const wishlist = (wishSample === (namespace === 'sample') ? window.STEAM_WISHLIST : []) ?? [];
@@ -54,7 +54,8 @@ async function initialize() {
   const ownedById = new Map(library.map(game => [game.id, game]));
   const legacyGroupsById = new Map(library.flatMap(game => (game.legacyGroups ?? []).map(group => [group.id, group])));
   const copiesById = new Map(library.flatMap(game => game.copies.map(copy => [copy.id, { game, copy }])));
-  const repository = await openTracking({ namespace, ...context, onNotice: announce });
+  // (It has no app behind it either, so it doesn't ask for one: tracking stays in this browser.)
+  const repository = await openTracking({ namespace, ...context, server: demoPage ? false : null, onNotice: announce });
   let pending = null, migrationError = '', legacyRecovery = {}, ready = false, matched = null, choices = null;
   // Challenge candidates by template, reused while the planner is open (see challenges.js).
   const challengeMemo = new Map();
