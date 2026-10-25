@@ -1,0 +1,33 @@
+{
+  "name": "retro-library",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "catalog": "node scripts/build-catalog.mjs",
+    "build": "node scripts/build.mjs",
+    "test": "node --test",
+    "library:update": "bash library/tools/update.sh",
+    "library:connect": "node scripts/connect-library.mjs",
+    "library:import": "node scripts/import-playnite.mjs",
+    "wishlist:update": "bash library/tools/update-wishlist.sh",
+    "build:local": "node scripts/build.mjs --local",
+    "package": "node scripts/package.mjs",
+    "library:verify": "node scripts/verify-local-library.mjs",
+    "check:share": "node scripts/check-share.mjs",
+    "ratings:refresh": "node scripts/enrich-ratings.mjs --batch",
+    "igdb:refresh": "node scripts/igdb-enrich.mjs",
+    "roms:scan": "node scripts/rom-scan.mjs",
+    "update": "node scripts/update-all.mjs",
+    "awards:refresh": "node scripts/awards.mjs",
+    "vgc:refresh": "node scripts/vgc-refresh.mjs",
+    "retro:lists": "node scripts/retro-lists.mjs",
+    "systems:refresh": "node scripts/system-facts.mjs",
+    "mods:lists": "node scripts/mods-lists.mjs",
+    "sample:build": "node scripts/demo-library.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

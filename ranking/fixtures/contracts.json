@@ -1,0 +1,437 @@
+{
+  "schemaVersion": 1,
+  "description": "Fictional contract data. Does not assert real provider coverage or transferable editions.",
+  "observations": [
+    {
+      "schemaVersion": 1,
+      "id": "playnite:fixture-original:critic:legacy-snapshot",
+      "source": {
+        "provider": "playnite-import",
+        "family": null,
+        "upstreamId": null,
+        "url": null,
+        "label": "Imported critic",
+        "lineage": []
+      },
+      "type": "aggregate",
+      "lane": "critic",
+      "scope": {
+        "ref": {
+          "provider": "playnite",
+          "id": "fixture-original"
+        },
+        "work": null,
+        "edition": null,
+        "platforms": [
+          "SNES"
+        ],
+        "region": null,
+        "build": null,
+        "mapping": "imported-copy"
+      },
+      "original": {
+        "value": 70,
+        "raw": 70,
+        "scale": {
+          "min": 0,
+          "max": 100
+        },
+        "positive": null,
+        "negative": null,
+        "count": null,
+        "countMeaning": null
+      },
+      "dates": {
+        "publishedAt": null,
+        "observedAt": null,
+        "sourceUpdatedAt": null,
+        "windowFrom": null,
+        "windowTo": null
+      },
+      "provenance": {
+        "adapterVersion": "legacy-snapshot-v1",
+        "checksum": null,
+        "fixture": null,
+        "extraction": "criticScore",
+        "attribution": "Imported from Playnite; original rating provider and date unknown",
+        "access": "personal-import",
+        "reviewStatus": "unverified-source",
+        "supersedes": null
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "playnite:fixture-original:community:legacy-snapshot",
+      "source": {
+        "provider": "playnite-import",
+        "family": null,
+        "upstreamId": null,
+        "url": null,
+        "label": "Imported community",
+        "lineage": []
+      },
+      "type": "aggregate",
+      "lane": "community",
+      "scope": {
+        "ref": {
+          "provider": "playnite",
+          "id": "fixture-original"
+        },
+        "work": null,
+        "edition": null,
+        "platforms": [
+          "SNES"
+        ],
+        "region": null,
+        "build": null,
+        "mapping": "imported-copy"
+      },
+      "original": {
+        "value": 80,
+        "raw": 80,
+        "scale": {
+          "min": 0,
+          "max": 100
+        },
+        "positive": null,
+        "negative": null,
+        "count": null,
+        "countMeaning": null
+      },
+      "dates": {
+        "publishedAt": null,
+        "observedAt": null,
+        "sourceUpdatedAt": null,
+        "windowFrom": null,
+        "windowTo": null
+      },
+      "provenance": {
+        "adapterVersion": "legacy-snapshot-v1",
+        "checksum": null,
+        "fixture": null,
+        "extraction": "communityScore",
+        "attribution": "Imported from Playnite; original rating provider and date unknown",
+        "access": "personal-import",
+        "reviewStatus": "unverified-source",
+        "supersedes": null
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "playnite:fixture-original:personal:legacy-snapshot",
+      "source": {
+        "provider": "playnite-import",
+        "family": null,
+        "upstreamId": null,
+        "url": null,
+        "label": "Personal (Playnite)",
+        "lineage": []
+      },
+      "type": "personal-rating",
+      "lane": "personal",
+      "scope": {
+        "ref": {
+          "provider": "playnite",
+          "id": "fixture-original"
+        },
+        "work": null,
+        "edition": null,
+        "platforms": [
+          "SNES"
+        ],
+        "region": null,
+        "build": null,
+        "mapping": "imported-copy"
+      },
+      "original": {
+        "value": 100,
+        "raw": 100,
+        "scale": {
+          "min": 0,
+          "max": 100
+        },
+        "positive": null,
+        "negative": null,
+        "count": null,
+        "countMeaning": null
+      },
+      "dates": {
+        "publishedAt": null,
+        "observedAt": null,
+        "sourceUpdatedAt": null,
+        "windowFrom": null,
+        "windowTo": null
+      },
+      "provenance": {
+        "adapterVersion": "legacy-snapshot-v1",
+        "checksum": null,
+        "fixture": null,
+        "extraction": "userScore",
+        "attribution": "Imported from Playnite; original rating provider and date unknown",
+        "access": "personal-import",
+        "reviewStatus": "unverified-source",
+        "supersedes": null
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "playnite:fixture-port:critic:legacy-snapshot",
+      "source": {
+        "provider": "playnite-import",
+        "family": null,
+        "upstreamId": null,
+        "url": null,
+        "label": "Imported critic",
+        "lineage": []
+      },
+      "type": "aggregate",
+      "lane": "critic",
+      "scope": {
+        "ref": {
+          "provider": "playnite",
+          "id": "fixture-port"
+        },
+        "work": null,
+        "edition": null,
+        "platforms": [
+          "PC"
+        ],
+        "region": null,
+        "build": null,
+        "mapping": "imported-copy"
+      },
+      "original": {
+        "value": 95,
+        "raw": 95,
+        "scale": {
+          "min": 0,
+          "max": 100
+        },
+        "positive": null,
+        "negative": null,
+        "count": null,
+        "countMeaning": null
+      },
+      "dates": {
+        "publishedAt": null,
+        "observedAt": null,
+        "sourceUpdatedAt": null,
+        "windowFrom": null,
+        "windowTo": null
+      },
+      "provenance": {
+        "adapterVersion": "legacy-snapshot-v1",
+        "checksum": null,
+        "fixture": null,
+        "extraction": "criticScore",
+        "attribution": "Imported from Playnite; original rating provider and date unknown",
+        "access": "personal-import",
+        "reviewStatus": "unverified-source",
+        "supersedes": null
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "playnite:fixture-port:community:legacy-snapshot",
+      "source": {
+        "provider": "playnite-import",
+        "family": null,
+        "upstreamId": null,
+        "url": null,
+        "label": "Imported community",
+        "lineage": []
+      },
+      "type": "aggregate",
+      "lane": "community",
+      "scope": {
+        "ref": {
+          "provider": "playnite",
+          "id": "fixture-port"
+        },
+        "work": null,
+        "edition": null,
+        "platforms": [
+          "PC"
+        ],
+        "region": null,
+        "build": null,
+        "mapping": "imported-copy"
+      },
+      "original": {
+        "value": 99,
+        "raw": 99,
+        "scale": {
+          "min": 0,
+          "max": 100
+        },
+        "positive": null,
+        "negative": null,
+        "count": null,
+        "countMeaning": null
+      },
+      "dates": {
+        "publishedAt": null,
+        "observedAt": null,
+        "sourceUpdatedAt": null,
+        "windowFrom": null,
+        "windowTo": null
+      },
+      "provenance": {
+        "adapterVersion": "legacy-snapshot-v1",
+        "checksum": null,
+        "fixture": null,
+        "extraction": "communityScore",
+        "attribution": "Imported from Playnite; original rating provider and date unknown",
+        "access": "personal-import",
+        "reviewStatus": "unverified-source",
+        "supersedes": null
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "playnite:fixture-port:personal:legacy-snapshot",
+      "source": {
+        "provider": "playnite-import",
+        "family": null,
+        "upstreamId": null,
+        "url": null,
+        "label": "Personal (Playnite)",
+        "lineage": []
+      },
+      "type": "personal-rating",
+      "lane": "personal",
+      "scope": {
+        "ref": {
+          "provider": "playnite",
+          "id": "fixture-port"
+        },
+        "work": null,
+        "edition": null,
+        "platforms": [
+          "PC"
+        ],
+        "region": null,
+        "build": null,
+        "mapping": "imported-copy"
+      },
+      "original": {
+        "value": null,
+        "raw": null,
+        "scale": {
+          "min": 0,
+          "max": 100
+        },
+        "positive": null,
+        "negative": null,
+        "count": null,
+        "countMeaning": null
+      },
+      "dates": {
+        "publishedAt": null,
+        "observedAt": null,
+        "sourceUpdatedAt": null,
+        "windowFrom": null,
+        "windowTo": null
+      },
+      "provenance": {
+        "adapterVersion": "legacy-snapshot-v1",
+        "checksum": null,
+        "fixture": null,
+        "extraction": "userScore",
+        "attribution": "Imported from Playnite; original rating provider and date unknown",
+        "access": "personal-import",
+        "reviewStatus": "unverified-source",
+        "supersedes": null
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "playnite:fixture-legacy:legacy:legacy-snapshot",
+      "source": {
+        "provider": "playnite-import",
+        "family": null,
+        "upstreamId": null,
+        "url": null,
+        "label": "Legacy score",
+        "lineage": []
+      },
+      "type": "legacy-unspecified",
+      "lane": "legacy",
+      "scope": {
+        "ref": {
+          "provider": "playnite",
+          "id": "fixture-legacy"
+        },
+        "work": null,
+        "edition": null,
+        "platforms": [
+          "PS1"
+        ],
+        "region": null,
+        "build": null,
+        "mapping": "imported-copy"
+      },
+      "original": {
+        "value": 91,
+        "raw": 91,
+        "scale": {
+          "min": 0,
+          "max": 100
+        },
+        "positive": null,
+        "negative": null,
+        "count": null,
+        "countMeaning": null
+      },
+      "dates": {
+        "publishedAt": null,
+        "observedAt": null,
+        "sourceUpdatedAt": null,
+        "windowFrom": null,
+        "windowTo": null
+      },
+      "provenance": {
+        "adapterVersion": "legacy-snapshot-v1",
+        "checksum": null,
+        "fixture": null,
+        "extraction": "bestScore",
+        "attribution": "Imported from Playnite; original rating provider and date unknown",
+        "access": "personal-import",
+        "reviewStatus": "unverified-source",
+        "supersedes": null
+      }
+    }
+  ],
+  "approvalCases": [
+    {
+      "pct": 95,
+      "count": 1000,
+      "expected": 0.9346858639155304
+    },
+    {
+      "pct": 90,
+      "count": 100000,
+      "expected": 0.8981251871509301
+    },
+    {
+      "pct": 100,
+      "count": 1,
+      "expected": 0.20654329147389291
+    },
+    {
+      "pct": 0,
+      "count": 10,
+      "expected": 0.0
+    },
+    {
+      "pct": null,
+      "count": 100,
+      "expected": null
+    },
+    {
+      "pct": 95,
+      "count": 0,
+      "expected": null
+    }
+  ]
+}

@@ -1,0 +1,2731 @@
+{
+  "schemaVersion": 1,
+  "workspace": "sample",
+  "snapshotId": "2366d060638d1a69b437b0527ada4deb61fed32341cd54b57deed5f6741e8aac",
+  "crosswalkRevision": 1,
+  "generatedAt": "2026-09-16T12:00:00.000Z",
+  "rows": [
+    {
+      "mappingId": "steam-900000001",
+      "mappingRevision": 1,
+      "mappingFingerprint": "2b84534379b0eb96139d62455a5b0f8b6b70e0b9d9e408751dbcd9e770cc66c7",
+      "target": {
+        "provider": "steam",
+        "id": "900000001"
+      },
+      "provider": "steam",
+      "providerId": "900000001",
+      "scope": "steam-product",
+      "status": "updated",
+      "error": null,
+      "checkedAt": "2026-09-16T12:00:00.000Z",
+      "observedAt": "2026-09-16T12:00:00.000Z",
+      "freshUntil": "2026-09-17T12:00:00.000Z",
+      "nextAttemptAt": null,
+      "observations": [
+        {
+          "schemaVersion": 1,
+          "id": "steam:900000001:steam-approval:d8d01c8f598b2a80:2b84534379b0",
+          "source": {
+            "provider": "steam",
+            "family": "steam-reviewers",
+            "upstreamId": "900000001",
+            "url": "https://store.steampowered.com/app/900000001/",
+            "label": "Steam approval",
+            "lineage": []
+          },
+          "type": "binary-approval",
+          "lane": "steam-approval",
+          "scope": {
+            "ref": {
+              "provider": "steam",
+              "id": "900000001"
+            },
+            "work": null,
+            "edition": null,
+            "platforms": [
+              "Steam product"
+            ],
+            "region": null,
+            "build": null,
+            "mapping": "reviewed-provider-reference",
+            "scoreScope": "steam-product"
+          },
+          "original": {
+            "value": 95,
+            "raw": 95,
+            "scale": {
+              "min": 0,
+              "max": 100
+            },
+            "positive": 950,
+            "negative": 50,
+            "count": 1000,
+            "countMeaning": "Reviews matching the recorded Steam query"
+          },
+          "dates": {
+            "publishedAt": null,
+            "observedAt": "2026-09-16T12:00:00.000Z",
+            "sourceUpdatedAt": null,
+            "windowFrom": null,
+            "windowTo": null
+          },
+          "provenance": {
+            "adapterVersion": "steam-review-summary-v1",
+            "checksum": "2954efca85e80ed2b7c7a9d5d94eb10667e8384b4fd5d02fc20c4cf8e4a2729b",
+            "fixture": null,
+            "extraction": "steam-approval",
+            "attribution": "Steam user reviews",
+            "access": "provider-api",
+            "reviewStatus": "verified-identity-scope-limited",
+            "supersedes": null
+          }
+        }
+      ],
+      "source": {
+        "title": "Steam app 900000001",
+        "url": "https://store.steampowered.com/app/900000001/",
+        "attribution": "Steam user reviews",
+        "details": {
+          "queryScope": {
+            "json": "1",
+            "language": "all",
+            "purchase_type": "all",
+            "review_type": "all",
+            "filter": "recent",
+            "filter_offtopic_activity": "1",
+            "num_per_page": "1",
+            "cursor": "*"
+          },
+          "countMeaning": "Total reviews matching the query; not the returned page count"
+        }
+      }
+    },
+    {
+      "mappingId": "sample-vgc-wishlist",
+      "mappingRevision": 1,
+      "mappingFingerprint": "a02d2debc4b98a4a82ce619c714769e47bf43e92d5ebc643aa56c35831137fed",
+      "target": {
+        "provider": "steam",
+        "id": "900000001"
+      },
+      "provider": "vgc",
+      "providerId": "990001",
+      "scope": "work-context",
+      "status": "updated",
+      "error": null,
+      "checkedAt": "2026-09-16T12:00:00.000Z",
+      "observedAt": "2026-09-16T12:00:00.000Z",
+      "freshUntil": "2026-09-16T18:00:00.000Z",
+      "nextAttemptAt": null,
+      "observations": [
+        {
+          "schemaVersion": 1,
+          "id": "vgc:990001:vgc:ebf78910af31aaa8:a02d2debc4b9",
+          "source": {
+            "provider": "vgc",
+            "family": "vgc-overlapping-composite",
+            "upstreamId": "990001",
+            "url": "https://videogamescritic.com/game/fictional-quest-990001",
+            "label": "VGC Score",
+            "lineage": [
+              "vgc-components-share-underlying-evidence"
+            ]
+          },
+          "type": "external-composite",
+          "lane": "vgc",
+          "scope": {
+            "ref": {
+              "provider": "steam",
+              "id": "900000001"
+            },
+            "work": null,
+            "edition": null,
+            "platforms": [
+              "PC",
+              "PlayStation"
+            ],
+            "region": null,
+            "build": null,
+            "mapping": "reviewed-provider-reference",
+            "scoreScope": "work-context"
+          },
+          "original": {
+            "value": 82,
+            "raw": 82,
+            "scale": {
+              "min": 0,
+              "max": 100
+            },
+            "positive": null,
+            "negative": null,
+            "count": null,
+            "countMeaning": "Provider aggregate count"
+          },
+          "dates": {
+            "publishedAt": null,
+            "observedAt": "2026-09-16T12:00:00.000Z",
+            "sourceUpdatedAt": "2026-09-16T00:00:00.000Z",
+            "windowFrom": null,
+            "windowTo": null
+          },
+          "provenance": {
+            "adapterVersion": "vgc-detail-v1",
+            "checksum": "cec036f635ce094b2895e068919a05316c69baeea6b10c569e586edb63435b0d",
+            "fixture": null,
+            "extraction": "vgc",
+            "attribution": "Powered by VideoGamesCritic",
+            "access": "provider-api",
+            "reviewStatus": "verified-identity-scope-limited",
+            "supersedes": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "id": "vgc:990001:vgc-players:ebf78910af31aaa8:a02d2debc4b9",
+          "source": {
+            "provider": "vgc",
+            "family": "vgc-overlapping-composite",
+            "upstreamId": "990001",
+            "url": "https://videogamescritic.com/game/fictional-quest-990001",
+            "label": "VGC Players",
+            "lineage": [
+              "vgc-components-share-underlying-evidence"
+            ]
+          },
+          "type": "external-composite",
+          "lane": "vgc-players",
+          "scope": {
+            "ref": {
+              "provider": "steam",
+              "id": "900000001"
+            },
+            "work": null,
+            "edition": null,
+            "platforms": [
+              "PC",
+              "PlayStation"
+            ],
+            "region": null,
+            "build": null,
+            "mapping": "reviewed-provider-reference",
+            "scoreScope": "work-context"
+          },
+          "original": {
+            "value": 80,
+            "raw": 80,
+            "scale": {
+              "min": 0,
+              "max": 100
+            },
+            "positive": null,
+            "negative": null,
+            "count": null,
+            "countMeaning": "Provider aggregate count"
+          },
+          "dates": {
+            "publishedAt": null,
+            "observedAt": "2026-09-16T12:00:00.000Z",
+            "sourceUpdatedAt": "2026-09-16T00:00:00.000Z",
+            "windowFrom": null,
+            "windowTo": null
+          },
+          "provenance": {
+            "adapterVersion": "vgc-detail-v1",
+            "checksum": "cec036f635ce094b2895e068919a05316c69baeea6b10c569e586edb63435b0d",
+            "fixture": null,
+            "extraction": "vgc-players",
+            "attribution": "Powered by VideoGamesCritic",
+            "access": "provider-api",
+            "reviewStatus": "verified-identity-scope-limited",
+            "supersedes": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "id": "vgc:990001:vgc-critics:ebf78910af31aaa8:a02d2debc4b9",
+          "source": {
+            "provider": "vgc",
+            "family": "vgc-overlapping-composite",
+            "upstreamId": "990001",
+            "url": "https://videogamescritic.com/game/fictional-quest-990001",
+            "label": "VGC Critics",
+            "lineage": [
+              "vgc-components-share-underlying-evidence"
+            ]
+          },
+          "type": "external-composite",
+          "lane": "vgc-critics",
+          "scope": {
+            "ref": {
+              "provider": "steam",
+              "id": "900000001"
+            },
+            "work": null,
+            "edition": null,
+            "platforms": [
+              "PC",
+              "PlayStation"
+            ],
+            "region": null,
+            "build": null,
+            "mapping": "reviewed-provider-reference",
+            "scoreScope": "work-context"
+          },
+          "original": {
+            "value": 90,
+            "raw": 90,
+            "scale": {
+              "min": 0,
+              "max": 100
+            },
+            "positive": null,
+            "negative": null,
+            "count": 12,
+            "countMeaning": "Provider aggregate count"
+          },
+          "dates": {
+            "publishedAt": null,
+            "observedAt": "2026-09-16T12:00:00.000Z",
+            "sourceUpdatedAt": "2026-09-16T00:00:00.000Z",
+            "windowFrom": null,
+            "windowTo": null
+          },
+          "provenance": {
+            "adapterVersion": "vgc-detail-v1",
+            "checksum": "cec036f635ce094b2895e068919a05316c69baeea6b10c569e586edb63435b0d",
+            "fixture": null,
+            "extraction": "vgc-critics",
+            "attribution": "Powered by VideoGamesCritic",
+            "access": "provider-api",
+            "reviewStatus": "verified-identity-scope-limited",
+            "supersedes": null
+          }
+        }
+      ],
+      "source": {
+        "title": "Fictional Quest",
+        "url": "https://videogamescritic.com/game/fictional-quest-990001",
+        "attribution": "Powered by VideoGamesCritic",
+        "details": {
+          "gap": 10,
+          "confidence": "medium",
+          "trend": null
+        }
+      }
+    },
+    {
+      "mappingId": "sample-vgc-owned",
+      "mappingRevision": 1,
+      "mappingFingerprint": "177d3f1b35a5e8c5a0751feb43f95a28b7a12349dbfd957ff0ee79c78a121290",
+      "target": {
+        "provider": "playnite",
+        "id": "sample-copy-super-metroid"
+      },
+      "provider": "vgc",
+      "providerId": "990001",
+      "scope": "work-context",
+      "status": "updated",
+      "error": null,
+      "checkedAt": "2026-09-16T12:00:00.000Z",
+      "observedAt": "2026-09-16T12:00:00.000Z",
+      "freshUntil": "2026-09-16T18:00:00.000Z",
+      "nextAttemptAt": null,
+      "observations": [
+        {
+          "schemaVersion": 1,
+          "id": "vgc:990001:vgc:ebf78910af31aaa8:177d3f1b35a5",
+          "source": {
+            "provider": "vgc",
+            "family": "vgc-overlapping-composite",
+            "upstreamId": "990001",
+            "url": "https://videogamescritic.com/game/fictional-quest-990001",
+            "label": "VGC Score",
+            "lineage": [
+              "vgc-components-share-underlying-evidence"
+            ]
+          },
+          "type": "external-composite",
+          "lane": "vgc",
+          "scope": {
+            "ref": {
+              "provider": "playnite",
+              "id": "sample-copy-super-metroid"
+            },
+            "work": null,
+            "edition": null,
+            "platforms": [
+              "PC",
+              "PlayStation"
+            ],
+            "region": null,
+            "build": null,
+            "mapping": "reviewed-provider-reference",
+            "scoreScope": "work-context"
+          },
+          "original": {
+            "value": 82,
+            "raw": 82,
+            "scale": {
+              "min": 0,
+              "max": 100
+            },
+            "positive": null,
+            "negative": null,
+            "count": null,
+            "countMeaning": "Provider aggregate count"
+          },
+          "dates": {
+            "publishedAt": null,
+            "observedAt": "2026-09-16T12:00:00.000Z",
+            "sourceUpdatedAt": "2026-09-16T00:00:00.000Z",
+            "windowFrom": null,
+            "windowTo": null
+          },
+          "provenance": {
+            "adapterVersion": "vgc-detail-v1",
+            "checksum": "cec036f635ce094b2895e068919a05316c69baeea6b10c569e586edb63435b0d",
+            "fixture": null,
+            "extraction": "vgc",
+            "attribution": "Powered by VideoGamesCritic",
+            "access": "provider-api",
+            "reviewStatus": "verified-identity-scope-limited",
+            "supersedes": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "id": "vgc:990001:vgc-players:ebf78910af31aaa8:177d3f1b35a5",
+          "source": {
+            "provider": "vgc",
+            "family": "vgc-overlapping-composite",
+            "upstreamId": "990001",
+            "url": "https://videogamescritic.com/game/fictional-quest-990001",
+            "label": "VGC Players",
+            "lineage": [
+              "vgc-components-share-underlying-evidence"
+            ]
+          },
+          "type": "external-composite",
+          "lane": "vgc-players",
+          "scope": {
+            "ref": {
+              "provider": "playnite",
+              "id": "sample-copy-super-metroid"
+            },
+            "work": null,
+            "edition": null,
+            "platforms": [
+              "PC",
+              "PlayStation"
+            ],
+            "region": null,
+            "build": null,
+            "mapping": "reviewed-provider-reference",
+            "scoreScope": "work-context"
+          },
+          "original": {
+            "value": 80,
+            "raw": 80,
+            "scale": {
+              "min": 0,
+              "max": 100
+            },
+            "positive": null,
+            "negative": null,
+            "count": null,
+            "countMeaning": "Provider aggregate count"
+          },
+          "dates": {
+            "publishedAt": null,
+            "observedAt": "2026-09-16T12:00:00.000Z",
+            "sourceUpdatedAt": "2026-09-16T00:00:00.000Z",
+            "windowFrom": null,
+            "windowTo": null
+          },
+          "provenance": {
+            "adapterVersion": "vgc-detail-v1",
+            "checksum": "cec036f635ce094b2895e068919a05316c69baeea6b10c569e586edb63435b0d",
+            "fixture": null,
+            "extraction": "vgc-players",
+            "attribution": "Powered by VideoGamesCritic",
+            "access": "provider-api",
+            "reviewStatus": "verified-identity-scope-limited",
+            "supersedes": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "id": "vgc:990001:vgc-critics:ebf78910af31aaa8:177d3f1b35a5",
+          "source": {
+            "provider": "vgc",
+            "family": "vgc-overlapping-composite",
+            "upstreamId": "990001",
+            "url": "https://videogamescritic.com/game/fictional-quest-990001",
+            "label": "VGC Critics",
+            "lineage": [
+              "vgc-components-share-underlying-evidence"
+            ]
+          },
+          "type": "external-composite",
+          "lane": "vgc-critics",
+          "scope": {
+            "ref": {
+              "provider": "playnite",
+              "id": "sample-copy-super-metroid"
+            },
+            "work": null,
+            "edition": null,
+            "platforms": [
+              "PC",
+              "PlayStation"
+            ],
+            "region": null,
+            "build": null,
+            "mapping": "reviewed-provider-reference",
+            "scoreScope": "work-context"
+          },
+          "original": {
+            "value": 90,
+            "raw": 90,
+            "scale": {
+              "min": 0,
+              "max": 100
+            },
+            "positive": null,
+            "negative": null,
+            "count": 12,
+            "countMeaning": "Provider aggregate count"
+          },
+          "dates": {
+            "publishedAt": null,
+            "observedAt": "2026-09-16T12:00:00.000Z",
+            "sourceUpdatedAt": "2026-09-16T00:00:00.000Z",
+            "windowFrom": null,
+            "windowTo": null
+          },
+          "provenance": {
+            "adapterVersion": "vgc-detail-v1",
+            "checksum": "cec036f635ce094b2895e068919a05316c69baeea6b10c569e586edb63435b0d",
+            "fixture": null,
+            "extraction": "vgc-critics",
+            "attribution": "Powered by VideoGamesCritic",
+            "access": "provider-api",
+            "reviewStatus": "verified-identity-scope-limited",
+            "supersedes": null
+          }
+        }
+      ],
+      "source": {
+        "title": "Fictional Quest",
+        "url": "https://videogamescritic.com/game/fictional-quest-990001",
+        "attribution": "Powered by VideoGamesCritic",
+        "details": {
+          "gap": 10,
+          "confidence": "medium",
+          "trend": null
+        }
+      }
+    },
+    {
+      "mappingId": "sample-vgc-catalog",
+      "mappingRevision": 1,
+      "mappingFingerprint": "f2c2c0eb227436c801b28b2d134ec34d44fdeddc57285f46812fec7118cb92de",
+      "target": {
+        "provider": "catalog",
+        "id": "ps5-1e772489c042f49a"
+      },
+      "provider": "vgc",
+      "providerId": "990001",
+      "scope": "work-context",
+      "status": "updated",
+      "error": null,
+      "checkedAt": "2026-09-16T12:00:00.000Z",
+      "observedAt": "2026-09-16T12:00:00.000Z",
+      "freshUntil": "2026-09-16T18:00:00.000Z",
+      "nextAttemptAt": null,
+      "observations": [
+        {
+          "schemaVersion": 1,
+          "id": "vgc:990001:vgc:ebf78910af31aaa8:f2c2c0eb2274",
+          "source": {
+            "provider": "vgc",
+            "family": "vgc-overlapping-composite",
+            "upstreamId": "990001",
+            "url": "https://videogamescritic.com/game/fictional-quest-990001",
+            "label": "VGC Score",
+            "lineage": [
+              "vgc-components-share-underlying-evidence"
+            ]
+          },
+          "type": "external-composite",
+          "lane": "vgc",
+          "scope": {
+            "ref": {
+              "provider": "catalog",
+              "id": "ps5-1e772489c042f49a"
+            },
+            "work": null,
+            "edition": null,
+            "platforms": [
+              "PC",
+              "PlayStation"
+            ],
+            "region": null,
+            "build": null,
+            "mapping": "reviewed-provider-reference",
+            "scoreScope": "work-context"
+          },
+          "original": {
+            "value": 82,
+            "raw": 82,
+            "scale": {
+              "min": 0,
+              "max": 100
+            },
+            "positive": null,
+            "negative": null,
+            "count": null,
+            "countMeaning": "Provider aggregate count"
+          },
+          "dates": {
+            "publishedAt": null,
+            "observedAt": "2026-09-16T12:00:00.000Z",
+            "sourceUpdatedAt": "2026-09-16T00:00:00.000Z",
+            "windowFrom": null,
+            "windowTo": null
+          },
+          "provenance": {
+            "adapterVersion": "vgc-detail-v1",
+            "checksum": "cec036f635ce094b2895e068919a05316c69baeea6b10c569e586edb63435b0d",
+            "fixture": null,
+            "extraction": "vgc",
+            "attribution": "Powered by VideoGamesCritic",
+            "access": "provider-api",
+            "reviewStatus": "verified-identity-scope-limited",
+            "supersedes": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "id": "vgc:990001:vgc-players:ebf78910af31aaa8:f2c2c0eb2274",
+          "source": {
+            "provider": "vgc",
+            "family": "vgc-overlapping-composite",
+            "upstreamId": "990001",
+            "url": "https://videogamescritic.com/game/fictional-quest-990001",
+            "label": "VGC Players",
+            "lineage": [
+              "vgc-components-share-underlying-evidence"
+            ]
+          },
+          "type": "external-composite",
+          "lane": "vgc-players",
+          "scope": {
+            "ref": {
+              "provider": "catalog",
+              "id": "ps5-1e772489c042f49a"
+            },
+            "work": null,
+            "edition": null,
+            "platforms": [
+              "PC",
+              "PlayStation"
+            ],
+            "region": null,
+            "build": null,
+            "mapping": "reviewed-provider-reference",
+            "scoreScope": "work-context"
+          },
+          "original": {
+            "value": 80,
+            "raw": 80,
+            "scale": {
+              "min": 0,
+              "max": 100
+            },
+            "positive": null,
+            "negative": null,
+            "count": null,
+            "countMeaning": "Provider aggregate count"
+          },
+          "dates": {
+            "publishedAt": null,
+            "observedAt": "2026-09-16T12:00:00.000Z",
+            "sourceUpdatedAt": "2026-09-16T00:00:00.000Z",
+            "windowFrom": null,
+            "windowTo": null
+          },
+          "provenance": {
+            "adapterVersion": "vgc-detail-v1",
+            "checksum": "cec036f635ce094b2895e068919a05316c69baeea6b10c569e586edb63435b0d",
+            "fixture": null,
+            "extraction": "vgc-players",
+            "attribution": "Powered by VideoGamesCritic",
+            "access": "provider-api",
+            "reviewStatus": "verified-identity-scope-limited",
+            "supersedes": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "id": "vgc:990001:vgc-critics:ebf78910af31aaa8:f2c2c0eb2274",
+          "source": {
+            "provider": "vgc",
+            "family": "vgc-overlapping-composite",
+            "upstreamId": "990001",
+            "url": "https://videogamescritic.com/game/fictional-quest-990001",
+            "label": "VGC Critics",
+            "lineage": [
+              "vgc-components-share-underlying-evidence"
+            ]
+          },
+          "type": "external-composite",
+          "lane": "vgc-critics",
+          "scope": {
+            "ref": {
+              "provider": "catalog",
+              "id": "ps5-1e772489c042f49a"
+            },
+            "work": null,
+            "edition": null,
+            "platforms": [
+              "PC",
+              "PlayStation"
+            ],
+            "region": null,
+            "build": null,
+            "mapping": "reviewed-provider-reference",
+            "scoreScope": "work-context"
+          },
+          "original": {
+            "value": 90,
+            "raw": 90,
+            "scale": {
+              "min": 0,
+              "max": 100
+            },
+            "positive": null,
+            "negative": null,
+            "count": 12,
+            "countMeaning": "Provider aggregate count"
+          },
+          "dates": {
+            "publishedAt": null,
+            "observedAt": "2026-09-16T12:00:00.000Z",
+            "sourceUpdatedAt": "2026-09-16T00:00:00.000Z",
+            "windowFrom": null,
+            "windowTo": null
+          },
+          "provenance": {
+            "adapterVersion": "vgc-detail-v1",
+            "checksum": "cec036f635ce094b2895e068919a05316c69baeea6b10c569e586edb63435b0d",
+            "fixture": null,
+            "extraction": "vgc-critics",
+            "attribution": "Powered by VideoGamesCritic",
+            "access": "provider-api",
+            "reviewStatus": "verified-identity-scope-limited",
+            "supersedes": null
+          }
+        }
+      ],
+      "source": {
+        "title": "Fictional Quest",
+        "url": "https://videogamescritic.com/game/fictional-quest-990001",
+        "attribution": "Powered by VideoGamesCritic",
+        "details": {
+          "gap": 10,
+          "confidence": "medium",
+          "trend": null
+        }
+      }
+    },
+    {
+      "mappingId": "sample-igdb-owned",
+      "mappingRevision": 1,
+      "mappingFingerprint": "38a07e020231a4466d841736c04dbbb62d283d93199a7bc539236f77bdaa4a31",
+      "target": {
+        "provider": "playnite",
+        "id": "sample-copy-super-metroid"
+      },
+      "provider": "igdb",
+      "providerId": "990002",
+      "scope": "work-context",
+      "status": "updated",
+      "error": null,
+      "checkedAt": "2026-09-16T12:00:00.000Z",
+      "observedAt": "2026-09-16T12:00:00.000Z",
+      "freshUntil": "2026-09-23T12:00:00.000Z",
+      "nextAttemptAt": null,
+      "observations": [
+        {
+          "schemaVersion": 1,
+          "id": "igdb:990002:igdb-community:d32e2e31f6ff6718:38a07e020231",
+          "source": {
+            "provider": "igdb",
+            "family": "igdb-aggregate",
+            "upstreamId": "990002",
+            "url": "https://www.igdb.com/games/fictional-quest",
+            "label": "IGDB community",
+            "lineage": []
+          },
+          "type": "aggregate",
+          "lane": "igdb-community",
+          "scope": {
+            "ref": {
+              "provider": "playnite",
+              "id": "sample-copy-super-metroid"
+            },
+            "work": null,
+            "edition": null,
+            "platforms": [
+              "IGDB platform 6"
+            ],
+            "region": null,
+            "build": null,
+            "mapping": "reviewed-provider-reference",
+            "scoreScope": "work-context"
+          },
+          "original": {
+            "value": 75,
+            "raw": 75,
+            "scale": {
+              "min": 0,
+              "max": 100
+            },
+            "positive": null,
+            "negative": null,
+            "count": 40,
+            "countMeaning": "Provider aggregate count"
+          },
+          "dates": {
+            "publishedAt": null,
+            "observedAt": "2026-09-16T12:00:00.000Z",
+            "sourceUpdatedAt": "2026-09-16T00:00:00.000Z",
+            "windowFrom": null,
+            "windowTo": null
+          },
+          "provenance": {
+            "adapterVersion": "igdb-game-ratings-v1",
+            "checksum": "942145a7a82fce6c626a3c69171477d547577d588ed4326b771e5872cc9031dd",
+            "fixture": null,
+            "extraction": "igdb-community",
+            "attribution": "IGDB",
+            "access": "provider-api",
+            "reviewStatus": "verified-identity-scope-limited",
+            "supersedes": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "id": "igdb:990002:igdb-critics:d32e2e31f6ff6718:38a07e020231",
+          "source": {
+            "provider": "igdb",
+            "family": "igdb-aggregate",
+            "upstreamId": "990002",
+            "url": "https://www.igdb.com/games/fictional-quest",
+            "label": "IGDB critics",
+            "lineage": []
+          },
+          "type": "aggregate",
+          "lane": "igdb-critics",
+          "scope": {
+            "ref": {
+              "provider": "playnite",
+              "id": "sample-copy-super-metroid"
+            },
+            "work": null,
+            "edition": null,
+            "platforms": [
+              "IGDB platform 6"
+            ],
+            "region": null,
+            "build": null,
+            "mapping": "reviewed-provider-reference",
+            "scoreScope": "work-context"
+          },
+          "original": {
+            "value": 88,
+            "raw": 88,
+            "scale": {
+              "min": 0,
+              "max": 100
+            },
+            "positive": null,
+            "negative": null,
+            "count": 6,
+            "countMeaning": "Provider aggregate count"
+          },
+          "dates": {
+            "publishedAt": null,
+            "observedAt": "2026-09-16T12:00:00.000Z",
+            "sourceUpdatedAt": "2026-09-16T00:00:00.000Z",
+            "windowFrom": null,
+            "windowTo": null
+          },
+          "provenance": {
+            "adapterVersion": "igdb-game-ratings-v1",
+            "checksum": "942145a7a82fce6c626a3c69171477d547577d588ed4326b771e5872cc9031dd",
+            "fixture": null,
+            "extraction": "igdb-critics",
+            "attribution": "IGDB",
+            "access": "provider-api",
+            "reviewStatus": "verified-identity-scope-limited",
+            "supersedes": null
+          }
+        }
+      ],
+      "source": {
+        "title": "Fictional Quest",
+        "url": "https://www.igdb.com/games/fictional-quest",
+        "attribution": "IGDB",
+        "details": {
+          "versionParent": null
+        }
+      }
+    },
+    {
+      "mappingId": "steam-813230",
+      "mappingRevision": 1,
+      "mappingFingerprint": "f69e65af7a739bb66b110ab1195532e81ce5bc54748ed69cef2940c7eb59675f",
+      "target": {
+        "provider": "steam",
+        "id": "813230"
+      },
+      "provider": "steam",
+      "providerId": "813230",
+      "scope": "steam-product",
+      "status": "updated",
+      "error": null,
+      "checkedAt": "2026-10-20T21:16:51.840Z",
+      "observedAt": "2026-10-20T21:16:51.840Z",
+      "freshUntil": "2026-10-21T21:16:51.840Z",
+      "nextAttemptAt": null,
+      "observations": [
+        {
+          "schemaVersion": 1,
+          "id": "steam:813230:steam-approval:f69e65af7a739bb6:6b110ab11955",
+          "source": {
+            "provider": "steam",
+            "family": "steam-reviewers",
+            "upstreamId": "813230",
+            "url": "https://store.steampowered.com/app/813230/",
+            "label": "Steam approval",
+            "lineage": []
+          },
+          "type": "binary-approval",
+          "lane": "steam-approval",
+          "scope": {
+            "ref": {
+              "provider": "steam",
+              "id": "813230"
+            },
+            "work": null,
+            "edition": null,
+            "platforms": [
+              "Steam product"
+            ],
+            "region": null,
+            "build": null,
+            "mapping": "reviewed-provider-reference",
+            "scoreScope": "steam-product"
+          },
+          "original": {
+            "value": 96,
+            "raw": 96,
+            "scale": {
+              "min": 0,
+              "max": 100
+            },
+            "positive": 23736,
+            "negative": 1061,
+            "count": 24797,
+            "countMeaning": "Reviews matching the recorded Steam query"
+          },
+          "dates": {
+            "publishedAt": null,
+            "observedAt": "2026-10-20T21:16:51.840Z",
+            "sourceUpdatedAt": null,
+            "windowFrom": null,
+            "windowTo": null
+          },
+          "provenance": {
+            "adapterVersion": "steam-review-summary-v1",
+            "checksum": "f69e65af7a739bb66b110ab1195532e81ce5bc54748ed69cef2940c7eb59675f",
+            "fixture": null,
+            "extraction": "steam-approval",
+            "attribution": "Steam user reviews",
+            "access": "provider-api",
+            "reviewStatus": "verified-identity-scope-limited",
+            "supersedes": null
+          }
+        }
+      ],
+      "source": {
+        "title": "ANIMAL WELL",
+        "url": "https://store.steampowered.com/app/813230/",
+        "attribution": "Steam user reviews",
+        "details": {
+          "queryScope": {
+            "json": "1",
+            "language": "all",
+            "purchase_type": "all",
+            "review_type": "all",
+            "filter": "recent",
+            "filter_offtopic_activity": "1",
+            "num_per_page": "1",
+            "cursor": "*"
+          },
+          "countMeaning": "Total reviews matching the query; not the returned page count"
+        },
+        "publicData": true
+      }
+    },
+    {
+      "mappingId": "steam-2231450",
+      "mappingRevision": 1,
+      "mappingFingerprint": "870409195250536a7bbd43ac620b93d07b9183787968a078383a3d017a54ccaf",
+      "target": {
+        "provider": "steam",
+        "id": "2231450"
+      },
+      "provider": "steam",
+      "providerId": "2231450",
+      "scope": "steam-product",
+      "status": "updated",
+      "error": null,
+      "checkedAt": "2026-10-20T21:16:52.804Z",
+      "observedAt": "2026-10-20T21:16:52.804Z",
+      "freshUntil": "2026-10-21T21:16:52.804Z",
+      "nextAttemptAt": null,
+      "observations": [
+        {
+          "schemaVersion": 1,
+          "id": "steam:2231450:steam-approval:870409195250536a:7bbd43ac620b",
+          "source": {
+            "provider": "steam",
+            "family": "steam-reviewers",
+            "upstreamId": "2231450",
+            "url": "https://store.steampowered.com/app/2231450/",
+            "label": "Steam approval",
+            "lineage": []
+          },
+          "type": "binary-approval",
+          "lane": "steam-approval",
+          "scope": {
+            "ref": {
+              "provider": "steam",
+              "id": "2231450"
+            },
+            "work": null,
+            "edition": null,
+            "platforms": [
+              "Steam product"
+            ],
+            "region": null,
+            "build": null,
+            "mapping": "reviewed-provider-reference",
+            "scoreScope": "steam-product"
+          },
+          "original": {
+            "value": 98,
+            "raw": 98,
+            "scale": {
+              "min": 0,
+              "max": 100
+            },
+            "positive": 71805,
+            "negative": 1265,
+            "count": 73070,
+            "countMeaning": "Reviews matching the recorded Steam query"
+          },
+          "dates": {
+            "publishedAt": null,
+            "observedAt": "2026-10-20T21:16:52.804Z",
+            "sourceUpdatedAt": null,
+            "windowFrom": null,
+            "windowTo": null
+          },
+          "provenance": {
+            "adapterVersion": "steam-review-summary-v1",
+            "checksum": "870409195250536a7bbd43ac620b93d07b9183787968a078383a3d017a54ccaf",
+            "fixture": null,
+            "extraction": "steam-approval",
+            "attribution": "Steam user reviews",
+            "access": "provider-api",
+            "reviewStatus": "verified-identity-scope-limited",
+            "supersedes": null
+          }
+        }
+      ],
+      "source": {
+        "title": "Pizza Tower",
+        "url": "https://store.steampowered.com/app/2231450/",
+        "attribution": "Steam user reviews",
+        "details": {
+          "queryScope": {
+            "json": "1",
+            "language": "all",
+            "purchase_type": "all",
+            "review_type": "all",
+            "filter": "recent",
+            "filter_offtopic_activity": "1",
+            "num_per_page": "1",
+            "cursor": "*"
+          },
+          "countMeaning": "Total reviews matching the query; not the returned page count"
+        },
+        "publicData": true
+      }
+    },
+    {
+      "mappingId": "steam-1244090",
+      "mappingRevision": 1,
+      "mappingFingerprint": "0489c0ac8e2ee8a3231eaf74791d31cd95d24a53a20084818afb6006fab0ca77",
+      "target": {
+        "provider": "steam",
+        "id": "1244090"
+      },
+      "provider": "steam",
+      "providerId": "1244090",
+      "scope": "steam-product",
+      "status": "updated",
+      "error": null,
+      "checkedAt": "2026-10-20T21:16:53.807Z",
+      "observedAt": "2026-10-20T21:16:53.807Z",
+      "freshUntil": "2026-10-21T21:16:53.807Z",
+      "nextAttemptAt": null,
+      "observations": [
+        {
+          "schemaVersion": 1,
+          "id": "steam:1244090:steam-approval:0489c0ac8e2ee8a3:231eaf74791d",
+          "source": {
+            "provider": "steam",
+            "family": "steam-reviewers",
+            "upstreamId": "1244090",
+            "url": "https://store.steampowered.com/app/1244090/",
+            "label": "Steam approval",
+            "lineage": []
+          },
+          "type": "binary-approval",
+          "lane": "steam-approval",
+          "scope": {
+            "ref": {
+              "provider": "steam",
+              "id": "1244090"
+            },
+            "work": null,
+            "edition": null,
+            "platforms": [
+              "Steam product"
+            ],
+            "region": null,
+            "build": null,
+            "mapping": "reviewed-provider-reference",
+            "scoreScope": "steam-product"
+          },
+          "original": {
+            "value": 88,
+            "raw": 88,
+            "scale": {
+              "min": 0,
+              "max": 100
+            },
+            "positive": 13914,
+            "negative": 1823,
+            "count": 15737,
+            "countMeaning": "Reviews matching the recorded Steam query"
+          },
+          "dates": {
+            "publishedAt": null,
+            "observedAt": "2026-10-20T21:16:53.807Z",
+            "sourceUpdatedAt": null,
+            "windowFrom": null,
+            "windowTo": null
+          },
+          "provenance": {
+            "adapterVersion": "steam-review-summary-v1",
+            "checksum": "0489c0ac8e2ee8a3231eaf74791d31cd95d24a53a20084818afb6006fab0ca77",
+            "fixture": null,
+            "extraction": "steam-approval",
+            "attribution": "Steam user reviews",
+            "access": "provider-api",
+            "reviewStatus": "verified-identity-scope-limited",
+            "supersedes": null
+          }
+        }
+      ],
+      "source": {
+        "title": "Sea of Stars: Sunset Edition",
+        "url": "https://store.steampowered.com/app/1244090/",
+        "attribution": "Steam user reviews",
+        "details": {
+          "queryScope": {
+            "json": "1",
+            "language": "all",
+            "purchase_type": "all",
+            "review_type": "all",
+            "filter": "recent",
+            "filter_offtopic_activity": "1",
+            "num_per_page": "1",
+            "cursor": "*"
+          },
+          "countMeaning": "Total reviews matching the query; not the returned page count"
+        },
+        "publicData": true
+      }
+    },
+    {
+      "mappingId": "steam-1627720",
+      "mappingRevision": 1,
+      "mappingFingerprint": "78d40680db7e30d335631cf73581f17769cec11c656fd36676eb6bcc68f929f4",
+      "target": {
+        "provider": "steam",
+        "id": "1627720"
+      },
+      "provider": "steam",
+      "providerId": "1627720",
+      "scope": "steam-product",
+      "status": "updated",
+      "error": null,
+      "checkedAt": "2026-10-20T21:16:54.727Z",
+      "observedAt": "2026-10-20T21:16:54.727Z",
+      "freshUntil": "2026-10-21T21:16:54.727Z",
+      "nextAttemptAt": null,
+      "observations": [
+        {
+          "schemaVersion": 1,
+          "id": "steam:1627720:steam-approval:78d40680db7e30d3:35631cf73581",
+          "source": {
+            "provider": "steam",
+            "family": "steam-reviewers",
+            "upstreamId": "1627720",
+            "url": "https://store.steampowered.com/app/1627720/",
+            "label": "Steam approval",
+            "lineage": []
+          },
+          "type": "binary-approval",
+          "lane": "steam-approval",
+          "scope": {
+            "ref": {
+              "provider": "steam",
+              "id": "1627720"
+            },
+            "work": null,
+            "edition": null,
+            "platforms": [
+              "Steam product"
+            ],
+            "region": null,
+            "build": null,
+            "mapping": "reviewed-provider-reference",
+            "scoreScope": "steam-product"
+          },
+          "original": {
+            "value": 92,
+            "raw": 92,
+            "scale": {
+              "min": 0,
+              "max": 100
+            },
+            "positive": 77018,
+            "negative": 7064,
+            "count": 84082,
+            "countMeaning": "Reviews matching the recorded Steam query"
+          },
+          "dates": {
+            "publishedAt": null,
+            "observedAt": "2026-10-20T21:16:54.727Z",
+            "sourceUpdatedAt": null,
+            "windowFrom": null,
+            "windowTo": null
+          },
+          "provenance": {
+            "adapterVersion": "steam-review-summary-v1",
+            "checksum": "78d40680db7e30d335631cf73581f17769cec11c656fd36676eb6bcc68f929f4",
+            "fixture": null,
+            "extraction": "steam-approval",
+            "attribution": "Steam user reviews",
+            "access": "provider-api",
+            "reviewStatus": "verified-identity-scope-limited",
+            "supersedes": null
+          }
+        }
+      ],
+      "source": {
+        "title": "Lies of P",
+        "url": "https://store.steampowered.com/app/1627720/",
+        "attribution": "Steam user reviews",
+        "details": {
+          "queryScope": {
+            "json": "1",
+            "language": "all",
+            "purchase_type": "all",
+            "review_type": "all",
+            "filter": "recent",
+            "filter_offtopic_activity": "1",
+            "num_per_page": "1",
+            "cursor": "*"
+          },
+          "countMeaning": "Total reviews matching the query; not the returned page count"
+        },
+        "publicData": true
+      }
+    },
+    {
+      "mappingId": "steam-1817230",
+      "mappingRevision": 1,
+      "mappingFingerprint": "9ca4027819bf8ece789dc5a137016ce21ac3cb318316de8bcc7948b0c9ded673",
+      "target": {
+        "provider": "steam",
+        "id": "1817230"
+      },
+      "provider": "steam",
+      "providerId": "1817230",
+      "scope": "steam-product",
+      "status": "updated",
+      "error": null,
+      "checkedAt": "2026-10-20T21:16:55.655Z",
+      "observedAt": "2026-10-20T21:16:55.655Z",
+      "freshUntil": "2026-10-21T21:16:55.655Z",
+      "nextAttemptAt": null,
+      "observations": [
+        {
+          "schemaVersion": 1,
+          "id": "steam:1817230:steam-approval:9ca4027819bf8ece:789dc5a13701",
+          "source": {
+            "provider": "steam",
+            "family": "steam-reviewers",
+            "upstreamId": "1817230",
+            "url": "https://store.steampowered.com/app/1817230/",
+            "label": "Steam approval",
+            "lineage": []
+          },
+          "type": "binary-approval",
+          "lane": "steam-approval",
+          "scope": {
+            "ref": {
+              "provider": "steam",
+              "id": "1817230"
+            },
+            "work": null,
+            "edition": null,
+            "platforms": [
+              "Steam product"
+            ],
+            "region": null,
+            "build": null,
+            "mapping": "reviewed-provider-reference",
+            "scoreScope": "steam-product"
+          },
+          "original": {
+            "value": 97,
+            "raw": 97,
+            "scale": {
+              "min": 0,
+              "max": 100
+            },
+            "positive": 34979,
+            "negative": 1112,
+            "count": 36091,
+            "countMeaning": "Reviews matching the recorded Steam query"
+          },
+          "dates": {
+            "publishedAt": null,
+            "observedAt": "2026-10-20T21:16:55.655Z",
+            "sourceUpdatedAt": null,
+            "windowFrom": null,
+            "windowTo": null
+          },
+          "provenance": {
+            "adapterVersion": "steam-review-summary-v1",
+            "checksum": "9ca4027819bf8ece789dc5a137016ce21ac3cb318316de8bcc7948b0c9ded673",
+            "fixture": null,
+            "extraction": "steam-approval",
+            "attribution": "Steam user reviews",
+            "access": "provider-api",
+            "reviewStatus": "verified-identity-scope-limited",
+            "supersedes": null
+          }
+        }
+      ],
+      "source": {
+        "title": "Hi-Fi RUSH",
+        "url": "https://store.steampowered.com/app/1817230/",
+        "attribution": "Steam user reviews",
+        "details": {
+          "queryScope": {
+            "json": "1",
+            "language": "all",
+            "purchase_type": "all",
+            "review_type": "all",
+            "filter": "recent",
+            "filter_offtopic_activity": "1",
+            "num_per_page": "1",
+            "cursor": "*"
+          },
+          "countMeaning": "Total reviews matching the query; not the returned page count"
+        },
+        "publicData": true
+      }
+    },
+    {
+      "mappingId": "steam-1868140",
+      "mappingRevision": 1,
+      "mappingFingerprint": "46bc9c85dc88d1eb7e658cb384e9efb4cc894224ac1cc63d86742f8b752f6c10",
+      "target": {
+        "provider": "steam",
+        "id": "1868140"
+      },
+      "provider": "steam",
+      "providerId": "1868140",
+      "scope": "steam-product",
+      "status": "updated",
+      "error": null,
+      "checkedAt": "2026-10-20T21:16:56.565Z",
+      "observedAt": "2026-10-20T21:16:56.565Z",
+      "freshUntil": "2026-10-21T21:16:56.565Z",
+      "nextAttemptAt": null,
+      "observations": [
+        {
+          "schemaVersion": 1,
+          "id": "steam:1868140:steam-approval:46bc9c85dc88d1eb:7e658cb384e9",
+          "source": {
+            "provider": "steam",
+            "family": "steam-reviewers",
+            "upstreamId": "1868140",
+            "url": "https://store.steampowered.com/app/1868140/",
+            "label": "Steam approval",
+            "lineage": []
+          },
+          "type": "binary-approval",
+          "lane": "steam-approval",
+          "scope": {
+            "ref": {
+              "provider": "steam",
+              "id": "1868140"
+            },
+            "work": null,
+            "edition": null,
+            "platforms": [
+              "Steam product"
+            ],
+            "region": null,
+            "build": null,
+            "mapping": "reviewed-provider-reference",
+            "scoreScope": "steam-product"
+          },
+          "original": {
+            "value": 96,
+            "raw": 96,
+            "scale": {
+              "min": 0,
+              "max": 100
+            },
+            "positive": 158466,
+            "negative": 5809,
+            "count": 164275,
+            "countMeaning": "Reviews matching the recorded Steam query"
+          },
+          "dates": {
+            "publishedAt": null,
+            "observedAt": "2026-10-20T21:16:56.565Z",
+            "sourceUpdatedAt": null,
+            "windowFrom": null,
+            "windowTo": null
+          },
+          "provenance": {
+            "adapterVersion": "steam-review-summary-v1",
+            "checksum": "46bc9c85dc88d1eb7e658cb384e9efb4cc894224ac1cc63d86742f8b752f6c10",
+            "fixture": null,
+            "extraction": "steam-approval",
+            "attribution": "Steam user reviews",
+            "access": "provider-api",
+            "reviewStatus": "verified-identity-scope-limited",
+            "supersedes": null
+          }
+        }
+      ],
+      "source": {
+        "title": "DAVE THE DIVER",
+        "url": "https://store.steampowered.com/app/1868140/",
+        "attribution": "Steam user reviews",
+        "details": {
+          "queryScope": {
+            "json": "1",
+            "language": "all",
+            "purchase_type": "all",
+            "review_type": "all",
+            "filter": "recent",
+            "filter_offtopic_activity": "1",
+            "num_per_page": "1",
+            "cursor": "*"
+          },
+          "countMeaning": "Total reviews matching the query; not the returned page count"
+        },
+        "publicData": true
+      }
+    },
+    {
+      "mappingId": "steam-2679460",
+      "mappingRevision": 1,
+      "mappingFingerprint": "d566896eddac258b7f5f2644323c9c7886506845fd0b47f5a04b3c945426686f",
+      "target": {
+        "provider": "steam",
+        "id": "2679460"
+      },
+      "provider": "steam",
+      "providerId": "2679460",
+      "scope": "steam-product",
+      "status": "updated",
+      "error": null,
+      "checkedAt": "2026-10-20T21:16:57.508Z",
+      "observedAt": "2026-10-20T21:16:57.508Z",
+      "freshUntil": "2026-10-21T21:16:57.508Z",
+      "nextAttemptAt": null,
+      "observations": [
+        {
+          "schemaVersion": 1,
+          "id": "steam:2679460:steam-approval:d566896eddac258b:7f5f2644323c",
+          "source": {
+            "provider": "steam",
+            "family": "steam-reviewers",
+            "upstreamId": "2679460",
+            "url": "https://store.steampowered.com/app/2679460/",
+            "label": "Steam approval",
+            "lineage": []
+          },
+          "type": "binary-approval",
+          "lane": "steam-approval",
+          "scope": {
+            "ref": {
+              "provider": "steam",
+              "id": "2679460"
+            },
+            "work": null,
+            "edition": null,
+            "platforms": [
+              "Steam product"
+            ],
+            "region": null,
+            "build": null,
+            "mapping": "reviewed-provider-reference",
+            "scoreScope": "steam-product"
+          },
+          "original": {
+            "value": 90,
+            "raw": 90,
+            "scale": {
+              "min": 0,
+              "max": 100
+            },
+            "positive": 39151,
+            "negative": 4564,
+            "count": 43715,
+            "countMeaning": "Reviews matching the recorded Steam query"
+          },
+          "dates": {
+            "publishedAt": null,
+            "observedAt": "2026-10-20T21:16:57.508Z",
+            "sourceUpdatedAt": null,
+            "windowFrom": null,
+            "windowTo": null
+          },
+          "provenance": {
+            "adapterVersion": "steam-review-summary-v1",
+            "checksum": "d566896eddac258b7f5f2644323c9c7886506845fd0b47f5a04b3c945426686f",
+            "fixture": null,
+            "extraction": "steam-approval",
+            "attribution": "Steam user reviews",
+            "access": "provider-api",
+            "reviewStatus": "verified-identity-scope-limited",
+            "supersedes": null
+          }
+        }
+      ],
+      "source": {
+        "title": "Metaphor: ReFantazio",
+        "url": "https://store.steampowered.com/app/2679460/",
+        "attribution": "Steam user reviews",
+        "details": {
+          "queryScope": {
+            "json": "1",
+            "language": "all",
+            "purchase_type": "all",
+            "review_type": "all",
+            "filter": "recent",
+            "filter_offtopic_activity": "1",
+            "num_per_page": "1",
+            "cursor": "*"
+          },
+          "countMeaning": "Total reviews matching the query; not the returned page count"
+        },
+        "publicData": true
+      }
+    },
+    {
+      "mappingId": "steam-526870",
+      "mappingRevision": 1,
+      "mappingFingerprint": "32a5764daaf27aa4f23a82ce1dad670f430cf4a78c60ec8c63fdf2233f2330bc",
+      "target": {
+        "provider": "steam",
+        "id": "526870"
+      },
+      "provider": "steam",
+      "providerId": "526870",
+      "scope": "steam-product",
+      "status": "updated",
+      "error": null,
+      "checkedAt": "2026-10-20T21:16:58.439Z",
+      "observedAt": "2026-10-20T21:16:58.439Z",
+      "freshUntil": "2026-10-21T21:16:58.439Z",
+      "nextAttemptAt": null,
+      "observations": [
+        {
+          "schemaVersion": 1,
+          "id": "steam:526870:steam-approval:32a5764daaf27aa4:f23a82ce1dad",
+          "source": {
+            "provider": "steam",
+            "family": "steam-reviewers",
+            "upstreamId": "526870",
+            "url": "https://store.steampowered.com/app/526870/",
+            "label": "Steam approval",
+            "lineage": []
+          },
+          "type": "binary-approval",
+          "lane": "steam-approval",
+          "scope": {
+            "ref": {
+              "provider": "steam",
+              "id": "526870"
+            },
+            "work": null,
+            "edition": null,
+            "platforms": [
+              "Steam product"
+            ],
+            "region": null,
+            "build": null,
+            "mapping": "reviewed-provider-reference",
+            "scoreScope": "steam-product"
+          },
+          "original": {
+            "value": 97,
+            "raw": 97,
+            "scale": {
+              "min": 0,
+              "max": 100
+            },
+            "positive": 273817,
+            "negative": 7709,
+            "count": 281526,
+            "countMeaning": "Reviews matching the recorded Steam query"
+          },
+          "dates": {
+            "publishedAt": null,
+            "observedAt": "2026-10-20T21:16:58.439Z",
+            "sourceUpdatedAt": null,
+            "windowFrom": null,
+            "windowTo": null
+          },
+          "provenance": {
+            "adapterVersion": "steam-review-summary-v1",
+            "checksum": "32a5764daaf27aa4f23a82ce1dad670f430cf4a78c60ec8c63fdf2233f2330bc",
+            "fixture": null,
+            "extraction": "steam-approval",
+            "attribution": "Steam user reviews",
+            "access": "provider-api",
+            "reviewStatus": "verified-identity-scope-limited",
+            "supersedes": null
+          }
+        }
+      ],
+      "source": {
+        "title": "Satisfactory",
+        "url": "https://store.steampowered.com/app/526870/",
+        "attribution": "Steam user reviews",
+        "details": {
+          "queryScope": {
+            "json": "1",
+            "language": "all",
+            "purchase_type": "all",
+            "review_type": "all",
+            "filter": "recent",
+            "filter_offtopic_activity": "1",
+            "num_per_page": "1",
+            "cursor": "*"
+          },
+          "countMeaning": "Total reviews matching the query; not the returned page count"
+        },
+        "publicData": true
+      }
+    },
+    {
+      "mappingId": "steam-553420",
+      "mappingRevision": 1,
+      "mappingFingerprint": "9baef0a19d82f92cb4841236d6b03650cfe44062f59811db7c3e608d58adc6f9",
+      "target": {
+        "provider": "steam",
+        "id": "553420"
+      },
+      "provider": "steam",
+      "providerId": "553420",
+      "scope": "steam-product",
+      "status": "updated",
+      "error": null,
+      "checkedAt": "2026-10-20T21:16:59.329Z",
+      "observedAt": "2026-10-20T21:16:59.329Z",
+      "freshUntil": "2026-10-21T21:16:59.329Z",
+      "nextAttemptAt": null,
+      "observations": [
+        {
+          "schemaVersion": 1,
+          "id": "steam:553420:steam-approval:9baef0a19d82f92c:b4841236d6b0",
+          "source": {
+            "provider": "steam",
+            "family": "steam-reviewers",
+            "upstreamId": "553420",
+            "url": "https://store.steampowered.com/app/553420/",
+            "label": "Steam approval",
+            "lineage": []
+          },
+          "type": "binary-approval",
+          "lane": "steam-approval",
+          "scope": {
+            "ref": {
+              "provider": "steam",
+              "id": "553420"
+            },
+            "work": null,
+            "edition": null,
+            "platforms": [
+              "Steam product"
+            ],
+            "region": null,
+            "build": null,
+            "mapping": "reviewed-provider-reference",
+            "scoreScope": "steam-product"
+          },
+          "original": {
+            "value": 91,
+            "raw": 91,
+            "scale": {
+              "min": 0,
+              "max": 100
+            },
+            "positive": 17190,
+            "negative": 1715,
+            "count": 18905,
+            "countMeaning": "Reviews matching the recorded Steam query"
+          },
+          "dates": {
+            "publishedAt": null,
+            "observedAt": "2026-10-20T21:16:59.329Z",
+            "sourceUpdatedAt": null,
+            "windowFrom": null,
+            "windowTo": null
+          },
+          "provenance": {
+            "adapterVersion": "steam-review-summary-v1",
+            "checksum": "9baef0a19d82f92cb4841236d6b03650cfe44062f59811db7c3e608d58adc6f9",
+            "fixture": null,
+            "extraction": "steam-approval",
+            "attribution": "Steam user reviews",
+            "access": "provider-api",
+            "reviewStatus": "verified-identity-scope-limited",
+            "supersedes": null
+          }
+        }
+      ],
+      "source": {
+        "title": "TUNIC",
+        "url": "https://store.steampowered.com/app/553420/",
+        "attribution": "Steam user reviews",
+        "details": {
+          "queryScope": {
+            "json": "1",
+            "language": "all",
+            "purchase_type": "all",
+            "review_type": "all",
+            "filter": "recent",
+            "filter_offtopic_activity": "1",
+            "num_per_page": "1",
+            "cursor": "*"
+          },
+          "countMeaning": "Total reviews matching the query; not the returned page count"
+        },
+        "publicData": true
+      }
+    },
+    {
+      "mappingId": "steam-1794680",
+      "mappingRevision": 1,
+      "mappingFingerprint": "621075e045ee8920de3af55295e9934d8d78a8520f96238f07ba1f6c33f11b83",
+      "target": {
+        "provider": "steam",
+        "id": "1794680"
+      },
+      "provider": "steam",
+      "providerId": "1794680",
+      "scope": "steam-product",
+      "status": "updated",
+      "error": null,
+      "checkedAt": "2026-10-20T21:17:00.263Z",
+      "observedAt": "2026-10-20T21:17:00.263Z",
+      "freshUntil": "2026-10-21T21:17:00.263Z",
+      "nextAttemptAt": null,
+      "observations": [
+        {
+          "schemaVersion": 1,
+          "id": "steam:1794680:steam-approval:621075e045ee8920:de3af55295e9",
+          "source": {
+            "provider": "steam",
+            "family": "steam-reviewers",
+            "upstreamId": "1794680",
+            "url": "https://store.steampowered.com/app/1794680/",
+            "label": "Steam approval",
+            "lineage": []
+          },
+          "type": "binary-approval",
+          "lane": "steam-approval",
+          "scope": {
+            "ref": {
+              "provider": "steam",
+              "id": "1794680"
+            },
+            "work": null,
+            "edition": null,
+            "platforms": [
+              "Steam product"
+            ],
+            "region": null,
+            "build": null,
+            "mapping": "reviewed-provider-reference",
+            "scoreScope": "steam-product"
+          },
+          "original": {
+            "value": 98,
+            "raw": 98,
+            "scale": {
+              "min": 0,
+              "max": 100
+            },
+            "positive": 262077,
+            "negative": 4528,
+            "count": 266605,
+            "countMeaning": "Reviews matching the recorded Steam query"
+          },
+          "dates": {
+            "publishedAt": null,
+            "observedAt": "2026-10-20T21:17:00.263Z",
+            "sourceUpdatedAt": null,
+            "windowFrom": null,
+            "windowTo": null
+          },
+          "provenance": {
+            "adapterVersion": "steam-review-summary-v1",
+            "checksum": "621075e045ee8920de3af55295e9934d8d78a8520f96238f07ba1f6c33f11b83",
+            "fixture": null,
+            "extraction": "steam-approval",
+            "attribution": "Steam user reviews",
+            "access": "provider-api",
+            "reviewStatus": "verified-identity-scope-limited",
+            "supersedes": null
+          }
+        }
+      ],
+      "source": {
+        "title": "Vampire Survivors",
+        "url": "https://store.steampowered.com/app/1794680/",
+        "attribution": "Steam user reviews",
+        "details": {
+          "queryScope": {
+            "json": "1",
+            "language": "all",
+            "purchase_type": "all",
+            "review_type": "all",
+            "filter": "recent",
+            "filter_offtopic_activity": "1",
+            "num_per_page": "1",
+            "cursor": "*"
+          },
+          "countMeaning": "Total reviews matching the query; not the returned page count"
+        },
+        "publicData": true
+      }
+    },
+    {
+      "mappingId": "steam-2246340",
+      "mappingRevision": 1,
+      "mappingFingerprint": "7f1eb993aeda7cc54d7e4178e0e5ce0b82834bccd4e1252b56dc01a56e329838",
+      "target": {
+        "provider": "steam",
+        "id": "2246340"
+      },
+      "provider": "steam",
+      "providerId": "2246340",
+      "scope": "steam-product",
+      "status": "updated",
+      "error": null,
+      "checkedAt": "2026-10-20T21:17:01.266Z",
+      "observedAt": "2026-10-20T21:17:01.266Z",
+      "freshUntil": "2026-10-21T21:17:01.266Z",
+      "nextAttemptAt": null,
+      "observations": [
+        {
+          "schemaVersion": 1,
+          "id": "steam:2246340:steam-approval:7f1eb993aeda7cc5:4d7e4178e0e5",
+          "source": {
+            "provider": "steam",
+            "family": "steam-reviewers",
+            "upstreamId": "2246340",
+            "url": "https://store.steampowered.com/app/2246340/",
+            "label": "Steam approval",
+            "lineage": []
+          },
+          "type": "binary-approval",
+          "lane": "steam-approval",
+          "scope": {
+            "ref": {
+              "provider": "steam",
+              "id": "2246340"
+            },
+            "work": null,
+            "edition": null,
+            "platforms": [
+              "Steam product"
+            ],
+            "region": null,
+            "build": null,
+            "mapping": "reviewed-provider-reference",
+            "scoreScope": "steam-product"
+          },
+          "original": {
+            "value": 50,
+            "raw": 50,
+            "scale": {
+              "min": 0,
+              "max": 100
+            },
+            "positive": 166047,
+            "negative": 167796,
+            "count": 333843,
+            "countMeaning": "Reviews matching the recorded Steam query"
+          },
+          "dates": {
+            "publishedAt": null,
+            "observedAt": "2026-10-20T21:17:01.266Z",
+            "sourceUpdatedAt": null,
+            "windowFrom": null,
+            "windowTo": null
+          },
+          "provenance": {
+            "adapterVersion": "steam-review-summary-v1",
+            "checksum": "7f1eb993aeda7cc54d7e4178e0e5ce0b82834bccd4e1252b56dc01a56e329838",
+            "fixture": null,
+            "extraction": "steam-approval",
+            "attribution": "Steam user reviews",
+            "access": "provider-api",
+            "reviewStatus": "verified-identity-scope-limited",
+            "supersedes": null
+          }
+        }
+      ],
+      "source": {
+        "title": "Monster Hunter Wilds",
+        "url": "https://store.steampowered.com/app/2246340/",
+        "attribution": "Steam user reviews",
+        "details": {
+          "queryScope": {
+            "json": "1",
+            "language": "all",
+            "purchase_type": "all",
+            "review_type": "all",
+            "filter": "recent",
+            "filter_offtopic_activity": "1",
+            "num_per_page": "1",
+            "cursor": "*"
+          },
+          "countMeaning": "Total reviews matching the query; not the returned page count"
+        },
+        "publicData": true
+      }
+    },
+    {
+      "mappingId": "steam-1569580",
+      "mappingRevision": 1,
+      "mappingFingerprint": "5ea42e86ff6895fb3b9466afbaa861d3619bffb29102034e71e0c90335e2ecda",
+      "target": {
+        "provider": "steam",
+        "id": "1569580"
+      },
+      "provider": "steam",
+      "providerId": "1569580",
+      "scope": "steam-product",
+      "status": "updated",
+      "error": null,
+      "checkedAt": "2026-10-20T21:17:02.201Z",
+      "observedAt": "2026-10-20T21:17:02.201Z",
+      "freshUntil": "2026-10-21T21:17:02.201Z",
+      "nextAttemptAt": null,
+      "observations": [
+        {
+          "schemaVersion": 1,
+          "id": "steam:1569580:steam-approval:5ea42e86ff6895fb:3b9466afbaa8",
+          "source": {
+            "provider": "steam",
+            "family": "steam-reviewers",
+            "upstreamId": "1569580",
+            "url": "https://store.steampowered.com/app/1569580/",
+            "label": "Steam approval",
+            "lineage": []
+          },
+          "type": "binary-approval",
+          "lane": "steam-approval",
+          "scope": {
+            "ref": {
+              "provider": "steam",
+              "id": "1569580"
+            },
+            "work": null,
+            "edition": null,
+            "platforms": [
+              "Steam product"
+            ],
+            "region": null,
+            "build": null,
+            "mapping": "reviewed-provider-reference",
+            "scoreScope": "steam-product"
+          },
+          "original": {
+            "value": 86,
+            "raw": 86,
+            "scale": {
+              "min": 0,
+              "max": 100
+            },
+            "positive": 17677,
+            "negative": 2816,
+            "count": 20493,
+            "countMeaning": "Reviews matching the recorded Steam query"
+          },
+          "dates": {
+            "publishedAt": null,
+            "observedAt": "2026-10-20T21:17:02.201Z",
+            "sourceUpdatedAt": null,
+            "windowFrom": null,
+            "windowTo": null
+          },
+          "provenance": {
+            "adapterVersion": "steam-review-summary-v1",
+            "checksum": "5ea42e86ff6895fb3b9466afbaa861d3619bffb29102034e71e0c90335e2ecda",
+            "fixture": null,
+            "extraction": "steam-approval",
+            "attribution": "Steam user reviews",
+            "access": "provider-api",
+            "reviewStatus": "verified-identity-scope-limited",
+            "supersedes": null
+          }
+        }
+      ],
+      "source": {
+        "title": "Blue Prince",
+        "url": "https://store.steampowered.com/app/1569580/",
+        "attribution": "Steam user reviews",
+        "details": {
+          "queryScope": {
+            "json": "1",
+            "language": "all",
+            "purchase_type": "all",
+            "review_type": "all",
+            "filter": "recent",
+            "filter_offtopic_activity": "1",
+            "num_per_page": "1",
+            "cursor": "*"
+          },
+          "countMeaning": "Total reviews matching the query; not the returned page count"
+        },
+        "publicData": true
+      }
+    },
+    {
+      "mappingId": "steam-646570",
+      "mappingRevision": 1,
+      "mappingFingerprint": "2457e88fcd45b08f806bb0250305b8c2d4da6a6d23562f95d83e626a01935d9f",
+      "target": {
+        "provider": "steam",
+        "id": "646570"
+      },
+      "provider": "steam",
+      "providerId": "646570",
+      "scope": "steam-product",
+      "status": "updated",
+      "error": null,
+      "checkedAt": "2026-10-20T21:17:03.108Z",
+      "observedAt": "2026-10-20T21:17:03.108Z",
+      "freshUntil": "2026-10-21T21:17:03.108Z",
+      "nextAttemptAt": null,
+      "observations": [
+        {
+          "schemaVersion": 1,
+          "id": "steam:646570:steam-approval:2457e88fcd45b08f:806bb0250305",
+          "source": {
+            "provider": "steam",
+            "family": "steam-reviewers",
+            "upstreamId": "646570",
+            "url": "https://store.steampowered.com/app/646570/",
+            "label": "Steam approval",
+            "lineage": []
+          },
+          "type": "binary-approval",
+          "lane": "steam-approval",
+          "scope": {
+            "ref": {
+              "provider": "steam",
+              "id": "646570"
+            },
+            "work": null,
+            "edition": null,
+            "platforms": [
+              "Steam product"
+            ],
+            "region": null,
+            "build": null,
+            "mapping": "reviewed-provider-reference",
+            "scoreScope": "steam-product"
+          },
+          "original": {
+            "value": 97,
+            "raw": 97,
+            "scale": {
+              "min": 0,
+              "max": 100
+            },
+            "positive": 213996,
+            "negative": 5598,
+            "count": 219594,
+            "countMeaning": "Reviews matching the recorded Steam query"
+          },
+          "dates": {
+            "publishedAt": null,
+            "observedAt": "2026-10-20T21:17:03.108Z",
+            "sourceUpdatedAt": null,
+            "windowFrom": null,
+            "windowTo": null
+          },
+          "provenance": {
+            "adapterVersion": "steam-review-summary-v1",
+            "checksum": "2457e88fcd45b08f806bb0250305b8c2d4da6a6d23562f95d83e626a01935d9f",
+            "fixture": null,
+            "extraction": "steam-approval",
+            "attribution": "Steam user reviews",
+            "access": "provider-api",
+            "reviewStatus": "verified-identity-scope-limited",
+            "supersedes": null
+          }
+        }
+      ],
+      "source": {
+        "title": "Slay the Spire",
+        "url": "https://store.steampowered.com/app/646570/",
+        "attribution": "Steam user reviews",
+        "details": {
+          "queryScope": {
+            "json": "1",
+            "language": "all",
+            "purchase_type": "all",
+            "review_type": "all",
+            "filter": "recent",
+            "filter_offtopic_activity": "1",
+            "num_per_page": "1",
+            "cursor": "*"
+          },
+          "countMeaning": "Total reviews matching the query; not the returned page count"
+        },
+        "publicData": true
+      }
+    },
+    {
+      "mappingId": "steam-1092790",
+      "mappingRevision": 1,
+      "mappingFingerprint": "73562ea3c629f4615963ee9faabc7d56d3ef781e7f99a9f5c0bfe9f662f69358",
+      "target": {
+        "provider": "steam",
+        "id": "1092790"
+      },
+      "provider": "steam",
+      "providerId": "1092790",
+      "scope": "steam-product",
+      "status": "updated",
+      "error": null,
+      "checkedAt": "2026-10-20T21:17:04.042Z",
+      "observedAt": "2026-10-20T21:17:04.042Z",
+      "freshUntil": "2026-10-21T21:17:04.042Z",
+      "nextAttemptAt": null,
+      "observations": [
+        {
+          "schemaVersion": 1,
+          "id": "steam:1092790:steam-approval:73562ea3c629f461:5963ee9faabc",
+          "source": {
+            "provider": "steam",
+            "family": "steam-reviewers",
+            "upstreamId": "1092790",
+            "url": "https://store.steampowered.com/app/1092790/",
+            "label": "Steam approval",
+            "lineage": []
+          },
+          "type": "binary-approval",
+          "lane": "steam-approval",
+          "scope": {
+            "ref": {
+              "provider": "steam",
+              "id": "1092790"
+            },
+            "work": null,
+            "edition": null,
+            "platforms": [
+              "Steam product"
+            ],
+            "region": null,
+            "build": null,
+            "mapping": "reviewed-provider-reference",
+            "scoreScope": "steam-product"
+          },
+          "original": {
+            "value": 97,
+            "raw": 97,
+            "scale": {
+              "min": 0,
+              "max": 100
+            },
+            "positive": 144688,
+            "negative": 4759,
+            "count": 149447,
+            "countMeaning": "Reviews matching the recorded Steam query"
+          },
+          "dates": {
+            "publishedAt": null,
+            "observedAt": "2026-10-20T21:17:04.042Z",
+            "sourceUpdatedAt": null,
+            "windowFrom": null,
+            "windowTo": null
+          },
+          "provenance": {
+            "adapterVersion": "steam-review-summary-v1",
+            "checksum": "73562ea3c629f4615963ee9faabc7d56d3ef781e7f99a9f5c0bfe9f662f69358",
+            "fixture": null,
+            "extraction": "steam-approval",
+            "attribution": "Steam user reviews",
+            "access": "provider-api",
+            "reviewStatus": "verified-identity-scope-limited",
+            "supersedes": null
+          }
+        }
+      ],
+      "source": {
+        "title": "Inscryption",
+        "url": "https://store.steampowered.com/app/1092790/",
+        "attribution": "Steam user reviews",
+        "details": {
+          "queryScope": {
+            "json": "1",
+            "language": "all",
+            "purchase_type": "all",
+            "review_type": "all",
+            "filter": "recent",
+            "filter_offtopic_activity": "1",
+            "num_per_page": "1",
+            "cursor": "*"
+          },
+          "countMeaning": "Total reviews matching the query; not the returned page count"
+        },
+        "publicData": true
+      }
+    },
+    {
+      "mappingId": "steam-427520",
+      "mappingRevision": 1,
+      "mappingFingerprint": "cf2a990e2fd8e9df252f43c7a8837c7c14f69c5d811742f8170afc383a9ef38f",
+      "target": {
+        "provider": "steam",
+        "id": "427520"
+      },
+      "provider": "steam",
+      "providerId": "427520",
+      "scope": "steam-product",
+      "status": "updated",
+      "error": null,
+      "checkedAt": "2026-10-20T21:17:04.970Z",
+      "observedAt": "2026-10-20T21:17:04.970Z",
+      "freshUntil": "2026-10-21T21:17:04.970Z",
+      "nextAttemptAt": null,
+      "observations": [
+        {
+          "schemaVersion": 1,
+          "id": "steam:427520:steam-approval:cf2a990e2fd8e9df:252f43c7a883",
+          "source": {
+            "provider": "steam",
+            "family": "steam-reviewers",
+            "upstreamId": "427520",
+            "url": "https://store.steampowered.com/app/427520/",
+            "label": "Steam approval",
+            "lineage": []
+          },
+          "type": "binary-approval",
+          "lane": "steam-approval",
+          "scope": {
+            "ref": {
+              "provider": "steam",
+              "id": "427520"
+            },
+            "work": null,
+            "edition": null,
+            "platforms": [
+              "Steam product"
+            ],
+            "region": null,
+            "build": null,
+            "mapping": "reviewed-provider-reference",
+            "scoreScope": "steam-product"
+          },
+          "original": {
+            "value": 98,
+            "raw": 98,
+            "scale": {
+              "min": 0,
+              "max": 100
+            },
+            "positive": 230210,
+            "negative": 5847,
+            "count": 236057,
+            "countMeaning": "Reviews matching the recorded Steam query"
+          },
+          "dates": {
+            "publishedAt": null,
+            "observedAt": "2026-10-20T21:17:04.970Z",
+            "sourceUpdatedAt": null,
+            "windowFrom": null,
+            "windowTo": null
+          },
+          "provenance": {
+            "adapterVersion": "steam-review-summary-v1",
+            "checksum": "cf2a990e2fd8e9df252f43c7a8837c7c14f69c5d811742f8170afc383a9ef38f",
+            "fixture": null,
+            "extraction": "steam-approval",
+            "attribution": "Steam user reviews",
+            "access": "provider-api",
+            "reviewStatus": "verified-identity-scope-limited",
+            "supersedes": null
+          }
+        }
+      ],
+      "source": {
+        "title": "Factorio",
+        "url": "https://store.steampowered.com/app/427520/",
+        "attribution": "Steam user reviews",
+        "details": {
+          "queryScope": {
+            "json": "1",
+            "language": "all",
+            "purchase_type": "all",
+            "review_type": "all",
+            "filter": "recent",
+            "filter_offtopic_activity": "1",
+            "num_per_page": "1",
+            "cursor": "*"
+          },
+          "countMeaning": "Total reviews matching the query; not the returned page count"
+        },
+        "publicData": true
+      }
+    },
+    {
+      "mappingId": "steam-105600",
+      "mappingRevision": 1,
+      "mappingFingerprint": "bdc03b12cd8020129e70f48024de4b7fba9c93ed083ea3e6e1da56a5bd29e685",
+      "target": {
+        "provider": "steam",
+        "id": "105600"
+      },
+      "provider": "steam",
+      "providerId": "105600",
+      "scope": "steam-product",
+      "status": "updated",
+      "error": null,
+      "checkedAt": "2026-10-20T21:17:05.893Z",
+      "observedAt": "2026-10-20T21:17:05.893Z",
+      "freshUntil": "2026-10-21T21:17:05.893Z",
+      "nextAttemptAt": null,
+      "observations": [
+        {
+          "schemaVersion": 1,
+          "id": "steam:105600:steam-approval:bdc03b12cd802012:9e70f48024de",
+          "source": {
+            "provider": "steam",
+            "family": "steam-reviewers",
+            "upstreamId": "105600",
+            "url": "https://store.steampowered.com/app/105600/",
+            "label": "Steam approval",
+            "lineage": []
+          },
+          "type": "binary-approval",
+          "lane": "steam-approval",
+          "scope": {
+            "ref": {
+              "provider": "steam",
+              "id": "105600"
+            },
+            "work": null,
+            "edition": null,
+            "platforms": [
+              "Steam product"
+            ],
+            "region": null,
+            "build": null,
+            "mapping": "reviewed-provider-reference",
+            "scoreScope": "steam-product"
+          },
+          "original": {
+            "value": 97,
+            "raw": 97,
+            "scale": {
+              "min": 0,
+              "max": 100
+            },
+            "positive": 1522945,
+            "negative": 41127,
+            "count": 1564072,
+            "countMeaning": "Reviews matching the recorded Steam query"
+          },
+          "dates": {
+            "publishedAt": null,
+            "observedAt": "2026-10-20T21:17:05.893Z",
+            "sourceUpdatedAt": null,
+            "windowFrom": null,
+            "windowTo": null
+          },
+          "provenance": {
+            "adapterVersion": "steam-review-summary-v1",
+            "checksum": "bdc03b12cd8020129e70f48024de4b7fba9c93ed083ea3e6e1da56a5bd29e685",
+            "fixture": null,
+            "extraction": "steam-approval",
+            "attribution": "Steam user reviews",
+            "access": "provider-api",
+            "reviewStatus": "verified-identity-scope-limited",
+            "supersedes": null
+          }
+        }
+      ],
+      "source": {
+        "title": "Terraria",
+        "url": "https://store.steampowered.com/app/105600/",
+        "attribution": "Steam user reviews",
+        "details": {
+          "queryScope": {
+            "json": "1",
+            "language": "all",
+            "purchase_type": "all",
+            "review_type": "all",
+            "filter": "recent",
+            "filter_offtopic_activity": "1",
+            "num_per_page": "1",
+            "cursor": "*"
+          },
+          "countMeaning": "Total reviews matching the query; not the returned page count"
+        },
+        "publicData": true
+      }
+    },
+    {
+      "mappingId": "steam-990080",
+      "mappingRevision": 1,
+      "mappingFingerprint": "f46a888071bfa89b58cf88f54a63e8e46296155aeda59ef496aa249fa7597a8d",
+      "target": {
+        "provider": "steam",
+        "id": "990080"
+      },
+      "provider": "steam",
+      "providerId": "990080",
+      "scope": "steam-product",
+      "status": "updated",
+      "error": null,
+      "checkedAt": "2026-10-20T21:17:06.785Z",
+      "observedAt": "2026-10-20T21:17:06.785Z",
+      "freshUntil": "2026-10-21T21:17:06.785Z",
+      "nextAttemptAt": null,
+      "observations": [
+        {
+          "schemaVersion": 1,
+          "id": "steam:990080:steam-approval:f46a888071bfa89b:58cf88f54a63",
+          "source": {
+            "provider": "steam",
+            "family": "steam-reviewers",
+            "upstreamId": "990080",
+            "url": "https://store.steampowered.com/app/990080/",
+            "label": "Steam approval",
+            "lineage": []
+          },
+          "type": "binary-approval",
+          "lane": "steam-approval",
+          "scope": {
+            "ref": {
+              "provider": "steam",
+              "id": "990080"
+            },
+            "work": null,
+            "edition": null,
+            "platforms": [
+              "Steam product"
+            ],
+            "region": null,
+            "build": null,
+            "mapping": "reviewed-provider-reference",
+            "scoreScope": "steam-product"
+          },
+          "original": {
+            "value": 90,
+            "raw": 90,
+            "scale": {
+              "min": 0,
+              "max": 100
+            },
+            "positive": 337603,
+            "negative": 38706,
+            "count": 376309,
+            "countMeaning": "Reviews matching the recorded Steam query"
+          },
+          "dates": {
+            "publishedAt": null,
+            "observedAt": "2026-10-20T21:17:06.785Z",
+            "sourceUpdatedAt": null,
+            "windowFrom": null,
+            "windowTo": null
+          },
+          "provenance": {
+            "adapterVersion": "steam-review-summary-v1",
+            "checksum": "f46a888071bfa89b58cf88f54a63e8e46296155aeda59ef496aa249fa7597a8d",
+            "fixture": null,
+            "extraction": "steam-approval",
+            "attribution": "Steam user reviews",
+            "access": "provider-api",
+            "reviewStatus": "verified-identity-scope-limited",
+            "supersedes": null
+          }
+        }
+      ],
+      "source": {
+        "title": "Hogwarts Legacy",
+        "url": "https://store.steampowered.com/app/990080/",
+        "attribution": "Steam user reviews",
+        "details": {
+          "queryScope": {
+            "json": "1",
+            "language": "all",
+            "purchase_type": "all",
+            "review_type": "all",
+            "filter": "recent",
+            "filter_offtopic_activity": "1",
+            "num_per_page": "1",
+            "cursor": "*"
+          },
+          "countMeaning": "Total reviews matching the query; not the returned page count"
+        },
+        "publicData": true
+      }
+    },
+    {
+      "mappingId": "steam-2344520",
+      "mappingRevision": 1,
+      "mappingFingerprint": "bbefbd7e71645e617d28b54ff25ed774d0c5e53814c52a021ea1cc218b513b7b",
+      "target": {
+        "provider": "steam",
+        "id": "2344520"
+      },
+      "provider": "steam",
+      "providerId": "2344520",
+      "scope": "steam-product",
+      "status": "updated",
+      "error": null,
+      "checkedAt": "2026-10-20T21:17:07.715Z",
+      "observedAt": "2026-10-20T21:17:07.715Z",
+      "freshUntil": "2026-10-21T21:17:07.715Z",
+      "nextAttemptAt": null,
+      "observations": [
+        {
+          "schemaVersion": 1,
+          "id": "steam:2344520:steam-approval:bbefbd7e71645e61:7d28b54ff25e",
+          "source": {
+            "provider": "steam",
+            "family": "steam-reviewers",
+            "upstreamId": "2344520",
+            "url": "https://store.steampowered.com/app/2344520/",
+            "label": "Steam approval",
+            "lineage": []
+          },
+          "type": "binary-approval",
+          "lane": "steam-approval",
+          "scope": {
+            "ref": {
+              "provider": "steam",
+              "id": "2344520"
+            },
+            "work": null,
+            "edition": null,
+            "platforms": [
+              "Steam product"
+            ],
+            "region": null,
+            "build": null,
+            "mapping": "reviewed-provider-reference",
+            "scoreScope": "steam-product"
+          },
+          "original": {
+            "value": 65,
+            "raw": 65,
+            "scale": {
+              "min": 0,
+              "max": 100
+            },
+            "positive": 52332,
+            "negative": 27856,
+            "count": 80188,
+            "countMeaning": "Reviews matching the recorded Steam query"
+          },
+          "dates": {
+            "publishedAt": null,
+            "observedAt": "2026-10-20T21:17:07.715Z",
+            "sourceUpdatedAt": null,
+            "windowFrom": null,
+            "windowTo": null
+          },
+          "provenance": {
+            "adapterVersion": "steam-review-summary-v1",
+            "checksum": "bbefbd7e71645e617d28b54ff25ed774d0c5e53814c52a021ea1cc218b513b7b",
+            "fixture": null,
+            "extraction": "steam-approval",
+            "attribution": "Steam user reviews",
+            "access": "provider-api",
+            "reviewStatus": "verified-identity-scope-limited",
+            "supersedes": null
+          }
+        }
+      ],
+      "source": {
+        "title": "Diablo® IV",
+        "url": "https://store.steampowered.com/app/2344520/",
+        "attribution": "Steam user reviews",
+        "details": {
+          "queryScope": {
+            "json": "1",
+            "language": "all",
+            "purchase_type": "all",
+            "review_type": "all",
+            "filter": "recent",
+            "filter_offtopic_activity": "1",
+            "num_per_page": "1",
+            "cursor": "*"
+          },
+          "countMeaning": "Total reviews matching the query; not the returned page count"
+        },
+        "publicData": true
+      }
+    },
+    {
+      "mappingId": "steam-1716740",
+      "mappingRevision": 1,
+      "mappingFingerprint": "9a5e1cc13c8a776e745fee2d6a07cef05a43f1d885f5a50f8cd513b377233d30",
+      "target": {
+        "provider": "steam",
+        "id": "1716740"
+      },
+      "provider": "steam",
+      "providerId": "1716740",
+      "scope": "steam-product",
+      "status": "updated",
+      "error": null,
+      "checkedAt": "2026-10-20T21:17:08.628Z",
+      "observedAt": "2026-10-20T21:17:08.628Z",
+      "freshUntil": "2026-10-21T21:17:08.628Z",
+      "nextAttemptAt": null,
+      "observations": [
+        {
+          "schemaVersion": 1,
+          "id": "steam:1716740:steam-approval:9a5e1cc13c8a776e:745fee2d6a07",
+          "source": {
+            "provider": "steam",
+            "family": "steam-reviewers",
+            "upstreamId": "1716740",
+            "url": "https://store.steampowered.com/app/1716740/",
+            "label": "Steam approval",
+            "lineage": []
+          },
+          "type": "binary-approval",
+          "lane": "steam-approval",
+          "scope": {
+            "ref": {
+              "provider": "steam",
+              "id": "1716740"
+            },
+            "work": null,
+            "edition": null,
+            "platforms": [
+              "Steam product"
+            ],
+            "region": null,
+            "build": null,
+            "mapping": "reviewed-provider-reference",
+            "scoreScope": "steam-product"
+          },
+          "original": {
+            "value": 57,
+            "raw": 57,
+            "scale": {
+              "min": 0,
+              "max": 100
+            },
+            "positive": 100063,
+            "negative": 75740,
+            "count": 175803,
+            "countMeaning": "Reviews matching the recorded Steam query"
+          },
+          "dates": {
+            "publishedAt": null,
+            "observedAt": "2026-10-20T21:17:08.628Z",
+            "sourceUpdatedAt": null,
+            "windowFrom": null,
+            "windowTo": null
+          },
+          "provenance": {
+            "adapterVersion": "steam-review-summary-v1",
+            "checksum": "9a5e1cc13c8a776e745fee2d6a07cef05a43f1d885f5a50f8cd513b377233d30",
+            "fixture": null,
+            "extraction": "steam-approval",
+            "attribution": "Steam user reviews",
+            "access": "provider-api",
+            "reviewStatus": "verified-identity-scope-limited",
+            "supersedes": null
+          }
+        }
+      ],
+      "source": {
+        "title": "Starfield",
+        "url": "https://store.steampowered.com/app/1716740/",
+        "attribution": "Steam user reviews",
+        "details": {
+          "queryScope": {
+            "json": "1",
+            "language": "all",
+            "purchase_type": "all",
+            "review_type": "all",
+            "filter": "recent",
+            "filter_offtopic_activity": "1",
+            "num_per_page": "1",
+            "cursor": "*"
+          },
+          "countMeaning": "Total reviews matching the query; not the returned page count"
+        },
+        "publicData": true
+      }
+    }
+  ]
+}

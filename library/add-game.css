@@ -1,0 +1,71 @@
+/* "Add a game" (add-game.js). Built from the theme tokens, so it follows the chosen theme. */
+dialog.add-game {
+  width: min(720px, calc(100% - 32px)); height: min(680px, calc(100dvh - 48px)); max-height: none;
+  display: flex; flex-direction: column; padding: 0; overflow: hidden;
+  color: var(--text); background: var(--panel); border: 1px solid var(--line-strong, var(--line)); border-radius: var(--radius-lg, 16px);
+  box-shadow: 0 30px 90px -30px var(--shadow, #000a);
+}
+dialog.add-game:not([open]) { display: none; }
+dialog.add-game::backdrop { background: var(--overlay, #000a); backdrop-filter: blur(6px); }
+.add-game-head { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 16px 24px; border-bottom: 1px solid var(--line-soft, var(--line)); }
+.add-game-head h2 { margin: 0; font: 600 1.25rem/1.2 var(--font-display, inherit); }
+.add-game-body { flex: 1; display: flex; flex-direction: column; gap: 12px; min-height: 0; overflow-y: auto; padding: 20px 24px 24px; overscroll-behavior: contain; }
+
+/* Search */
+.add-game-search input { width: 100%; }
+.add-game-status { margin: 0; min-height: 1.4em; color: var(--muted); font-size: .875rem; }
+.add-game-results { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.add-game-results button { width: 100%; display: grid; grid-template-columns: 44px 1fr auto; align-items: center; gap: 14px; padding: 8px 12px 8px 8px; text-align: left; border-radius: var(--radius, 10px); }
+.add-game-thumb { width: 44px; aspect-ratio: 3 / 4; border-radius: var(--radius-sm, 6px); background: var(--art-bg, var(--raised)); overflow: hidden; }
+.add-game-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.add-game-result { display: grid; gap: 3px; min-width: 0; }
+.add-game-result strong, .add-game-result small { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.add-game-result small { color: var(--muted); }
+.add-game-badge { padding: 3px 8px; border: 1px solid var(--line); border-radius: 99px; color: var(--muted); font-size: .75rem; white-space: nowrap; }
+.add-game-foot { margin-top: auto; padding-top: 8px; }
+.add-game-manual { width: 100%; border-style: dashed; color: var(--muted); }
+.add-game-manual:hover { color: var(--text); }
+
+/* Details */
+.add-game-form { display: grid; grid-template-columns: 180px 1fr; gap: 16px 24px; align-content: start; }
+.add-game-cover { display: grid; gap: 8px; align-content: start; }
+.add-game-art { aspect-ratio: 3 / 4; display: grid; place-items: center; border: 1px solid var(--line); border-radius: var(--radius, 10px); background: var(--art-bg, var(--raised)); overflow: hidden; color: var(--muted); font-size: .8125rem; }
+.add-game-art img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.add-game-upload { position: relative; display: grid; place-items: center; min-height: 44px; padding: 9px 13px; border: 1px solid var(--line); border-radius: 8px; font-size: .875rem; text-align: center; cursor: pointer; }
+.add-game-upload:hover { background: var(--raised); border-color: var(--line-strong, var(--line)); }
+.add-game-upload:focus-within { outline: 2px solid var(--accent); outline-offset: 4px; }
+.add-game-upload input { position: absolute; inset: 0; opacity: 0; cursor: pointer; min-height: 0; }
+.add-game-fields { display: grid; gap: 14px; align-content: start; min-width: 0; }
+.add-game-fields .field input, .add-game-fields .field select { width: 100%; }
+.add-game-row { display: grid; grid-template-columns: 1fr 110px; gap: 12px; }
+.add-game-choose { display: grid; gap: 8px; color: var(--muted); font-size: .875rem; }
+.add-game-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.add-game-chips button { min-height: 36px; padding: 6px 12px; border-radius: 99px; }
+.add-game-chips button small { color: var(--muted); margin-left: 4px; }
+.add-game-chips button[aria-pressed="true"] { background: var(--accent-bg); border-color: var(--accent); color: var(--accent); }
+.add-game-dupe { margin: 0; padding: 10px 12px; border: 1px solid var(--accent-line, var(--line)); border-radius: var(--radius-sm, 6px); background: var(--accent-bg); color: var(--text); font-size: .8125rem; line-height: 1.5; }
+.add-game-from { margin: 0; color: var(--muted); font-size: .8125rem; }
+.add-game-from:empty { display: none; }
+.add-game-message { grid-column: 1 / -1; margin: 0; min-height: 1.4em; color: var(--muted); font-size: .875rem; }
+.add-game-actions { grid-column: 1 / -1; display: flex; justify-content: space-between; gap: 12px; }
+.add-game-actions .is-primary { margin-left: auto; background: var(--accent); border-color: var(--accent); color: var(--on-accent, var(--bg)); font-weight: 600; }
+.add-game-actions .is-primary:hover { background: var(--accent-hover, var(--accent)); }
+.add-game-danger { color: var(--danger, #e66); }
+
+@media (max-width: 560px) {
+  .add-game-head, .add-game-body { padding-left: 16px; padding-right: 16px; }
+  .add-game-form { grid-template-columns: 1fr; }
+  .add-game-cover { grid-template-columns: 96px 1fr; grid-template-rows: auto auto 1fr; }
+  .add-game-art { grid-row: 1 / 4; }
+  .add-game-row { grid-template-columns: 1fr 96px; }
+}
+
+/* Already own it: a duplicate blocks adding; the same platform from elsewhere asks first. */
+.add-game-dupe.is-blocking { border-color: var(--danger, #e66); background: transparent; }
+.add-game-dupe a { color: var(--accent); margin-left: 4px; }
+.add-game-confirm { display: flex; align-items: center; gap: 8px; margin-top: 8px; font-weight: 600; cursor: pointer; }
+.add-game-confirm input { min-height: 0; width: 18px; height: 18px; accent-color: var(--accent); }
+/* Fixing an imported game */
+.add-game-imported { margin: 0; padding: 10px 12px; border: 1px solid var(--line); border-radius: var(--radius-sm, 6px); color: var(--muted); font-size: .8125rem; line-height: 1.5; }
+.add-game-imported strong { color: var(--text); }
+.add-game-find { justify-self: start; }

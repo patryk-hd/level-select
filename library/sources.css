@@ -1,0 +1,83 @@
+/* Import games: one card per source, each with numbered steps. */
+.sources-sync { margin: 0 0 1.4rem; padding: 1rem 1.2rem; border: 1px solid var(--line); border-radius: var(--radius-lg, 16px); background: var(--panel); }
+.sources-sync:empty { display: none; }
+.sources-jump { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0 0 1.6rem; }
+.sources-jump a { padding: .45rem .9rem; border: 1px solid var(--line); border-radius: 999px; color: var(--text); text-decoration: none; font-size: .88rem; }
+.sources-jump a:hover { border-color: var(--accent-line); color: var(--accent); }
+
+.source-group { margin: 0 0 2.4rem; scroll-margin-top: 1rem; }
+.source-group > header { margin-bottom: 1rem; }
+.source-group > header h2 { font-size: 1.45rem; margin: 0 0 .3rem; }
+.source-group > header p { margin: 0; color: var(--muted); max-width: 62ch; line-height: 1.55; }
+.source-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); gap: 1rem; align-items: start; }
+
+.source-card { min-width: 0; padding: 1.2rem 1.25rem 1rem; border: 1px solid var(--line); border-radius: var(--radius-lg, 16px); background: var(--panel); }
+.source-card.is-connected { border-color: var(--success-line, var(--accent-line)); }
+.source-card > header { display: grid; grid-template-columns: auto 1fr auto; gap: .8rem; align-items: start; }
+.source-icon { display: grid; place-items: center; width: 2.4rem; height: 2.4rem; border-radius: var(--radius, 10px); background: var(--raised); font-size: 1.2rem; }
+.source-card h3 { margin: .15rem 0 .25rem; font-size: 1.1rem; }
+.source-tagline { margin: 0; color: var(--muted); font-size: .88rem; line-height: 1.5; }
+.source-state { padding: .2rem .55rem; border-radius: 999px; border: 1px solid var(--line); color: var(--muted); font-size: .72rem; font-weight: 600; white-space: nowrap; }
+.is-connected .source-state { color: var(--success); border-color: var(--success-line, var(--line)); background: var(--success-bg, transparent); }
+.source-status { margin: .9rem 0 0; padding: .6rem .75rem; border-radius: var(--radius-sm, 6px); background: var(--raised); font-size: .9rem; line-height: 1.5; overflow-wrap: anywhere; }
+.source-status small { color: var(--muted); }
+.source-status .warn { color: var(--danger); }
+.source-blocked { margin: .9rem 0 0; color: var(--muted); font-size: .88rem; }
+
+.source-steps { list-style: none; counter-reset: step; margin: 1rem 0 0; padding: 0; display: grid; gap: .65rem; }
+.source-steps li { counter-increment: step; display: grid; grid-template-columns: 1.7rem 1fr; gap: .6rem; align-items: start; font-size: .9rem; line-height: 1.55; }
+.step-mark { display: grid; place-items: center; width: 1.7rem; height: 1.7rem; border-radius: 50%; border: 1px solid var(--line-strong, var(--line)); color: var(--muted); font: 600 .78rem/1 var(--font-body, inherit); }
+.step-mark:empty::before { content: counter(step); }
+.source-steps .is-done .step-mark { background: var(--success); border-color: var(--success); color: var(--bg); }
+.source-steps .is-done > div { color: var(--muted); }
+.source-steps code, .source-card code { font-size: .82em; padding: .05rem .3rem; border-radius: 4px; background: var(--raised); overflow-wrap: anywhere; }
+.source-steps a, .source-card .data-note a { color: var(--accent); }
+
+.source-found { margin-top: 1rem; }
+.source-found p { margin: 0 0 .5rem; font-size: .9rem; }
+.source-actions { display: flex; flex-wrap: wrap; align-items: center; gap: .55rem; margin-top: 1rem; }
+.source-actions button, .source-form button {
+  min-height: 2.5rem; padding: .55rem 1rem; border: 1px solid var(--line); border-radius: var(--radius-sm, 6px); background: var(--raised); color: var(--text); font: inherit; font-size: .88rem; font-weight: 600; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center;
+}
+.source-actions button.is-primary, .source-form button.is-primary { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+.source-actions button:disabled, .source-form button:disabled { opacity: .55; cursor: not-allowed; }
+.source-form { display: flex; flex-wrap: wrap; align-items: flex-end; gap: .55rem; margin-top: 1rem; }
+.source-form label { flex: 1 1 14rem; display: grid; gap: .35rem; font-size: .85rem; color: var(--muted); }
+.source-form input { min-height: 2.5rem; padding: .5rem .7rem; border: 1px solid var(--line); border-radius: var(--radius-sm, 6px); background: var(--bg); color: var(--text); font: inherit; min-width: 0; }
+.source-more { margin-top: 1rem; border-top: 1px solid var(--line-soft, var(--line)); padding-top: .8rem; }
+.source-more > summary { cursor: pointer; font-size: .88rem; font-weight: 600; color: var(--accent); }
+.source-more[open] > summary { margin-bottom: .2rem; }
+.source-card .data-note { margin: .9rem 0 0; color: var(--muted); font-size: .8rem; line-height: 1.5; }
+.source-message { margin: .7rem 0 0; font-size: .88rem; line-height: 1.5; }
+.source-message:empty { display: none; }
+.source-folders { list-style: none; margin: 1rem 0 0; padding: 0; display: grid; gap: .4rem; }
+.source-folders:empty { display: none; }
+.source-folders li { display: flex; justify-content: space-between; align-items: center; gap: .6rem; padding: .45rem .6rem; border-radius: var(--radius-sm, 6px); background: var(--raised); }
+.source-folders .text-button { flex: none; }
+
+.drop-zone { position: relative; display: flex; align-items: center; gap: .8rem; margin-top: .9rem; padding: .9rem 1rem; border: 1.5px dashed var(--line-strong, var(--line)); border-radius: var(--radius, 10px); cursor: pointer; }
+.drop-zone:hover, .drop-zone.is-over { border-color: var(--accent); background: var(--accent-bg); }
+.drop-zone:focus-within { outline: 2px solid var(--accent); outline-offset: 2px; }
+.drop-zone input { position: absolute; inset: 0; opacity: 0; cursor: pointer; }
+.drop-icon { font-size: 1.4rem; color: var(--accent); }
+.drop-zone strong { display: block; font-size: .9rem; }
+.drop-zone small { color: var(--muted); font-size: .8rem; }
+
+:root[data-theme="arcade"] :is(.source-card, .sources-sync) { border-width: 2px; }
+:root[data-theme="arcade"] .step-mark { border-radius: 2px; }
+@media (max-width: 650px) { .source-card { padding: 1rem; } .source-card > header { grid-template-columns: auto 1fr; } .source-state { grid-column: 2; justify-self: start; } }
+
+/* "How did Level Select find this?" and the privacy notes. */
+.source-how { margin-top: .9rem; font-size: .84rem; }
+.source-how > summary { cursor: pointer; color: var(--muted); width: max-content; max-width: 100%; }
+.source-how > summary:hover { color: var(--accent); }
+.source-how p { margin: .5rem 0 0; color: var(--muted); line-height: 1.55; }
+.source-path code { display: inline-block; max-width: 100%; overflow-wrap: anywhere; }
+.sources-privacy { margin: 0 0 1.4rem; border: 1px solid var(--line); border-radius: var(--radius-lg, 16px); background: var(--panel); }
+.sources-privacy > summary { cursor: pointer; padding: .85rem 1.1rem; font-weight: 600; font-size: .92rem; }
+.sources-privacy[open] > summary { border-bottom: 1px solid var(--line-soft, var(--line)); }
+.sources-privacy-body { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr)); gap: 1rem 1.6rem; padding: 1rem 1.1rem 1.1rem; }
+.sources-privacy-body h3 { margin: 0 0 .5rem; font-size: .95rem; }
+.sources-privacy-body ul { margin: 0; padding-left: 1.1rem; display: grid; gap: .4rem; font-size: .86rem; line-height: 1.5; }
+.sources-privacy-body p { margin: .6rem 0 0; color: var(--muted); font-size: .82rem; }
+.sources-privacy-body code { font-size: .8em; padding: .05rem .3rem; border-radius: 4px; background: var(--raised); }

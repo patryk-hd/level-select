@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><script src="../theme.js"></script><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Import games — Level Select</title><meta name="theme-color" content="#141619">
+  <link rel="icon" href="../assets/favicon.svg?v=level-select"><link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../navigation.css"><link rel="stylesheet" href="sources.css"><script type="module" src="../navigation.js"></script>
+  <script type="module" src="sources.js"></script>
+<link rel="stylesheet" href="../controls.css">
+<link rel="stylesheet" href="../theme.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to Import games</a>
+<!-- shared-navigation:start -->
+<header class="site-mobile-header"><a class="site-brand" href="../library/backlog.html"><span class="site-brand-mark" aria-hidden="true">L</span><span>Level Select<small>Games across every era</small></span></a><button id="open-navigation" class="site-menu-button" type="button" aria-label="Open navigation" aria-controls="sidebar" aria-expanded="false">☰</button></header>
+<aside class="site-sidebar" id="sidebar" aria-label="Library navigation">
+<a class="site-brand" href="../library/backlog.html"><span class="site-brand-mark" aria-hidden="true">L</span><span>Level Select<small>Games across every era</small></span></a>
+<button id="close-navigation" class="site-menu-close" type="button" aria-label="Close navigation">×</button>
+<nav class="site-primary-nav" aria-label="Main">
+<a class="site-nav-link" data-section="backlog" href="../library/backlog.html"><span class="site-nav-symbol" aria-hidden="true">▷</span><span>Play</span></a>
+<a class="site-nav-link" data-section="owned" href="../library/index.html"><span class="site-nav-symbol" aria-hidden="true">▣</span><span>Library</span></a>
+<a class="site-nav-link" data-section="wishlist" href="../library/wishlist.html"><span class="site-nav-symbol" aria-hidden="true">☆</span><span>Wishlist</span></a>
+<a class="site-nav-link" data-section="recommendations" data-view="games" href="../index.html"><span class="site-nav-symbol" aria-hidden="true">▦</span><span>Game Atlas</span></a>
+<a class="site-nav-link" data-section="saved" data-view="collection" href="../index.html?view=collection"><span class="site-nav-symbol" aria-hidden="true">◈</span><span>My Atlas</span></a>
+<a class="site-nav-link" data-section="mods" href="../library/mods.html"><span class="site-nav-symbol" aria-hidden="true">✦</span><span>Mods</span></a>
+<a class="site-nav-link" data-section="sources" href="../library/sources.html" aria-current="page"><span class="site-nav-symbol" aria-hidden="true">⊕</span><span>Import games</span></a>
+</nav>
+<a class="player-card" id="player-card" href="../library/backlog.html?section=progress" hidden><span class="player-level" aria-hidden="true">1</span><span class="player-copy"><strong>Explorer</strong><small>0 XP</small><span class="xp-bar"><span class="xp-fill"></span></span></span></a>
+<details class="theme-picker"><summary><span data-theme-chip><span class="theme-chip" aria-hidden="true" style="--c1:#13120f;--c2:#26231e;--c3:#e8b96f"></span></span><span class="theme-picker-label">Theme</span><b data-theme-name>Modern</b><span class="theme-picker-caret" aria-hidden="true">▾</span></summary><div class="theme-menu" role="group" aria-label="Theme"><button type="button" data-theme-choice="modern" data-tone="dark" aria-pressed="true" title="Modern"><span class="theme-chip" aria-hidden="true" style="--c1:#13120f;--c2:#26231e;--c3:#e8b96f"></span><span><strong>Modern</strong><small>Calm dark gold. The default.</small></span></button><button type="button" data-theme-choice="midnight" data-tone="dark" aria-pressed="false" title="Midnight"><span class="theme-chip" aria-hidden="true" style="--c1:#000000;--c2:#2a2d34;--c3:#8ab4ff"></span><span><strong>Midnight</strong><small>Pure black with hairlines only, for OLED screens and late nights.</small></span></button><button type="button" data-theme-choice="arcade" data-tone="dark" aria-pressed="false" title="Arcade"><span class="theme-chip" aria-hidden="true" style="--c1:#140a30;--c2:#2b1b62;--c3:#ff5cad"></span><span><strong>Arcade</strong><small>Synthwave cabinet: neon purple, pixel type and a CRT glow.</small></span></button><button type="button" data-theme-choice="cyberpunk" data-tone="dark" aria-pressed="false" title="Cyberpunk"><span class="theme-chip" aria-hidden="true" style="--c1:#050b0d;--c2:#0f1f23;--c3:#fcee0a"></span><span><strong>Cyberpunk</strong><small>A 2077 HUD: teal screens, hazard yellow, cut corners.</small></span></button><button type="button" data-theme-choice="y2k" data-tone="dark" aria-pressed="false" title="Y2K"><span class="theme-chip" aria-hidden="true" style="--c1:#06122b;--c2:#16336a;--c3:#39c4ff"></span><span><strong>Y2K</strong><small>Millennium dashboards: glass, chrome and aqua glow.</small></span></button><button type="button" data-theme-choice="console" data-tone="light" aria-pressed="false" title="Console"><span class="theme-chip" aria-hidden="true" style="--c1:#e3e1e9;--c2:#ffffff;--c3:#5a45b3"></span><span><strong>Console</strong><small>A 16-bit living room: lilac plastic and face buttons.</small></span></button><button type="button" data-theme-choice="handheld" data-tone="light" aria-pressed="false" title="Handheld"><span class="theme-chip" aria-hidden="true" style="--c1:#c4cfa1;--c2:#306230;--c3:#8e2a52"></span><span><strong>Handheld</strong><small>The pocket classic: four greens and a dot-matrix screen.</small></span></button><button type="button" data-theme-choice="retro-pc" data-tone="light" aria-pressed="false" title="Retro PC"><span class="theme-chip" aria-hidden="true" style="--c1:#c3c3c3;--c2:#000080;--c3:#008080"></span><span><strong>Retro PC</strong><small>90s desktop: bevelled grey windows and navy title bars.</small></span></button><button type="button" data-theme-choice="anime" data-tone="light" aria-pressed="false" title="Anime"><span class="theme-chip" aria-hidden="true" style="--c1:#f6f0e4;--c2:#1f1a17;--c3:#c8301f"></span><span><strong>Anime</strong><small>A manga page: ink, vermilion seals and sakura.</small></span></button><button type="button" data-theme-choice="fantasy" data-tone="light" aria-pressed="false" title="Fantasy"><span class="theme-chip" aria-hidden="true" style="--c1:#efe3c8;--c2:#2b1d10;--c3:#b8862b"></span><span><strong>Fantasy</strong><small>An adventurer’s tome: parchment, gold leaf and wax seals.</small></span></button></div></details>
+<p class="site-nav-footer">Your library, your next game.<a class="site-nav-guide" data-phone-link href="../library/phone.html">On your phone</a><button type="button" class="site-nav-guide" data-open-guide>Setup guide</button></p>
+</aside>
+<button id="nav-scrim" class="site-nav-scrim" type="button" aria-label="Close navigation" hidden></button>
+<!-- shared-navigation:end -->
+  <main class="content" id="main" tabindex="-1" data-loading>
+    <header class="topbar"><div><p class="eyebrow">Your games, wherever they are</p><h1>Import games<span class="title-dot">.</span></h1>
+      <p class="section-summary">Connect what you already use. Level Select reads your games from it and keeps them up to date whenever you choose <strong>Update data</strong>. Everything stays on this computer.</p></div></header>
+    <section id="sourcesSync" class="sources-sync" aria-live="polite"></section>
+    <details class="sources-privacy"><summary>Privacy and permissions: what Level Select reads, and what it asks for</summary>
+      <div class="sources-privacy-body">
+        <section><h3>Read on this computer, never changed</h3><ul>
+          <li><strong>Steam:</strong> the list of accounts that signed in here (names and Steam IDs only; no passwords).</li>
+          <li><strong>GOG Galaxy:</strong> its library database, read from a temporary copy.</li>
+          <li><strong>ES-DE:</strong> its game lists, box art and settings.</li>
+          <li><strong>ROM folders</strong> you choose (file names only) and <strong>Playnite exports</strong> you drop here.</li></ul>
+          <p>Everything Level Select saves stays in <code>library/data</code> in its own folder.</p></section>
+        <section><h3>Sent over the internet</h3><ul>
+          <li><strong>Steam:</strong> your Steam ID (for the wishlist), your Web API key (for owned games), and game ids for prices and reviews.</li>
+          <li><strong>IGDB, Wikidata and VideoGamesCritic:</strong> game titles and ids, to fetch scores, awards and time to beat.</li></ul>
+          <p>Nothing else about you leaves this computer.</p></section>
+        <section><h3>Permissions on a new computer</h3><ul>
+          <li><strong>macOS:</strong> Steam, GOG Galaxy and ES-DE need no permission. If a ROM folder is on an external drive or in Desktop, Documents or Downloads, macOS asks once (“Level Select would like to access files…”): choose <strong>Allow</strong>. Changed your mind? System Settings → Privacy &amp; Security → Files &amp; Folders → Level Select (or Terminal, if you run <code>npm run dev</code>).</li>
+          <li><strong>Windows and Linux:</strong> no prompts. GOG Galaxy’s database is readable without administrator rights.</li>
+          <li><strong>Steam:</strong> the wishlist and owned games need your profile’s <em>Game details</em> set to Public. Owned games also need your Web API key (step 3).</li></ul></section>
+      </div>
+    </details>
+    <nav class="sources-jump" aria-label="Sources"><a href="#steam">Steam</a><a href="#launchers">GOG Galaxy &amp; Playnite</a><a href="#roms">ROMs</a><a href="#by-hand">By hand</a><a href="#scores">Scores</a></nav>
+    <div id="sourcesBody" class="sources-body"><p class="data-note">Looking for your games on this computer…</p></div>
+  </main>
+</body>
+</html>

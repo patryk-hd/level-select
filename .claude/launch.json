@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "retro-library-dev",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["scripts/serve.mjs"],
+      "env": { "RETRO_LIBRARY_PORT": "18765" },
+      "port": 18765
+    }
+  ]
+}

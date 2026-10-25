@@ -1,0 +1,25 @@
+.provider-ratings { margin: 1.4rem 0; padding-top: 1rem; border-top: 1px solid var(--line); overflow-wrap: anywhere; }
+.provider-ratings h4 { margin: 0 0 .8rem; font-size: 1rem; }
+.provider-rating { margin: .8rem 0; padding: 1rem; border: 1px solid var(--line); border-radius: .6rem; }
+.provider-rating h5 { margin: 0; font-size: 1rem; }
+.provider-rating p, .provider-ratings .provider-help { font-size: .85rem; line-height: 1.55; }
+.provider-rating dl { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); gap: .5rem .8rem; font-size: .85rem; }
+.provider-rating dt, .provider-rating dd { min-width: 0; margin: 0; }
+.provider-rating dt { opacity: .8; }
+.provider-rating a { color: inherit; text-decoration: underline; }
+.provider-cache-status, .provider-notice { color: var(--accent-hover); }
+.provider-ratings code { white-space: normal; }
+.ranking-summary { margin: 1rem 0; padding: .8rem 1rem; border: 1px solid var(--line-strong); border-radius: .6rem; font-size: .9rem; line-height: 1.6; }
+.ranking-summary[hidden] { display: none; }
+.ranking-summary a, .ranking-explanation a, .provider-credit { color: inherit; text-decoration: underline; }
+.ranking-explanation { margin: 1.2rem 0; padding: 1rem; border: 1px solid var(--line-strong); border-radius: .6rem; line-height: 1.6; overflow-wrap: anywhere; font-size: .9rem; }
+.ranking-explanation h4 { margin: 0 0 .5rem; }
+.provider-game-main { min-width: 0; }
+.provider-game-main .game-title-button { width: 100%; }
+.provider-credit { display: block; margin: .4rem 1rem; font-size: .8rem; }
+.methodology-page { color: #e6e8e5; background: #171c1e; font: 1rem/1.7 system-ui, sans-serif; margin: 0; }
+.methodology-page main { max-width: 52rem; margin: auto; padding: 2rem 1.2rem; }
+.methodology-page a { color: var(--accent-hover); }
+.methodology-page dt { font-weight: 700; margin-top: 1rem; }
+.methodology-page dd { margin: .3rem 0 1rem; }
+.methodology-page code { overflow-wrap: anywhere; }

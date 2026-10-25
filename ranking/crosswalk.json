@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "revision": 1,
+  "mappings": [
+    {
+      "id": "steam-1245620",
+      "provider": "steam",
+      "providerId": "1245620",
+      "target": {
+        "provider": "steam",
+        "id": "1245620"
+      },
+      "scope": "steam-product",
+      "expected": {
+        "steamId": "1245620"
+      },
+      "review": {
+        "status": "verified",
+        "reviewedAt": "2026-09-16T18:20:45.703Z",
+        "reason": "Explicit Steam product reference maps to the same Steam app ID; no title or platform inference."
+      }
+    },
+    {
+      "provider": "vgc",
+      "providerId": "1245620",
+      "scope": "work-context",
+      "expected": {
+        "names": [
+          "ELDEN RING"
+        ],
+        "steamId": "1245620"
+      },
+      "review": {
+        "status": "verified",
+        "reviewedAt": "2026-09-16T18:20:45.703Z",
+        "reason": "VGC detail explicitly links Steam app 1245620 and names ELDEN RING. Its broad platform list does not establish a platform-specific composite score.",
+        "url": "https://videogamescritic.com/api/v1/game/elden-ring"
+      },
+      "id": "vgc-elden-ring-steam",
+      "target": {
+        "provider": "steam",
+        "id": "1245620"
+      }
+    },
+    {
+      "provider": "vgc",
+      "providerId": "1245620",
+      "scope": "work-context",
+      "expected": {
+        "names": [
+          "ELDEN RING"
+        ],
+        "steamId": "1245620"
+      },
+      "review": {
+        "status": "verified",
+        "reviewedAt": "2026-09-16T18:20:45.703Z",
+        "reason": "VGC detail explicitly links Steam app 1245620 and names ELDEN RING. Its broad platform list does not establish a platform-specific composite score.",
+        "url": "https://videogamescritic.com/api/v1/game/elden-ring"
+      },
+      "id": "vgc-elden-ring-catalog-ps5",
+      "target": {
+        "provider": "catalog",
+        "id": "ps5-1e772489c042f49a"
+      }
+    }
+  ]
+}

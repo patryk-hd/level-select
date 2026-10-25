@@ -1,0 +1,1345 @@
+{
+ "schemaVersion": 1,
+ "fetchedAt": "2026-10-06T00:49:52.650Z",
+ "source": "Wikidata (CC0), English Wikipedia (CC BY-SA 4.0), Wikimedia Commons photos",
+ "systems": {
+  "nes": {
+   "item": "Q172742",
+   "tagline": "Third generation home video game console",
+   "page": "Nintendo Entertainment System",
+   "overview": "The Nintendo Entertainment System (NES) is a home video game console developed and marketed by Nintendo. It was released as the Family Computer (Famicom) in Japan on July 15, 1983, and as the NES in test markets in the United States on October 18, 1985, followed by a nationwide launch on September 27, 1986. The NES was distributed in Europe, Australia, and parts of Asia throughout the 1980s. It was Nintendo's first programmable home console, succeeding the Color TV-Game line of dedicated consoles, and primarily competed with Sega's Master System in the third generation of video game consoles.",
+   "manufacturer": [
+    "Nintendo"
+   ],
+   "released": "15 July 1983",
+   "discontinued": null,
+   "unitsSold": {
+    "amount": 61910000,
+    "asOf": "March 2022"
+   },
+   "cpu": [
+    "Ricoh 2A03"
+   ],
+   "predecessor": [
+    "Color TV-Game"
+   ],
+   "successor": [
+    "Super Nintendo Entertainment System"
+   ],
+   "image": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wikipedia%20NES%20PAL.jpg?width=640",
+    "page": "https://commons.wikimedia.org/wiki/File:Wikipedia_NES_PAL.jpg"
+   }
+  },
+  "snes": {
+   "item": "Q183259",
+   "tagline": "Fourth-generation home video game console by Nintendo",
+   "page": "Super Nintendo Entertainment System",
+   "overview": "The Super Nintendo Entertainment System (Super NES or SNES) is a home video game console developed and marketed by Nintendo. It was released as the Super Famicom (SFC) in Japan on November 21, 1990, as the Super NES in North America on August 23, 1991, and internationally throughout 1992. It was Nintendo's second programmable home console, following the Nintendo Entertainment System (NES). A fourth-generation console, the SNES primarily competed with the Sega Genesis in the console war, a fierce battle for market share in the United States and Europe.",
+   "manufacturer": [
+    "Nintendo"
+   ],
+   "released": "21 November 1990",
+   "discontinued": null,
+   "unitsSold": {
+    "amount": 49100000,
+    "asOf": "March 2022"
+   },
+   "cpu": [
+    "Ricoh 5A22"
+   ],
+   "predecessor": [
+    "Nintendo Entertainment System",
+    "Family Computer"
+   ],
+   "successor": [
+    "Nintendo 64"
+   ],
+   "image": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/SNES-Mod1-Console-Set.jpg?width=640",
+    "page": "https://commons.wikimedia.org/wiki/File:SNES-Mod1-Console-Set.jpg"
+   }
+  },
+  "n64": {
+   "item": "Q184839",
+   "tagline": "Fifth-generation home video game console by Nintendo",
+   "page": "Nintendo 64",
+   "overview": "The Nintendo 64 (N64) is a home video game console developed and marketed by Nintendo. It was released in Japan on June 23, 1996, in North America on September 29, 1996, and in Europe and Australia on March 1, 1997. It was Nintendo's third major home console, following the Super Nintendo Entertainment System, and competed with Sony's PlayStation and the Sega Saturn in the fifth generation of consoles. Nintendo began developing the N64 in 1993 in collaboration with Silicon Graphics.",
+   "manufacturer": [
+    "Nintendo"
+   ],
+   "released": "23 June 1996",
+   "discontinued": "7 August 2007",
+   "unitsSold": {
+    "amount": 32930000,
+    "asOf": "March 2022"
+   },
+   "cpu": [
+    "NEC VR4300"
+   ],
+   "predecessor": [
+    "Super Nintendo Entertainment System"
+   ],
+   "successor": [
+    "Nintendo GameCube"
+   ],
+   "image": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nintendo-64-wController-L.jpg?width=640",
+    "page": "https://commons.wikimedia.org/wiki/File:Nintendo-64-wController-L.jpg"
+   }
+  },
+  "gc": {
+   "item": "Q182172",
+   "tagline": "Sixth-generation home video game console by Nintendo",
+   "page": "GameCube",
+   "overview": "The GameCube is a home video game console developed and marketed by Nintendo. It was released in Japan on September 14, 2001, in North America on November 18, 2001, and in Europe on May 3, 2002. It was Nintendo's fourth major home console, succeeding the Nintendo 64, and competed with Sony's PlayStation 2 and Microsoft's Xbox in the sixth generation of game consoles. Nintendo began developing the GameCube in 1998 after entering a partnership with ArtX to design a graphics processing unit.",
+   "manufacturer": [
+    "Nintendo"
+   ],
+   "released": "14 September 2001",
+   "discontinued": "2007",
+   "unitsSold": {
+    "amount": 21740000,
+    "asOf": "March 2022"
+   },
+   "cpu": [
+    "Gekko"
+   ],
+   "predecessor": [
+    "Nintendo 64"
+   ],
+   "successor": [
+    "Wii"
+   ],
+   "image": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/GameCube-Set.jpg?width=640",
+    "page": "https://commons.wikimedia.org/wiki/File:GameCube-Set.jpg"
+   }
+  },
+  "wii": {
+   "item": "Q8079",
+   "tagline": "Seventh-generation home video game console by Nintendo",
+   "page": "Wii",
+   "overview": "The Wii ( WEE) is a home video game console developed and marketed by Nintendo. It was released on November 19, 2006, in North America, and in December 2006 for most other regions of the world. It is Nintendo's fifth major home game console, following the GameCube, and is a seventh-generation console alongside Microsoft's Xbox 360 and Sony's PlayStation 3. The Nintendo president, Satoru Iwata, focused on appealing to a broader audience through innovative gameplay, rather than competing with Microsoft and Sony on raw computational power.",
+   "manufacturer": [
+    "Foxconn",
+    "Nintendo"
+   ],
+   "released": "19 November 2006",
+   "discontinued": "2017",
+   "unitsSold": {
+    "amount": 101630000,
+    "asOf": "March 2022"
+   },
+   "cpu": [
+    "Broadway"
+   ],
+   "predecessor": [
+    "Nintendo GameCube"
+   ],
+   "successor": [
+    "Wii U"
+   ],
+   "image": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wii-console.jpg?width=640",
+    "page": "https://commons.wikimedia.org/wiki/File:Wii-console.jpg"
+   }
+  },
+  "wiiu": {
+   "item": "Q56942",
+   "tagline": "Eighth-generation home video game console by Nintendo",
+   "page": "Wii U",
+   "overview": "The Wii U ( WEE YOO) is a home video game console developed by Nintendo as the successor to the Wii. Released in late 2012, it was the first eighth-generation video game console and competed with Microsoft's Xbox One and Sony's PlayStation 4. The Wii U was the first Nintendo console to support high-definition (HD) graphics. The primary controller, the Wii U GamePad, features an embedded touchscreen, a D-pad, analog sticks, and action buttons.",
+   "manufacturer": [
+    "Nintendo"
+   ],
+   "released": "18 November 2012",
+   "discontinued": "2018",
+   "unitsSold": {
+    "amount": 13560000,
+    "asOf": "March 2022"
+   },
+   "cpu": [
+    "Espresso"
+   ],
+   "predecessor": [
+    "Wii"
+   ],
+   "successor": [
+    "Nintendo Switch"
+   ],
+   "image": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wii%20U%20Console%20and%20Gamepad.png?width=640",
+    "page": "https://commons.wikimedia.org/wiki/File:Wii_U_Console_and_Gamepad.png"
+   }
+  },
+  "gb": {
+   "item": "Q186437",
+   "tagline": "1989 portable video game console",
+   "page": "Game Boy",
+   "overview": "The Game Boy is a handheld game console developed and marketed by Nintendo. It was released in Japan on April 21, 1989, followed by North America on July 31, 1989 and Europe on September 28, 1990. Nintendo's first handheld to use ROM cartridges, it succeeded the Game & Watch line of handheld electronic games and competed with Sega's Game Gear, Atari's Lynx, and NEC's TurboExpress in the fourth generation of video game consoles. Nintendo Research & Development 1, under Gunpei Yokoi and Satoru Okada, designed the Game Boy.",
+   "manufacturer": [
+    "Nintendo"
+   ],
+   "released": "21 April 1989",
+   "discontinued": "23 March 2003",
+   "unitsSold": {
+    "amount": 118690000,
+    "asOf": "March 2022"
+   },
+   "cpu": [
+    "Sharp SM83"
+   ],
+   "predecessor": [
+    "Game & Watch series"
+   ],
+   "successor": [
+    "Game Boy Pocket",
+    "Game Boy Light",
+    "Game Boy Color"
+   ],
+   "image": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Game-Boy-FL.jpg?width=640",
+    "page": "https://commons.wikimedia.org/wiki/File:Game-Boy-FL.jpg"
+   }
+  },
+  "gbc": {
+   "item": "Q203992",
+   "tagline": "Handheld Nintendo video game console introduced in 1998",
+   "page": "Game Boy Color",
+   "overview": "The Game Boy Color (abbreviated as CGB or GBC) is an 8-bit handheld game console developed by Nintendo. It was released in Japan on October 21, 1998, and in international markets the following month. Compared with the original Game Boy, the Game Boy Color features a color TFT screen instead of monochrome, a CPU running at up to twice the speed, and four times as much memory. It is backward compatible with games developed for its predecessor.",
+   "manufacturer": [
+    "Nintendo"
+   ],
+   "released": "21 October 1998",
+   "discontinued": null,
+   "unitsSold": null,
+   "cpu": [
+    "Sharp SM83"
+   ],
+   "predecessor": [
+    "Game Boy",
+    "Game Boy Light",
+    "Game Boy Pocket"
+   ],
+   "successor": [
+    "Game Boy Advance"
+   ],
+   "image": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nintendo-Game-Boy-Color-FL.png?width=640",
+    "page": "https://commons.wikimedia.org/wiki/File:Nintendo-Game-Boy-Color-FL.png"
+   }
+  },
+  "gba": {
+   "item": "Q188642",
+   "tagline": "Handheld game console by Nintendo",
+   "page": "Game Boy Advance",
+   "overview": "The Game Boy Advance (GBA) is a handheld game console developed and marketed by Nintendo, which was released in Japan on March 21, 2001, and in other regions in June. It was later released in mainland China in 2004, under the name iQue Game Boy Advance. Compared to the Game Boy Color it succeeded, the console offered a significantly more powerful ARM7 processor and improved graphics, while retaining backward compatibility with games initially developed for its predecessor. The 32-bit GBA is part of the sixth generation of video game consoles, competing against Nokia's N-Gage and Bandai's Japan-only WonderSwan.",
+   "manufacturer": [
+    "Nintendo"
+   ],
+   "released": "21 March 2001",
+   "discontinued": "14 May 2010",
+   "unitsSold": {
+    "amount": 81510000,
+    "asOf": "March 2022"
+   },
+   "cpu": [
+    "ARM7TDMI"
+   ],
+   "predecessor": [
+    "Game Boy Color"
+   ],
+   "successor": [
+    "Nintendo DS"
+   ],
+   "image": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nintendo-Game-Boy-Advance-Purple-FL.jpg?width=640",
+    "page": "https://commons.wikimedia.org/wiki/File:Nintendo-Game-Boy-Advance-Purple-FL.jpg"
+   }
+  },
+  "ds": {
+   "item": "Q170323",
+   "tagline": "Nintendo handheld game console",
+   "page": "Nintendo DS",
+   "overview": "The Nintendo DS is a foldable handheld game console developed by Nintendo and released worldwide between 2004 and 2005. The \"DS\" in the name is an initialism for \"Dual Screen\", reflecting the system's most distinctive feature: two LCD screens working in tandem, with the lower screen functioning as a touchscreen. Both screens are housed in a clamshell design similar to that of the Game Boy Advance SP and some models of the Game & Watch series. The DS was among the first portable consoles to support wireless connectivity for local multiplayer over short distances, as well as online play through the now-defunct Nintendo Wi-Fi Connection service.",
+   "manufacturer": [
+    "Nintendo"
+   ],
+   "released": "21 November 2004",
+   "discontinued": "18 January 2007",
+   "unitsSold": {
+    "amount": 154020000,
+    "asOf": "March 2022"
+   },
+   "cpu": [],
+   "predecessor": [
+    "Game Boy Advance",
+    "Game Boy Advance SP"
+   ],
+   "successor": [
+    "Nintendo 3DS",
+    "Nintendo DSi",
+    "Nintendo DS Lite"
+   ],
+   "image": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nintendo-DS-Fat-Blue.jpg?width=640",
+    "page": "https://commons.wikimedia.org/wiki/File:Nintendo-DS-Fat-Blue.jpg"
+   }
+  },
+  "3ds": {
+   "item": "Q203597",
+   "tagline": "Portable 3D dual-screen handheld by Nintendo",
+   "page": "Nintendo 3DS",
+   "overview": "The Nintendo 3DS is a foldable dual-screen handheld game console developed and marketed by Nintendo. Announced in March 2010 and released beginning in early 2011, it succeeds the Nintendo DS and DSi. Building on the basic design of the DS, the 3DS retains the clamshell form factor and backward compatibility with Nintendo DS software, while introducing autostereoscopic 3D visuals that do not require special glasses. As an eighth-generation console, its primary competitor was Sony's PlayStation Vita.",
+   "manufacturer": [
+    "Nintendo"
+   ],
+   "released": "26 February 2011",
+   "discontinued": "16 September 2020",
+   "unitsSold": {
+    "amount": 75940000,
+    "asOf": "March 2022"
+   },
+   "cpu": [
+    "Original Nintendo 3DS CPU"
+   ],
+   "predecessor": [
+    "Nintendo DSi",
+    "Nintendo DS"
+   ],
+   "successor": [
+    "Nintendo Switch"
+   ],
+   "image": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nintendo-3DS-AquaOpen.jpg?width=640",
+    "page": "https://commons.wikimedia.org/wiki/File:Nintendo-3DS-AquaOpen.jpg"
+   }
+  },
+  "switch": {
+   "item": "Q19610114",
+   "tagline": "Hybrid video game console",
+   "page": "Nintendo Switch",
+   "overview": "The Nintendo Switch is a video game console developed by Nintendo and released worldwide in most regions on March 3, 2017. Released in the middle of the eighth generation of home consoles, the Switch succeeded the Wii U and competed with Sony's PlayStation 4 and Microsoft's Xbox One; it also competes with the ninth-generation consoles, the PlayStation 5 and Xbox Series X/S. The Switch is a tablet that can either be docked for home console use or used as a portable device, making it a hybrid console. Its wireless Joy-Con controllers function as two halves of a standard controller and alternatively as individual controllers, featuring buttons, directional analog sticks for user input, motion sensing, and tactile feedback. A pair can attach to the sides of the console for handheld play, attach to a grip accessory to provide the form of a separated gamepad, or be used unattached.",
+   "manufacturer": [
+    "Nintendo Platform Technology Development",
+    "Nintendo"
+   ],
+   "released": "3 March 2017",
+   "discontinued": null,
+   "unitsSold": {
+    "amount": 156590000,
+    "asOf": "June 2026"
+   },
+   "cpu": [
+    "NVIDIA Tegra X1"
+   ],
+   "predecessor": [
+    "Wii U",
+    "Nintendo 3DS"
+   ],
+   "successor": [
+    "Nintendo Switch 2"
+   ],
+   "image": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nintendo-Switch-Console-Docked-wJoyConRB.jpg?width=640",
+    "page": "https://commons.wikimedia.org/wiki/File:Nintendo-Switch-Console-Docked-wJoyConRB.jpg"
+   }
+  },
+  "switch2": {
+   "item": "Q122761124",
+   "tagline": "Video game console developed by Nintendo",
+   "page": "Nintendo Switch 2",
+   "overview": "The Nintendo Switch 2 is a video game console developed by Nintendo and released in most regions on June 5, 2025. Like the original Nintendo Switch, it can be used as a handheld, as a tablet, or connected via the dock to an external display. The Joy-Con 2 controllers can be used while magnetically attached or detached from the console. Compared to the original Switch, the Switch 2 has a larger liquid-crystal display (LCD), more internal storage, and updated graphics, controllers, and social features.",
+   "manufacturer": [
+    "Nintendo",
+    "Foxconn",
+    "Samsung Electronics",
+    "Nvidia"
+   ],
+   "released": "5 June 2025",
+   "discontinued": null,
+   "unitsSold": {
+    "amount": 23680000,
+    "asOf": "June 2026"
+   },
+   "cpu": [],
+   "predecessor": [
+    "Nintendo Switch"
+   ],
+   "successor": [],
+   "image": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nintendo%20Switch%202%20console%20in%20handheld%20mode.png?width=640",
+    "page": "https://commons.wikimedia.org/wiki/File:Nintendo_Switch_2_console_in_handheld_mode.png"
+   }
+  },
+  "ps1": {
+   "item": "Q10677",
+   "tagline": "1994 5th generation video game console by Sony Interactive Entertainment",
+   "page": "PlayStation (console)",
+   "overview": "The PlayStation (codenamed PSX, abbreviated as PS, and retronymically PS1 or PS one) is a home video game console developed and marketed by Sony Computer Entertainment. It was released in Japan on 3 December 1994, followed by North America on 9 September 1995, Europe on 29 September 1995, and other regions following thereafter. As a fifth-generation console, the PlayStation primarily competed with the Nintendo 64 and the Sega Saturn. Sony began developing the PlayStation after a failed venture with Nintendo to create a CD-ROM peripheral for the Super Nintendo Entertainment System in the early 1990s.",
+   "manufacturer": [
+    "Sony Interactive Entertainment"
+   ],
+   "released": "3 December 1994",
+   "discontinued": "23 March 2006",
+   "unitsSold": {
+    "amount": 102400000,
+    "asOf": "March 2012"
+   },
+   "cpu": [
+    "R3000"
+   ],
+   "predecessor": [
+    "Super NES CD-ROM"
+   ],
+   "successor": [
+    "PlayStation 2",
+    "PS one"
+   ],
+   "image": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/PSX-Console-wController.jpg?width=640",
+    "page": "https://commons.wikimedia.org/wiki/File:PSX-Console-wController.jpg"
+   }
+  },
+  "ps2": {
+   "item": "Q10680",
+   "tagline": "Sony's second home video game console, part of the sixth generation of consoles",
+   "page": "PlayStation 2",
+   "overview": "The PlayStation 2 (PS2) is a home video game console developed by Sony Computer Entertainment. It was first released in Japan on March 4, 2000, in North America on October 26, in Europe on November 24, in Australia on November 30, and other regions thereafter. It is the successor to the original PlayStation as well as the second installment in the PlayStation brand of consoles. As a sixth-generation console, it competed with Nintendo's GameCube, Sega's Dreamcast, and Microsoft's Xbox.",
+   "manufacturer": [
+    "Sony Interactive Entertainment"
+   ],
+   "released": "4 March 2000",
+   "discontinued": "4 January 2013",
+   "unitsSold": {
+    "amount": 160000000,
+    "asOf": "November 2024"
+   },
+   "cpu": [
+    "Emotion Engine"
+   ],
+   "predecessor": [
+    "PlayStation"
+   ],
+   "successor": [
+    "PlayStation 3"
+   ],
+   "image": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/PS2-Versions.jpg?width=640",
+    "page": "https://commons.wikimedia.org/wiki/File:PS2-Versions.jpg"
+   }
+  },
+  "ps3": {
+   "item": "Q10683",
+   "tagline": "Video game console developed Sony Interactive Entertainment",
+   "page": "PlayStation 3",
+   "overview": "The PlayStation 3 (PS3) is a home video game console developed and marketed by Sony Computer Entertainment (SCE). It is the successor to the PlayStation 2, and both are part of the PlayStation brand of consoles. The PS3 was first released on November 11, 2006, in Japan, followed by November 17 in North America and March 23, 2007, in Europe and Australasia. It competed primarily with Microsoft's Xbox 360 and Nintendo's Wii as part of the seventh generation of video game consoles.",
+   "manufacturer": [
+    "Sony Interactive Entertainment"
+   ],
+   "released": "11 November 2006",
+   "discontinued": "May 2017",
+   "unitsSold": {
+    "amount": 87000000,
+    "asOf": null
+   },
+   "cpu": [
+    "Cell"
+   ],
+   "predecessor": [
+    "PlayStation 2"
+   ],
+   "successor": [
+    "PlayStation 4"
+   ],
+   "image": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/PS3Versions.png?width=640",
+    "page": "https://commons.wikimedia.org/wiki/File:PS3Versions.png"
+   }
+  },
+  "ps4": {
+   "item": "Q5014725",
+   "tagline": "Sony's fourth home video game console, part of the eighth generation of consoles",
+   "page": "PlayStation 4",
+   "overview": "The PlayStation 4 (PS4) is a home video game console developed by Sony Interactive Entertainment. Announced as the successor to the PlayStation 3 in February 2013, it was launched on November 15, 2013, in North America, November 29, 2013, in Europe, South America, and Australia, and on February 22, 2014, in Japan. A console of the eighth generation, it competed with Microsoft's Xbox One and Nintendo's Wii U and Switch. Moving away from the more complex Cell microarchitecture of its predecessor, the console features an APU from AMD built upon the x86-64 architecture, which can theoretically peak at 1.84 teraflops; AMD stated that it was the \"most powerful\" APU it had developed to date.",
+   "manufacturer": [
+    "Sony Interactive Entertainment"
+   ],
+   "released": "15 November 2013",
+   "discontinued": null,
+   "unitsSold": {
+    "amount": 117200000,
+    "asOf": "March 2022"
+   },
+   "cpu": [
+    "PlayStation 4 APU"
+   ],
+   "predecessor": [
+    "PlayStation 3"
+   ],
+   "successor": [
+    "PlayStation 5"
+   ],
+   "image": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/PS4-Console-wDS4.jpg?width=640",
+    "page": "https://commons.wikimedia.org/wiki/File:PS4-Console-wDS4.jpg"
+   }
+  },
+  "ps5": {
+   "item": "Q63184502",
+   "tagline": "Sony's ninth-generation and fifth home video game console",
+   "page": "PlayStation 5",
+   "overview": "The PlayStation 5 (PS5) is a home video game console developed by Sony Interactive Entertainment as the fifth iteration of their PlayStation brand. It was announced as the successor to the PlayStation 4 in April 2019, and was launched in Australia, Japan, New Zealand, North America, and South Korea on November 12, 2020, and worldwide a week later. The PS5 is part of the ninth generation of video game consoles, along with Microsoft's Xbox Series X/S consoles, which were released the same month. The base model includes an optical disc drive compatible with Ultra HD Blu-ray discs.",
+   "manufacturer": [
+    "Sony Group"
+   ],
+   "released": "12 November 2020",
+   "discontinued": null,
+   "unitsSold": {
+    "amount": 95300000,
+    "asOf": "June 2026"
+   },
+   "cpu": [
+    "Zen 2"
+   ],
+   "predecessor": [
+    "PlayStation 4"
+   ],
+   "successor": [],
+   "image": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/PlayStation%205%20and%20DualSense%20with%20transparent%20background.png?width=640",
+    "page": "https://commons.wikimedia.org/wiki/File:PlayStation_5_and_DualSense_with_transparent_background.png"
+   }
+  },
+  "psp": {
+   "item": "Q170325",
+   "tagline": "Handheld game console by Sony",
+   "page": "PlayStation Portable",
+   "overview": "The PlayStation Portable (PSP) is a handheld game console developed and marketed by Sony Computer Entertainment. It was first released in Japan on December 12, 2004, in North America on March 24, 2005, and in PAL regions on September 1, 2005, and is the first handheld installment in the PlayStation line of consoles. As a seventh generation console, the PSP mainly competed with the Nintendo DS. Development of the PSP was announced during E3 2003, and the console was unveiled at a Sony press conference on May 11, 2004. The system was the most powerful portable video game console at the time of its introduction, and was the first viable competitor to Nintendo's handheld consoles after many challengers such as Nokia's N-Gage and Sega's Game Gear had failed or underperformed.",
+   "manufacturer": [
+    "Sony Interactive Entertainment"
+   ],
+   "released": "12 December 2004",
+   "discontinued": "June 2014",
+   "unitsSold": {
+    "amount": 82000000,
+    "asOf": null
+   },
+   "cpu": [
+    "R4000"
+   ],
+   "predecessor": [
+    "PocketStation"
+   ],
+   "successor": [
+    "PlayStation Vita",
+    "PSP Slim",
+    "PSP 3000",
+    "PSP Go",
+    "PlayStation Portable E1000"
+   ],
+   "image": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Psp-1000.jpg?width=640",
+    "page": "https://commons.wikimedia.org/wiki/File:Psp-1000.jpg"
+   }
+  },
+  "vita": {
+   "item": "Q188808",
+   "tagline": "Portable game console developed by Sony Computer Entertainment",
+   "page": "PlayStation Vita",
+   "overview": "The PlayStation Vita (PS Vita) is a handheld game console developed and marketed by Sony Computer Entertainment. It was first released in Japan on December 17, 2011, then in other international territories on February 22, 2012, and was produced until discontinuation on March 1, 2019. The console is the successor to the PlayStation Portable (PSP), and a part of the PlayStation brand of gaming devices; as part of the eighth generation of video game consoles, it primarily competed with the Nintendo 3DS. The original model of the handheld includes a 5-inch (130 mm) OLED multi-touch capacitive touchscreen, a rear touchpad, two analog joysticks, and front and shoulder push-button input, and supports Bluetooth and Wi-Fi as standard while a variant model was sold with an additional 3G modem. The Vita features a quad-core ARM Cortex-A9 MPCore CPU and a quad-core SGX543MP GPU. The PS Vita 2000 series, a revised version of the system, was released across 2013 and 2014.",
+   "manufacturer": [
+    "Sony Interactive Entertainment"
+   ],
+   "released": "17 December 2011",
+   "discontinued": "1 March 2019",
+   "unitsSold": {
+    "amount": 15000000,
+    "asOf": null
+   },
+   "cpu": [
+    "ARM Cortex-A9"
+   ],
+   "predecessor": [
+    "PlayStation Portable"
+   ],
+   "successor": [],
+   "image": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/PlayStation-Vita-1101-FL.jpg?width=640",
+    "page": "https://commons.wikimedia.org/wiki/File:PlayStation-Vita-1101-FL.jpg"
+   }
+  },
+  "sg1000": {
+   "item": "Q1136956",
+   "tagline": "Home video game console developed by Sega",
+   "page": "SG-1000",
+   "overview": "The SG-1000 is a home video game console manufactured by Sega. It was Sega's first entry into the home video game hardware business. Developed in response to a downturn in arcades starting in 1982, the SG-1000 was created on the advice of Hayao Nakayama, president of Sega's Japanese arm, and was released on July 15, 1983, the same day that Nintendo released the Family Computer in Japan. It also had a limited release in Australia and New Zealand.",
+   "manufacturer": [
+    "Sega"
+   ],
+   "released": "15 July 1983",
+   "discontinued": null,
+   "unitsSold": {
+    "amount": 162000,
+    "asOf": null
+   },
+   "cpu": [
+    "NEC µPD780C"
+   ],
+   "predecessor": [],
+   "successor": [
+    "Sega Master System",
+    "Sega Mark III",
+    "SG-1000 II"
+   ],
+   "image": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sega-SG-1000-Console-Set.png?width=640",
+    "page": "https://commons.wikimedia.org/wiki/File:Sega-SG-1000-Console-Set.png"
+   }
+  },
+  "ms": {
+   "item": "Q209868",
+   "tagline": "Third-generation home video game console developed by Sega",
+   "page": "Master System",
+   "overview": "The Master System is an 8-bit home video game console manufactured and developed by Sega. It was originally a remodeled export version of the Sega Mark III, the third iteration of the SG-1000 series of consoles, released in Japan on October 20, 1985. The Master System was launched in North America in September 1986, followed by Europe in August 1987, South Korea in April 1989, and Brazil in September 1989. A Japanese version was launched on October 23, 1987, with additions including a built-in FM audio chip, a rapid-fire switch, and a dedicated port for the 3D glasses.",
+   "manufacturer": [
+    "Sega",
+    "Tectoy"
+   ],
+   "released": "September 1986",
+   "discontinued": null,
+   "unitsSold": null,
+   "cpu": [
+    "Zilog Z80"
+   ],
+   "predecessor": [
+    "SG-1000",
+    "Sega Mark III"
+   ],
+   "successor": [
+    "Sega Genesis"
+   ],
+   "image": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sega-Master-System-Set.png?width=640",
+    "page": "https://commons.wikimedia.org/wiki/File:Sega-Master-System-Set.png"
+   }
+  },
+  "md": {
+   "item": "Q10676",
+   "tagline": "Fourth-generation home video game console developed by Sega",
+   "page": "Sega Genesis",
+   "overview": "The Sega Genesis, known as the Mega Drive outside North America, is a 16-bit fourth generation home video game console developed and sold by Sega. It was Sega's third console and the successor to the Master System. Sega released it in October 1988 in Japan as the Mega Drive, and in August 1989 in North America as the Genesis. In 1990, it was distributed as the Mega Drive by Virgin Mastertronic in Europe, Sega Ozisoft in Australasia, and Tectoy in Brazil.",
+   "manufacturer": [
+    "Sega"
+   ],
+   "released": "29 October 1988",
+   "discontinued": null,
+   "unitsSold": {
+    "amount": 39800000,
+    "asOf": null
+   },
+   "cpu": [
+    "Motorola 68000",
+    "Zilog Z80"
+   ],
+   "predecessor": [
+    "Sega Master System",
+    "Sega Mark III"
+   ],
+   "successor": [
+    "Sega 32X",
+    "Sega CD/Mega CD",
+    "Sega Saturn"
+   ],
+   "image": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sega-Genesis-NA-Mk2-Console-Set.png?width=640",
+    "page": "https://commons.wikimedia.org/wiki/File:Sega-Genesis-NA-Mk2-Console-Set.png"
+   }
+  },
+  "gg": {
+   "item": "Q751719",
+   "tagline": "Handheld game console developed by Sega",
+   "page": "Game Gear",
+   "overview": "The Game Gear is a handheld game console developed and marketed by Sega. It was released in Japan on October 6, 1990, in North America and Europe in April 1991, and in Australia in 1992. The Game Gear was the first handheld console by Sega and competed with Game Boy from Nintendo, Lynx from Atari, and TurboExpress from NEC in the fourth generation of video game consoles. Sega rushed the 8-bit Game Gear to market to compete with the Game Boy.",
+   "manufacturer": [
+    "Sega"
+   ],
+   "released": "6 October 1990",
+   "discontinued": "30 April 1997",
+   "unitsSold": {
+    "amount": 10620000,
+    "asOf": null
+   },
+   "cpu": [
+    "Zilog Z80"
+   ],
+   "predecessor": [],
+   "successor": [
+    "Sega Nomad"
+   ],
+   "image": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Game-Gear-Handheld.jpg?width=640",
+    "page": "https://commons.wikimedia.org/wiki/File:Game-Gear-Handheld.jpg"
+   }
+  },
+  "scd": {
+   "item": "Q1047516",
+   "tagline": "Add-on for the Sega Genesis/Mega Drive video game console",
+   "page": "Sega CD",
+   "overview": "The Sega CD, known as Mega-CD in most regions outside North America and Brazil, is a CD-ROM peripheral and format for the Sega Genesis produced by Sega as part of the fourth generation of video game consoles. Originally released in Japan on December 12, 1991, it came to North America on October 15, 1992, and the rest of the world in 1993. The Sega CD plays CD-based games and adds hardware functionality such as a faster CPU and a custom graphics chip for enhanced sprite scaling and rotation. It can also play audio CDs and CD+G discs.",
+   "manufacturer": [
+    "Sega"
+   ],
+   "released": "12 December 1991",
+   "discontinued": "1996",
+   "unitsSold": {
+    "amount": 6000000,
+    "asOf": null
+   },
+   "cpu": [
+    "Motorola 68000"
+   ],
+   "predecessor": [
+    "Sega Genesis"
+   ],
+   "successor": [
+    "Sega Saturn"
+   ],
+   "image": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sega-Genesis-CD-Model-1-Bare.jpg?width=640",
+    "page": "https://commons.wikimedia.org/wiki/File:Sega-Genesis-CD-Model-1-Bare.jpg"
+   }
+  },
+  "32x": {
+   "item": "Q1063978",
+   "tagline": "Add-on for the Sega Genesis home video game console",
+   "page": "32X",
+   "overview": "The 32X is an add-on for the Sega Genesis video game console. Codenamed \"Project Mars\", it was designed to expand the power of the Genesis and serve as a transitional console into the 32-bit era until the release of the Sega Saturn. The 32X uses its own ROM cartridges and has its own library of games. It was distributed under the name Super 32X in Japan and South Korea, Genesis 32X in North America, Mega 32X in Brazil, and Mega Drive 32X in all other regions.",
+   "manufacturer": [
+    "Sega"
+   ],
+   "released": "21 November 1994",
+   "discontinued": "1996",
+   "unitsSold": {
+    "amount": 665000,
+    "asOf": null
+   },
+   "cpu": [],
+   "predecessor": [
+    "Sega CD/Mega CD"
+   ],
+   "successor": [
+    "Sega Saturn"
+   ],
+   "image": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sega-Genesis-32X-01.jpg?width=640",
+    "page": "https://commons.wikimedia.org/wiki/File:Sega-Genesis-32X-01.jpg"
+   }
+  },
+  "saturn": {
+   "item": "Q200912",
+   "tagline": "Home video game console",
+   "page": "Sega Saturn",
+   "overview": "The Sega Saturn is a home video game console developed by Sega and released on November 22, 1994, in Japan, May 11, 1995, in North America, and July 8, 1995, in Europe. Part of the fifth generation of video game consoles, it is the successor to the successful Genesis. The Saturn has a dual-CPU architecture and eight processors. Its games are in CD-ROM format, including several ports of arcade games and original games.",
+   "manufacturer": [
+    "Sega"
+   ],
+   "released": "22 November 1994",
+   "discontinued": "2000",
+   "unitsSold": {
+    "amount": 9500000,
+    "asOf": null
+   },
+   "cpu": [
+    "SH-2"
+   ],
+   "predecessor": [
+    "Sega Genesis"
+   ],
+   "successor": [
+    "Dreamcast"
+   ],
+   "image": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sega-Saturn-Console-Set-Mk1.png?width=640",
+    "page": "https://commons.wikimedia.org/wiki/File:Sega-Saturn-Console-Set-Mk1.png"
+   }
+  },
+  "dc": {
+   "item": "Q184198",
+   "tagline": "Sixth-generation home video game console developed by Sega",
+   "page": "Dreamcast",
+   "overview": "The Dreamcast is the final home video game console manufactured by Sega. It was released in Japan on November 27, 1998, and worldwide in late 1999. It succeeded the Sega Saturn and was the first sixth-generation console, preceding Sony's PlayStation 2, Nintendo's GameCube, and Microsoft's Xbox. A team led by Hideki Sato began developing the Dreamcast in 1997.",
+   "manufacturer": [
+    "Sega"
+   ],
+   "released": "27 November 1998",
+   "discontinued": "14 February 2002",
+   "unitsSold": {
+    "amount": 9130000,
+    "asOf": null
+   },
+   "cpu": [
+    "SuperH"
+   ],
+   "predecessor": [
+    "Sega Saturn"
+   ],
+   "successor": [],
+   "image": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dreamcast-Console-Set.jpg?width=640",
+    "page": "https://commons.wikimedia.org/wiki/File:Dreamcast-Console-Set.jpg"
+   }
+  },
+  "atari2600": {
+   "item": "Q206261",
+   "tagline": "Home video game console by Atari",
+   "page": "Atari 2600",
+   "overview": "The Atari 2600 is a home video game console developed and produced by Atari, Inc. Released c. September 1977 as the Atari Video Computer System (Atari VCS), it popularized microprocessor-based hardware and games stored on swappable ROM cartridges, a format first used with the Fairchild Channel F in 1976. The VCS was bundled with two joystick controllers, a conjoined pair of paddle controllers, and a game cartridge—initially Combat and later Pac-Man.",
+   "manufacturer": [
+    "Atari, Inc."
+   ],
+   "released": "September 1977",
+   "discontinued": null,
+   "unitsSold": {
+    "amount": 30000000,
+    "asOf": null
+   },
+   "cpu": [
+    "MOS 6507"
+   ],
+   "predecessor": [
+    "Atari Home Pong series"
+   ],
+   "successor": [
+    "Atari 5200",
+    "Atari 7800"
+   ],
+   "image": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Atari-2600-Light-Sixer-FL.jpg?width=640",
+    "page": "https://commons.wikimedia.org/wiki/File:Atari-2600-Light-Sixer-FL.jpg"
+   }
+  },
+  "atari5200": {
+   "item": "Q743222",
+   "tagline": "Home video game console",
+   "page": "Atari 5200",
+   "overview": "The Atari 5200 is a home video game console introduced in 1982 by Atari, Inc. as a higher-end complement for the popular Atari Video Computer System. The VCS was renamed to Atari 2600 at the time of the 5200's launch. Created to compete with Mattel's Intellivision, the 5200 wound up a direct competitor of ColecoVision shortly after its release.",
+   "manufacturer": [
+    "Atari Corporation",
+    "Atari"
+   ],
+   "released": "November 1982",
+   "discontinued": "21 May 1984",
+   "unitsSold": {
+    "amount": 1000000,
+    "asOf": null
+   },
+   "cpu": [
+    "MOS Technology 6502"
+   ],
+   "predecessor": [
+    "Atari 2600"
+   ],
+   "successor": [
+    "Atari 7800"
+   ],
+   "image": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Atari-5200-Console-Set.png?width=640",
+    "page": "https://commons.wikimedia.org/wiki/File:Atari-5200-Console-Set.png"
+   }
+  },
+  "atari7800": {
+   "item": "Q753600",
+   "tagline": "Home video game console",
+   "page": "Atari 7800",
+   "overview": "The Atari 7800 ProSystem, or simply the Atari 7800, is a home video game console released by Atari Corporation in May 1986 as the successor to both the Atari 2600 and Atari 5200. It can run almost all Atari 2600 cartridges, making it the first console with backward compatibility. It shipped with a two button controller, instead of the 2600-standard Atari CX40 joystick, and with Pole Position II as the pack-in game. The European model has a gamepad instead of a joystick.",
+   "manufacturer": [
+    "Atari Corporation",
+    "Atari"
+   ],
+   "released": "May 1986",
+   "discontinued": "1 January 1992",
+   "unitsSold": null,
+   "cpu": [
+    "Atari SALLY"
+   ],
+   "predecessor": [
+    "Atari 5200"
+   ],
+   "successor": [
+    "Atari XEGS",
+    "Atari Jaguar"
+   ],
+   "image": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Atari-7800-Console-Set.png?width=640",
+    "page": "https://commons.wikimedia.org/wiki/File:Atari-7800-Console-Set.png"
+   }
+  },
+  "lynx": {
+   "item": "Q753657",
+   "tagline": "Handheld game console developed by Atari Corporation and Epyx",
+   "page": "Atari Lynx",
+   "overview": "The Atari Lynx is a fourth-generation handheld game console released by Atari Corporation in September 1989 in North America and 1990 in Europe and Japan. It was the first handheld game console with a color liquid-crystal display. Powered by a 4 MHz 65C02 8-bit CPU and a custom 16-bit blitter, the Lynx was more advanced than Nintendo's monochrome Game Boy, released five months earlier. It also competed with Sega's Game Gear and NEC's TurboExpress, released the following year.",
+   "manufacturer": [
+    "Atari Corporation"
+   ],
+   "released": "1 September 1989",
+   "discontinued": "1996",
+   "unitsSold": {
+    "amount": 5000000,
+    "asOf": null
+   },
+   "cpu": [
+    "WDC 65C02"
+   ],
+   "predecessor": [
+    "Atari XEGS"
+   ],
+   "successor": [
+    "Atari Lynx II"
+   ],
+   "image": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Atari-Lynx-I-Handheld.png?width=640",
+    "page": "https://commons.wikimedia.org/wiki/File:Atari-Lynx-I-Handheld.png"
+   }
+  },
+  "jaguar": {
+   "item": "Q650601",
+   "tagline": "Fifth-generation home video game console by Atari",
+   "page": "Atari Jaguar",
+   "overview": "The Atari Jaguar is a home video game console developed by Atari Corporation and released in North America in November 1993. Atari marketed it as the world's first 64-bit game system, drawing controversy as some argued that this configuration did not meet the definition of a 64-bit system. The Jaguar launched with Cybermorph as the pack-in game. A total of 63 licensed games (50 on cartridge, 13 on CD-ROM) were released for the system prior to its discontinuation in 1996.",
+   "manufacturer": [
+    "Atari Corporation",
+    "Atari"
+   ],
+   "released": "23 November 1993",
+   "discontinued": "1996",
+   "unitsSold": {
+    "amount": 100000,
+    "asOf": null
+   },
+   "cpu": [
+    "Motorola 68000",
+    "Motorola 68000 family"
+   ],
+   "predecessor": [
+    "Atari Lynx",
+    "Atari 7800"
+   ],
+   "successor": [
+    "Atari Jaguar CD",
+    "Atari Flashback series"
+   ],
+   "image": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Atari-Jaguar-Console-Set.jpg?width=640",
+    "page": "https://commons.wikimedia.org/wiki/File:Atari-Jaguar-Console-Set.jpg"
+   }
+  },
+  "tg16": {
+   "item": "Q1057377",
+   "tagline": "Fourth-generation home video game console",
+   "page": "TurboGrafx-16",
+   "overview": "The TurboGrafx-16, known as the PC Engine outside North America, is a home video game console developed by Hudson Soft and manufactured by NEC. It was released in Japan in 1987 and in North America in 1989. The first console of the fourth generation, it launched in Japan to compete with Nintendo's Family Computer, but its delayed U.S. debut placed it against the more advanced Sega Genesis and later the Super NES. The TurboGrafx-16 features an 8-bit CPU paired with dual 16-bit graphics processors, and supports up to 482 on-screen colors from a palette of 512. The \"16\" in the console’s North American branding was criticized as misleading. With dimensions of 14 by 14 by 3.5 centimeters (5.5 in × 5.5 in × 1.4 in), the PC Engine remains the smallest major home console ever released.",
+   "manufacturer": [
+    "NEC"
+   ],
+   "released": "30 October 1987",
+   "discontinued": null,
+   "unitsSold": {
+    "amount": 10000000,
+    "asOf": null
+   },
+   "cpu": [
+    "Hudson Soft HuC6280"
+   ],
+   "predecessor": [],
+   "successor": [
+    "PC Engine SuperGrafx",
+    "PC-FX"
+   ],
+   "image": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/PC%20Engine.jpg?width=640",
+    "page": "https://commons.wikimedia.org/wiki/File:PC_Engine.jpg"
+   }
+  },
+  "pcecd": {
+   "item": "Q10854461",
+   "tagline": "Add-on for the PC Engine video game console",
+   "page": "TurboGrafx-CD",
+   "overview": null,
+   "manufacturer": [],
+   "released": null,
+   "discontinued": null,
+   "unitsSold": null,
+   "cpu": [],
+   "predecessor": [],
+   "successor": [
+    "Super CD-ROM2"
+   ],
+   "image": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/NEC-TurboGrafx-16-CD-FL.jpg?width=640",
+    "page": "https://commons.wikimedia.org/wiki/File:NEC-TurboGrafx-16-CD-FL.jpg"
+   }
+  },
+  "neogeo": {
+   "item": "Q1054350",
+   "tagline": "Cartridge-based arcade system board and home video game console developed by SNK",
+   "page": "Neo Geo",
+   "overview": "The Neo Geo (Greek for 'New World'), stylized as NEO•GEO, is a video game platform released in 1990 by Japanese game company SNK Corporation. It was initially released in two ROM cartridge-based formats: an arcade system board (Multi Video System; MVS) and a home video game console (Advanced Entertainment System; AES). A CD-ROM-based home console iteration, the Neo Geo CD, was released in 1994. The arcade system can hold multiple cartridges that can be exchanged out, a unique feature that contrasted to the dedicated single-game arcade cabinets of its time, making it popular with arcade operators.",
+   "manufacturer": [
+    "SNK"
+   ],
+   "released": "26 April 1990",
+   "discontinued": "1997",
+   "unitsSold": null,
+   "cpu": [
+    "Motorola 68000"
+   ],
+   "predecessor": [],
+   "successor": [
+    "Neo Geo CD"
+   ],
+   "image": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Neo-Geo-AES-FL.jpg?width=640",
+    "page": "https://commons.wikimedia.org/wiki/File:Neo-Geo-AES-FL.jpg"
+   }
+  },
+  "ngpc": {
+   "item": "Q1977455",
+   "tagline": "Handheld console",
+   "page": "Neo Geo Pocket",
+   "overview": "The Neo Geo Pocket is a series of handheld game consoles developed and manufactured by Japanese video game company SNK between 1998 and 2001. The first model, the monochrome Neo Geo Pocket, was released in Japan in October 1998, marking SNK's entry into the handheld gaming market and competing with Nintendo's long-running Game Boy line. It was quickly superseded by the Neo Geo Pocket Color in 1999, a more widely produced model featuring a color display and full backward compatibility with the games for the original model. The Neo Geo Pocket Color launched in Japan in March 1999, followed by releases in North America in August and parts of Europe in October.",
+   "manufacturer": [
+    "SNK"
+   ],
+   "released": "16 March 1999",
+   "discontinued": "30 October 2001",
+   "unitsSold": null,
+   "cpu": [],
+   "predecessor": [
+    "Neo Geo Pocket"
+   ],
+   "successor": [
+    "Neo-Geo X"
+   ],
+   "image": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Neo-Geo-Pocket-Color-Blue-Left.jpg?width=640",
+    "page": "https://commons.wikimedia.org/wiki/File:Neo-Geo-Pocket-Color-Blue-Left.jpg"
+   }
+  },
+  "mame": {
+   "item": "Q192851",
+   "tagline": "Coin-operated video game machine",
+   "page": "Arcade video game",
+   "overview": "An arcade video game is an arcade game that takes player input from its controls, processes it through electrical or computerized components, and displays output to an electronic monitor or similar display. All arcade video games are coin-operated or accept other means of payment, housed in an arcade cabinet, and located in amusement arcades alongside other kinds of arcade games. Until the early 2000s, arcade video games were the largest and most technologically advanced segment of the video game industry. Early prototypical entries Galaxy Game and Computer Space in 1971 established the principle operations for arcade games, and Atari's Pong in 1972 is recognized as the first successful commercial arcade video game.",
+   "manufacturer": [],
+   "released": null,
+   "discontinued": null,
+   "unitsSold": null,
+   "cpu": [],
+   "predecessor": [],
+   "successor": [],
+   "image": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%22Custom%22%20multigame%20arcade%20cabinet%20(2137119547).jpg?width=640",
+    "page": "https://commons.wikimedia.org/wiki/File:%22Custom%22_multigame_arcade_cabinet_(2137119547).jpg"
+   }
+  },
+  "cps": {
+   "item": "Q1034233",
+   "tagline": "Arcade system board developed by Capcom",
+   "page": "CP System",
+   "overview": "The CP System, also known as Capcom Play System or CPS for short (and retroactively as CPS-1), is an arcade system board developed by Capcom that ran game software stored on removable daughterboards. More than two dozen arcade titles were released for CPS-1, before Capcom shifted game development over to its successor, the CP System II. Technical support for the CPS-1 ended on March 31, 2015. The CP System is best known for its many beat 'em up titles such as Dynasty Wars, Final Fight, The King of Dragons, Captain Commando, Knights of the Round, Warriors of Fate, Cadillacs and Dinosaurs, and The Punisher, as well as fighting games such as Street Fighter II and Muscle Bomber.",
+   "manufacturer": [
+    "Capcom"
+   ],
+   "released": null,
+   "discontinued": null,
+   "unitsSold": null,
+   "cpu": [
+    "Motorola 68000"
+   ],
+   "predecessor": [],
+   "successor": [],
+   "image": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/CPS1%20CPU.JPG?width=640",
+    "page": "https://commons.wikimedia.org/wiki/File:CPS1_CPU.JPG"
+   }
+  },
+  "naomi": {
+   "item": "Q1369174",
+   "tagline": "Arcade system board created by Sega",
+   "page": null,
+   "overview": null,
+   "manufacturer": [
+    "Sega"
+   ],
+   "released": null,
+   "discontinued": null,
+   "unitsSold": null,
+   "cpu": [
+    "SuperH"
+   ],
+   "predecessor": [],
+   "successor": [],
+   "image": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sega%20F355%20Challenge.jpg?width=640",
+    "page": "https://commons.wikimedia.org/wiki/File:Sega_F355_Challenge.jpg"
+   }
+  },
+  "cave": {
+   "item": "Q2495040",
+   "tagline": "Video game company",
+   "page": "Cave (company)",
+   "overview": "CAVE Interactive Co., Ltd. is a Japanese video game company founded in 1994 by former employees of Toaplan following its bankruptcy. It is known primarily for its \"bullet hell\" shoot 'em ups; from 1995 up to 2013, CAVE was one of the most prolific shoot 'em up developers in the Japanese market. Alongside this, CAVE has produced a variety of other types games for arcades, home consoles, PCs, and smartphones, also dating back to 1995.",
+   "manufacturer": [],
+   "released": null,
+   "discontinued": null,
+   "unitsSold": null,
+   "cpu": [],
+   "predecessor": [],
+   "successor": [],
+   "image": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/NakameguroGT%20tower.JPG?width=640",
+    "page": "https://commons.wikimedia.org/wiki/File:NakameguroGT_tower.JPG"
+   }
+  },
+  "c64": {
+   "item": "Q99775",
+   "tagline": "8-bit home computer introduced in 1982",
+   "page": "Commodore 64",
+   "overview": "The Commodore 64, also known as the C64, is an 8-bit home computer introduced in January 1982 by Commodore International (first shown at the Consumer Electronics Show, January 7–10, 1982, in Las Vegas). It has been listed in the Guinness World Records as the best-selling desktop computer model of all time, with independent estimates placing the number sold between 12.5 and 17 million units. Volume production started in early 1982, marketing in August for US$595 (equivalent to $1,990 in 2025). Preceded by the VIC-20 and Commodore PET, the C64 took its name from its 64 kibibytes (65,536 bytes) of RAM. With support for multicolor sprites and a custom chip for waveform generation, the C64 could create superior visuals and audio compared to systems without such custom hardware.",
+   "manufacturer": [
+    "Commodore International"
+   ],
+   "released": null,
+   "discontinued": "May 1994",
+   "unitsSold": {
+    "amount": 17000000,
+    "asOf": null
+   },
+   "cpu": [
+    "MOS Technology 6510"
+   ],
+   "predecessor": [
+    "Commodore VIC-20"
+   ],
+   "successor": [
+    "Commodore 128",
+    "Commodore 64C"
+   ],
+   "image": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Commodore-64-Computer-FL.jpg?width=640",
+    "page": "https://commons.wikimedia.org/wiki/File:Commodore-64-Computer-FL.jpg"
+   }
+  },
+  "amiga": {
+   "item": "Q100047",
+   "tagline": "Family of personal computers sold by Commodore",
+   "page": "Amiga",
+   "overview": "Amiga is a family of personal computers produced by Commodore from 1985 until the company's bankruptcy in 1994, with production by others afterward. When introduced, it was one of a number of mid-1980s computers with 16-bit or 32-bit processors, 256 KB or more of RAM, and mouse-based GUIs. These include the Atari ST—the Amiga's primary competitor—Macintosh, Apple IIGS, and Archimedes. The Amiga differs from its contemporaries through custom hardware to accelerate graphics and sound, including sprites, a blitter, and four channels of sample-based audio.",
+   "manufacturer": [
+    "Commodore International"
+   ],
+   "released": null,
+   "discontinued": "1996",
+   "unitsSold": null,
+   "cpu": [
+    "Motorola 68000"
+   ],
+   "predecessor": [],
+   "successor": [],
+   "image": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Amiga500%20system.jpg?width=640",
+    "page": "https://commons.wikimedia.org/wiki/File:Amiga500_system.jpg"
+   }
+  },
+  "spectrum": {
+   "item": "Q23882",
+   "tagline": "Series of personal home computers",
+   "page": "ZX Spectrum",
+   "overview": "The ZX Spectrum (UK: ) is an 8-bit home computer developed and marketed by Sinclair Research. The Spectrum played a pivotal role in the history of personal computers and video games, especially in the United Kingdom. It was one of the all-time bestselling British computers with over five million units sold. It was first released in Britain on 23 April 1982 with releases in some other regions, including West Germany and the United States, after that year.",
+   "manufacturer": [
+    "Sinclair Research"
+   ],
+   "released": null,
+   "discontinued": "1992",
+   "unitsSold": {
+    "amount": 5500000,
+    "asOf": null
+   },
+   "cpu": [
+    "Zilog Z80",
+    "Zilog Z80A"
+   ],
+   "predecessor": [
+    "Sinclair ZX81"
+   ],
+   "successor": [
+    "Sinclair QL"
+   ],
+   "image": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/ZXSpectrum48k.jpg?width=640",
+    "page": "https://commons.wikimedia.org/wiki/File:ZXSpectrum48k.jpg"
+   }
+  },
+  "msx": {
+   "item": "Q853547",
+   "tagline": "Family of standardized home computer architectures released between 1983 and 1990",
+   "page": "MSX",
+   "overview": "MSX is a standardized home computer and video game system architecture, announced by ASCII Corporation on June 16, 1983. It was initially conceived by Microsoft as a product for the Japanese market, and jointly marketed by Kazuhiko Nishi, the director at ASCII Corporation. Microsoft conceived the project as an attempt to create unified standards among various home computing system manufacturers of the period, in the same fashion as the VHS standard for home video tape machines. The first MSX computer sold to the public was a Mitsubishi ML-8000, released on October 21, 1983, thus marking its official release date.",
+   "manufacturer": [],
+   "released": "1983",
+   "discontinued": "1993",
+   "unitsSold": null,
+   "cpu": [
+    "Zilog Z80"
+   ],
+   "predecessor": [],
+   "successor": [],
+   "image": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sony%20HitBit%20HB-10P%20(White%20Background).jpg?width=640",
+    "page": "https://commons.wikimedia.org/wiki/File:Sony_HitBit_HB-10P_(White_Background).jpg"
+   }
+  },
+  "dos": {
+   "item": "Q170434",
+   "tagline": "Group of closely-related PC-compatible operating systems",
+   "page": "DOS",
+   "overview": "DOS is a family of disk-based operating systems for IBM PC compatible computers. It primarily consists of IBM PC DOS and a rebranded version, Microsoft's MS-DOS, both of which were introduced in 1981. Later, compatible systems from other manufacturers are DR-DOS (1988), ROM-DOS (1989), PTS-DOS (1993), and FreeDOS (1994). MS-DOS dominated the IBM PC compatible market between 1981 and 1995.",
+   "manufacturer": [],
+   "released": null,
+   "discontinued": null,
+   "unitsSold": null,
+   "cpu": [],
+   "predecessor": [],
+   "successor": [],
+   "image": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/IBM%20PC%20DOS%201.0%20screenshot.jpg?width=640",
+    "page": "https://commons.wikimedia.org/wiki/File:IBM_PC_DOS_1.0_screenshot.jpg"
+   }
+  },
+  "xbox": {
+   "item": "Q132020",
+   "tagline": "Video game console by Microsoft",
+   "page": "Xbox (console)",
+   "overview": "The Xbox is a home video game console developed and marketed by Microsoft. It was released on November 15, 2001, in North America, followed by Australia, Europe, and Japan in 2002. It was the first major American-produced console since the Atari Jaguar in 1993, and as a sixth-generation console, competed with Sony's PlayStation 2 and Nintendo's GameCube. Microsoft began developing the Xbox in response to the impending launch of the PlayStation 2, which Microsoft CEO Bill Gates saw as threatening the Windows PC business due to its support for CD-ROM and DVD playback.",
+   "manufacturer": [
+    "Flex Ltd."
+   ],
+   "released": "15 November 2001",
+   "discontinued": "2006",
+   "unitsSold": {
+    "amount": 24000000,
+    "asOf": null
+   },
+   "cpu": [
+    "X-CPU"
+   ],
+   "predecessor": [],
+   "successor": [
+    "Xbox 360"
+   ],
+   "image": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Xbox-console.jpg?width=640",
+    "page": "https://commons.wikimedia.org/wiki/File:Xbox-console.jpg"
+   }
+  },
+  "x360": {
+   "item": "Q48263",
+   "tagline": "Microsoft's seventh-generation and second home video game console",
+   "page": "Xbox 360",
+   "overview": "The Xbox 360 is a home video game console developed by Microsoft, being the successor to the original Xbox and the second console in the Xbox series. It was officially unveiled in the program titled Xbox: The Next Generation Revealed on May 12, 2005, with detailed launch and game information announced later that month at the 2005 Electronic Entertainment Expo (E3). As a seventh-generation console, it primarily competed with Sony's PlayStation 3 and Nintendo's Wii. The Xbox 360's online service, Xbox Live, was expanded from its previous iteration on the original Xbox and received regular updates during the console's lifetime.",
+   "manufacturer": [
+    "Flex Ltd.",
+    "Wistron",
+    "Celestica",
+    "Foxconn",
+    "Microsoft"
+   ],
+   "released": "22 November 2005",
+   "discontinued": null,
+   "unitsSold": {
+    "amount": 85480000,
+    "asOf": null
+   },
+   "cpu": [
+    "Microsoft XCPU"
+   ],
+   "predecessor": [
+    "Xbox"
+   ],
+   "successor": [
+    "Xbox One"
+   ],
+   "image": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Xbox-360-Consoles-Infobox.png?width=640",
+    "page": "https://commons.wikimedia.org/wiki/File:Xbox-360-Consoles-Infobox.png"
+   }
+  },
+  "xone": {
+   "item": "Q13361286",
+   "tagline": "Home video game console developed by Microsoft",
+   "page": "Xbox One",
+   "overview": "The Xbox One is a home video game console developed by Microsoft. Announced in May 2013, it is the successor to Xbox 360 and the third console in the Xbox series. It was first released in North America, parts of Europe, Australia, and South America in November 2013 and in Japan, China, and other European countries in September 2014. It is the first Xbox game console to be released in China, specifically in the Shanghai Free-Trade Zone.",
+   "manufacturer": [
+    "Foxconn",
+    "Flex Ltd."
+   ],
+   "released": "22 November 2013",
+   "discontinued": "2020",
+   "unitsSold": {
+    "amount": 58000000,
+    "asOf": "June 2023"
+   },
+   "cpu": [
+    "AMD Accelerated Processing Unit"
+   ],
+   "predecessor": [
+    "Xbox 360"
+   ],
+   "successor": [
+    "Xbox Series X and Series S"
+   ],
+   "image": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Microsoft-Xbox-One-Console-Set-wKinect.jpg?width=640",
+    "page": "https://commons.wikimedia.org/wiki/File:Microsoft-Xbox-One-Console-Set-wKinect.jpg"
+   }
+  },
+  "xsx": {
+   "item": "Q98973368",
+   "tagline": "Home video game consoles developed by Microsoft",
+   "page": "Xbox Series X and Series S",
+   "overview": "The Xbox Series X and Xbox Series S are the fourth generation of consoles in Microsoft's Xbox series, succeeding the previous generation's Xbox One. Released on November 10, 2020, the higher-end Series X and lower-end Series S are part of the ninth generation of video game consoles, which also includes Sony's PlayStation 5, released the same month. Like the Xbox One, the consoles use an AMD 64-bit x86-64 CPU and GPU. Both models have solid-state drives to reduce loading times, support for hardware-accelerated ray-tracing and spatial audio, the ability to convert games to high-dynamic-range rendering using machine learning (Auto HDR), support for HDMI 2.1 variable refresh rate and low-latency modes, and updated controllers. Xbox Series X was designed to nominally render games in 2160p (4K resolution) at 60 frames per second (FPS).",
+   "manufacturer": [
+    "Microsoft"
+   ],
+   "released": "10 November 2020",
+   "discontinued": null,
+   "unitsSold": {
+    "amount": 21000000,
+    "asOf": "June 2023"
+   },
+   "cpu": [],
+   "predecessor": [
+    "Xbox One"
+   ],
+   "successor": [],
+   "image": null
+  },
+  "pc": {
+   "item": "Q4485157",
+   "tagline": "Video game played on a PC, rather than on a console or an arcade machine",
+   "page": "PC game",
+   "overview": "A PC game, historically also known as a computer game, is a video game played on a personal computer (PC). The term PC game has been popularly used specifically to games on Windows software with Intel hardware known as Wintel, which has dominated the computer industry since the 1990s. Mainframe and minicomputer games are a precursor to personal computer games. Home computer games became popular following the video game crash of 1983.",
+   "manufacturer": [],
+   "released": null,
+   "discontinued": null,
+   "unitsSold": null,
+   "cpu": [],
+   "predecessor": [],
+   "successor": [],
+   "image": null
+  }
+ }
+}

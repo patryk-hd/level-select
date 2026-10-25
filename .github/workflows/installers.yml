@@ -1,0 +1,60 @@
+name: Installers
+
+# Builds the Windows installer on a real Windows machine, installs it silently, checks the
+# installed app end to end (scripts/check-windows-install.mjs) and keeps the installer as a
+# download on the run's page (Artifacts → level-select-windows).
+# Windows machines count double against Actions minutes and each installer is ~40 MB of
+# storage, so it doesn't run on every change:
+# - pull requests that change how the installer is made run the install check, keeping no file;
+# - Actions → Installers → Run workflow builds one to share, kept for 7 days.
+on:
+  pull_request:
+    paths:
+      - scripts/package.mjs
+      - scripts/package-runtimes.json
+      - scripts/check-windows-install.mjs
+      - scripts/library-control.mjs
+      - scripts/platform.mjs
+      - launcher/windows/**
+      - .github/workflows/installers.yml
+  workflow_dispatch:
+
+concurrency:
+  group: installers-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  windows:
+    runs-on: windows-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: 22
+          package-manager-cache: false
+      - name: Make sure NSIS is there
+        shell: pwsh
+        run: |
+          if (-not (Get-Command makensis -ErrorAction SilentlyContinue) -and -not (Test-Path 'C:\Program Files (x86)\NSIS\makensis.exe')) { choco install nsis -y --no-progress }
+      - name: Build the installer
+        run: node scripts/package.mjs --windows
+      - name: Install silently and check the installed app
+        shell: pwsh
+        run: |
+          $setup = (Get-ChildItem dist-installers\Level-Select-Setup-*.exe | Select-Object -First 1).FullName
+          $target = Join-Path $env:RUNNER_TEMP 'Level Select'
+          Start-Process -FilePath $setup -ArgumentList '/S', "/D=$target" -Wait
+          node scripts/check-windows-install.mjs $target $setup
+      - if: github.event_name == 'workflow_dispatch'
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: level-select-windows
+          path: dist-installers/*.exe
+          retention-days: 7
+          if-no-files-found: error

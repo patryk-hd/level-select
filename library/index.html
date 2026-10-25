@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><script src="../theme.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Library — Level Select</title>
+  <meta name="theme-color" content="#141619">
+  <link rel="icon" href="../assets/favicon.svg?v=level-select">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../navigation.css"><script type="module" src="../navigation.js"></script>
+  <script type="module" blocking="render" src="app.js"></script>
+<link rel="stylesheet" href="../ranking/styles.css">
+<link rel="stylesheet" href="../controls.css">
+<link rel="stylesheet" href="../theme.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to games</a>
+  <div class="app-shell">
+<!-- shared-navigation:start -->
+<header class="site-mobile-header"><a class="site-brand" href="../library/backlog.html"><span class="site-brand-mark" aria-hidden="true">L</span><span>Level Select<small>Games across every era</small></span></a><button id="open-navigation" class="site-menu-button" type="button" aria-label="Open navigation" aria-controls="sidebar" aria-expanded="false">☰</button></header>
+<aside class="site-sidebar" id="sidebar" aria-label="Library navigation">
+<a class="site-brand" href="../library/backlog.html"><span class="site-brand-mark" aria-hidden="true">L</span><span>Level Select<small>Games across every era</small></span></a>
+<button id="close-navigation" class="site-menu-close" type="button" aria-label="Close navigation">×</button>
+<nav class="site-primary-nav" aria-label="Main">
+<a class="site-nav-link" data-section="backlog" href="../library/backlog.html"><span class="site-nav-symbol" aria-hidden="true">▷</span><span>Play</span></a>
+<a class="site-nav-link" data-section="owned" href="../library/index.html" aria-current="page"><span class="site-nav-symbol" aria-hidden="true">▣</span><span>Library</span></a>
+<a class="site-nav-link" data-section="wishlist" href="../library/wishlist.html"><span class="site-nav-symbol" aria-hidden="true">☆</span><span>Wishlist</span></a>
+<a class="site-nav-link" data-section="recommendations" data-view="games" href="../index.html"><span class="site-nav-symbol" aria-hidden="true">▦</span><span>Game Atlas</span></a>
+<a class="site-nav-link" data-section="saved" data-view="collection" href="../index.html?view=collection"><span class="site-nav-symbol" aria-hidden="true">◈</span><span>My Atlas</span></a>
+<a class="site-nav-link" data-section="mods" href="../library/mods.html"><span class="site-nav-symbol" aria-hidden="true">✦</span><span>Mods</span></a>
+<a class="site-nav-link" data-section="sources" href="../library/sources.html"><span class="site-nav-symbol" aria-hidden="true">⊕</span><span>Import games</span></a>
+</nav>
+<a class="player-card" id="player-card" href="../library/backlog.html?section=progress" hidden><span class="player-level" aria-hidden="true">1</span><span class="player-copy"><strong>Explorer</strong><small>0 XP</small><span class="xp-bar"><span class="xp-fill"></span></span></span></a>
+<details class="theme-picker"><summary><span data-theme-chip><span class="theme-chip" aria-hidden="true" style="--c1:#13120f;--c2:#26231e;--c3:#e8b96f"></span></span><span class="theme-picker-label">Theme</span><b data-theme-name>Modern</b><span class="theme-picker-caret" aria-hidden="true">▾</span></summary><div class="theme-menu" role="group" aria-label="Theme"><button type="button" data-theme-choice="modern" data-tone="dark" aria-pressed="true" title="Modern"><span class="theme-chip" aria-hidden="true" style="--c1:#13120f;--c2:#26231e;--c3:#e8b96f"></span><span><strong>Modern</strong><small>Calm dark gold. The default.</small></span></button><button type="button" data-theme-choice="midnight" data-tone="dark" aria-pressed="false" title="Midnight"><span class="theme-chip" aria-hidden="true" style="--c1:#000000;--c2:#2a2d34;--c3:#8ab4ff"></span><span><strong>Midnight</strong><small>Pure black with hairlines only, for OLED screens and late nights.</small></span></button><button type="button" data-theme-choice="arcade" data-tone="dark" aria-pressed="false" title="Arcade"><span class="theme-chip" aria-hidden="true" style="--c1:#140a30;--c2:#2b1b62;--c3:#ff5cad"></span><span><strong>Arcade</strong><small>Synthwave cabinet: neon purple, pixel type and a CRT glow.</small></span></button><button type="button" data-theme-choice="cyberpunk" data-tone="dark" aria-pressed="false" title="Cyberpunk"><span class="theme-chip" aria-hidden="true" style="--c1:#050b0d;--c2:#0f1f23;--c3:#fcee0a"></span><span><strong>Cyberpunk</strong><small>A 2077 HUD: teal screens, hazard yellow, cut corners.</small></span></button><button type="button" data-theme-choice="y2k" data-tone="dark" aria-pressed="false" title="Y2K"><span class="theme-chip" aria-hidden="true" style="--c1:#06122b;--c2:#16336a;--c3:#39c4ff"></span><span><strong>Y2K</strong><small>Millennium dashboards: glass, chrome and aqua glow.</small></span></button><button type="button" data-theme-choice="console" data-tone="light" aria-pressed="false" title="Console"><span class="theme-chip" aria-hidden="true" style="--c1:#e3e1e9;--c2:#ffffff;--c3:#5a45b3"></span><span><strong>Console</strong><small>A 16-bit living room: lilac plastic and face buttons.</small></span></button><button type="button" data-theme-choice="handheld" data-tone="light" aria-pressed="false" title="Handheld"><span class="theme-chip" aria-hidden="true" style="--c1:#c4cfa1;--c2:#306230;--c3:#8e2a52"></span><span><strong>Handheld</strong><small>The pocket classic: four greens and a dot-matrix screen.</small></span></button><button type="button" data-theme-choice="retro-pc" data-tone="light" aria-pressed="false" title="Retro PC"><span class="theme-chip" aria-hidden="true" style="--c1:#c3c3c3;--c2:#000080;--c3:#008080"></span><span><strong>Retro PC</strong><small>90s desktop: bevelled grey windows and navy title bars.</small></span></button><button type="button" data-theme-choice="anime" data-tone="light" aria-pressed="false" title="Anime"><span class="theme-chip" aria-hidden="true" style="--c1:#f6f0e4;--c2:#1f1a17;--c3:#c8301f"></span><span><strong>Anime</strong><small>A manga page: ink, vermilion seals and sakura.</small></span></button><button type="button" data-theme-choice="fantasy" data-tone="light" aria-pressed="false" title="Fantasy"><span class="theme-chip" aria-hidden="true" style="--c1:#efe3c8;--c2:#2b1d10;--c3:#b8862b"></span><span><strong>Fantasy</strong><small>An adventurer’s tome: parchment, gold leaf and wax seals.</small></span></button></div></details>
+<p class="site-nav-footer">Your library, your next game.<a class="site-nav-guide" data-phone-link href="../library/phone.html">On your phone</a><button type="button" class="site-nav-guide" data-open-guide>Setup guide</button></p>
+</aside>
+<button id="nav-scrim" class="site-nav-scrim" type="button" aria-label="Close navigation" hidden></button>
+<!-- shared-navigation:end -->
+
+    <main class="content" id="main" tabindex="-1" data-loading>
+      <section class="topbar">
+        <div>
+          <p class="eyebrow">YOUR COLLECTION</p>
+          <h1>Library<span class="title-dot">.</span></h1><p id="libraryMeta" class="section-summary"></p>
+        </div>
+        <div class="topbar-actions"><button id="addGame" class="add-game-button" type="button">+ Add game</button><button id="updateLibrary" class="update-data-button" type="button">Update data</button>
+        <div class="view-toggle" aria-label="View mode">
+          <button id="gridView" type="button" class="active" aria-label="Grid view">Grid</button>
+          <button id="listView" type="button" aria-label="List view">List</button>
+          <button id="spotlightView" type="button" aria-label="Spotlight view: a list beside a large panel for the selected game">Spotlight</button>
+        </div></div>
+      </section>
+
+      <details class="section-tools"><summary>Library tools</summary><div class="section-tools-body">      <button id="exportOverrides" class="reset-button ghost" type="button">Export overrides.json</button>
+      <button id="reviewSteamProducts" type="button">Review Steam products</button>
+      <button id="backupLibrary" type="button">Backup &amp; import</button>
+</div></details>
+      <section class="stats-strip" id="statsStrip"></section>
+      <div id="shelves"></div>
+
+<div class="browse-controls">      <label class="field field-search">
+        <span>Search</span>
+        <input id="searchInput" type="search" autocomplete="off" placeholder="Search game titles…">
+      </label>
+<details class="filter-panel"><summary>Filters &amp; sort <span aria-hidden="true">⌄</span></summary><div class="filter-content">      <div class="filter-grid">
+        <label class="field">
+          <span>Platform</span>
+          <select id="platformFilter"></select>
+        </label>
+        <label class="field">
+          <span>Store / source</span>
+          <select id="sourceFilter"></select>
+        </label>
+        <label class="field" id="mainGenreField">
+          <span>Main genre</span>
+          <select id="mainGenreFilter"></select>
+        </label>
+        <label class="field" id="genreField">
+          <span>Genre</span>
+          <select id="genreFilter"></select>
+        </label>
+        <label class="field" id="categoryField" hidden>
+          <span>Category</span>
+          <select id="categoryFilter"></select>
+        </label>
+        <label class="field">
+          <span>Tag</span>
+          <select id="tagFilter"></select>
+        </label>
+      </div>
+
+      <div class="field">
+        <span>Status</span>
+        <div class="segmented" id="statusFilter">
+          <button type="button" class="active" data-value="">All</button>
+          <button type="button" data-value="played">Played</button>
+          <button type="button" data-value="unplayed">Unplayed</button>
+        </div>
+      </div>
+
+      <div class="field">
+        <span>Visibility</span>
+        <div class="segmented" id="visibilityFilter">
+          <button type="button" class="active" data-value="">All</button>
+          <button type="button" data-value="visible">Visible</button>
+          <button type="button" data-value="hidden">Hidden</button>
+        </div>
+      </div>
+
+      <div class="field">
+        <span>Cover Art</span>
+        <div class="segmented two" id="coverFilter">
+          <button type="button" class="active" data-value="">All</button>
+          <button type="button" data-value="with">With images</button>
+        </div>
+      </div>
+
+      <div class="field">
+        <span>Favorites</span>
+        <div class="segmented two" id="favoriteFilter">
+          <button type="button" class="active" data-value="">All</button>
+          <button type="button" data-value="favorite">Favorites only</button>
+        </div>
+      </div>
+
+      <div class="field">
+        <span>Ownership</span>
+        <div class="segmented two" id="duplicateFilter">
+          <button type="button" class="active" data-value="">All</button>
+          <button type="button" data-value="duplicate">Multiple copies</button>
+        </div>
+      </div>
+
+      <div class="range-fields">
+        <label class="field">
+          <span>Year From</span>
+          <input id="yearMin" type="number" inputmode="numeric" placeholder="Any">
+        </label>
+        <label class="field">
+          <span>Year To</span>
+          <input id="yearMax" type="number" inputmode="numeric" placeholder="Any">
+        </label>
+      </div>
+
+      <div class="range-fields">
+        <label class="field"><span>Rating field</span><select id="ratingMode"><option value="score" selected>Score (IGDB · Steam · Playnite)</option><option value="steam">Steam conservative approval</option><option value="steam-raw">Steam approval percentage</option><option value="critic">Imported critic</option><option value="community">Imported community</option><option value="personal">Personal (Playnite)</option><option value="vgc">VGC Score · work context</option><option value="igdb-community">IGDB community · work context</option><option value="igdb-critics">IGDB critics · work context</option></select></label>
+        <label class="field">
+          <span>Minimum selected rating</span>
+          <select id="scoreMin">
+            <option value="">Any</option>
+            <option value="90">90+</option>
+            <option value="80">80+</option>
+            <option value="70">70+</option>
+            <option value="60">60+</option>
+          </select>
+        </label>
+        <label class="field">
+          <span>Sort</span>
+          <select id="sortMode">
+            <option value="smart">Title A–Z (default)</option>
+            <option value="relevance">Relevance</option>
+            <option value="name">Title A-Z</option>
+            <option value="newest">Newest release</option>
+            <option value="oldest">Oldest release</option>
+            <option value="score">Selected rating: highest first</option>
+            <option value="time">Most played</option>
+            <option value="source">Source</option>
+          </select>
+        </label>
+      </div>
+
+      <button id="resetFilters" class="reset-button" type="button">Reset filters</button></div></details></div>
+      <div id="ratingSummary" class="ranking-summary" role="status" hidden></div><section class="results-toolbar">
+        <div>
+          <strong id="resultCount" role="status" aria-live="polite">0 games</strong>
+          <span id="activeSummary">No filters active</span>
+        </div>
+        <div class="pager">
+          <label class="page-size-field">
+            <span>Per page</span>
+            <select id="pageSizeSelect">
+              <option value="10">10</option>
+              <option value="25">25</option>
+              <option value="50" selected>50</option>
+              <option value="100">100</option>
+            </select>
+          </label>
+          <button id="prevPage" type="button">Previous</button>
+          <span id="pageInfo">Page 1</span>
+          <button id="nextPage" type="button">Next</button>
+        </div>
+      </section>
+
+      <section aria-label="Games" id="results" class="results-grid" ></section>
+    <p class="data-note">Your library snapshot comes from Playnite. Favorites and notes are saved in this browser.</p></main>
+  </div>
+
+  <div id="detailsOverlay" class="details-overlay" hidden></div>
+  <dialog id="detailsPanel" class="details-panel" aria-label="Game details">
+    <div class="details-bar"><button id="closeDetails" type="button" class="close-button" aria-label="Close details">Close</button></div>
+    <div id="detailsContent"></div>
+  </dialog>
+
+  <script src="data/library-data.js"></script>
+  <script src="icons.js"></script>
+
+<dialog id="updateDialog" class="utility-dialog" aria-labelledby="updateTitle"><div class="utility-heading"><h2 id="updateTitle">Update your snapshot</h2><button data-close-dialog type="button">Close</button></div><p>Export your library from Playnite as CSV, then rebuild with your new export. Existing cover art and saved notes are kept.</p><pre><code>./library/tools/update.sh --csv /path/to/playnite_library.csv</code></pre><p>To refresh your Steam wishlist, replace <strong>library/steam-wishlist.json</strong> and run:</p><pre><code>./library/tools/update-wishlist.sh</code></pre><p>Reload the page after updating. <a href="README.md">Full update instructions</a></p></dialog><noscript><p class="notice">Enable JavaScript to browse your game library.</p></noscript></body>
+</html>

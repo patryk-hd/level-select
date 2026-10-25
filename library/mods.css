@@ -1,0 +1,93 @@
+/* Mods (mods.js): tabs per system, filters, one card per mod, and each game's essentials. */
+/* Every system in sight: the buttons wrap onto more rows rather than scroll sideways. */
+.mods-tabs { display: flex; flex-wrap: wrap; gap: .45rem; margin: 0 0 1.2rem; }
+.mods-tabs a { display: inline-flex; align-items: center; gap: .3rem; min-height: 2.5rem; padding: .45rem .95rem; border: 1px solid var(--line); border-radius: 999px; background: var(--panel); color: var(--text); text-decoration: none; font-size: .9rem; white-space: nowrap; }
+.mods-tabs a small { color: var(--muted); }
+.mods-tabs a[data-tab="essentials"]::before { content: "★"; color: var(--accent); }
+.mods-tabs a:hover { border-color: var(--accent-line, var(--line-strong)); color: var(--accent); }
+.mods-tabs a[aria-current="page"] { background: var(--accent-bg); border-color: var(--accent); color: var(--accent); font-weight: 600; }
+
+.mods-tools { display: flex; flex-wrap: wrap; gap: .8rem 1.2rem; align-items: end; margin-bottom: 1rem; }
+.mods-tools:empty { display: none; }
+.mods-search { flex: 1 1 16rem; max-width: 30rem; }
+.mods-search input { width: 100%; }
+.mods-kinds { order: 3; flex: 1 1 100%; display: flex; flex-wrap: wrap; gap: .4rem; }
+.mods-kinds button { min-height: 2.25rem; padding: .35rem .8rem; border-radius: 999px; font-size: .84rem; }
+.mods-kinds button[aria-pressed="true"] { background: var(--accent-bg); border-color: var(--accent); color: var(--accent); }
+.mods-options { display: flex; flex-wrap: wrap; align-items: end; gap: 1rem; }
+.mods-owned { display: flex; align-items: center; gap: .5rem; min-height: 44px; font-size: .9rem; cursor: pointer; }
+.mods-owned input { min-height: 0; width: 18px; height: 18px; accent-color: var(--accent); }
+.mods-sort { grid-template-columns: auto auto; align-items: center; }
+.mods-count { margin: 0 0 1rem; color: var(--muted); font-size: .9rem; }
+
+.mods-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 30rem), 1fr)); gap: 1rem; align-items: start; }
+.mod-card { position: relative; display: grid; grid-template-columns: 6.5rem 1fr; gap: 1rem; padding: 1rem; border: 1px solid var(--line); border-radius: var(--radius-lg, 16px); background: var(--panel); min-width: 0; }
+.mod-card.is-owned { border-color: var(--success-line, var(--accent-line)); }
+.mod-rank { position: absolute; top: .55rem; left: .55rem; z-index: 1; min-width: 1.9rem; padding: .15rem .45rem; border-radius: 999px; background: var(--accent); color: var(--on-accent, var(--bg)); font: 700 .8rem/1.4 var(--font-score, inherit); text-align: center; }
+/* Tiers, as in the Game Atlas: gold, silver and bronze coins for the top 3 (theme.css has the
+   medal colours), a filled mark for the top 5, an outlined one for the top 10. */
+.mods-tiers { display: grid; gap: 2rem; }
+.mods-tiers .mods-more { justify-self: center; }
+.mod-card[data-tier="podium"] { border-color: color-mix(in srgb, var(--medal) 55%, var(--line)); background: linear-gradient(150deg, color-mix(in srgb, var(--medal) 12%, var(--panel)), var(--panel) 60%); }
+.mod-card[data-tier="podium"] .mod-rank { display: grid; place-items: center; width: 2.6rem; height: 2.6rem; min-width: 0; padding: 0; top: .4rem; left: .4rem; border-radius: 50%;
+  background: radial-gradient(circle at 34% 28%, #ffffffa6, transparent 42%), linear-gradient(145deg, var(--medal), var(--medal-deep)); color: var(--coin-text); font-size: 1.05rem;
+  box-shadow: 0 6px 14px -6px var(--medal-deep), inset 0 -3px 0 #00000026; }
+.mod-card[data-tier="podium"] h3 { font-size: 1.2rem; }
+.mod-card[data-tier="top5"] { border-color: var(--accent-line, var(--line-strong)); box-shadow: 0 16px 36px -26px var(--accent); }
+.mod-card[data-tier="top10"] .mod-rank { background: var(--panel); color: var(--accent); border: 1px solid var(--accent-line, var(--accent)); }
+.mod-card[data-tier="top25"] .mod-rank { background: var(--panel); color: var(--text); border: 1px solid var(--line-strong, var(--line)); }
+.mod-card:is([data-tier="rest"], :not([data-tier])) .mod-rank { background: var(--panel); color: var(--muted); border: 1px solid var(--line); font-weight: 600; }
+.mod-art { aspect-ratio: 3 / 4; border-radius: var(--radius, 10px); background: var(--art-bg, var(--raised)); overflow: hidden; display: grid; place-items: center; color: var(--muted); font-size: .8rem; font-weight: 600; text-align: center; padding: 0; }
+.mod-art img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.mod-body { display: grid; gap: .45rem; align-content: start; min-width: 0; }
+.mod-body h3 { margin: 0; font-size: 1.08rem; line-height: 1.3; overflow-wrap: anywhere; }
+.mod-base, .mod-meta, .mod-became, .mod-signals { margin: 0; font-size: .86rem; color: var(--muted); line-height: 1.45; }
+.mod-base strong, .mod-became strong { color: var(--text); font-weight: 600; }
+.mod-owned { color: var(--success); font-weight: 600; white-space: nowrap; }
+.mod-kind { display: inline-block; margin: .1rem 0 0 .25rem; padding: .05rem .45rem; border: 1px solid var(--line); border-radius: 999px; font-size: .74rem; }
+.mod-picks { list-style: none; margin: .1rem 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: .35rem; }
+.mod-picks a { display: inline-block; padding: .18rem .55rem; border-radius: var(--radius-sm, 6px); background: var(--accent-bg); color: var(--accent); font-size: .78rem; font-weight: 600; text-decoration: none; }
+.mod-picks a:hover { text-decoration: underline; }
+.mod-picks .is-supporting a { background: transparent; border: 1px dashed var(--line-strong, var(--line)); color: var(--muted); font-weight: 500; }
+.mod-signals small { font-size: .78rem; }
+.mod-about summary { cursor: pointer; color: var(--muted); font-size: .84rem; }
+.mod-about p { margin: .5rem 0 0; font-size: .88rem; line-height: 1.55; }
+.mod-about .mod-credit { color: var(--muted); font-size: .76rem; }
+.mod-links { display: flex; flex-wrap: wrap; gap: .3rem .8rem; margin: 0; font-size: .84rem; }
+.mod-links a { color: var(--accent); }
+.mods-more { grid-column: 1 / -1; justify-self: center; min-width: 12rem; }
+.mods-empty { grid-column: 1 / -1; color: var(--muted); }
+
+/* Essentials */
+.mods-essentials { display: grid; grid-template-columns: minmax(12rem, 16rem) 1fr; gap: 1.2rem; align-items: start; }
+.mods-games { display: grid; gap: .3rem; max-height: 70vh; overflow-y: auto; padding-right: .2rem; }
+.mods-games button { justify-content: flex-start; text-align: left; min-height: 2.5rem; font-size: .88rem; }
+.mods-games button span { color: var(--success); }
+.mods-games button[aria-pressed="true"] { background: var(--accent-bg); border-color: var(--accent); color: var(--accent); font-weight: 600; }
+.mods-essential { padding: 1.1rem 1.25rem; border: 1px solid var(--line); border-radius: var(--radius-lg, 16px); background: var(--panel); min-width: 0; }
+.mods-essential header h2 { margin: 0 0 .3rem; font-size: 1.3rem; }
+.mods-essential header p { margin: 0 0 1rem; color: var(--muted); font-size: .9rem; }
+.mods-essential header a { color: var(--accent); }
+.mods-essential ol { margin: 0; padding-left: 1.6rem; display: grid; gap: .7rem; }
+.mods-essential li { padding-left: .3rem; line-height: 1.45; }
+.mods-essential li::marker { color: var(--accent); font-weight: 700; }
+.mods-essential li > a { color: var(--text); overflow-wrap: anywhere; }
+.mods-essential li > a:hover { color: var(--accent); }
+.mods-essential-meta, .mods-essential-votes { display: block; color: var(--muted); font-size: .82rem; }
+.mods-essential-votes strong { color: var(--text); }
+
+.mods-method { margin-top: 2rem; padding: 1rem 1.2rem; border: 1px solid var(--line); border-radius: var(--radius-lg, 16px); background: var(--panel); }
+.mods-method summary { cursor: pointer; font-weight: 600; }
+.mods-method p { color: var(--muted); line-height: 1.6; font-size: .9rem; }
+.mods-sources { margin: .5rem 0; padding-left: 1.2rem; display: grid; gap: .5rem; font-size: .9rem; line-height: 1.5; }
+.mods-sources a { color: var(--accent); }
+.mods-sources span { color: var(--muted); }
+
+@media (max-width: 720px) {
+  .mods-tabs { gap: .35rem; }
+  .mods-tabs a { min-height: 2.25rem; padding: .35rem .75rem; font-size: .84rem; }
+  .mod-card { grid-template-columns: 5rem 1fr; gap: .8rem; padding: .85rem; }
+  .mods-essentials { grid-template-columns: 1fr; }
+  .mods-games { display: flex; overflow-x: auto; max-height: none; }
+  .mods-games button { flex: none; }
+}

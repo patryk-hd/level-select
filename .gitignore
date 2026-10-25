@@ -1,0 +1,43 @@
+.DS_Store
+dist/
+node_modules/
+*.tgz
+__pycache__/
+# Local Playnite exports and full-resolution artwork are kept on this device.
+library/assets/
+library/data/cache/
+library/data/overrides.json
+library/data/
+library/playnite_library.csv
+library/steam-wishlist.json
+library/playnite_library_backup/
+.runtime/
+# Other tools' account settings (hosting project ids and the like).
+.openai/
+*.app/
+dist-local/
+dist-phone/
+# Installer builds (npm run package) and the runtimes they download.
+.build/
+dist-installers/
+backups/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.sqlite
+*.sqlite3
+*.db
+playnite-library-backup*.json
+library-recovery*.json
+wishlist-removals*.json
+retro-library-backup*.json
+retro-library-recovery*.json
+retro-tracking-*.json
+wishlist-acquisitions*.json
+# Any Playnite/Steam export in library/, including renamed older copies (e.g. *-old).
+library/playnite_library*.csv
+library/steam-wishlist*.json
+library/*-old.*

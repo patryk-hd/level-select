@@ -1,0 +1,2780 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Coverage audit only. Not a provider crosswalk or ranking input. Catalog metadata remains provisional.",
+  "selection": "First eight existing editorial entries per NES, SNES, Mega Drive, PS1 and classic PC; ten named modern PC titles. Purposive stress sample, not a representative coverage estimate.",
+  "entries": [
+    {
+      "id": "nes-eb55f77bf8d98dfb",
+      "title": "Super Mario Bros. 3",
+      "system": "nes",
+      "catalogYear": 1988,
+      "targetScope": "original catalog platform release; region/build unverified",
+      "catalogRef": {
+        "provider": "catalog",
+        "id": "nes-eb55f77bf8d98dfb"
+      },
+      "audit": {
+        "provider": "vgc",
+        "queryUrl": "https://videogamescritic.com/api/v1/search?q=Super%20Mario%20Bros.%203&limit=5",
+        "observedAt": "2026-09-16T02:35:31.017Z",
+        "responseChecksum": "12a2fb105d5713f91890acccdd7357d64ab34fc86781d2a72ff491a14edb0c27",
+        "returned": 2,
+        "reportedTotal": 2,
+        "truncated": false,
+        "candidates": [
+          {
+            "providerId": "1000000526",
+            "name": "Super Mario Bros. 35",
+            "releaseDate": "2020-10-01",
+            "platforms": [
+              "Switch"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/super-mario-bros-35-1000000526"
+          },
+          {
+            "providerId": "1000002324",
+            "name": "Super Mario Advance 4: Super Mario Bros. 3",
+            "releaseDate": "2003-10-21",
+            "platforms": [],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/super-mario-advance-4-super-mario-bros-3-1000002324"
+          }
+        ],
+        "review": {
+          "status": "other-edition-only",
+          "candidateId": null,
+          "workCandidate": true,
+          "exactReleaseAccepted": false,
+          "rankingEligible": false,
+          "reason": "Adaptation and similarly named online title; no original NES candidate."
+        }
+      }
+    },
+    {
+      "id": "nes-f2383438508c440f",
+      "title": "The Legend of Zelda",
+      "system": "nes",
+      "catalogYear": 1986,
+      "targetScope": "original catalog platform release; region/build unverified",
+      "catalogRef": {
+        "provider": "catalog",
+        "id": "nes-f2383438508c440f"
+      },
+      "audit": {
+        "provider": "vgc",
+        "queryUrl": "https://videogamescritic.com/api/v1/search?q=The%20Legend%20of%20Zelda&limit=5",
+        "observedAt": "2026-09-16T02:35:31.270Z",
+        "responseChecksum": "f50bd6d014ce4e54550d2639065d4e78350217b999bf795caff41e35b85ddd98",
+        "returned": 5,
+        "reportedTotal": 29,
+        "truncated": true,
+        "candidates": [
+          {
+            "providerId": "1000001686",
+            "name": "The Legend of Zelda: Ocarina of Time",
+            "releaseDate": "2026-11-05",
+            "platforms": [
+              "Switch"
+            ],
+            "hasHeadlineScore": false,
+            "url": "https://videogamescritic.com/game/the-legend-of-zelda-ocarina-of-time-1000001686"
+          },
+          {
+            "providerId": "1000000395",
+            "name": "The Legend of Zelda: Echoes of Wisdom",
+            "releaseDate": "2024-09-26",
+            "platforms": [
+              "Switch"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/the-legend-of-zelda-echoes-of-wisdom-1000000395"
+          },
+          {
+            "providerId": "1000000410",
+            "name": "The Legend of Zelda: Tears of the Kingdom",
+            "releaseDate": "2023-05-12",
+            "platforms": [
+              "Switch"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/the-legend-of-zelda-tears-of-the-kingdom-1000000410"
+          },
+          {
+            "providerId": "1000000469",
+            "name": "The Legend of Zelda: Skyward Sword HD",
+            "releaseDate": "2021-07-16",
+            "platforms": [
+              "Switch"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/the-legend-of-zelda-skyward-sword-hd-1000000469"
+          },
+          {
+            "providerId": "1000000530",
+            "name": "The Legend of Zelda: Link's Awakening",
+            "releaseDate": "2019-09-20",
+            "platforms": [
+              "Switch"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/the-legend-of-zelda-link-s-awakening-1000000530"
+          }
+        ],
+        "review": {
+          "status": "unrelated-or-sequel",
+          "candidateId": null,
+          "workCandidate": false,
+          "exactReleaseAccepted": false,
+          "rankingEligible": false,
+          "reason": "First five are later Zelda titles; bounded search is incomplete."
+        }
+      }
+    },
+    {
+      "id": "nes-2273523ed7f908e3",
+      "title": "Mega Man 2",
+      "system": "nes",
+      "catalogYear": 1988,
+      "targetScope": "original catalog platform release; region/build unverified",
+      "catalogRef": {
+        "provider": "catalog",
+        "id": "nes-2273523ed7f908e3"
+      },
+      "audit": {
+        "provider": "vgc",
+        "queryUrl": "https://videogamescritic.com/api/v1/search?q=Mega%20Man%202&limit=5",
+        "observedAt": "2026-09-16T02:35:31.518Z",
+        "responseChecksum": "969e6a414737f4e33fee8fa66b6d23fd7304bf11598b93c070dc79d8d4e1af81",
+        "returned": 5,
+        "reportedTotal": 8,
+        "truncated": true,
+        "candidates": [
+          {
+            "providerId": "1000005470",
+            "name": "Mega Man II",
+            "releaseDate": "1991-12-20",
+            "platforms": [],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/mega-man-ii-1000005470"
+          },
+          {
+            "providerId": "1000004303",
+            "name": "Mega Man 2",
+            "releaseDate": "1988-12-24",
+            "platforms": [
+              "Switch"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/mega-man-2-1000004303"
+          },
+          {
+            "providerId": "743900",
+            "name": "Mega Man X Legacy Collection 2",
+            "releaseDate": "2018-07-24",
+            "platforms": [
+              "PC",
+              "PlayStation",
+              "Xbox",
+              "Switch"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/mega-man-x-legacy-collection-2-743900"
+          },
+          {
+            "providerId": "1000000093",
+            "name": "Mega Man X Legacy Collection 1 + 2",
+            "releaseDate": "2018-07-24",
+            "platforms": [
+              "PC",
+              "PlayStation",
+              "Xbox",
+              "Switch"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/mega-man-x-legacy-collection-1-2-1000000093"
+          },
+          {
+            "providerId": "495050",
+            "name": "Mega Man Legacy Collection 2",
+            "releaseDate": "2017-08-08",
+            "platforms": [
+              "PC",
+              "PlayStation",
+              "Xbox",
+              "Switch"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/mega-man-legacy-collection-2-495050"
+          }
+        ],
+        "review": {
+          "status": "scope-unresolved",
+          "candidateId": "1000004303",
+          "workCandidate": true,
+          "exactReleaseAccepted": false,
+          "rankingEligible": false,
+          "reason": "Matching work/year, but only Switch is listed; NES score scope unestablished."
+        }
+      }
+    },
+    {
+      "id": "nes-2270e73a86e507f7",
+      "title": "Contra",
+      "system": "nes",
+      "catalogYear": 1987,
+      "targetScope": "original catalog platform release; region/build unverified",
+      "catalogRef": {
+        "provider": "catalog",
+        "id": "nes-2270e73a86e507f7"
+      },
+      "audit": {
+        "provider": "vgc",
+        "queryUrl": "https://videogamescritic.com/api/v1/search?q=Contra&limit=5",
+        "observedAt": "2026-09-16T02:35:31.776Z",
+        "responseChecksum": "75987a5765af32e0ea432832ea7962e9d1d99645d0eaedc1369aa55625e02a82",
+        "returned": 5,
+        "reportedTotal": 18,
+        "truncated": true,
+        "candidates": [
+          {
+            "providerId": "1000003645",
+            "name": "Contra",
+            "releaseDate": "2006-05-25",
+            "platforms": [
+              "PC",
+              "PlayStation",
+              "Xbox",
+              "Switch"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/contra-1000003645"
+          },
+          {
+            "providerId": "2698780",
+            "name": "ContractVille",
+            "releaseDate": "2025-05-26",
+            "platforms": [
+              "PC"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/contractville-2698780"
+          },
+          {
+            "providerId": "2235020",
+            "name": "Contra: Operation Galuga",
+            "releaseDate": "2024-03-11",
+            "platforms": [
+              "PC",
+              "PlayStation",
+              "Xbox",
+              "Switch"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/contra-operation-galuga-2235020"
+          },
+          {
+            "providerId": "756800",
+            "name": "Contraband Police",
+            "releaseDate": "2023-03-07",
+            "platforms": [
+              "PC",
+              "PlayStation",
+              "Xbox"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/contraband-police-756800"
+          },
+          {
+            "providerId": "1020540",
+            "name": "CONTRA: ROGUE CORPS",
+            "releaseDate": "2019-09-24",
+            "platforms": [
+              "PC",
+              "PlayStation",
+              "Xbox",
+              "Switch"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/contra-rogue-corps-1020540"
+          }
+        ],
+        "review": {
+          "status": "other-edition-only",
+          "candidateId": "1000003645",
+          "workCandidate": true,
+          "exactReleaseAccepted": false,
+          "rankingEligible": false,
+          "reason": "Same title has a 2006 date and modern platform families."
+        }
+      }
+    },
+    {
+      "id": "nes-d1d6ee3a3437e668",
+      "title": "Super Mario Bros.",
+      "system": "nes",
+      "catalogYear": 1985,
+      "targetScope": "original catalog platform release; region/build unverified",
+      "catalogRef": {
+        "provider": "catalog",
+        "id": "nes-d1d6ee3a3437e668"
+      },
+      "audit": {
+        "provider": "vgc",
+        "queryUrl": "https://videogamescritic.com/api/v1/search?q=Super%20Mario%20Bros.&limit=5",
+        "observedAt": "2026-09-16T02:35:32.012Z",
+        "responseChecksum": "697f03fea88e177f6ed0ab594cfec0d0121cfbfc05164b55a77f9ef08b99a28b",
+        "returned": 5,
+        "reportedTotal": 12,
+        "truncated": true,
+        "candidates": [
+          {
+            "providerId": "1000002307",
+            "name": "Super Mario Bros.",
+            "releaseDate": "2004-06-02",
+            "platforms": [
+              "Switch"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/super-mario-bros-1000002307"
+          },
+          {
+            "providerId": "1000000412",
+            "name": "Super Mario Bros. Wonder",
+            "releaseDate": "2023-10-20",
+            "platforms": [
+              "Switch"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/super-mario-bros-wonder-1000000412"
+          },
+          {
+            "providerId": "1000000526",
+            "name": "Super Mario Bros. 35",
+            "releaseDate": "2020-10-01",
+            "platforms": [
+              "Switch"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/super-mario-bros-35-1000000526"
+          },
+          {
+            "providerId": "1000005250",
+            "name": "Super Mario Bros. 2",
+            "releaseDate": "1988-09-01",
+            "platforms": [
+              "Switch"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/super-mario-bros-2-1000005250"
+          },
+          {
+            "providerId": "1000005151",
+            "name": "Super Mario Bros.: The Lost Levels",
+            "releaseDate": "1986-06-03",
+            "platforms": [
+              "Switch"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/super-mario-bros-the-lost-levels-1000005151"
+          }
+        ],
+        "review": {
+          "status": "other-edition-only",
+          "candidateId": "1000002307",
+          "workCandidate": true,
+          "exactReleaseAccepted": false,
+          "rankingEligible": false,
+          "reason": "Same title has a 2004 date and Switch platform."
+        }
+      }
+    },
+    {
+      "id": "nes-8d2ceed4c78dee43",
+      "title": "Kirby's Adventure",
+      "system": "nes",
+      "catalogYear": 1993,
+      "targetScope": "original catalog platform release; region/build unverified",
+      "catalogRef": {
+        "provider": "catalog",
+        "id": "nes-8d2ceed4c78dee43"
+      },
+      "audit": {
+        "provider": "vgc",
+        "queryUrl": "https://videogamescritic.com/api/v1/search?q=Kirby's%20Adventure&limit=5",
+        "observedAt": "2026-09-16T02:35:32.301Z",
+        "responseChecksum": "1783650ea6c60b576563cb1a78ae0b32654340a379b07ce4eb40fbf1e3ed11d6",
+        "returned": 0,
+        "reportedTotal": 0,
+        "truncated": false,
+        "candidates": [],
+        "review": {
+          "status": "no-results",
+          "candidateId": null,
+          "workCandidate": false,
+          "exactReleaseAccepted": false,
+          "rankingEligible": false,
+          "reason": "No matches in this query."
+        }
+      }
+    },
+    {
+      "id": "nes-f853fa686e0aaf77",
+      "title": "Mike Tyson's Punch-Out!!",
+      "system": "nes",
+      "catalogYear": 1987,
+      "targetScope": "original catalog platform release; region/build unverified",
+      "catalogRef": {
+        "provider": "catalog",
+        "id": "nes-f853fa686e0aaf77"
+      },
+      "audit": {
+        "provider": "vgc",
+        "queryUrl": "https://videogamescritic.com/api/v1/search?q=Mike%20Tyson's%20Punch-Out!!&limit=5",
+        "observedAt": "2026-09-16T02:35:32.545Z",
+        "responseChecksum": "e815e4b21cd75af6c2d896f76aeb87f1fcab32f31a43dd88aa88fc2025b5e205",
+        "returned": 0,
+        "reportedTotal": 0,
+        "truncated": false,
+        "candidates": [],
+        "review": {
+          "status": "no-results",
+          "candidateId": null,
+          "workCandidate": false,
+          "exactReleaseAccepted": false,
+          "rankingEligible": false,
+          "reason": "No matches in this query."
+        }
+      }
+    },
+    {
+      "id": "nes-0358cc4b7f3dd117",
+      "title": "Bionic Commando",
+      "system": "nes",
+      "catalogYear": 1988,
+      "targetScope": "original catalog platform release; region/build unverified",
+      "catalogRef": {
+        "provider": "catalog",
+        "id": "nes-0358cc4b7f3dd117"
+      },
+      "audit": {
+        "provider": "vgc",
+        "queryUrl": "https://videogamescritic.com/api/v1/search?q=Bionic%20Commando&limit=5",
+        "observedAt": "2026-09-16T02:35:32.823Z",
+        "responseChecksum": "79f0372680a2901b0fa3f4baccd2cd25be0beed156d4e2e3eac0e7f9bbae735f",
+        "returned": 1,
+        "reportedTotal": 1,
+        "truncated": false,
+        "candidates": [
+          {
+            "providerId": "21680",
+            "name": "Bionic Commando: Rearmed",
+            "releaseDate": "2009-07-28",
+            "platforms": [
+              "PC",
+              "PlayStation",
+              "Xbox"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/bionic-commando-rearmed-21680"
+          }
+        ],
+        "review": {
+          "status": "other-edition-only",
+          "candidateId": "21680",
+          "workCandidate": true,
+          "exactReleaseAccepted": false,
+          "rankingEligible": false,
+          "reason": "Only Rearmed returned."
+        }
+      }
+    },
+    {
+      "id": "snes-8fdd26aa4c5ce2c8",
+      "title": "The Legend of Zelda: A Link to the Past",
+      "system": "snes",
+      "catalogYear": 1991,
+      "targetScope": "original catalog platform release; region/build unverified",
+      "catalogRef": {
+        "provider": "catalog",
+        "id": "snes-8fdd26aa4c5ce2c8"
+      },
+      "audit": {
+        "provider": "vgc",
+        "queryUrl": "https://videogamescritic.com/api/v1/search?q=The%20Legend%20of%20Zelda%3A%20A%20Link%20to%20the%20Past&limit=5",
+        "observedAt": "2026-09-16T02:35:33.057Z",
+        "responseChecksum": "1c94584afcfc0fda103af3cf9607bc53f6e0d4f4b66ba663fdf3b27b2c6efcd9",
+        "returned": 2,
+        "reportedTotal": 2,
+        "truncated": false,
+        "candidates": [
+          {
+            "providerId": "1000004393",
+            "name": "The Legend of Zelda: A Link to the Past",
+            "releaseDate": "1991-11-21",
+            "platforms": [
+              "Switch"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/the-legend-of-zelda-a-link-to-the-past-1000004393"
+          },
+          {
+            "providerId": "1000002356",
+            "name": "The Legend of Zelda: A Link to the Past / Four Swords",
+            "releaseDate": "2002-12-03",
+            "platforms": [],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/the-legend-of-zelda-a-link-to-the-past-four-swords-1000002356"
+          }
+        ],
+        "review": {
+          "status": "scope-unresolved",
+          "candidateId": "1000004393",
+          "workCandidate": true,
+          "exactReleaseAccepted": false,
+          "rankingEligible": false,
+          "reason": "Matching work/year, but only Switch is listed."
+        }
+      }
+    },
+    {
+      "id": "snes-efca17891ef003a2",
+      "title": "Super Metroid",
+      "system": "snes",
+      "catalogYear": 1994,
+      "targetScope": "original catalog platform release; region/build unverified",
+      "catalogRef": {
+        "provider": "catalog",
+        "id": "snes-efca17891ef003a2"
+      },
+      "audit": {
+        "provider": "vgc",
+        "queryUrl": "https://videogamescritic.com/api/v1/search?q=Super%20Metroid&limit=5",
+        "observedAt": "2026-09-16T02:35:33.345Z",
+        "responseChecksum": "ad95818d53855a9d248e2d60a8de78609ecbca754e64db0c0eba2b80324d985f",
+        "returned": 1,
+        "reportedTotal": 1,
+        "truncated": false,
+        "candidates": [
+          {
+            "providerId": "1000003862",
+            "name": "Super Metroid",
+            "releaseDate": "1994-03-19",
+            "platforms": [
+              "Switch"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/super-metroid-1000003862"
+          }
+        ],
+        "review": {
+          "status": "scope-unresolved",
+          "candidateId": "1000003862",
+          "workCandidate": true,
+          "exactReleaseAccepted": false,
+          "rankingEligible": false,
+          "reason": "Matching work/year, but only Switch is listed."
+        }
+      }
+    },
+    {
+      "id": "snes-b10570e969c9e884",
+      "title": "Chrono Trigger",
+      "system": "snes",
+      "catalogYear": 1995,
+      "targetScope": "original catalog platform release; region/build unverified",
+      "catalogRef": {
+        "provider": "catalog",
+        "id": "snes-b10570e969c9e884"
+      },
+      "audit": {
+        "provider": "vgc",
+        "queryUrl": "https://videogamescritic.com/api/v1/search?q=Chrono%20Trigger&limit=5",
+        "observedAt": "2026-09-16T02:35:33.577Z",
+        "responseChecksum": "f3a0ff71af63fa2e63212eccec20d920915365582d60d3260bbf6e3421047be1",
+        "returned": 1,
+        "reportedTotal": 1,
+        "truncated": false,
+        "candidates": [
+          {
+            "providerId": "613830",
+            "name": "CHRONO TRIGGER®",
+            "releaseDate": "2018-02-26",
+            "platforms": [
+              "PC",
+              "PlayStation",
+              "Mobile"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/chrono-trigger-613830"
+          }
+        ],
+        "review": {
+          "status": "other-edition-only",
+          "candidateId": "613830",
+          "workCandidate": true,
+          "exactReleaseAccepted": false,
+          "rankingEligible": false,
+          "reason": "2018 PC record cannot supply a SNES score."
+        }
+      }
+    },
+    {
+      "id": "snes-84156199764952f6",
+      "title": "Final Fantasy VI",
+      "system": "snes",
+      "catalogYear": 1994,
+      "targetScope": "original catalog platform release; region/build unverified",
+      "catalogRef": {
+        "provider": "catalog",
+        "id": "snes-84156199764952f6"
+      },
+      "audit": {
+        "provider": "vgc",
+        "queryUrl": "https://videogamescritic.com/api/v1/search?q=Final%20Fantasy%20VI&limit=5",
+        "observedAt": "2026-09-16T02:35:33.872Z",
+        "responseChecksum": "3ad3c304aa6b71afb89bdf296d70076d064faeb7812579298f97118484e7518c",
+        "returned": 2,
+        "reportedTotal": 2,
+        "truncated": false,
+        "candidates": [
+          {
+            "providerId": "1173820",
+            "name": "FINAL FANTASY VI",
+            "releaseDate": "2022-02-22",
+            "platforms": [
+              "PC",
+              "PlayStation",
+              "Mobile"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/final-fantasy-vi-1173820"
+          },
+          {
+            "providerId": "1000003854",
+            "name": "Final Fantasy VI",
+            "releaseDate": "1994-04-02",
+            "platforms": [
+              "PC",
+              "PlayStation",
+              "Switch"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/final-fantasy-vi-1000003854"
+          }
+        ],
+        "review": {
+          "status": "scope-unresolved",
+          "candidateId": "1000003854",
+          "workCandidate": true,
+          "exactReleaseAccepted": false,
+          "rankingEligible": false,
+          "reason": "1994 work candidate and 2022 edition; neither establishes SNES score scope."
+        }
+      }
+    },
+    {
+      "id": "snes-bd03c92c397b51c9",
+      "title": "Super Mario World",
+      "system": "snes",
+      "catalogYear": 1990,
+      "targetScope": "original catalog platform release; region/build unverified",
+      "catalogRef": {
+        "provider": "catalog",
+        "id": "snes-bd03c92c397b51c9"
+      },
+      "audit": {
+        "provider": "vgc",
+        "queryUrl": "https://videogamescritic.com/api/v1/search?q=Super%20Mario%20World&limit=5",
+        "observedAt": "2026-09-16T02:35:34.103Z",
+        "responseChecksum": "7bf97dc52ce2fc9b0531ce63fae732681bde7a56b5cf33dc1e4ae604535798da",
+        "returned": 4,
+        "reportedTotal": 4,
+        "truncated": false,
+        "candidates": [
+          {
+            "providerId": "1000002357",
+            "name": "Super Mario World: Super Mario Advance 2",
+            "releaseDate": "2002-02-09",
+            "platforms": [],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/super-mario-world-super-mario-advance-2-1000002357"
+          },
+          {
+            "providerId": "1000003897",
+            "name": "Super Mario World 2: Yoshi's Island",
+            "releaseDate": "1995-08-05",
+            "platforms": [
+              "Switch"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/super-mario-world-2-yoshi-s-island-1000003897"
+          },
+          {
+            "providerId": "1000000460",
+            "name": "Super Mario 3D World + Bowser's Fury",
+            "releaseDate": "2021-02-12",
+            "platforms": [
+              "Switch"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/super-mario-3d-world-bowser-s-fury-1000000460"
+          },
+          {
+            "providerId": "1000003422",
+            "name": "Super Mario 3D World",
+            "releaseDate": "2013-11-22",
+            "platforms": [
+              "Switch"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/super-mario-3d-world-1000003422"
+          }
+        ],
+        "review": {
+          "status": "other-edition-only",
+          "candidateId": null,
+          "workCandidate": true,
+          "exactReleaseAccepted": false,
+          "rankingEligible": false,
+          "reason": "GBA adaptation, sequel and 3D World records; original SNES absent."
+        }
+      }
+    },
+    {
+      "id": "snes-4b4c654410f25eb8",
+      "title": "Earthbound",
+      "system": "snes",
+      "catalogYear": 1994,
+      "targetScope": "original catalog platform release; region/build unverified",
+      "catalogRef": {
+        "provider": "catalog",
+        "id": "snes-4b4c654410f25eb8"
+      },
+      "audit": {
+        "provider": "vgc",
+        "queryUrl": "https://videogamescritic.com/api/v1/search?q=Earthbound&limit=5",
+        "observedAt": "2026-09-16T02:35:34.396Z",
+        "responseChecksum": "53c2f578847c3972e1f4ab741bd4e4cf29f954ae4fecfd84b83142396ebbe4f4",
+        "returned": 1,
+        "reportedTotal": 1,
+        "truncated": false,
+        "candidates": [
+          {
+            "providerId": "1000004622",
+            "name": "EarthBound 64",
+            "releaseDate": "2000-03-22",
+            "platforms": [
+              "Switch"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/earthbound-64-1000004622"
+          }
+        ],
+        "review": {
+          "status": "unrelated-or-sequel",
+          "candidateId": null,
+          "workCandidate": false,
+          "exactReleaseAccepted": false,
+          "rankingEligible": false,
+          "reason": "Only EarthBound 64 returned; not the requested SNES release."
+        }
+      }
+    },
+    {
+      "id": "snes-9742b64812f7dab2",
+      "title": "Donkey Kong Country 2: Diddy's Kong Quest",
+      "system": "snes",
+      "catalogYear": 1995,
+      "targetScope": "original catalog platform release; region/build unverified",
+      "catalogRef": {
+        "provider": "catalog",
+        "id": "snes-9742b64812f7dab2"
+      },
+      "audit": {
+        "provider": "vgc",
+        "queryUrl": "https://videogamescritic.com/api/v1/search?q=Donkey%20Kong%20Country%202%3A%20Diddy's%20Kong%20Quest&limit=5",
+        "observedAt": "2026-09-16T02:35:34.637Z",
+        "responseChecksum": "356b1a7d2b850f1553d78eecd5f47f9d16ef487695bff4851a8fe712f6884348",
+        "returned": 1,
+        "reportedTotal": 1,
+        "truncated": false,
+        "candidates": [
+          {
+            "providerId": "1000002310",
+            "name": "Donkey Kong Country 2: Diddy's Kong Quest",
+            "releaseDate": "2004-11-15",
+            "platforms": [],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/donkey-kong-country-2-diddy-s-kong-quest-1000002310"
+          }
+        ],
+        "review": {
+          "status": "other-edition-only",
+          "candidateId": "1000002310",
+          "workCandidate": true,
+          "exactReleaseAccepted": false,
+          "rankingEligible": false,
+          "reason": "2004 record without a platform; original SNES scope unestablished."
+        }
+      }
+    },
+    {
+      "id": "snes-e7f282c2961354ed",
+      "title": "Super Mario RPG",
+      "system": "snes",
+      "catalogYear": 1996,
+      "targetScope": "original catalog platform release; region/build unverified",
+      "catalogRef": {
+        "provider": "catalog",
+        "id": "snes-e7f282c2961354ed"
+      },
+      "audit": {
+        "provider": "vgc",
+        "queryUrl": "https://videogamescritic.com/api/v1/search?q=Super%20Mario%20RPG&limit=5",
+        "observedAt": "2026-09-16T02:35:34.917Z",
+        "responseChecksum": "af683a03b04732064baedb5cf1934ea09f80dc012d8b563ba95e395abbeddd82",
+        "returned": 1,
+        "reportedTotal": 1,
+        "truncated": false,
+        "candidates": [
+          {
+            "providerId": "1000000418",
+            "name": "Super Mario RPG",
+            "releaseDate": "2023-11-17",
+            "platforms": [
+              "Switch"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/super-mario-rpg-1000000418"
+          }
+        ],
+        "review": {
+          "status": "other-edition-only",
+          "candidateId": "1000000418",
+          "workCandidate": true,
+          "exactReleaseAccepted": false,
+          "rankingEligible": false,
+          "reason": "2023 Switch remake."
+        }
+      }
+    },
+    {
+      "id": "md-e6a0f6c621711006",
+      "title": "Sonic the Hedgehog 2",
+      "system": "md",
+      "catalogYear": 1992,
+      "targetScope": "original catalog platform release; region/build unverified",
+      "catalogRef": {
+        "provider": "catalog",
+        "id": "md-e6a0f6c621711006"
+      },
+      "audit": {
+        "provider": "vgc",
+        "queryUrl": "https://videogamescritic.com/api/v1/search?q=Sonic%20the%20Hedgehog%202&limit=5",
+        "observedAt": "2026-09-16T02:35:35.163Z",
+        "responseChecksum": "bf8d64df7a5f4833031cbb57bd09aa2660e8b2a91312c9e64735e42d374feb0f",
+        "returned": 3,
+        "reportedTotal": 3,
+        "truncated": false,
+        "candidates": [
+          {
+            "providerId": "1000000493",
+            "name": "Sonic the Hedgehog 2",
+            "releaseDate": "2007-09-12",
+            "platforms": [
+              "PC",
+              "PlayStation",
+              "Xbox",
+              "Switch",
+              "Mobile"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/sonic-the-hedgehog-2-1000000493"
+          },
+          {
+            "providerId": "203650",
+            "name": "Sonic the Hedgehog 4 - Episode II",
+            "releaseDate": "2012-05-15",
+            "platforms": [
+              "PC",
+              "PlayStation",
+              "Xbox",
+              "Switch",
+              "Mobile"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/sonic-the-hedgehog-4-episode-ii-203650"
+          },
+          {
+            "providerId": "1000004480",
+            "name": "Knuckles the Echidna in Sonic the Hedgehog 2",
+            "releaseDate": "1994-01-01",
+            "platforms": [],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/knuckles-the-echidna-in-sonic-the-hedgehog-2-1000004480"
+          }
+        ],
+        "review": {
+          "status": "other-edition-only",
+          "candidateId": "1000000493",
+          "workCandidate": true,
+          "exactReleaseAccepted": false,
+          "rankingEligible": false,
+          "reason": "2007 record and modern platforms; not original Mega Drive scope."
+        }
+      }
+    },
+    {
+      "id": "md-7de035df3fcbe46f",
+      "title": "Streets of Rage 2",
+      "system": "md",
+      "catalogYear": 1992,
+      "targetScope": "original catalog platform release; region/build unverified",
+      "catalogRef": {
+        "provider": "catalog",
+        "id": "md-7de035df3fcbe46f"
+      },
+      "audit": {
+        "provider": "vgc",
+        "queryUrl": "https://videogamescritic.com/api/v1/search?q=Streets%20of%20Rage%202&limit=5",
+        "observedAt": "2026-09-16T02:35:35.443Z",
+        "responseChecksum": "d61053b0188077203ab46bbab33ff2148ea30bcb9c258fd1d79800286fb0b716",
+        "returned": 1,
+        "reportedTotal": 1,
+        "truncated": false,
+        "candidates": [
+          {
+            "providerId": "1000003005",
+            "name": "Streets of Rage 2",
+            "releaseDate": "2007-08-29",
+            "platforms": [
+              "PC",
+              "PlayStation",
+              "Xbox",
+              "Mobile"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/streets-of-rage-2-1000003005"
+          }
+        ],
+        "review": {
+          "status": "other-edition-only",
+          "candidateId": "1000003005",
+          "workCandidate": true,
+          "exactReleaseAccepted": false,
+          "rankingEligible": false,
+          "reason": "2007 record with modern platform families."
+        }
+      }
+    },
+    {
+      "id": "md-a971c4da17bd5287",
+      "title": "Castlevania: Bloodlines",
+      "system": "md",
+      "catalogYear": 1994,
+      "targetScope": "original catalog platform release; region/build unverified",
+      "catalogRef": {
+        "provider": "catalog",
+        "id": "md-a971c4da17bd5287"
+      },
+      "audit": {
+        "provider": "vgc",
+        "queryUrl": "https://videogamescritic.com/api/v1/search?q=Castlevania%3A%20Bloodlines&limit=5",
+        "observedAt": "2026-09-16T02:35:35.671Z",
+        "responseChecksum": "c710b495b411838c6d0554a63ea52a5f99bf859fe81646076ec5acd7a1fc61ca",
+        "returned": 1,
+        "reportedTotal": 1,
+        "truncated": false,
+        "candidates": [
+          {
+            "providerId": "1000003872",
+            "name": "Castlevania: Bloodlines",
+            "releaseDate": "1994-03-17",
+            "platforms": [],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/castlevania-bloodlines-1000003872"
+          }
+        ],
+        "review": {
+          "status": "scope-unresolved",
+          "candidateId": "1000003872",
+          "workCandidate": true,
+          "exactReleaseAccepted": false,
+          "rankingEligible": false,
+          "reason": "Matching work/year; platform list empty."
+        }
+      }
+    },
+    {
+      "id": "md-1431762bc7426242",
+      "title": "Gunstar Heroes",
+      "system": "md",
+      "catalogYear": 1993,
+      "targetScope": "original catalog platform release; region/build unverified",
+      "catalogRef": {
+        "provider": "catalog",
+        "id": "md-1431762bc7426242"
+      },
+      "audit": {
+        "provider": "vgc",
+        "queryUrl": "https://videogamescritic.com/api/v1/search?q=Gunstar%20Heroes&limit=5",
+        "observedAt": "2026-09-16T02:35:35.968Z",
+        "responseChecksum": "6f636939be340fcb1b1a42b62dac068555261c65da03b643e1635d61137ebc89",
+        "returned": 2,
+        "reportedTotal": 2,
+        "truncated": false,
+        "candidates": [
+          {
+            "providerId": "1000003295",
+            "name": "Gunstar Heroes",
+            "releaseDate": "2009-06-10",
+            "platforms": [
+              "PC",
+              "PlayStation",
+              "Xbox",
+              "Mobile"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/gunstar-heroes-1000003295"
+          },
+          {
+            "providerId": "1000002296",
+            "name": "Gunstar Super Heroes",
+            "releaseDate": "2005-10-25",
+            "platforms": [],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/gunstar-super-heroes-1000002296"
+          }
+        ],
+        "review": {
+          "status": "other-edition-only",
+          "candidateId": "1000003295",
+          "workCandidate": true,
+          "exactReleaseAccepted": false,
+          "rankingEligible": false,
+          "reason": "2009 record and handheld successor."
+        }
+      }
+    },
+    {
+      "id": "md-4545acb59eaca9dd",
+      "title": "Shinobi III: Return of the Ninja Master",
+      "system": "md",
+      "catalogYear": 1993,
+      "targetScope": "original catalog platform release; region/build unverified",
+      "catalogRef": {
+        "provider": "catalog",
+        "id": "md-4545acb59eaca9dd"
+      },
+      "audit": {
+        "provider": "vgc",
+        "queryUrl": "https://videogamescritic.com/api/v1/search?q=Shinobi%20III%3A%20Return%20of%20the%20Ninja%20Master&limit=5",
+        "observedAt": "2026-09-16T02:35:36.198Z",
+        "responseChecksum": "3fc4fb09dbffb321297371b4d34b77cb1da4320bfce00daf281613b449f20241",
+        "returned": 0,
+        "reportedTotal": 0,
+        "truncated": false,
+        "candidates": [],
+        "review": {
+          "status": "no-results",
+          "candidateId": null,
+          "workCandidate": false,
+          "exactReleaseAccepted": false,
+          "rankingEligible": false,
+          "reason": "No matches in this query."
+        }
+      }
+    },
+    {
+      "id": "md-a1dddbb4cf129062",
+      "title": "Comix Zone",
+      "system": "md",
+      "catalogYear": 1995,
+      "targetScope": "original catalog platform release; region/build unverified",
+      "catalogRef": {
+        "provider": "catalog",
+        "id": "md-a1dddbb4cf129062"
+      },
+      "audit": {
+        "provider": "vgc",
+        "queryUrl": "https://videogamescritic.com/api/v1/search?q=Comix%20Zone&limit=5",
+        "observedAt": "2026-09-16T02:35:36.498Z",
+        "responseChecksum": "ef699760ea11fea4b14174ca3dbddd49910a80087ea0cec0e4502c5cddcd1c6d",
+        "returned": 1,
+        "reportedTotal": 1,
+        "truncated": false,
+        "candidates": [
+          {
+            "providerId": "1000003214",
+            "name": "Comix Zone",
+            "releaseDate": "2002-09-11",
+            "platforms": [
+              "PC",
+              "PlayStation",
+              "Xbox",
+              "Mobile"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/comix-zone-1000003214"
+          }
+        ],
+        "review": {
+          "status": "other-edition-only",
+          "candidateId": "1000003214",
+          "workCandidate": true,
+          "exactReleaseAccepted": false,
+          "rankingEligible": false,
+          "reason": "2002 record with modern platform families."
+        }
+      }
+    },
+    {
+      "id": "md-fecbd8d65c36a215",
+      "title": "Sonic the Hedgehog 3 and Knuckles",
+      "system": "md",
+      "catalogYear": 1994,
+      "targetScope": "original catalog platform release; region/build unverified",
+      "catalogRef": {
+        "provider": "catalog",
+        "id": "md-fecbd8d65c36a215"
+      },
+      "audit": {
+        "provider": "vgc",
+        "queryUrl": "https://videogamescritic.com/api/v1/search?q=Sonic%20the%20Hedgehog%203%20and%20Knuckles&limit=5",
+        "observedAt": "2026-09-16T02:35:36.727Z",
+        "responseChecksum": "9a62d43a7c0212d39f83c0a52b4f6ed774c505d954fbe61eb38da1650d0bb604",
+        "returned": 0,
+        "reportedTotal": 0,
+        "truncated": false,
+        "candidates": [],
+        "review": {
+          "status": "no-results",
+          "candidateId": null,
+          "workCandidate": false,
+          "exactReleaseAccepted": false,
+          "rankingEligible": false,
+          "reason": "No matches in this query; alternate title queries not attempted."
+        }
+      }
+    },
+    {
+      "id": "md-19feaf878f065bc6",
+      "title": "Phantasy Star IV: The End of the Millennium",
+      "system": "md",
+      "catalogYear": 1993,
+      "targetScope": "original catalog platform release; region/build unverified",
+      "catalogRef": {
+        "provider": "catalog",
+        "id": "md-19feaf878f065bc6"
+      },
+      "audit": {
+        "provider": "vgc",
+        "queryUrl": "https://videogamescritic.com/api/v1/search?q=Phantasy%20Star%20IV%3A%20The%20End%20of%20the%20Millennium&limit=5",
+        "observedAt": "2026-09-16T02:35:37.019Z",
+        "responseChecksum": "37f6526b8d0e5dfc26a121488d4e7be4856121061815f7e2b6fad5b968b34b33",
+        "returned": 0,
+        "reportedTotal": 0,
+        "truncated": false,
+        "candidates": [],
+        "review": {
+          "status": "no-results",
+          "candidateId": null,
+          "workCandidate": false,
+          "exactReleaseAccepted": false,
+          "rankingEligible": false,
+          "reason": "No matches in this query; shorter title query not attempted."
+        }
+      }
+    },
+    {
+      "id": "ps1-50c2806c7c42fe90",
+      "title": "Final Fantasy VII",
+      "system": "ps1",
+      "catalogYear": 1997,
+      "targetScope": "original catalog platform release; region/build unverified",
+      "catalogRef": {
+        "provider": "catalog",
+        "id": "ps1-50c2806c7c42fe90"
+      },
+      "audit": {
+        "provider": "vgc",
+        "queryUrl": "https://videogamescritic.com/api/v1/search?q=Final%20Fantasy%20VII&limit=5",
+        "observedAt": "2026-09-16T02:35:37.256Z",
+        "responseChecksum": "57c724de94a70e15e37cfce5590a70691446c32b502ed43ca4ad6a00d06081cb",
+        "returned": 5,
+        "reportedTotal": 10,
+        "truncated": true,
+        "candidates": [
+          {
+            "providerId": "3837340",
+            "name": "FINAL FANTASY VII",
+            "releaseDate": "2013-07-24",
+            "platforms": [
+              "PC",
+              "PlayStation",
+              "Xbox",
+              "Switch",
+              "Mobile"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/final-fantasy-vii-3837340"
+          },
+          {
+            "providerId": "4354570",
+            "name": "FINAL FANTASY VII REVELATION",
+            "releaseDate": "2027-04-08",
+            "platforms": [
+              "PC",
+              "PlayStation",
+              "Xbox",
+              "Switch"
+            ],
+            "hasHeadlineScore": false,
+            "url": "https://videogamescritic.com/game/final-fantasy-vii-revelation-4354570"
+          },
+          {
+            "providerId": "2909400",
+            "name": "FINAL FANTASY VII REBIRTH",
+            "releaseDate": "2025-01-22",
+            "platforms": [
+              "PC",
+              "PlayStation",
+              "Xbox",
+              "Switch"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/final-fantasy-vii-rebirth-2909400"
+          },
+          {
+            "providerId": "1000003618",
+            "name": "Final Fantasy VII Ever Crisis",
+            "releaseDate": "2023-09-07",
+            "platforms": [
+              "PC",
+              "Mobile"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/final-fantasy-vii-ever-crisis-1000003618"
+          },
+          {
+            "providerId": "1462040",
+            "name": "FINAL FANTASY VII REMAKE INTERGRADE",
+            "releaseDate": "2022-06-16",
+            "platforms": [
+              "PC",
+              "PlayStation",
+              "Xbox",
+              "Switch"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/final-fantasy-vii-remake-intergrade-1462040"
+          }
+        ],
+        "review": {
+          "status": "other-edition-only",
+          "candidateId": "3837340",
+          "workCandidate": true,
+          "exactReleaseAccepted": false,
+          "rankingEligible": false,
+          "reason": "2013 record and newer series releases; original PS1 scope not established."
+        }
+      }
+    },
+    {
+      "id": "ps1-6925a80752f55275",
+      "title": "Metal Gear Solid",
+      "system": "ps1",
+      "catalogYear": 1998,
+      "targetScope": "original catalog platform release; region/build unverified",
+      "catalogRef": {
+        "provider": "catalog",
+        "id": "ps1-6925a80752f55275"
+      },
+      "audit": {
+        "provider": "vgc",
+        "queryUrl": "https://videogamescritic.com/api/v1/search?q=Metal%20Gear%20Solid&limit=5",
+        "observedAt": "2026-09-16T02:35:37.540Z",
+        "responseChecksum": "05ba91162696c4c2f2a28bf80897349c9a5fd2ae5afbd52f43ce4f8e028d8715",
+        "returned": 5,
+        "reportedTotal": 23,
+        "truncated": true,
+        "candidates": [
+          {
+            "providerId": "1000003479",
+            "name": "Metal Gear Solid",
+            "releaseDate": "1998-10-21",
+            "platforms": [
+              "PlayStation",
+              "Xbox",
+              "Switch"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/metal-gear-solid-1000003479"
+          },
+          {
+            "providerId": "2492670",
+            "name": "METAL GEAR SOLID 4: Guns of the Patriots - Master Collection Version",
+            "releaseDate": "2026-08-27",
+            "platforms": [
+              "PC",
+              "PlayStation",
+              "Xbox",
+              "Switch"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/metal-gear-solid-4-guns-of-the-patriots-master-collection-2492670"
+          },
+          {
+            "providerId": "2492660",
+            "name": "METAL GEAR SOLID: Peace Walker - Master Collection Version",
+            "releaseDate": "2026-08-27",
+            "platforms": [
+              "PC",
+              "PlayStation",
+              "Xbox",
+              "Switch"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/metal-gear-solid-peace-walker-master-collection-version-2492660"
+          },
+          {
+            "providerId": "3859630",
+            "name": "METAL GEAR SOLID: MASTER COLLECTION Vol.2",
+            "releaseDate": "2026-08-26",
+            "platforms": [
+              "PC",
+              "PlayStation",
+              "Xbox",
+              "Switch"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/metal-gear-solid-master-collection-vol-2-3859630"
+          },
+          {
+            "providerId": "2417610",
+            "name": "METAL GEAR SOLID Δ: SNAKE EATER",
+            "releaseDate": "2025-08-28",
+            "platforms": [
+              "PC",
+              "PlayStation",
+              "Xbox"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/metal-gear-solid-snake-eater-2417610"
+          }
+        ],
+        "review": {
+          "status": "scope-unresolved",
+          "candidateId": "1000003479",
+          "workCandidate": true,
+          "exactReleaseAccepted": false,
+          "rankingEligible": false,
+          "reason": "Matching work/year, but broad PlayStation/Xbox/Switch labels do not identify a PS1 score."
+        }
+      }
+    },
+    {
+      "id": "ps1-a041d67b6c8e8bc8",
+      "title": "Castlevania: Symphony of the Night",
+      "system": "ps1",
+      "catalogYear": 1997,
+      "targetScope": "original catalog platform release; region/build unverified",
+      "catalogRef": {
+        "provider": "catalog",
+        "id": "ps1-a041d67b6c8e8bc8"
+      },
+      "audit": {
+        "provider": "vgc",
+        "queryUrl": "https://videogamescritic.com/api/v1/search?q=Castlevania%3A%20Symphony%20of%20the%20Night&limit=5",
+        "observedAt": "2026-09-16T02:35:37.772Z",
+        "responseChecksum": "42edbd647ba4556bb2c094545f3b9f31e635555ff4d10c600849adf9b8bfaf13",
+        "returned": 1,
+        "reportedTotal": 1,
+        "truncated": false,
+        "candidates": [
+          {
+            "providerId": "1000001768",
+            "name": "Castlevania: Symphony of the Night",
+            "releaseDate": "1997-10-02",
+            "platforms": [
+              "PlayStation",
+              "Xbox",
+              "Mobile"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/castlevania-symphony-of-the-night-1000001768"
+          }
+        ],
+        "review": {
+          "status": "scope-unresolved",
+          "candidateId": "1000001768",
+          "workCandidate": true,
+          "exactReleaseAccepted": false,
+          "rankingEligible": false,
+          "reason": "Matching work/year; platform generation and score population unknown."
+        }
+      }
+    },
+    {
+      "id": "ps1-6b0fb52d12330f2f",
+      "title": "Final Fantasy IX",
+      "system": "ps1",
+      "catalogYear": 2000,
+      "targetScope": "original catalog platform release; region/build unverified",
+      "catalogRef": {
+        "provider": "catalog",
+        "id": "ps1-6b0fb52d12330f2f"
+      },
+      "audit": {
+        "provider": "vgc",
+        "queryUrl": "https://videogamescritic.com/api/v1/search?q=Final%20Fantasy%20IX&limit=5",
+        "observedAt": "2026-09-16T02:35:38.065Z",
+        "responseChecksum": "16ca6ae2616914ea1b384296cd1ed72f1505b6249ee1f3bb8dff4baf64771914",
+        "returned": 1,
+        "reportedTotal": 1,
+        "truncated": false,
+        "candidates": [
+          {
+            "providerId": "377840",
+            "name": "FINAL FANTASY IX",
+            "releaseDate": "2016-04-13",
+            "platforms": [
+              "PC",
+              "PlayStation",
+              "Xbox",
+              "Switch",
+              "Mobile"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/final-fantasy-ix-377840"
+          }
+        ],
+        "review": {
+          "status": "other-edition-only",
+          "candidateId": "377840",
+          "workCandidate": true,
+          "exactReleaseAccepted": false,
+          "rankingEligible": false,
+          "reason": "2016 PC record; not original PS1."
+        }
+      }
+    },
+    {
+      "id": "ps1-230c3a12a3e0d3c5",
+      "title": "Resident Evil 2",
+      "system": "ps1",
+      "catalogYear": 1998,
+      "targetScope": "original catalog platform release; region/build unverified",
+      "catalogRef": {
+        "provider": "catalog",
+        "id": "ps1-230c3a12a3e0d3c5"
+      },
+      "audit": {
+        "provider": "vgc",
+        "queryUrl": "https://videogamescritic.com/api/v1/search?q=Resident%20Evil%202&limit=5",
+        "observedAt": "2026-09-16T02:35:38.294Z",
+        "responseChecksum": "2fd41458b37edda04dcbc45bddb15f0746bdc9953cf16f2ab4f22ab5b2a9424c",
+        "returned": 5,
+        "reportedTotal": 8,
+        "truncated": true,
+        "candidates": [
+          {
+            "providerId": "883710",
+            "name": "Resident Evil 2",
+            "releaseDate": "2019-01-23",
+            "platforms": [
+              "PC",
+              "PlayStation",
+              "Xbox",
+              "Switch",
+              "Mobile"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/resident-evil-2-883710"
+          },
+          {
+            "providerId": "4249110",
+            "name": "Resident Evil 2 (1998)",
+            "releaseDate": "2026-04-01",
+            "platforms": [
+              "PC",
+              "PlayStation",
+              "Switch"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/resident-evil-2-1998-4249110"
+          },
+          {
+            "providerId": "1000000272",
+            "name": "Resident Evil: Revelations 2 - Episode 4: Metamorphosis",
+            "releaseDate": "2015-03-17",
+            "platforms": [
+              "PC",
+              "PlayStation",
+              "Xbox"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/resident-evil-revelations-2-episode-4-metamorphosis-1000000272"
+          },
+          {
+            "providerId": "1000000266",
+            "name": "Resident Evil: Revelations 2 - Episode 3: Judgment",
+            "releaseDate": "2015-03-10",
+            "platforms": [
+              "PC",
+              "PlayStation",
+              "Xbox"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/resident-evil-revelations-2-episode-3-judgment-1000000266"
+          },
+          {
+            "providerId": "1000000269",
+            "name": "Resident Evil: Revelations 2 - Episode 2: Contemplation",
+            "releaseDate": "2015-03-03",
+            "platforms": [
+              "PC",
+              "PlayStation",
+              "Xbox"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/resident-evil-revelations-2-episode-2-contemplation-1000000269"
+          }
+        ],
+        "review": {
+          "status": "other-edition-only",
+          "candidateId": "4249110",
+          "workCandidate": true,
+          "exactReleaseAccepted": false,
+          "rankingEligible": false,
+          "reason": "Remake and 2026 record of the 1998 work; no original PS1 score scope."
+        }
+      }
+    },
+    {
+      "id": "ps1-f58d5e68bd6a15c2",
+      "title": "Tekken 3",
+      "system": "ps1",
+      "catalogYear": 1998,
+      "targetScope": "original catalog platform release; region/build unverified",
+      "catalogRef": {
+        "provider": "catalog",
+        "id": "ps1-f58d5e68bd6a15c2"
+      },
+      "audit": {
+        "provider": "vgc",
+        "queryUrl": "https://videogamescritic.com/api/v1/search?q=Tekken%203&limit=5",
+        "observedAt": "2026-09-16T02:35:38.590Z",
+        "responseChecksum": "2c8f01aa9c27d6a0fa051326c4dde63acb4914ecbe5d6fadfaa7b58fed34b995",
+        "returned": 2,
+        "reportedTotal": 2,
+        "truncated": false,
+        "candidates": [
+          {
+            "providerId": "1000001756",
+            "name": "Tekken 3",
+            "releaseDate": "1998-04-29",
+            "platforms": [
+              "PlayStation"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/tekken-3-1000001756"
+          },
+          {
+            "providerId": "1000004954",
+            "name": "Tekken 3D Prime Edition",
+            "releaseDate": "2012-02-14",
+            "platforms": [],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/tekken-3d-prime-edition-1000004954"
+          }
+        ],
+        "review": {
+          "status": "scope-unresolved",
+          "candidateId": "1000001756",
+          "workCandidate": true,
+          "exactReleaseAccepted": false,
+          "rankingEligible": false,
+          "reason": "Matching work/year; PlayStation label does not establish generation or rating population."
+        }
+      }
+    },
+    {
+      "id": "ps1-c49fa29ed6978af4",
+      "title": "Final Fantasy VIII",
+      "system": "ps1",
+      "catalogYear": 1999,
+      "targetScope": "original catalog platform release; region/build unverified",
+      "catalogRef": {
+        "provider": "catalog",
+        "id": "ps1-c49fa29ed6978af4"
+      },
+      "audit": {
+        "provider": "vgc",
+        "queryUrl": "https://videogamescritic.com/api/v1/search?q=Final%20Fantasy%20VIII&limit=5",
+        "observedAt": "2026-09-16T02:35:38.871Z",
+        "responseChecksum": "faabcc314f840e0c5dd808c397a741d8713092af4d291aa570f7fc5d723c0b82",
+        "returned": 1,
+        "reportedTotal": 1,
+        "truncated": false,
+        "candidates": [
+          {
+            "providerId": "1026680",
+            "name": "FINAL FANTASY VIII - REMASTERED",
+            "releaseDate": "2019-09-03",
+            "platforms": [
+              "PC",
+              "PlayStation",
+              "Xbox",
+              "Switch",
+              "Mobile"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/final-fantasy-viii-remastered-1026680"
+          }
+        ],
+        "review": {
+          "status": "other-edition-only",
+          "candidateId": "1026680",
+          "workCandidate": true,
+          "exactReleaseAccepted": false,
+          "rankingEligible": false,
+          "reason": "Only Remastered returned."
+        }
+      }
+    },
+    {
+      "id": "ps1-79e4c3b695925d91",
+      "title": "Chrono Cross",
+      "system": "ps1",
+      "catalogYear": 1999,
+      "targetScope": "original catalog platform release; region/build unverified",
+      "catalogRef": {
+        "provider": "catalog",
+        "id": "ps1-79e4c3b695925d91"
+      },
+      "audit": {
+        "provider": "vgc",
+        "queryUrl": "https://videogamescritic.com/api/v1/search?q=Chrono%20Cross&limit=5",
+        "observedAt": "2026-09-16T02:35:39.113Z",
+        "responseChecksum": "b6e258bdf8f3919508a5062ca1f6f8d20c4962d48d63fe5bb776f42a762a4320",
+        "returned": 2,
+        "reportedTotal": 2,
+        "truncated": false,
+        "candidates": [
+          {
+            "providerId": "1000002805",
+            "name": "Chrono Cross",
+            "releaseDate": "2000-08-15",
+            "platforms": [
+              "PlayStation"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/chrono-cross-1000002805"
+          },
+          {
+            "providerId": "1133760",
+            "name": "CHRONO CROSS: THE RADICAL DREAMERS EDITION",
+            "releaseDate": "2022-04-07",
+            "platforms": [
+              "PC",
+              "PlayStation",
+              "Xbox",
+              "Switch"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/chrono-cross-the-radical-dreamers-edition-1133760"
+          }
+        ],
+        "review": {
+          "status": "scope-unresolved",
+          "candidateId": "1000002805",
+          "workCandidate": true,
+          "exactReleaseAccepted": false,
+          "rankingEligible": false,
+          "reason": "Original work candidate and newer edition; region and original platform score scope unresolved."
+        }
+      }
+    },
+    {
+      "id": "dos-910ecd3e43c7d241",
+      "title": "Doom",
+      "system": "dos",
+      "catalogYear": 1993,
+      "targetScope": "original catalog platform release; region/build unverified",
+      "catalogRef": {
+        "provider": "catalog",
+        "id": "dos-910ecd3e43c7d241"
+      },
+      "audit": {
+        "provider": "vgc",
+        "queryUrl": "https://videogamescritic.com/api/v1/search?q=Doom&limit=5",
+        "observedAt": "2026-09-16T02:35:39.359Z",
+        "responseChecksum": "38cf6e112bcda3046139e51c2744fffb36bae9f8486b13d5dca531df354d7951",
+        "returned": 5,
+        "reportedTotal": 23,
+        "truncated": true,
+        "candidates": [
+          {
+            "providerId": "379720",
+            "name": "DOOM",
+            "releaseDate": "2016-05-12",
+            "platforms": [
+              "PC",
+              "PlayStation",
+              "Xbox",
+              "Switch"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/doom-379720"
+          },
+          {
+            "providerId": "1000000614",
+            "name": "DOOM: The Dark Ages - Revelations",
+            "releaseDate": "2026-07-07",
+            "platforms": [
+              "PC",
+              "PlayStation",
+              "Xbox"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/doom-the-dark-ages-revelations-1000000614"
+          },
+          {
+            "providerId": "3017860",
+            "name": "DOOM: The Dark Ages",
+            "releaseDate": "2025-05-13",
+            "platforms": [
+              "PC",
+              "PlayStation",
+              "Xbox"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/doom-the-dark-ages-3017860"
+          },
+          {
+            "providerId": "922050",
+            "name": "DOOMBLADE",
+            "releaseDate": "2023-05-31",
+            "platforms": [
+              "PC"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/doomblade-922050"
+          },
+          {
+            "providerId": "1098293",
+            "name": "DOOM Eternal: The Ancient Gods - Part Two",
+            "releaseDate": "2021-03-18",
+            "platforms": [
+              "PC",
+              "PlayStation",
+              "Xbox",
+              "Switch"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/doom-eternal-the-ancient-gods-part-two-1098293"
+          }
+        ],
+        "review": {
+          "status": "unrelated-or-sequel",
+          "candidateId": null,
+          "workCandidate": false,
+          "exactReleaseAccepted": false,
+          "rankingEligible": false,
+          "reason": "First five contain 2016 Doom and other later titles, not original Doom."
+        }
+      }
+    },
+    {
+      "id": "dos-aae3ba6bd925f6fa",
+      "title": "Quake",
+      "system": "dos",
+      "catalogYear": 1996,
+      "targetScope": "original catalog platform release; region/build unverified",
+      "catalogRef": {
+        "provider": "catalog",
+        "id": "dos-aae3ba6bd925f6fa"
+      },
+      "audit": {
+        "provider": "vgc",
+        "queryUrl": "https://videogamescritic.com/api/v1/search?q=Quake&limit=5",
+        "observedAt": "2026-09-16T02:35:39.639Z",
+        "responseChecksum": "0f79ab5429151c31d776c4b8dc7f955784bca6e4041ac43fe9c4a47d5e7e9cff",
+        "returned": 5,
+        "reportedTotal": 10,
+        "truncated": true,
+        "candidates": [
+          {
+            "providerId": "2310",
+            "name": "Quake",
+            "releaseDate": "2007-08-02",
+            "platforms": [
+              "PC",
+              "PlayStation",
+              "Switch"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/quake-2310"
+          },
+          {
+            "providerId": "611500",
+            "name": "Quake Champions",
+            "releaseDate": "2022-08-18",
+            "platforms": [
+              "PC"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/quake-champions-611500"
+          },
+          {
+            "providerId": "282440",
+            "name": "Quake Live",
+            "releaseDate": "2014-09-17",
+            "platforms": [
+              "PC"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/quake-live-282440"
+          },
+          {
+            "providerId": "2210",
+            "name": "Quake 4",
+            "releaseDate": "2011-08-04",
+            "platforms": [
+              "PC",
+              "Xbox"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/quake-4-2210"
+          },
+          {
+            "providerId": "1000005653",
+            "name": "Quake Arena Arcade",
+            "releaseDate": "2010-12-15",
+            "platforms": [
+              "Xbox"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/quake-arena-arcade-1000005653"
+          }
+        ],
+        "review": {
+          "status": "other-edition-only",
+          "candidateId": "2310",
+          "workCandidate": true,
+          "exactReleaseAccepted": false,
+          "rankingEligible": false,
+          "reason": "2007 store date; original 1996 PC release scope unresolved."
+        }
+      }
+    },
+    {
+      "id": "dos-4fd67467754f9825",
+      "title": "Duke Nukem 3D",
+      "system": "dos",
+      "catalogYear": 1996,
+      "targetScope": "original catalog platform release; region/build unverified",
+      "catalogRef": {
+        "provider": "catalog",
+        "id": "dos-4fd67467754f9825"
+      },
+      "audit": {
+        "provider": "vgc",
+        "queryUrl": "https://videogamescritic.com/api/v1/search?q=Duke%20Nukem%203D&limit=5",
+        "observedAt": "2026-09-16T02:35:39.864Z",
+        "responseChecksum": "50198bcb4edc33dcbe383415cbf1899a82a373285a9fc8d4cf1e59ed35d79aba",
+        "returned": 4,
+        "reportedTotal": 4,
+        "truncated": false,
+        "candidates": [
+          {
+            "providerId": "1000003215",
+            "name": "Duke Nukem 3D",
+            "releaseDate": "1996-01-29",
+            "platforms": [
+              "PC",
+              "Xbox",
+              "Switch",
+              "Mobile"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/duke-nukem-3d-1000003215"
+          },
+          {
+            "providerId": "434050",
+            "name": "Duke Nukem 3D: 20th Anniversary World Tour",
+            "releaseDate": "2016-10-11",
+            "platforms": [
+              "PC",
+              "PlayStation",
+              "Xbox",
+              "Switch"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/duke-nukem-3d-20th-anniversary-world-tour-434050"
+          },
+          {
+            "providerId": "1000005020",
+            "name": "Duke Nukem 3D: Megaton Edition",
+            "releaseDate": "2013-03-20",
+            "platforms": [
+              "PC",
+              "PlayStation"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/duke-nukem-3d-megaton-edition-1000005020"
+          },
+          {
+            "providerId": "1000003916",
+            "name": "Duke Nukem 3D: Atomic Edition",
+            "releaseDate": "1996-11-27",
+            "platforms": [
+              "PC"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/duke-nukem-3d-atomic-edition-1000003916"
+          }
+        ],
+        "review": {
+          "status": "scope-unresolved",
+          "candidateId": "1000003215",
+          "workCandidate": true,
+          "exactReleaseAccepted": false,
+          "rankingEligible": false,
+          "reason": "Original work and multiple editions; cross-platform score scope unspecified."
+        }
+      }
+    },
+    {
+      "id": "dos-9870e661fa505f31",
+      "title": "Wolfenstein 3D",
+      "system": "dos",
+      "catalogYear": 1992,
+      "targetScope": "original catalog platform release; region/build unverified",
+      "catalogRef": {
+        "provider": "catalog",
+        "id": "dos-9870e661fa505f31"
+      },
+      "audit": {
+        "provider": "vgc",
+        "queryUrl": "https://videogamescritic.com/api/v1/search?q=Wolfenstein%203D&limit=5",
+        "observedAt": "2026-09-16T02:35:40.163Z",
+        "responseChecksum": "62c1a998ef1691ccba5c7cf9fe61ca8e4f5a0501471fb773db0e0c10d748e81d",
+        "returned": 1,
+        "reportedTotal": 1,
+        "truncated": false,
+        "candidates": [
+          {
+            "providerId": "1000003654",
+            "name": "Wolfenstein 3D",
+            "releaseDate": "1992-05-05",
+            "platforms": [
+              "PC",
+              "PlayStation",
+              "Xbox",
+              "Mobile"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/wolfenstein-3d-1000003654"
+          }
+        ],
+        "review": {
+          "status": "scope-unresolved",
+          "candidateId": "1000003654",
+          "workCandidate": true,
+          "exactReleaseAccepted": false,
+          "rankingEligible": false,
+          "reason": "Matching work/year; combined platform families do not scope the score."
+        }
+      }
+    },
+    {
+      "id": "dos-4cf343c36269b389",
+      "title": "Commander Keen",
+      "system": "dos",
+      "catalogYear": 1990,
+      "targetScope": "original catalog platform release; region/build unverified",
+      "catalogRef": {
+        "provider": "catalog",
+        "id": "dos-4cf343c36269b389"
+      },
+      "audit": {
+        "provider": "vgc",
+        "queryUrl": "https://videogamescritic.com/api/v1/search?q=Commander%20Keen&limit=5",
+        "observedAt": "2026-09-16T02:35:40.399Z",
+        "responseChecksum": "c78140f68c424e562c3aa5a310bb8409ad4a48962cc312d75b896292a35519e2",
+        "returned": 4,
+        "reportedTotal": 4,
+        "truncated": false,
+        "candidates": [
+          {
+            "providerId": "1000004379",
+            "name": "Commander Keen in Goodbye, Galaxy",
+            "releaseDate": "1991-01-01",
+            "platforms": [
+              "PC"
+            ],
+            "hasHeadlineScore": false,
+            "url": "https://videogamescritic.com/game/commander-keen-in-goodbye-galaxy-1000004379"
+          },
+          {
+            "providerId": "1000004380",
+            "name": "Commander Keen in Aliens Ate My Babysitter",
+            "releaseDate": "1991-01-01",
+            "platforms": [
+              "PC"
+            ],
+            "hasHeadlineScore": false,
+            "url": "https://videogamescritic.com/game/commander-keen-in-aliens-ate-my-babysitter-1000004380"
+          },
+          {
+            "providerId": "1000005460",
+            "name": "Commander Keen in Keen Dreams",
+            "releaseDate": "1991-01-01",
+            "platforms": [
+              "PC"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/commander-keen-in-keen-dreams-1000005460"
+          },
+          {
+            "providerId": "1000004348",
+            "name": "Commander Keen in Invasion of the Vorticons",
+            "releaseDate": "1990-12-14",
+            "platforms": [
+              "PC"
+            ],
+            "hasHeadlineScore": false,
+            "url": "https://videogamescritic.com/game/commander-keen-in-invasion-of-the-vorticons-1000004348"
+          }
+        ],
+        "review": {
+          "status": "ambiguous-target",
+          "candidateId": null,
+          "workCandidate": false,
+          "exactReleaseAccepted": false,
+          "rankingEligible": false,
+          "reason": "Catalog target does not name an episode/collection; query returns distinct releases."
+        }
+      }
+    },
+    {
+      "id": "dos-98c942ee4baeb654",
+      "title": "Jazz Jackrabbit",
+      "system": "dos",
+      "catalogYear": 1994,
+      "targetScope": "original catalog platform release; region/build unverified",
+      "catalogRef": {
+        "provider": "catalog",
+        "id": "dos-98c942ee4baeb654"
+      },
+      "audit": {
+        "provider": "vgc",
+        "queryUrl": "https://videogamescritic.com/api/v1/search?q=Jazz%20Jackrabbit&limit=5",
+        "observedAt": "2026-09-16T02:35:40.688Z",
+        "responseChecksum": "25a65afa8b486ff60ad840eb5628f5acdbd75d90194ca67fbcfa5f6865fa72d9",
+        "returned": 1,
+        "reportedTotal": 1,
+        "truncated": false,
+        "candidates": [
+          {
+            "providerId": "1000003207",
+            "name": "Jazz Jackrabbit",
+            "releaseDate": "2003-01-03",
+            "platforms": [],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/jazz-jackrabbit-1000003207"
+          }
+        ],
+        "review": {
+          "status": "other-edition-only",
+          "candidateId": "1000003207",
+          "workCandidate": true,
+          "exactReleaseAccepted": false,
+          "rankingEligible": false,
+          "reason": "2003 record with no platform; original PC release not established."
+        }
+      }
+    },
+    {
+      "id": "dos-b7b54623a7229cde",
+      "title": "Prince of Persia",
+      "system": "dos",
+      "catalogYear": 1989,
+      "targetScope": "original catalog platform release; region/build unverified",
+      "catalogRef": {
+        "provider": "catalog",
+        "id": "dos-b7b54623a7229cde"
+      },
+      "audit": {
+        "provider": "vgc",
+        "queryUrl": "https://videogamescritic.com/api/v1/search?q=Prince%20of%20Persia&limit=5",
+        "observedAt": "2026-09-16T02:35:40.915Z",
+        "responseChecksum": "def36cce7f3b7e88e0b83ad0d6c5a221c222c41ed0c5291555c82b0fd90811b0",
+        "returned": 5,
+        "reportedTotal": 10,
+        "truncated": true,
+        "candidates": [
+          {
+            "providerId": "19980",
+            "name": "Prince of Persia®",
+            "releaseDate": "2008-12-10",
+            "platforms": [
+              "PC"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/prince-of-persia-19980"
+          },
+          {
+            "providerId": "2751000",
+            "name": "Prince of Persia The Lost Crown",
+            "releaseDate": "2024-08-07",
+            "platforms": [
+              "PC",
+              "PlayStation",
+              "Xbox",
+              "Switch",
+              "Mobile"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/prince-of-persia-the-lost-crown-2751000"
+          },
+          {
+            "providerId": "33320",
+            "name": "Prince of Persia: The Forgotten Sands™",
+            "releaseDate": "2010-06-08",
+            "platforms": [
+              "PC",
+              "PlayStation",
+              "Xbox",
+              "Switch"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/prince-of-persia-the-forgotten-sands-33320"
+          },
+          {
+            "providerId": "13600",
+            "name": "Prince of Persia®: The Sands of Time",
+            "releaseDate": "2008-11-21",
+            "platforms": [
+              "PC",
+              "PlayStation",
+              "Xbox"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/prince-of-persia-the-sands-of-time-13600"
+          },
+          {
+            "providerId": "13500",
+            "name": "Prince of Persia: Warrior Within™",
+            "releaseDate": "2008-11-21",
+            "platforms": [
+              "PC",
+              "PlayStation",
+              "Xbox",
+              "Mobile"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/prince-of-persia-warrior-within-13500"
+          }
+        ],
+        "review": {
+          "status": "unrelated-or-sequel",
+          "candidateId": null,
+          "workCandidate": false,
+          "exactReleaseAccepted": false,
+          "rankingEligible": false,
+          "reason": "2008 game and later titles; original PC release absent in bounded results."
+        }
+      }
+    },
+    {
+      "id": "dos-1cafb2eceac1487d",
+      "title": "Prince of Persia 2: The Shadow and the Flame",
+      "system": "dos",
+      "catalogYear": 1993,
+      "targetScope": "original catalog platform release; region/build unverified",
+      "catalogRef": {
+        "provider": "catalog",
+        "id": "dos-1cafb2eceac1487d"
+      },
+      "audit": {
+        "provider": "vgc",
+        "queryUrl": "https://videogamescritic.com/api/v1/search?q=Prince%20of%20Persia%202%3A%20The%20Shadow%20and%20the%20Flame&limit=5",
+        "observedAt": "2026-09-16T02:35:41.212Z",
+        "responseChecksum": "746281de249936375352c54844ebe8ab5b50d9d0b62f5d5f4fa0b829edf70949",
+        "returned": 1,
+        "reportedTotal": 1,
+        "truncated": false,
+        "candidates": [
+          {
+            "providerId": "1000004442",
+            "name": "Prince of Persia 2: The Shadow and the Flame",
+            "releaseDate": "1993-01-01",
+            "platforms": [
+              "PC",
+              "Switch"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/prince-of-persia-2-the-shadow-and-the-flame-1000004442"
+          }
+        ],
+        "review": {
+          "status": "scope-unresolved",
+          "candidateId": "1000004442",
+          "workCandidate": true,
+          "exactReleaseAccepted": false,
+          "rankingEligible": false,
+          "reason": "Matching work/year; PC/Switch score scope unspecified."
+        }
+      }
+    },
+    {
+      "id": "pilot-elden-ring",
+      "title": "Elden Ring",
+      "system": "modern-pc",
+      "catalogYear": 2022,
+      "targetScope": "original PC release; region/build unverified",
+      "catalogRef": null,
+      "audit": {
+        "provider": "vgc",
+        "queryUrl": "https://videogamescritic.com/api/v1/search?q=Elden%20Ring&limit=5",
+        "observedAt": "2026-09-16T02:35:41.441Z",
+        "responseChecksum": "940ca12a174c16e2b7e0d098e5e63910f5f3075ffeaa7d76fdb9c0833284c8b6",
+        "returned": 3,
+        "reportedTotal": 3,
+        "truncated": false,
+        "candidates": [
+          {
+            "providerId": "1245620",
+            "name": "ELDEN RING",
+            "releaseDate": "2022-02-23",
+            "platforms": [
+              "PC",
+              "PlayStation",
+              "Xbox"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/elden-ring-1245620"
+          },
+          {
+            "providerId": "2622380",
+            "name": "ELDEN RING NIGHTREIGN",
+            "releaseDate": "2025-05-28",
+            "platforms": [
+              "PC",
+              "PlayStation",
+              "Xbox"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/elden-ring-nightreign-2622380"
+          },
+          {
+            "providerId": "1000003620",
+            "name": "Elden Ring: Shadow of the Erdtree",
+            "releaseDate": "2024-06-21",
+            "platforms": [
+              "PC",
+              "PlayStation",
+              "Xbox"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/elden-ring-shadow-of-the-erdtree-1000003620"
+          }
+        ],
+        "review": {
+          "status": "scope-unresolved",
+          "candidateId": "1245620",
+          "workCandidate": true,
+          "exactReleaseAccepted": false,
+          "rankingEligible": false,
+          "reason": "Matching work candidate; query does not establish platform/build scope of the composite score."
+        }
+      }
+    },
+    {
+      "id": "pilot-hades",
+      "title": "Hades",
+      "system": "modern-pc",
+      "catalogYear": 2020,
+      "targetScope": "original PC release; region/build unverified",
+      "catalogRef": null,
+      "audit": {
+        "provider": "vgc",
+        "queryUrl": "https://videogamescritic.com/api/v1/search?q=Hades&limit=5",
+        "observedAt": "2026-09-16T02:35:41.736Z",
+        "responseChecksum": "6b8a44a3ef235869dc06e379cd2a3d12b805ffc2916a3e2bda25fdb3a26c5b78",
+        "returned": 2,
+        "reportedTotal": 2,
+        "truncated": false,
+        "candidates": [
+          {
+            "providerId": "1145360",
+            "name": "Hades",
+            "releaseDate": "2020-09-16",
+            "platforms": [
+              "PC",
+              "PlayStation",
+              "Xbox",
+              "Switch",
+              "Mobile"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/hades-1145360"
+          },
+          {
+            "providerId": "1145350",
+            "name": "Hades II",
+            "releaseDate": "2025-09-24",
+            "platforms": [
+              "PC",
+              "PlayStation",
+              "Xbox",
+              "Switch"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/hades-ii-1145350"
+          }
+        ],
+        "review": {
+          "status": "scope-unresolved",
+          "candidateId": "1145360",
+          "workCandidate": true,
+          "exactReleaseAccepted": false,
+          "rankingEligible": false,
+          "reason": "Matching work candidate; query does not establish platform/build scope of the composite score."
+        }
+      }
+    },
+    {
+      "id": "pilot-baldurs-gate-3",
+      "title": "Baldur's Gate 3",
+      "system": "modern-pc",
+      "catalogYear": 2023,
+      "targetScope": "original PC release; region/build unverified",
+      "catalogRef": null,
+      "audit": {
+        "provider": "vgc",
+        "queryUrl": "https://videogamescritic.com/api/v1/search?q=Baldur's%20Gate%203&limit=5",
+        "observedAt": "2026-09-16T02:35:41.964Z",
+        "responseChecksum": "d3805ea4b11ad084f632a33a0d3891ae5a82d7eb05b8e90210ff6a866f765769",
+        "returned": 1,
+        "reportedTotal": 1,
+        "truncated": false,
+        "candidates": [
+          {
+            "providerId": "1086940",
+            "name": "Baldur's Gate 3",
+            "releaseDate": "2023-08-02",
+            "platforms": [
+              "PC",
+              "PlayStation",
+              "Xbox"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/baldur-s-gate-3-1086940"
+          }
+        ],
+        "review": {
+          "status": "scope-unresolved",
+          "candidateId": "1086940",
+          "workCandidate": true,
+          "exactReleaseAccepted": false,
+          "rankingEligible": false,
+          "reason": "Matching work candidate; query does not establish platform/build scope of the composite score."
+        }
+      }
+    },
+    {
+      "id": "pilot-cyberpunk-2077",
+      "title": "Cyberpunk 2077",
+      "system": "modern-pc",
+      "catalogYear": 2020,
+      "targetScope": "original PC release; region/build unverified",
+      "catalogRef": null,
+      "audit": {
+        "provider": "vgc",
+        "queryUrl": "https://videogamescritic.com/api/v1/search?q=Cyberpunk%202077&limit=5",
+        "observedAt": "2026-09-16T02:35:42.259Z",
+        "responseChecksum": "f956372a5d71f4959fb3d7f05ccf16cd8c6454741468cda2f12d14d25b6d2c2c",
+        "returned": 2,
+        "reportedTotal": 2,
+        "truncated": false,
+        "candidates": [
+          {
+            "providerId": "1091500",
+            "name": "Cyberpunk 2077",
+            "releaseDate": "2020-12-08",
+            "platforms": [
+              "PC",
+              "PlayStation",
+              "Xbox"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/cyberpunk-2077-1091500"
+          },
+          {
+            "providerId": "1000003617",
+            "name": "Cyberpunk 2077: Phantom Liberty",
+            "releaseDate": "2023-09-26",
+            "platforms": [
+              "PC",
+              "PlayStation",
+              "Xbox"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/cyberpunk-2077-phantom-liberty-1000003617"
+          }
+        ],
+        "review": {
+          "status": "scope-unresolved",
+          "candidateId": "1091500",
+          "workCandidate": true,
+          "exactReleaseAccepted": false,
+          "rankingEligible": false,
+          "reason": "Matching work candidate; query does not establish platform/build scope of the composite score."
+        }
+      }
+    },
+    {
+      "id": "pilot-hollow-knight",
+      "title": "Hollow Knight",
+      "system": "modern-pc",
+      "catalogYear": 2017,
+      "targetScope": "original PC release; region/build unverified",
+      "catalogRef": null,
+      "audit": {
+        "provider": "vgc",
+        "queryUrl": "https://videogamescritic.com/api/v1/search?q=Hollow%20Knight&limit=5",
+        "observedAt": "2026-09-16T02:35:42.487Z",
+        "responseChecksum": "8868f3cddd76f294cd183de1d5d4b1086c07737fed9697f5d798dd7587340ab4",
+        "returned": 3,
+        "reportedTotal": 3,
+        "truncated": false,
+        "candidates": [
+          {
+            "providerId": "367520",
+            "name": "Hollow Knight",
+            "releaseDate": "2017-02-23",
+            "platforms": [
+              "PC",
+              "PlayStation",
+              "Xbox",
+              "Switch"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/hollow-knight-367520"
+          },
+          {
+            "providerId": "1030300",
+            "name": "Hollow Knight: Silksong",
+            "releaseDate": "2025-09-03",
+            "platforms": [
+              "PC",
+              "PlayStation",
+              "Xbox",
+              "Switch"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/hollow-knight-silksong-1030300"
+          },
+          {
+            "providerId": "1000000322",
+            "name": "Hollow Knight: Voidheart Edition",
+            "releaseDate": "2018-09-25",
+            "platforms": [
+              "PlayStation",
+              "Xbox"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/hollow-knight-voidheart-edition-1000000322"
+          }
+        ],
+        "review": {
+          "status": "scope-unresolved",
+          "candidateId": "367520",
+          "workCandidate": true,
+          "exactReleaseAccepted": false,
+          "rankingEligible": false,
+          "reason": "Matching work candidate; query does not establish platform/build scope of the composite score."
+        }
+      }
+    },
+    {
+      "id": "pilot-celeste",
+      "title": "Celeste",
+      "system": "modern-pc",
+      "catalogYear": 2018,
+      "targetScope": "original PC release; region/build unverified",
+      "catalogRef": null,
+      "audit": {
+        "provider": "vgc",
+        "queryUrl": "https://videogamescritic.com/api/v1/search?q=Celeste&limit=5",
+        "observedAt": "2026-09-16T02:35:42.784Z",
+        "responseChecksum": "151046be532156a47445b1223fdc1f6d02a51bae77ea07d3e6fa0f8260771b6e",
+        "returned": 4,
+        "reportedTotal": 4,
+        "truncated": false,
+        "candidates": [
+          {
+            "providerId": "504230",
+            "name": "Celeste",
+            "releaseDate": "2018-01-24",
+            "platforms": [
+              "PC",
+              "PlayStation",
+              "Xbox",
+              "Switch"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/celeste-504230"
+          },
+          {
+            "providerId": "1000004114",
+            "name": "Celeste 64: Fragments of the Mountain",
+            "releaseDate": "2024-01-29",
+            "platforms": [
+              "PC"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/celeste-64-fragments-of-the-mountain-1000004114"
+          },
+          {
+            "providerId": "1000004110",
+            "name": "Celeste Classic 2",
+            "releaseDate": "2021-01-25",
+            "platforms": [],
+            "hasHeadlineScore": false,
+            "url": "https://videogamescritic.com/game/celeste-classic-2-1000004110"
+          },
+          {
+            "providerId": "1000005024",
+            "name": "Celeste Classic",
+            "releaseDate": "2015-07-21",
+            "platforms": [],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/celeste-classic-1000005024"
+          }
+        ],
+        "review": {
+          "status": "scope-unresolved",
+          "candidateId": "504230",
+          "workCandidate": true,
+          "exactReleaseAccepted": false,
+          "rankingEligible": false,
+          "reason": "Matching work candidate; query does not establish platform/build scope of the composite score."
+        }
+      }
+    },
+    {
+      "id": "pilot-stardew-valley",
+      "title": "Stardew Valley",
+      "system": "modern-pc",
+      "catalogYear": 2016,
+      "targetScope": "original PC release; region/build unverified",
+      "catalogRef": null,
+      "audit": {
+        "provider": "vgc",
+        "queryUrl": "https://videogamescritic.com/api/v1/search?q=Stardew%20Valley&limit=5",
+        "observedAt": "2026-09-16T02:35:43.027Z",
+        "responseChecksum": "54bb19490306bdaaec06af01d714d9d282b46a44216b8119d43bfab2208daf67",
+        "returned": 1,
+        "reportedTotal": 1,
+        "truncated": false,
+        "candidates": [
+          {
+            "providerId": "413150",
+            "name": "Stardew Valley",
+            "releaseDate": "2016-02-25",
+            "platforms": [
+              "PC",
+              "PlayStation",
+              "Xbox",
+              "Switch",
+              "Mobile"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/stardew-valley-413150"
+          }
+        ],
+        "review": {
+          "status": "scope-unresolved",
+          "candidateId": "413150",
+          "workCandidate": true,
+          "exactReleaseAccepted": false,
+          "rankingEligible": false,
+          "reason": "Matching work candidate; query does not establish platform/build scope of the composite score."
+        }
+      }
+    },
+    {
+      "id": "pilot-disco-elysium",
+      "title": "Disco Elysium",
+      "system": "modern-pc",
+      "catalogYear": 2019,
+      "targetScope": "original PC release; region/build unverified",
+      "catalogRef": null,
+      "audit": {
+        "provider": "vgc",
+        "queryUrl": "https://videogamescritic.com/api/v1/search?q=Disco%20Elysium&limit=5",
+        "observedAt": "2026-09-16T02:35:43.307Z",
+        "responseChecksum": "e21fa3ba220847cc03b4adc287d60198ca12e5d3eda3f0b0aa79958c8933e9c3",
+        "returned": 2,
+        "reportedTotal": 2,
+        "truncated": false,
+        "candidates": [
+          {
+            "providerId": "1000001575",
+            "name": "Disco Elysium",
+            "releaseDate": "2019-10-15",
+            "platforms": [
+              "PC"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/disco-elysium-1000001575"
+          },
+          {
+            "providerId": "632470",
+            "name": "Disco Elysium - The Final Cut",
+            "releaseDate": "2019-10-15",
+            "platforms": [
+              "PC",
+              "PlayStation",
+              "Xbox",
+              "Switch",
+              "Mobile"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/disco-elysium-the-final-cut-632470"
+          }
+        ],
+        "review": {
+          "status": "scope-unresolved",
+          "candidateId": "1000001575",
+          "workCandidate": true,
+          "exactReleaseAccepted": false,
+          "rankingEligible": false,
+          "reason": "Original work and Final Cut separately returned; date alone cannot distinguish edition scope."
+        }
+      }
+    },
+    {
+      "id": "pilot-outer-wilds",
+      "title": "Outer Wilds",
+      "system": "modern-pc",
+      "catalogYear": 2019,
+      "targetScope": "original PC release; region/build unverified",
+      "catalogRef": null,
+      "audit": {
+        "provider": "vgc",
+        "queryUrl": "https://videogamescritic.com/api/v1/search?q=Outer%20Wilds&limit=5",
+        "observedAt": "2026-09-16T02:35:43.536Z",
+        "responseChecksum": "1e34f7a78d0e7814ae13a0de35f1dd84d79bf9177be50cbc155405b6d34d86d4",
+        "returned": 1,
+        "reportedTotal": 1,
+        "truncated": false,
+        "candidates": [
+          {
+            "providerId": "753640",
+            "name": "Outer Wilds",
+            "releaseDate": "2020-06-17",
+            "platforms": [
+              "PC",
+              "PlayStation",
+              "Xbox",
+              "Switch"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/outer-wilds-753640"
+          }
+        ],
+        "review": {
+          "status": "scope-unresolved",
+          "candidateId": "753640",
+          "workCandidate": true,
+          "exactReleaseAccepted": false,
+          "rankingEligible": false,
+          "reason": "Matching work; Steam date is 2020 while target original PC date is 2019. Store release differs from original release."
+        }
+      }
+    },
+    {
+      "id": "pilot-slay-the-spire",
+      "title": "Slay the Spire",
+      "system": "modern-pc",
+      "catalogYear": 2019,
+      "targetScope": "original PC release; region/build unverified",
+      "catalogRef": null,
+      "audit": {
+        "provider": "vgc",
+        "queryUrl": "https://videogamescritic.com/api/v1/search?q=Slay%20the%20Spire&limit=5",
+        "observedAt": "2026-09-16T02:35:43.831Z",
+        "responseChecksum": "53b10fd590fedbd2d5f218167a0160bce340d441f792d8b74be0db18991379bc",
+        "returned": 2,
+        "reportedTotal": 2,
+        "truncated": false,
+        "candidates": [
+          {
+            "providerId": "646570",
+            "name": "Slay the Spire",
+            "releaseDate": "2019-01-22",
+            "platforms": [
+              "PC",
+              "PlayStation",
+              "Xbox",
+              "Switch",
+              "Mobile"
+            ],
+            "hasHeadlineScore": true,
+            "url": "https://videogamescritic.com/game/slay-the-spire-646570"
+          },
+          {
+            "providerId": "2868840",
+            "name": "Slay the Spire 2",
+            "releaseDate": "2026-03-04",
+            "platforms": [
+              "PC"
+            ],
+            "hasHeadlineScore": false,
+            "url": "https://videogamescritic.com/game/slay-the-spire-2-2868840"
+          }
+        ],
+        "review": {
+          "status": "scope-unresolved",
+          "candidateId": "646570",
+          "workCandidate": true,
+          "exactReleaseAccepted": false,
+          "rankingEligible": false,
+          "reason": "Matching work candidate; query does not establish platform/build scope of the composite score."
+        }
+      }
+    }
+  ],
+  "access": {
+    "vgc": {
+      "checkedAt": "2026-09-15",
+      "documentation": "https://videogamescritic.com/developers",
+      "citationPolicy": "https://videogamescritic.com/cite",
+      "anonymousRequests": 50,
+      "limitPerHour": 60,
+      "reuse": "Attribution and game link required; branded score only, no blending/resale. No numeric scores redistributed in this audit."
+    },
+    "steam": {
+      "documentation": "https://partner.steamgames.com/doc/store/getreviews",
+      "status": "Official review schema checked; direct product/count audit belongs to K2. VGC IDs are not accepted as Steam mappings."
+    },
+    "igdb": {
+      "documentation": "https://api-docs.igdb.com/",
+      "status": "Documentation checked; authenticated access not exercised. Identity and rating coverage unknown."
+    }
+  },
+  "gates": {
+    "exactReleaseScoresAccepted": 0,
+    "usableIndependentSourceFamilies": 0,
+    "comparisonEdges": 0,
+    "consensusEligible": false,
+    "reason": "Search-only candidates are not platform-scoped observations. No independent comparison graph exists. Additional licensed sources and verified crosswalks are needed for K3."
+  }
+}

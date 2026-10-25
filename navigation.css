@@ -1,0 +1,93 @@
+/* One shell for every section. Loaded after each page's content stylesheet. */
+:root { --sidebar: 238px; }
+html { scrollbar-gutter: stable; background: var(--bg); }
+.site-sidebar {
+  position: fixed; inset: 0 auto 0 0; z-index: 40; width: 238px;
+  display: flex; flex-direction: column; padding: 30px 18px 20px;
+  overflow-y: auto; background: var(--sidebar-bg); border-right: 1px solid var(--line-soft);
+  view-transition-name: site-navigation;
+}
+.site-brand {
+  display: flex; align-items: center; gap: 11px; margin: 0 7px 36px;
+  color: var(--text); text-decoration: none;
+  font: 600 1.125rem/1.3 'Space Grotesk', system-ui, sans-serif; letter-spacing: -.035em;
+}
+.site-brand small { display: block; margin-top: 4px; color: var(--muted); font: 400 .75rem/1.4 'DM Sans', system-ui, sans-serif; letter-spacing: 0; }
+.site-brand-mark { width: 38px; height: 38px; flex: none; display: grid; place-items: center; border-radius: 10px; color: var(--on-accent); background: var(--accent); font-size: 1.45rem; font-weight: 700; }
+.site-primary-nav { display: grid; gap: 5px; }
+.site-nav-link {
+  display: flex; align-items: center; gap: 10px; width: 100%; min-height: 46px;
+  padding: 11px 12px; border: 0; border-radius: 8px; text-decoration: none;
+  color: var(--muted); background: transparent; text-align: left;
+  font: 500 .875rem/1.5 'DM Sans', system-ui, sans-serif;
+  transition: color 140ms ease, background-color 140ms ease;
+}
+.site-nav-link:hover { background: var(--raised); color: var(--text); }
+.site-nav-link[aria-current="page"] { color: var(--accent); background: var(--accent-bg); }
+.site-nav-symbol { font-size: 1.3rem; width: 22px; flex: none; text-align: center; line-height: 1; }
+.site-nav-footer { margin: auto 12px 0; padding-top: 30px; color: var(--muted); font: 400 .75rem/1.5 'DM Sans', system-ui, sans-serif; }
+.site-nav-guide { display: block; margin-top: 6px; padding: 0; min-height: 28px; border: 0; background: none; color: var(--muted); font: 500 .75rem/1.5 'DM Sans', system-ui, sans-serif; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+.site-nav-guide:hover { color: var(--accent); }
+/* It's a link, not a button: themes that frame every sidebar button (Retro PC's bevel, Anime's
+   ink shadow…) would draw that frame tight around the text. Specific enough to win over them. */
+:root[data-theme] .site-sidebar .site-nav-footer button.site-nav-guide:not(:disabled) { border-color: transparent; background: none; box-shadow: none; transform: none; }
+:root[data-theme] .site-sidebar .site-nav-footer button.site-nav-guide:not(:disabled):hover { color: var(--accent); }
+.site-mobile-header, .site-menu-close, .site-nav-scrim { display: none; }
+.site-menu-button, .site-menu-close { border: 1px solid var(--line); background: var(--panel); color: var(--text); border-radius: 8px; width: 44px; height: 44px; padding: 0; font: 400 1.4rem/1 system-ui; cursor: pointer; }
+.workspace { margin-left: 238px; }
+.content { margin-left: 238px; }
+.section-tools { margin: 0 0 20px; border: 1px solid var(--line); border-radius: 9px; background: var(--panel); }
+.section-tools > summary { cursor: pointer; padding: 12px 16px; color: var(--muted); font-size: .875rem; min-height: 46px; }
+.section-tools[open] > summary { color: var(--accent); border-bottom: 1px solid var(--line); }
+.section-tools-body { padding: 16px; display: flex; flex-wrap: wrap; gap: 10px; }
+.section-tools-body > button { min-height: 44px; border: 1px solid var(--line); padding: 9px 13px; border-radius: 7px; margin: 0; width: auto; }
+.section-tools .family-nav { display: flex; flex-wrap: wrap; gap: 8px; }
+.section-tools .family-nav button { border: 1px solid var(--line); }
+.section-tools .nav-label { margin: 0 0 12px; }
+.section-tools .sidebar-bottom { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin: 20px 0 0; padding: 16px 0 0; border-top: 1px solid var(--line); }
+.section-tools .sidebar-bottom button { margin: 0; font-size: .875rem; }
+.section-tools #pinned-section { margin-top: 18px; }
+.catalog-tools-body { padding: 16px; }
+.section-summary { font-size: .8125rem; color: var(--muted); margin-top: 10px; }
+.sample-notice { margin: 0 0 20px; padding: 12px 16px; border: 1px solid var(--accent-line); border-radius: 8px; color: var(--accent); background: var(--accent-bg); font-size: .875rem; }
+/* A page's content stays hidden until its first full render (pageReady in navigation.js),
+   then fades in already in place, so nothing jumps while its data fills in. A page that
+   never finishes loading still shows after 3 s. */
+main[data-loading] { visibility: hidden; opacity: 0; animation: page-ready 0s 3s forwards; }
+main { transition: opacity 180ms ease-out; }
+@keyframes page-ready { to { visibility: visible; opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { main { transition: none; } }
+/* Cross-document transitions keep the menu still while the content changes. */
+@view-transition { navigation: auto; }
+::view-transition-group(root) { animation-duration: 160ms; }
+::view-transition-group(site-navigation), ::view-transition-group(site-mobile-header) { animation-duration: 0s; z-index: 2; }
+::view-transition-old(site-navigation), ::view-transition-old(site-mobile-header) { animation: none; opacity: 0; }
+::view-transition-new(site-navigation), ::view-transition-new(site-mobile-header) { animation: none; mix-blend-mode: normal; }
+@media (max-width: 900px) {
+  :root { --sidebar: 0px; }
+  body { padding-top: 68px; }
+  .workspace, .content { margin-left: 0; }
+  .site-mobile-header { position: fixed; inset: 0 0 auto; height: 68px; padding: 10px 16px; z-index: 35; display: flex; align-items: center; justify-content: space-between; gap: 12px; background: var(--sidebar-bg); border-bottom: 1px solid var(--line-soft); view-transition-name: site-mobile-header; }
+  .site-mobile-header .site-brand { margin: 0; font-size: 1rem; }
+  .site-mobile-header .site-brand small { display: none; }
+  .site-sidebar { width: 270px; max-width: calc(100vw - 24px); transform: translateX(-100%); transition: transform 180ms ease; }
+  .site-sidebar.is-open { transform: translateX(0); }
+  .site-sidebar .site-brand { margin-top: 24px; }
+  .site-menu-close { display: block; position: absolute; right: 12px; top: 10px; }
+  .site-nav-scrim:not([hidden]) { display: block; position: fixed; inset: 0; z-index: 36; width: 100%; height: 100%; background: var(--overlay); border: 0; border-radius: 0; padding: 0; }
+  body.navigation-open { overflow: hidden; }
+}
+@media (prefers-reduced-motion: reduce) {
+  @view-transition { navigation: none; }
+  .site-sidebar, .site-nav-link { transition: none; }
+}
+
+/* On a paired phone (navigation.js), what only the computer does isn't offered. */
+.on-phone .update-data-button, .on-phone .add-game-button { display: none !important; }
+
+/* Reward moments: a small "+XP" pill, and a bigger card on level-up. */
+.reward-toast{position:fixed;right:20px;bottom:20px;z-index:1000;padding:.55rem .9rem;border-radius:999px;background:var(--accent-bg);color:var(--accent);border:1px solid var(--accent);font-weight:700;font-size:.95rem;box-shadow:0 8px 24px rgba(0,0,0,.35);pointer-events:none}
+.reward-toast.is-level{border-radius:.8rem;padding:.9rem 1.2rem;font-size:1.1rem}
+.reward-toast.show{animation:reward-pop .9s ease-out}
+@keyframes reward-pop{0%{opacity:0;transform:translateY(10px) scale(.96)}20%{opacity:1;transform:none}100%{opacity:1}}
+@media(prefers-reduced-motion:reduce){.reward-toast.show{animation:none}}

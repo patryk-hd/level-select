@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><script src="../theme.js"></script><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Play — Level Select</title><meta name="theme-color" content="#141619">
+  <link rel="icon" href="../assets/favicon.svg?v=level-select"><link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../navigation.css"><link rel="stylesheet" href="../tracking/styles.css">
+  <link rel="stylesheet" href="backlog.css"><link rel="stylesheet" href="rewards.css"><link rel="stylesheet" href="challenges.css"><script type="module" src="../navigation.js"></script>
+  <script type="module" src="backlog.js"></script>
+<link rel="stylesheet" href="../controls.css">
+<link rel="stylesheet" href="../theme.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to Play</a>
+<!-- shared-navigation:start -->
+<header class="site-mobile-header"><a class="site-brand" href="../library/backlog.html"><span class="site-brand-mark" aria-hidden="true">L</span><span>Level Select<small>Games across every era</small></span></a><button id="open-navigation" class="site-menu-button" type="button" aria-label="Open navigation" aria-controls="sidebar" aria-expanded="false">☰</button></header>
+<aside class="site-sidebar" id="sidebar" aria-label="Library navigation">
+<a class="site-brand" href="../library/backlog.html"><span class="site-brand-mark" aria-hidden="true">L</span><span>Level Select<small>Games across every era</small></span></a>
+<button id="close-navigation" class="site-menu-close" type="button" aria-label="Close navigation">×</button>
+<nav class="site-primary-nav" aria-label="Main">
+<a class="site-nav-link" data-section="backlog" href="../library/backlog.html" aria-current="page"><span class="site-nav-symbol" aria-hidden="true">▷</span><span>Play</span></a>
+<a class="site-nav-link" data-section="owned" href="../library/index.html"><span class="site-nav-symbol" aria-hidden="true">▣</span><span>Library</span></a>
+<a class="site-nav-link" data-section="wishlist" href="../library/wishlist.html"><span class="site-nav-symbol" aria-hidden="true">☆</span><span>Wishlist</span></a>
+<a class="site-nav-link" data-section="recommendations" data-view="games" href="../index.html"><span class="site-nav-symbol" aria-hidden="true">▦</span><span>Game Atlas</span></a>
+<a class="site-nav-link" data-section="saved" data-view="collection" href="../index.html?view=collection"><span class="site-nav-symbol" aria-hidden="true">◈</span><span>My Atlas</span></a>
+<a class="site-nav-link" data-section="mods" href="../library/mods.html"><span class="site-nav-symbol" aria-hidden="true">✦</span><span>Mods</span></a>
+<a class="site-nav-link" data-section="sources" href="../library/sources.html"><span class="site-nav-symbol" aria-hidden="true">⊕</span><span>Import games</span></a>
+</nav>
+<a class="player-card" id="player-card" href="../library/backlog.html?section=progress" hidden><span class="player-level" aria-hidden="true">1</span><span class="player-copy"><strong>Explorer</strong><small>0 XP</small><span class="xp-bar"><span class="xp-fill"></span></span></span></a>
+<details class="theme-picker"><summary><span data-theme-chip><span class="theme-chip" aria-hidden="true" style="--c1:#13120f;--c2:#26231e;--c3:#e8b96f"></span></span><span class="theme-picker-label">Theme</span><b data-theme-name>Modern</b><span class="theme-picker-caret" aria-hidden="true">▾</span></summary><div class="theme-menu" role="group" aria-label="Theme"><button type="button" data-theme-choice="modern" data-tone="dark" aria-pressed="true" title="Modern"><span class="theme-chip" aria-hidden="true" style="--c1:#13120f;--c2:#26231e;--c3:#e8b96f"></span><span><strong>Modern</strong><small>Calm dark gold. The default.</small></span></button><button type="button" data-theme-choice="midnight" data-tone="dark" aria-pressed="false" title="Midnight"><span class="theme-chip" aria-hidden="true" style="--c1:#000000;--c2:#2a2d34;--c3:#8ab4ff"></span><span><strong>Midnight</strong><small>Pure black with hairlines only, for OLED screens and late nights.</small></span></button><button type="button" data-theme-choice="arcade" data-tone="dark" aria-pressed="false" title="Arcade"><span class="theme-chip" aria-hidden="true" style="--c1:#140a30;--c2:#2b1b62;--c3:#ff5cad"></span><span><strong>Arcade</strong><small>Synthwave cabinet: neon purple, pixel type and a CRT glow.</small></span></button><button type="button" data-theme-choice="cyberpunk" data-tone="dark" aria-pressed="false" title="Cyberpunk"><span class="theme-chip" aria-hidden="true" style="--c1:#050b0d;--c2:#0f1f23;--c3:#fcee0a"></span><span><strong>Cyberpunk</strong><small>A 2077 HUD: teal screens, hazard yellow, cut corners.</small></span></button><button type="button" data-theme-choice="y2k" data-tone="dark" aria-pressed="false" title="Y2K"><span class="theme-chip" aria-hidden="true" style="--c1:#06122b;--c2:#16336a;--c3:#39c4ff"></span><span><strong>Y2K</strong><small>Millennium dashboards: glass, chrome and aqua glow.</small></span></button><button type="button" data-theme-choice="console" data-tone="light" aria-pressed="false" title="Console"><span class="theme-chip" aria-hidden="true" style="--c1:#e3e1e9;--c2:#ffffff;--c3:#5a45b3"></span><span><strong>Console</strong><small>A 16-bit living room: lilac plastic and face buttons.</small></span></button><button type="button" data-theme-choice="handheld" data-tone="light" aria-pressed="false" title="Handheld"><span class="theme-chip" aria-hidden="true" style="--c1:#c4cfa1;--c2:#306230;--c3:#8e2a52"></span><span><strong>Handheld</strong><small>The pocket classic: four greens and a dot-matrix screen.</small></span></button><button type="button" data-theme-choice="retro-pc" data-tone="light" aria-pressed="false" title="Retro PC"><span class="theme-chip" aria-hidden="true" style="--c1:#c3c3c3;--c2:#000080;--c3:#008080"></span><span><strong>Retro PC</strong><small>90s desktop: bevelled grey windows and navy title bars.</small></span></button><button type="button" data-theme-choice="anime" data-tone="light" aria-pressed="false" title="Anime"><span class="theme-chip" aria-hidden="true" style="--c1:#f6f0e4;--c2:#1f1a17;--c3:#c8301f"></span><span><strong>Anime</strong><small>A manga page: ink, vermilion seals and sakura.</small></span></button><button type="button" data-theme-choice="fantasy" data-tone="light" aria-pressed="false" title="Fantasy"><span class="theme-chip" aria-hidden="true" style="--c1:#efe3c8;--c2:#2b1d10;--c3:#b8862b"></span><span><strong>Fantasy</strong><small>An adventurer’s tome: parchment, gold leaf and wax seals.</small></span></button></div></details>
+<p class="site-nav-footer">Your library, your next game.<a class="site-nav-guide" data-phone-link href="../library/phone.html">On your phone</a><button type="button" class="site-nav-guide" data-open-guide>Setup guide</button></p>
+</aside>
+<button id="nav-scrim" class="site-nav-scrim" type="button" aria-label="Close navigation" hidden></button>
+<!-- shared-navigation:end -->
+  <main class="content" id="main" tabindex="-1" data-loading>
+    <header class="topbar"><div><p class="eyebrow">Your games, your pace</p><h1>Play<span class="title-dot">.</span></h1><p id="planWorkspace" class="section-summary"></p><p id="playLevel" class="play-level" hidden></p></div><div class="topbar-actions"><button id="planUpdate" class="update-data-button" type="button">Update data</button><button id="planBackup" type="button">Backup &amp; import</button></div></header>
+    <nav class="play-sections" id="playSections" aria-label="Play sections">
+      <a href="?section=home" data-section-link="home">Play</a><a href="?section=plan" data-section-link="plan">My plan</a><a href="?section=challenges" data-section-link="challenges">Challenges</a><a href="?section=history" data-section-link="history">History</a><a href="?section=progress" data-section-link="progress">Progress</a>
+    </nav>
+<div class="play-section" data-play-section="home">
+    <section id="playContinue" class="play-continue" aria-labelledby="continueTitle">
+      <header><p class="eyebrow">Pick up where you left off</p><h2 id="continueTitle">Continue</h2></header>
+      <div id="continueCards" class="continue-cards"></div>
+    </section>
+    <section id="playSuggestions" class="play-suggestions" aria-labelledby="suggestionTitle">
+      <header><p class="eyebrow">Tonight</p><h2 id="suggestionTitle">What should I play?</h2></header>
+      <div class="tonight" id="tonightChips">
+        <div class="tonight-group" role="group" aria-labelledby="tonightMood"><span id="tonightMood">Mood</span><div data-tonight="mood"></div></div>
+        <div class="tonight-group" role="group" aria-labelledby="tonightLength"><span id="tonightLength">Length</span><div data-tonight="length"></div></div>
+        <div class="tonight-group" role="group" aria-labelledby="tonightGenre"><span id="tonightGenre">Genre</span><div data-tonight="genre"></div></div>
+        <div class="tonight-group" role="group" aria-labelledby="tonightTaste"><span id="tonightTaste">Recently played</span><div data-tonight="taste"></div></div>
+      </div>
+      <p id="suggestionCount" role="status"></p><div id="suggestionCards" class="suggestion-cards"></div>
+      <p id="suggestionOrder" class="suggestion-help"></p>
+      <details class="suggestion-filters"><summary>More filters</summary>
+        <div id="suggestionFilters">
+          <label class="field">Choose from<select id="suggestOwnership"><option value="owned">Owned games</option><option value="planned">Owned + planned games</option></select></label>
+          <label class="field">In the mood to<select id="suggestIntent"><option value="all">Consider everything</option><option value="continue">Continue playing / paused</option><option value="queue">Choose from my backlog</option><option value="discover">Rediscover my library</option></select></label>
+          <label class="field">System<select id="suggestSystem"></select></label>
+          <label class="field">Store / source<select id="suggestSource"></select></label>
+          <label class="field">Genre<select id="suggestGenre"></select></label>
+          <label class="suggestion-check"><input id="suggestFavorites" type="checkbox"> Favorites only</label>
+          <label class="suggestion-check"><input id="suggestHidden" type="checkbox"> Include hidden games</label>
+        </div><button id="suggestionReset" type="button">Reset suggestion filters</button>
+      </details>
+
+      <section class="roulette" aria-labelledby="rouletteTitle"><h3 id="rouletteTitle">Let roulette choose</h3><label class="suggestion-check"><input id="rouletteRecent" type="checkbox" checked> Exclude the last 10 draws</label><div class="tracking-actions"><button id="rouletteRoll" type="button">Pick a game</button><button id="rouletteClear" type="button">Clear recent draws</button></div><p id="rouletteStatus" role="status"></p><p id="rouletteMemory" class="suggestion-help"></p><div id="rouletteResult" aria-live="polite"></div></section>
+    </section>
+    <section id="backlogTriage" class="triage-panel" aria-labelledby="triageTitle">
+      <div><p class="eyebrow">Backlog triage</p><h2 id="triageTitle">Which games deserve a spot?</h2><p id="triageSummary" class="suggestion-help"></p></div>
+      <button id="triageStart" class="triage-start" type="button">Decide on 10 games</button>
+    </section>
+    <section class="triage-panel wish-prompt" aria-labelledby="wishPromptTitle">
+      <div><p class="eyebrow">Wishlist</p><h2 id="wishPromptTitle">Keep your wishlist honest</h2><p id="wishPromptSummary" class="suggestion-help"></p></div>
+      <a class="triage-start" href="wishlist.html">Review wishlist games</a>
+    </section>
+</div>
+<div class="play-section" data-play-section="plan">
+    <nav class="plan-tabs" id="planTabs" aria-label="Play plan views"></nav>
+    <div class="plan-toolbar"><label class="field">Search your plan<input id="planSearch" type="search" placeholder="Search game titles…"></label><button id="addGames" type="button">Add games</button><label class="field">Workspace<select id="planNamespace"><option value="personal">Personal</option><option value="sample">Sample</option></select></label></div>
+    <p id="planCount" role="status"></p><p id="planActionStatus" class="plan-action-status" role="status"></p><section id="planResults" aria-label="Games in this plan"></section>
+    <details class="plan-preferences"><summary>Suggested queue sizes</summary><form id="planPreferences"><label class="field">Up Next<input id="upNextLimit" type="number" min="1" max="50" required></label><label class="field">Playing<input id="playingLimit" type="number" min="1" max="50" required></label><button type="submit">Save preferences</button></form><p>These are suggestions. You can always add another game.</p></details>
+</div>
+<div class="play-section" data-play-section="history">
+    <section id="playHistoryAlbum" class="play-history" aria-labelledby="historyTitle">
+      <header><p class="eyebrow">The games you remember</p><h2 id="historyTitle">Your play history</h2><p>One card per playthrough. Personal objectives and retirements have their own place.</p></header>
+      <div class="history-filters"><label class="field">Year<select id="historyYear"></select></label><label class="field">Platform<select id="historyPlatform"></select></label><label class="field">Show<select id="historyStatus"><option value="finished">Finished</option><option value="retired">Retired</option><option value="playing">Playing</option><option value="paused">Paused</option><option value="not-started">Not started</option><option value="all">All playthroughs</option></select></label><label class="field">Search history<input id="historyQ" type="search" placeholder="Title, objective or reflection"></label></div>
+      <details class="history-summary" open><summary>Year in review &amp; plan changes</summary><div id="historySummary"></div></details>
+      <p id="historyCount" role="status"></p><div id="historyCards"></div><button id="historyMore" type="button" hidden>Show more playthroughs</button>
+    </section>
+</div>
+<div class="play-section" data-play-section="progress">
+    <section id="progressOverview" class="progress-overview" aria-label="Level, badges and activity"></section>
+    <div class="plan-overview" id="planOverview" aria-live="polite"></div>
+    <section id="planStatistics" class="plan-statistics" aria-label="Plan completion"></section>
+    <section id="progressRewards" class="progress-rewards" aria-labelledby="rewardsTitle"></section>
+</div>
+<div class="play-section" data-play-section="challenges">
+    <section id="playGoals" class="play-challenges play-goals" aria-labelledby="goalsTitle"></section>
+    <section id="playChallenges" class="play-challenges" aria-labelledby="challengesTitle"></section>
+</div>
+    <dialog id="triageDialog" class="triage-dialog" aria-labelledby="triageDialogTitle">
+      <header class="triage-top"><p id="triageProgress" class="eyebrow"></p><button id="triageClose" type="button" aria-label="Close triage">Close</button></header>
+      <div class="triage-track" aria-hidden="true"><span id="triageBar"></span></div>
+      <div id="triageBody" class="triage-body"></div>
+      <div id="triageActions" class="triage-actions">
+        <button type="button" data-triage="soon" class="is-soon">Play soon <kbd>1</kbd></button>
+        <button type="button" data-triage="maybe">Maybe later <kbd>2</kbd></button>
+        <button type="button" data-triage="played">Already played <kbd>3</kbd></button>
+        <button type="button" data-triage="pass" class="is-pass">Not for me <kbd>4</kbd></button>
+        <button type="button" data-triage="skip" class="is-quiet">Skip <kbd>S</kbd></button>
+      </div>
+      <div id="triageFinish" class="triage-actions" hidden><button id="triageMore" type="button" class="is-soon">Decide on 10 more</button><button id="triageDone" type="button">Done</button></div>
+      <footer class="triage-foot"><p id="triageStatus" role="status"></p><button id="triageUndo" type="button" class="is-quiet">Undo <kbd>Z</kbd></button></footer>
+    </dialog>
+  </main>
+<dialog id="updateDialog" class="utility-dialog" aria-labelledby="updateTitle"><div class="utility-heading"><h2 id="updateTitle">Update your snapshot</h2><button data-close-dialog type="button">Close</button></div><p>Export your library from Playnite as CSV, then rebuild with your new export. Existing cover art and saved notes are kept.</p><pre><code>./library/tools/update.sh --csv /path/to/playnite_library.csv</code></pre><p>To refresh your Steam wishlist, replace <strong>library/steam-wishlist.json</strong> and run:</p><pre><code>./library/tools/update-wishlist.sh</code></pre><p>Reload the page after updating. <a href="README.md">Full update instructions</a></p></dialog>
+  <dialog id="planDetails" class="tracking-dialog" aria-labelledby="planDetailsTitle"><header><h2 id="planDetailsTitle"></h2><button type="button" data-close>Close</button></header><div id="planTracking"></div><div id="planNotes"></div></dialog>
+  <dialog id="addGamesDialog" class="tracking-dialog" aria-labelledby="addGamesTitle"><header><h2 id="addGamesTitle">Choose games for your backlog</h2><button type="button" data-close>Close</button></header><p>Owning or wishlisting a game does not add it to your backlog.</p><label>Find a game<input id="candidateSearch" type="search" placeholder="Search titles"></label><label>Look in<select id="candidateSource"><option value="owned">Owned games</option><option value="catalog">Recommendations</option><option value="wishlist">Wishlist</option></select></label><div id="planCandidates"></div><details><summary>Add a game manually</summary><form id="manualGame"><label>Title<input name="title" maxlength="500" required></label><label>Platform (optional)<input name="platform" maxlength="200"></label><button type="submit">Add to backlog</button></form></details><p id="addStatus" role="status"></p></dialog>
+</body>
+</html>

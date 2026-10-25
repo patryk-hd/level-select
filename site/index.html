@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Level Select: every game you own, in one place</title>
+<meta name="description" content="A free, private game library for your own computer: Steam, GOG, Epic, PlayStation, Xbox, Switch and your emulators in one place, with real scores and “what should I play tonight?” picks. No account, no ads, no tracking.">
+<meta name="theme-color" content="#13120f">
+<meta property="og:title" content="Level Select: every game you own, in one place">
+<meta property="og:description" content="Free and private. Steam, GOG, Epic, consoles and emulators in one library on your own computer. No account, no ads, no tracking.">
+<meta property="og:image" content="media/library.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23e8b96f'/%3E%3Ctext x='32' y='45' font-family='Arial,sans-serif' font-size='38' font-weight='700' text-anchor='middle' fill='%231a1408'%3EL%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap">
+<style>
+  :root {
+    --bg: #13120f; --panel: #1b1a16; --raised: #23211c; --line: #ffffff17; --line-strong: #ffffff2b;
+    --text: #f4f1ea; --muted: #b6ae9f; --accent: #e8b96f; --accent-bg: #e8b96f1a; --on-accent: #1a1408;
+    --green: #7ee2a8; --radius: 16px; --gutter: max(16px, 4vw);
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 400 17px/1.6 'DM Sans', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: var(--accent); }
+  img, video { max-width: 100%; display: block; }
+  h1, h2, h3 { font-family: 'Space Grotesk', system-ui, sans-serif; letter-spacing: -.03em; line-height: 1.08; margin: 0; }
+  .wrap { width: min(1160px, 100% - 2 * var(--gutter)); margin-inline: auto; }
+  .kicker { color: var(--accent); font: 600 .78rem/1 'Space Grotesk', sans-serif; letter-spacing: .14em; text-transform: uppercase; margin: 0 0 14px; }
+  .muted { color: var(--muted); }
+  .button { display: inline-flex; align-items: center; gap: .5rem; min-height: 48px; padding: .75rem 1.25rem; border-radius: 12px; border: 1px solid var(--line-strong);
+    color: var(--text); background: var(--raised); font-weight: 700; text-decoration: none; transition: transform .15s ease, border-color .15s ease; }
+  .button:hover { border-color: var(--accent); transform: translateY(-1px); }
+  .button.primary { background: var(--accent); color: var(--on-accent); border-color: var(--accent); }
+  .button:focus-visible, a:focus-visible, summary:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+
+  /* Top bar */
+  .top { position: sticky; top: 0; z-index: 10; background: #13120fe6; backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+  .top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 64px; }
+  .brand { display: flex; align-items: center; gap: 10px; color: var(--text); text-decoration: none; font: 700 1.1rem 'Space Grotesk', sans-serif; }
+  .mark { width: 34px; height: 34px; border-radius: 9px; background: var(--accent); color: var(--on-accent); display: grid; place-items: center; font-weight: 700; }
+  .top nav { display: flex; align-items: center; gap: 22px; }
+  .top nav a { color: var(--muted); text-decoration: none; font-weight: 500; }
+  .top nav a:hover { color: var(--text); }
+  .top nav .button { color: var(--on-accent); min-height: 40px; padding: .45rem 1rem; }
+
+  /* Hero */
+  .hero { padding: clamp(48px, 9vw, 110px) 0 40px; text-align: center; background: radial-gradient(1000px 500px at 50% -10%, #e8b96f22, transparent 70%); }
+  .hero h1 { font-size: clamp(2.6rem, 7vw, 5rem); max-width: 14ch; margin: 0 auto; }
+  .hero h1 span { color: var(--accent); }
+  .hero .lead { font-size: clamp(1.05rem, 2.2vw, 1.3rem); color: var(--muted); max-width: 46rem; margin: 22px auto 30px; }
+  .actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+  .promises { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 20px; margin: 26px 0 0; padding: 0; list-style: none; color: var(--muted); font-size: .95rem; }
+  .promises li::before { content: "✓ "; color: var(--green); font-weight: 700; }
+  .tour { margin: 48px auto 0; max-width: 1000px; border-radius: 20px; overflow: hidden; border: 1px solid var(--line-strong); box-shadow: 0 40px 100px -40px #000; background: #000; aspect-ratio: 16 / 9; }
+  .tour video { width: 100%; height: 100%; object-fit: cover; }
+
+  /* Stores */
+  .stores { padding: 36px 0 10px; text-align: center; }
+  .stores ul { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; padding: 0; margin: 14px 0 0; list-style: none; }
+  .stores li { padding: .45rem .9rem; border: 1px solid var(--line-strong); border-radius: 999px; color: var(--text); font-weight: 500; font-size: .95rem; background: var(--panel); }
+
+  /* Features */
+  section.block { padding: clamp(56px, 8vw, 96px) 0; }
+  .section-head { max-width: 44rem; margin-bottom: 40px; }
+  .section-head h2 { font-size: clamp(2rem, 4.5vw, 3rem); }
+  .section-head p { color: var(--muted); font-size: 1.1rem; margin: 14px 0 0; }
+  .feature { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(24px, 4vw, 56px); align-items: center; padding: 30px 0; }
+  .feature:nth-child(even) { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); }
+  .feature:nth-child(even) .feature-text { order: 2; }
+  .feature h3 { font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 12px; }
+  .feature p { color: var(--muted); margin: 0 0 10px; }
+  .feature ul { margin: 10px 0 0; padding-left: 1.1rem; color: var(--muted); }
+  .feature li { margin: 4px 0; }
+  .shot { border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line-strong); background: var(--panel); box-shadow: 0 30px 80px -40px #000; }
+  .shot img { width: 100%; height: auto; }
+
+  /* Privacy */
+  .privacy { background: var(--panel); border-block: 1px solid var(--line); }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px; }
+  .card { padding: 22px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--bg); }
+  .card h3 { font-size: 1.2rem; margin-bottom: 8px; }
+  .card p { margin: 0; color: var(--muted); font-size: .97rem; }
+  .card .icon { font-size: 1.5rem; margin-bottom: 10px; display: block; }
+
+  /* Download */
+  .downloads { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; }
+  .download { padding: 26px; border: 1px solid var(--line-strong); border-radius: var(--radius); background: var(--panel); display: flex; flex-direction: column; gap: 12px; }
+  .download h3 { font-size: 1.5rem; }
+  .download p { margin: 0; color: var(--muted); }
+  .download details { border-top: 1px solid var(--line); padding-top: 12px; color: var(--muted); font-size: .95rem; }
+  .download summary { cursor: pointer; color: var(--text); font-weight: 500; }
+  .download ol { padding-left: 1.2rem; margin: 10px 0 0; }
+  .download .button { align-self: flex-start; }
+  .source-note { margin-top: 18px; color: var(--muted); font-size: .95rem; }
+
+  /* FAQ */
+  .faq details { border-bottom: 1px solid var(--line); padding: 18px 0; }
+  .faq summary { cursor: pointer; font: 600 1.1rem 'Space Grotesk', sans-serif; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+  .faq summary::after { content: "+"; color: var(--accent); }
+  .faq details[open] summary::after { content: "–"; }
+  .faq p { color: var(--muted); margin: 10px 0 0; max-width: 52rem; }
+
+  footer { padding: 40px 0 56px; color: var(--muted); font-size: .9rem; border-top: 1px solid var(--line); }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; }
+
+  @media (max-width: 820px) {
+    .top nav a:not(.button) { display: none; }
+    .feature, .feature:nth-child(even) { grid-template-columns: 1fr; }
+    .feature:nth-child(even) .feature-text { order: 0; }
+  }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .button { transition: none; } }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top"><span class="mark" aria-hidden="true">L</span>Level Select</a>
+    <nav aria-label="Sections">
+      <a href="#features">Features</a>
+      <a href="#privacy">Privacy</a>
+      <a href="#download">Download</a>
+      <a href="https://github.com/patryk-hd/level-select">GitHub</a>
+      <a class="button primary" href="app/library/index.html">Live demo</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <p class="kicker">From gamers, to gamers</p>
+      <h1>Every game you own. <span>One place.</span></h1>
+      <p class="lead">Steam, GOG, Epic, PlayStation, Xbox, Switch and the games on your emulators, in one library on your own computer. Real scores, “what should I play tonight?” picks, and the best games and mods of every system.</p>
+      <div class="actions">
+        <a class="button primary" href="#download">Download free</a>
+        <a class="button" href="app/library/index.html">Try the live demo →</a>
+      </div>
+      <ul class="promises"><li>Free and open source</li><li>No account</li><li>No ads, no tracking</li><li>Windows &amp; macOS</li></ul>
+      <div class="tour">
+        <video src="media/tour.mp4" poster="media/tour.jpg" controls muted playsinline preload="metadata" aria-label="A 48-second tour of Level Select"></video>
+      </div>
+    </div>
+  </section>
+
+  <section class="stores" aria-labelledby="stores-title">
+    <div class="wrap">
+      <p class="kicker" id="stores-title">Brings in your games from</p>
+      <ul><li>Steam</li><li>GOG Galaxy</li><li>Epic</li><li>EA app</li><li>Ubisoft Connect</li><li>Battle.net</li><li>Xbox</li><li>PlayStation</li><li>Nintendo</li><li>Playnite</li><li>ES-DE</li><li>ROM folders</li></ul>
+    </div>
+  </section>
+
+  <section class="block" id="features" aria-labelledby="features-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">What it does</p>
+        <h2 id="features-title">Less scrolling through launchers. More playing.</h2>
+        <p>Every screenshot below is the live demo: real games with a made-up library. Try it in your browser, nothing to install.</p>
+      </div>
+
+      <article class="feature">
+        <div class="feature-text">
+          <p class="kicker">Library</p>
+          <h3>Every game you own, in one search</h3>
+          <p>Copies from different stores and consoles become one game, so Hades on Epic and on Switch shows once, with both copies.</p>
+          <ul><li>Steam (including Family Sharing and installed games), GOG Galaxy, Playnite, ES-DE and ROM folders</li><li>Filter by platform, store, genre, year, played or not</li><li>Add anything else by hand, with its cover</li></ul>
+        </div>
+        <figure class="shot"><img src="media/library.jpg" width="1600" height="1000" alt="The Library page: 130 games, 72 played, a shelf of box art per store" loading="lazy"></figure>
+      </article>
+
+      <article class="feature">
+        <div class="feature-text">
+          <p class="kicker">Play</p>
+          <h3>“What should I play tonight?” Answered.</h3>
+          <p>Pick a mood and a length, and Level Select suggests games you already own, best rated first. Or let the roulette decide.</p>
+          <ul><li>Up Next, backlog, playing and finished, with goals and challenges</li><li>Play history and stats, saved in your browser</li></ul>
+        </div>
+        <figure class="shot"><img src="media/play.jpg" width="1600" height="1000" alt="The Play page suggesting Elden Ring, Hollow Knight and Super Mario Odyssey" loading="lazy"></figure>
+      </article>
+
+      <article class="feature">
+        <div class="feature-text">
+          <p class="kicker">Scores</p>
+          <h3>Real scores, always with their source</h3>
+          <p>Critic and player ratings from IGDB, Steam reviews, VideoGamesCritic and major awards, each labelled, so you know where a number comes from.</p>
+          <ul><li>Time to beat, from players’ reports</li><li>Game of the Year and other awards on every game</li></ul>
+        </div>
+        <figure class="shot"><img src="media/details.jpg" width="1600" height="1000" alt="Game details for The Witcher 3 with its score and awards" loading="lazy"></figure>
+      </article>
+
+      <article class="feature">
+        <div class="feature-text">
+          <p class="kicker">Game Atlas</p>
+          <h3>The best games of every system</h3>
+          <p>Over 6,000 games across 50 systems, from the Atari 2600 to the PS5, ranked by critic reviews and player ratings. The ones you own are marked.</p>
+        </div>
+        <figure class="shot"><img src="media/atlas.jpg" width="1600" height="1000" alt="The Game Atlas for PC: Baldur's Gate 3, The Witcher 3 and Elden Ring on the podium, marked Owned" loading="lazy"></figure>
+      </article>
+
+      <article class="feature">
+        <div class="feature-text">
+          <p class="kicker">Mods</p>
+          <h3>The greatest mods and ROM hacks ever made</h3>
+          <p>221 mods ranked by how many respected lists pick them, from Defense of the Ancients to Super Mario World hacks, plus the essential mods for popular games.</p>
+        </div>
+        <figure class="shot"><img src="media/mods.jpg" width="1600" height="1000" alt="The Mods page with Defense of the Ancients, Garry's Mod and Black Mesa on top" loading="lazy"></figure>
+      </article>
+
+      <article class="feature">
+        <div class="feature-text">
+          <p class="kicker">Wishlist</p>
+          <h3>Know when it’s worth buying</h3>
+          <p>Your Steam wishlist with prices, discounts, reviews and time to beat. Set target prices and clear out what you’ll never play.</p>
+        </div>
+        <figure class="shot"><img src="media/wishlist.jpg" width="1600" height="1000" alt="The Wishlist with Vampire Survivors, Pizza Tower and Factorio, their prices and reviews" loading="lazy"></figure>
+      </article>
+
+      <article class="feature">
+        <div class="feature-text">
+          <p class="kicker">Themes</p>
+          <h3>Ten themes. Pick your era.</h3>
+          <p>Arcade, Cyberpunk, Anime, Retro PC, Handheld, Y2K, Fantasy, Console, Midnight and Modern.</p>
+        </div>
+        <figure class="shot"><img src="media/themes.jpg" width="1600" height="1000" alt="Four themes: Arcade, Cyberpunk, Handheld and Fantasy" loading="lazy"></figure>
+      </article>
+    </div>
+  </section>
+
+  <section class="block privacy" id="privacy" aria-labelledby="privacy-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">Private by design</p>
+        <h2 id="privacy-title">Your library stays on your computer</h2>
+        <p>Level Select runs on your own machine and opens in your browser. There’s no server of ours behind it.</p>
+      </div>
+      <div class="cards">
+        <div class="card"><span class="icon" aria-hidden="true">🔒</span><h3>No account</h3><p>Nothing to sign up for. Your games, notes and progress are saved on your computer and in your browser.</p></div>
+        <div class="card"><span class="icon" aria-hidden="true">🚫</span><h3>No ads, no tracking</h3><p>No analytics, no telemetry: nothing about you is sent anywhere. Box art loads from public image hosts, and scores update only when you ask.</p></div>
+        <div class="card"><span class="icon" aria-hidden="true">📴</span><h3>Works offline</h3><p>Once your games are in, your library, plans and tracking work without a connection. Only updates and some box art need one.</p></div>
+        <div class="card"><span class="icon" aria-hidden="true">🧩</span><h3>Open source</h3><p>MIT licensed. Read every line, build it yourself, or help make it better.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="download" aria-labelledby="download-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">Download</p>
+        <h2 id="download-title">Free for Windows and macOS</h2>
+        <p>One installer, no extra software needed.</p>
+      </div>
+      <div class="downloads">
+        <div class="download">
+          <h3>Windows</h3>
+          <p>Windows 10 or 11. Installs for you only, no administrator rights needed.</p>
+          <a class="button primary" href="https://github.com/patryk-hd/level-select/releases/latest">Download for Windows</a>
+          <details><summary>“Windows protected your PC”?</summary><p>Level Select isn’t signed with a paid certificate yet, so Windows doesn’t know it.</p><ol><li>Choose <strong>More info</strong>.</li><li>Choose <strong>Run anyway</strong>.</li></ol></details>
+        </div>
+        <div class="download">
+          <h3>macOS</h3>
+          <p>macOS 13 or later, on Apple silicon (M1 and newer).</p>
+          <a class="button primary" href="https://github.com/patryk-hd/level-select/releases/latest">Download for Mac</a>
+          <details><summary>macOS won’t open it?</summary><p>Level Select isn’t notarized by Apple yet.</p><ol><li>Drag Level Select to Applications and open it once.</li><li>Open <strong>System Settings → Privacy &amp; Security</strong>.</li><li>Next to the message about Level Select, choose <strong>Open Anyway</strong>.</li></ol></details>
+        </div>
+      </div>
+      <p class="source-note">Prefer to run it from source? It needs Node.js 20 or later: see the <a href="https://github.com/patryk-hd/level-select#readme">README</a>.</p>
+    </div>
+  </section>
+
+  <section class="block faq" aria-labelledby="faq-title">
+    <div class="wrap">
+      <div class="section-head"><p class="kicker">Questions</p><h2 id="faq-title">Good to know</h2></div>
+      <details><summary>Is it really free?</summary><p>Yes. No ads, no premium tier, no account. It’s open source under the MIT licence.</p></details>
+      <details><summary>Does it change anything in Steam, GOG Galaxy or Playnite?</summary><p>No. It only reads your games from them. It never buys, installs or posts anything.</p></details>
+      <details><summary>Where do the scores come from?</summary><p>IGDB (critics and players), Steam reviews, VideoGamesCritic and the review boxes on Wikipedia, each credited next to the score. Awards come from Wikidata.</p></details>
+      <details><summary>Can I use it on my phone?</summary><p>Not yet. Level Select runs on your computer. Browsing your library from your phone over your home Wi-Fi is being explored.</p></details>
+      <details><summary>What does the demo show?</summary><p>Real games with public box art and scores, in a made-up library: which store each game is on and the play time are invented. Importing and updating work in the app you install.</p></details>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Level Select · MIT licence · <a href="https://github.com/patryk-hd/level-select">GitHub</a></span>
+    <span>Box art and scores: IGDB, libretro thumbnails, Steam, Wikipedia. Video music: “Cyberpunk Moonlight Sonata” by Joth (CC0).</span>
+  </div>
+</footer>
+</body>
+</html>

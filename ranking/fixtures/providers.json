@@ -1,0 +1,14 @@
+{
+  "description": "Entirely fictional provider responses for isolated tests; never fetched from real APIs.",
+  "vgc": {
+    "id": 990001,
+    "name": "Fictional Quest",
+    "status": "scored",
+    "platforms": ["PC", "PlayStation"],
+    "links": {"page": "https://videogamescritic.com/game/fictional-quest-990001", "steam": "https://store.steampowered.com/app/900000001/"},
+    "scores": {"vgc": 82, "players": 80, "critics": 90, "criticCount": 12, "gap": {"value": 10}, "confidence": "medium", "trend": null, "updatedAt": "2026-09-16T00:00:00Z", "launch": {"players": 60}, "sincePatch": {"score": 85}},
+    "attribution": {"text": "Powered by VideoGamesCritic"}
+  },
+  "steam": {"success": 1, "query_summary": {"num_reviews": 1, "total_positive": 950, "total_negative": 50, "total_reviews": 1000}, "reviews": [{"review": "Fictional private test marker that must not enter saved snapshots", "author": {"steamid": "FICTIONAL_REVIEWER"}}]},
+  "igdb": [{"id": 990002, "name": "Fictional Quest", "url": "https://www.igdb.com/games/fictional-quest", "platforms": [6], "rating": 75, "rating_count": 40, "aggregated_rating": 88, "aggregated_rating_count": 6, "updated_at": 1789516800}]
+}

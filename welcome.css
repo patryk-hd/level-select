@@ -1,0 +1,133 @@
+/* First-run guide (welcome.js). Built from the theme tokens, so it follows the chosen theme
+   live; one fixed height for every step, so the buttons never move between steps. */
+html.welcome-open { overflow: hidden; }
+/* Choosing a theme crossfades the page. The sidebar normally has a layer of its own in that
+   crossfade, drawn above everything else, so it would flash in front of the guide; while the
+   guide is open the sidebar fades with the rest of the page, underneath it. */
+html.welcome-open :is(.site-sidebar, .site-mobile-header) { view-transition-name: none; }
+dialog.welcome {
+  width: min(780px, calc(100% - 32px)); height: min(720px, calc(100dvh - 48px)); max-height: none;
+  display: flex; flex-direction: column; padding: 0; overflow: hidden;
+  color: var(--text); background: var(--panel); border: 1px solid var(--line-strong); border-radius: var(--radius-lg, 16px);
+  box-shadow: 0 30px 90px -30px var(--shadow, #000a);
+}
+dialog.welcome:not([open]) { display: none; }
+dialog.welcome::backdrop { background: var(--overlay); backdrop-filter: blur(6px); }
+
+.welcome-top { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 24px; border-bottom: 1px solid var(--line-soft); }
+.welcome-progress { display: grid; gap: 8px; flex: 1; max-width: 340px; }
+.welcome-stage { color: var(--accent); font: 600 .75rem/1.2 var(--font-display); letter-spacing: .08em; text-transform: uppercase; }
+.welcome-stage span { color: var(--muted); }
+.welcome-bar { display: block; height: 6px; border-radius: 99px; background: var(--xp-track, var(--line)); overflow: hidden; }
+.welcome-bar > span { display: block; width: var(--done); height: 100%; border-radius: inherit; background: var(--xp, var(--accent)); box-shadow: 0 0 10px var(--xp-glow, transparent); transition: width var(--dur-3, 340ms) var(--ease-out, ease-out); }
+.welcome-skip { min-height: 40px; padding: 8px 12px; border-radius: var(--radius-sm, 6px); color: var(--muted); font-size: .8125rem; }
+.welcome-skip:hover { color: var(--text); background: var(--raised); }
+
+.welcome-body { flex: 1; display: flex; flex-direction: column; overflow-y: auto; padding: 26px 32px 24px; overscroll-behavior: contain; }
+/* The first and last steps sit in the middle, like a title screen. */
+.welcome-body:is([data-step="0"], [data-step="4"]) > :first-child { margin-top: auto; }
+.welcome-body:is([data-step="0"], [data-step="4"]) > :last-child { margin-bottom: auto; }
+.welcome-body.is-entering > * { animation: welcome-in var(--dur-3, 340ms) var(--ease-out, ease-out) both; }
+.welcome-body.is-entering > :nth-child(2) { animation-delay: 40ms; }
+.welcome-body.is-entering > :nth-child(n+3) { animation-delay: 80ms; }
+@keyframes welcome-in { from { opacity: 0; transform: translateY(8px); } }
+.welcome-body h2 { font: 500 1.875rem/1.15 var(--font-display); letter-spacing: -.035em; outline: none; }
+.welcome-lead { margin-top: 12px; max-width: 600px; color: var(--muted); font-size: .9375rem; line-height: 1.6; }
+.welcome-lead strong { color: var(--text); font-weight: 600; }
+.welcome-note { margin-top: 20px; color: var(--muted); font-size: .8125rem; line-height: 1.55; }
+.welcome-note strong { color: var(--text); font-weight: 600; }
+.welcome-eyebrow { margin-bottom: 8px; color: var(--accent); font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; }
+
+.welcome-hero { display: flex; align-items: center; gap: 20px; }
+.welcome-mark { flex: none; display: grid; place-items: center; width: 72px; height: 72px; border-radius: 18px; color: var(--on-accent); background: var(--accent); font: 700 2.6rem/1 var(--font-display); box-shadow: 0 12px 30px -12px var(--accent); }
+.welcome-mark.is-ready { font-size: 2.2rem; }
+.welcome-body.is-entering .welcome-mark { animation: welcome-pop 520ms var(--ease-spring, ease-out) both; }
+@keyframes welcome-pop { from { opacity: 0; transform: scale(.6) rotate(-8deg); } }
+
+.welcome-promises { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 26px 0 0; padding: 0; list-style: none; }
+.welcome-promises li { display: grid; gap: 6px; align-content: start; padding: 18px; border: 1px solid var(--line); border-radius: var(--radius, 10px); background: var(--bg); }
+.welcome-promises li > span { color: var(--accent); font-size: 1.35rem; line-height: 1; }
+.welcome-promises strong { font-weight: 600; font-size: .9375rem; }
+.welcome-promises small, .welcome-source small, .welcome-places small, .welcome-levelup small { display: block; color: var(--muted); font-size: .8125rem; line-height: 1.45; }
+
+/* Choices: themes and libraries. Pressed reads as chosen. */
+.welcome-themes { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin-top: 22px; }
+.welcome-sources { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 22px; }
+.welcome-theme, .welcome-source {
+  color: var(--text); background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius, 10px); text-align: left;
+  transition: border-color var(--dur-1, 120ms) ease, background-color var(--dur-1, 120ms) ease;
+}
+.welcome-theme { display: grid; gap: 9px; padding: 8px 8px 10px; }
+.welcome-source { display: flex; align-items: center; gap: 14px; min-height: 64px; padding: 12px 14px; }
+.welcome-theme:hover, .welcome-source:hover { border-color: var(--line-strong); background: var(--hover); }
+.welcome-theme[aria-pressed="true"], .welcome-source[aria-pressed="true"] { border-color: var(--accent); background: var(--accent-bg); box-shadow: inset 0 0 0 1px var(--accent); }
+.welcome-theme strong { padding: 0 2px; font-weight: 600; font-size: .875rem; }
+.welcome-source strong { display: block; font-weight: 600; font-size: .9375rem; }
+.welcome-theme-about { margin-top: 16px; min-height: 2.9em; color: var(--muted); font-size: .875rem; line-height: 1.45; }
+.welcome-theme-about strong { color: var(--text); font-weight: 600; }
+/* A tiny window in the theme's colours: sidebar, title, two cards and an accent button. */
+.welcome-swatch { position: relative; display: block; aspect-ratio: 4 / 3; border-radius: 6px; overflow: hidden; background: var(--c1); border: 1px solid color-mix(in srgb, var(--c3) 30%, #8885); }
+.welcome-swatch i { position: absolute; display: block; }
+.welcome-swatch i:nth-child(1) { inset: 0 auto 0 0; width: 22%; background: var(--c2); }
+.welcome-swatch i:nth-child(2) { left: 30%; top: 12%; width: 44%; height: 9%; border-radius: 2px; background: color-mix(in srgb, var(--c2) 75%, var(--c1)); }
+.welcome-swatch i:nth-child(3) { left: 30%; top: 32%; width: 28%; height: 36%; border-radius: 3px; background: var(--c2); }
+.welcome-swatch i:nth-child(4) { left: 63%; top: 32%; width: 28%; height: 36%; border-radius: 3px; background: var(--c2); }
+.welcome-swatch i:nth-child(5) { left: 30%; bottom: 11%; width: 30%; height: 11%; border-radius: 3px; background: var(--c3); }
+.welcome-source-icon { flex: none; display: grid; place-items: center; width: 44px; height: 44px; border-radius: 10px; background: var(--raised); font-size: 1.35rem; }
+.welcome-source > span:nth-child(2) { flex: 1; min-width: 0; }
+.welcome-source em { display: block; margin-top: 6px; color: var(--accent); font-size: .75rem; font-style: normal; font-weight: 600; }
+.welcome-source em.is-connected { color: var(--success); }
+.welcome-source em.is-missing { color: var(--muted); font-weight: 500; }
+.welcome-check { flex: none; display: grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; border: 1.5px solid var(--line-strong); color: var(--on-accent); font-size: .8rem; }
+.welcome-source[aria-pressed="true"] .welcome-check { border-color: var(--accent); background: var(--accent); }
+.welcome-source[aria-pressed="true"] .welcome-check::after { content: '✓'; font-weight: 700; }
+
+.welcome-places { display: grid; grid-template-columns: repeat(2, 1fr); gap: 4px 22px; margin: 22px 0 0; padding: 0; list-style: none; }
+.welcome-places li, .welcome-levelup { display: flex; gap: 14px; align-items: flex-start; padding: 12px 0; }
+.welcome-places li { border-bottom: 1px solid var(--line-soft); }
+.welcome-places strong, .welcome-levelup strong { display: block; font-weight: 600; font-size: .9375rem; margin-bottom: 2px; }
+.welcome-place-icon { flex: none; width: 36px; height: 36px; display: grid; place-items: center; border-radius: 9px; color: var(--accent); background: var(--accent-bg); font-size: 1.15rem; }
+.welcome-levelup { margin-top: 14px; padding: 14px 16px; border: 1px solid var(--accent-line); border-radius: var(--radius, 10px); background: var(--accent-bg); }
+.welcome-level { flex: none; width: 36px; height: 36px; display: grid; place-items: center; border-radius: 50%; color: var(--on-accent); background: var(--xp, var(--accent)); font: 700 1rem/1 var(--font-display); box-shadow: 0 0 14px var(--xp-glow, transparent); }
+
+.welcome-finish { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.welcome-primary, .welcome-secondary, .welcome-next, .welcome-back {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 46px; padding: 11px 20px;
+  border-radius: var(--radius-sm, 7px); font-size: .9375rem; font-weight: 600; text-decoration: none;
+}
+.welcome-primary, .welcome-next { color: var(--on-accent); background: var(--accent); }
+.welcome-primary:hover, .welcome-next:hover { background: var(--accent-hover); }
+.welcome-secondary { color: var(--text); background: var(--raised); border: 1px solid var(--line); }
+.welcome-secondary:hover { border-color: var(--line-strong); }
+.welcome-back { color: var(--muted); font-weight: 500; }
+.welcome-back:hover { color: var(--text); background: var(--raised); }
+.welcome-nav { display: flex; align-items: center; justify-content: flex-end; gap: 10px; padding: 16px 24px; border-top: 1px solid var(--line-soft); }
+.welcome-nav .welcome-back { margin-right: auto; }
+.welcome-nav .welcome-next { min-width: 150px; }
+
+@media (max-width: 700px) {
+  dialog.welcome { width: 100%; height: 100dvh; max-width: none; border-radius: 0; border: 0; }
+  .welcome-top { padding: 12px 16px; }
+  .welcome-body { padding: 22px 16px 18px; }
+  .welcome-body h2 { font-size: 1.5rem; }
+  .welcome-nav { padding: 12px 16px calc(12px + env(safe-area-inset-bottom)); }
+  .welcome-mark { width: 56px; height: 56px; border-radius: 14px; font-size: 2rem; }
+  .welcome-promises, .welcome-sources, .welcome-places { grid-template-columns: 1fr; }
+  .welcome-promises { gap: 8px; margin-top: 20px; }
+  .welcome-promises li { grid-template-columns: 24px 1fr; gap: 2px 12px; padding: 12px 14px; }
+  .welcome-promises li > span { grid-row: span 2; }
+  .welcome-swatch { aspect-ratio: 16 / 10; }
+  .welcome-themes { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .welcome-finish > a { flex: 1 1 100%; }
+}
+/* Themes restyle every button, and Y2K makes them pills. The guide's theme tiles and library
+   cards are cards, so they keep the theme's card corners. */
+:root[data-theme] dialog.welcome .welcome-body :is(.welcome-theme, .welcome-source):not(:disabled) { border-radius: var(--radius, 10px); }
+:root[data-theme="y2k"] dialog.welcome .welcome-swatch { border-radius: var(--radius-sm); }
+/* Retro PC: a chosen tile is selected the 90s way, navy with white text. */
+:root[data-theme="retro-pc"] dialog.welcome :is(.welcome-theme, .welcome-source)[aria-pressed="true"]:not(:disabled) { background: #000080; color: #fff; box-shadow: var(--bevel-in); }
+:root[data-theme="retro-pc"] dialog.welcome .welcome-source[aria-pressed="true"] :is(small, em) { color: #dfe3ff; }
+@media (prefers-reduced-motion: reduce) {
+  .welcome-body.is-entering > *, .welcome-body.is-entering .welcome-mark { animation: none; }
+  .welcome-bar > span { transition: none; }
+}

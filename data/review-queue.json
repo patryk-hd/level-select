@@ -1,0 +1,1874 @@
+[
+  {
+    "system": "nes",
+    "sourceRank": 89,
+    "record": [
+      "Rescue Rangers 2",
+      "Platformer",
+      1994
+    ],
+    "reason": "Duplicate or regional title alias",
+    "mergedInto": "nes-b5c1eccd6515c4e7"
+  },
+  {
+    "system": "nes",
+    "sourceRank": 98,
+    "record": [
+      "Mega Man (alt)",
+      "Platformer / Action",
+      1987
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "nes",
+    "sourceRank": 99,
+    "record": [
+      "Super Mario All-Stars",
+      "Compilation",
+      1993
+    ],
+    "reason": "SNES release incorrectly assigned to NES"
+  },
+  {
+    "system": "nes",
+    "sourceRank": 100,
+    "record": [
+      "Contra Force",
+      "Run & Gun",
+      1992
+    ],
+    "reason": "Duplicate or regional title alias",
+    "mergedInto": "nes-f568f9e9314b507b"
+  },
+  {
+    "system": "snes",
+    "sourceRank": 90,
+    "record": [
+      "Warcraft: Orcs and Humans",
+      "RTS",
+      1994
+    ],
+    "reason": "PC release incorrectly assigned to SNES"
+  },
+  {
+    "system": "snes",
+    "sourceRank": 98,
+    "record": [
+      "Super Mario World 2: Yoshi's Island",
+      "Platformer",
+      1995
+    ],
+    "reason": "Duplicate or regional title alias",
+    "mergedInto": "snes-a23c870fe6f99492"
+  },
+  {
+    "system": "snes",
+    "sourceRank": 99,
+    "record": [
+      "Donkey Kong Country (alt)",
+      "Platformer",
+      1994
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "snes",
+    "sourceRank": 100,
+    "record": [
+      "Final Fantasy IV (alt)",
+      "RPG",
+      1991
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "n64",
+    "sourceRank": 99,
+    "record": [
+      "Conker's Bad Fur Day (alt)",
+      "Platformer / Action",
+      2001
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "n64",
+    "sourceRank": 100,
+    "record": [
+      "Pokemon Stadium",
+      "Strategy / RPG",
+      1999
+    ],
+    "reason": "Duplicate or regional title alias",
+    "mergedInto": "n64-bc61c97de9f192b7"
+  },
+  {
+    "system": "gc",
+    "sourceRank": 100,
+    "record": [
+      "Pikmin 2 (alt)",
+      "Strategy / Adventure",
+      2004
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "wii",
+    "sourceRank": 95,
+    "record": [
+      "Xenoblade Chronicles (alt)",
+      "Action RPG",
+      2010
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "wii",
+    "sourceRank": 96,
+    "record": [
+      "Donkey Kong Country Returns (alt)",
+      "Platformer",
+      2010
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "wii",
+    "sourceRank": 97,
+    "record": [
+      "Muramasa: The Demon Blade (alt)",
+      "Action RPG",
+      2009
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "wii",
+    "sourceRank": 100,
+    "record": [
+      "Kororinpa: Marble Mania",
+      "Puzzle",
+      2006
+    ],
+    "reason": "Duplicate or regional title alias",
+    "mergedInto": "wii-9277f04251e43501"
+  },
+  {
+    "system": "wiiu",
+    "sourceRank": 95,
+    "record": [
+      "Super Smash Bros for Wii U (alt)",
+      "Fighting",
+      2014
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "wiiu",
+    "sourceRank": 96,
+    "record": [
+      "Splatoon (alt)",
+      "Third-Person Shooter",
+      2015
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "wiiu",
+    "sourceRank": 97,
+    "record": [
+      "Pikmin 3 (alt)",
+      "Strategy / Adventure",
+      2013
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "wiiu",
+    "sourceRank": 98,
+    "record": [
+      "Captain Toad (alt)",
+      "Puzzle / Platformer",
+      2014
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "wiiu",
+    "sourceRank": 99,
+    "record": [
+      "The Wonderful 101 (alt)",
+      "Action",
+      2013
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "gb",
+    "sourceRank": 100,
+    "record": [
+      "Mega Man V (alt)",
+      "Platformer / Action",
+      1994
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "gbc",
+    "sourceRank": 97,
+    "record": [
+      "Bomberman Max (alt)",
+      "Action / Puzzle",
+      2000
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "gbc",
+    "sourceRank": 98,
+    "record": [
+      "Magi Nation (alt)",
+      "RPG / Card",
+      2001
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "gbc",
+    "sourceRank": 100,
+    "record": [
+      "Worms Armageddon GBC (alt)",
+      "Strategy",
+      1999
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "gba",
+    "sourceRank": 99,
+    "record": [
+      "WarioWare Inc (alt)",
+      "Party / Mini-Games",
+      2003
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "gba",
+    "sourceRank": 100,
+    "record": [
+      "Golden Sun (alt)",
+      "RPG",
+      2001
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "ds",
+    "sourceRank": 97,
+    "record": [
+      "Pokemon Diamond and Pearl (alt)",
+      "RPG",
+      2006
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "ds",
+    "sourceRank": 98,
+    "record": [
+      "Mario Kart DS (alt)",
+      "Kart Racing",
+      2005
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "ds",
+    "sourceRank": 99,
+    "record": [
+      "Chrono Trigger DS (alt)",
+      "RPG",
+      2008
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "ds",
+    "sourceRank": 100,
+    "record": [
+      "Mario and Luigi: Partners in Time (alt)",
+      "RPG",
+      2005
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "3ds",
+    "sourceRank": 99,
+    "record": [
+      "Fire Emblem Awakening (alt)",
+      "Strategy RPG",
+      2012
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "3ds",
+    "sourceRank": 100,
+    "record": [
+      "Bravely Default (alt)",
+      "RPG",
+      2012
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "switch",
+    "sourceRank": 100,
+    "record": [
+      "Kirby and the Forgotten Land alt",
+      "Platformer",
+      2022
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "switch2",
+    "sourceRank": 2,
+    "record": [
+      "The Legend of Zelda: Breath of the Wild 2 (TBA)",
+      "Action / Adventure",
+      2025
+    ],
+    "reason": "Unconfirmed release or placeholder"
+  },
+  {
+    "system": "switch2",
+    "sourceRank": 3,
+    "record": [
+      "Super Mario Odyssey 2 (TBA)",
+      "Platformer",
+      2025
+    ],
+    "reason": "Unconfirmed release or placeholder"
+  },
+  {
+    "system": "switch2",
+    "sourceRank": 20,
+    "record": [
+      "Persona 6 (TBA)",
+      "RPG",
+      2025
+    ],
+    "reason": "Unconfirmed release or placeholder"
+  },
+  {
+    "system": "switch2",
+    "sourceRank": 28,
+    "record": [
+      "Bloodstained: Ritual of the Night 2 (TBA)",
+      "Action RPG",
+      2025
+    ],
+    "reason": "Unconfirmed release or placeholder"
+  },
+  {
+    "system": "switch2",
+    "sourceRank": 32,
+    "record": [
+      "Rune Factory 6 Switch 2 (TBA)",
+      "RPG / Simulation",
+      2025
+    ],
+    "reason": "Unconfirmed release or placeholder"
+  },
+  {
+    "system": "switch2",
+    "sourceRank": 33,
+    "record": [
+      "Story of Seasons Switch 2 (TBA)",
+      "Simulation",
+      2025
+    ],
+    "reason": "Unconfirmed release or placeholder"
+  },
+  {
+    "system": "switch2",
+    "sourceRank": 36,
+    "record": [
+      "Game Builder Garage 2 Switch 2 (TBA)",
+      "Creative",
+      2025
+    ],
+    "reason": "Unconfirmed release or placeholder"
+  },
+  {
+    "system": "switch2",
+    "sourceRank": 37,
+    "record": [
+      "Splatoon 4 (TBA)",
+      "Third-Person Shooter",
+      2025
+    ],
+    "reason": "Unconfirmed release or placeholder"
+  },
+  {
+    "system": "switch2",
+    "sourceRank": 38,
+    "record": [
+      "Pokemon Gen 10 (TBA)",
+      "RPG",
+      2025
+    ],
+    "reason": "Unconfirmed release or placeholder"
+  },
+  {
+    "system": "switch2",
+    "sourceRank": 39,
+    "record": [
+      "Pikmin 5 (TBA)",
+      "Strategy / Adventure",
+      2025
+    ],
+    "reason": "Unconfirmed release or placeholder"
+  },
+  {
+    "system": "switch2",
+    "sourceRank": 42,
+    "record": [
+      "Neon White 2 (TBA)",
+      "Action / Platformer",
+      2025
+    ],
+    "reason": "Unconfirmed release or placeholder"
+  },
+  {
+    "system": "switch2",
+    "sourceRank": 49,
+    "record": [
+      "Sonic the Hedgehog 3 Movie Tie-in Game Switch 2 (TBA)",
+      "Platformer",
+      2025
+    ],
+    "reason": "Unconfirmed release or placeholder"
+  },
+  {
+    "system": "switch2",
+    "sourceRank": 50,
+    "record": [
+      "Crash Bandicoot Switch 2 (TBA)",
+      "Platformer",
+      2025
+    ],
+    "reason": "Unconfirmed release or placeholder"
+  },
+  {
+    "system": "switch2",
+    "sourceRank": 51,
+    "record": [
+      "Spyro Switch 2 (TBA)",
+      "Platformer",
+      2025
+    ],
+    "reason": "Unconfirmed release or placeholder"
+  },
+  {
+    "system": "switch2",
+    "sourceRank": 52,
+    "record": [
+      "Tony Hawk's Pro Skater 3+4 Switch 2 (TBA)",
+      "Sports / Action",
+      2025
+    ],
+    "reason": "Unconfirmed release or placeholder"
+  },
+  {
+    "system": "switch2",
+    "sourceRank": 53,
+    "record": [
+      "Skate 4 Switch 2 (TBA)",
+      "Sports / Action",
+      2025
+    ],
+    "reason": "Unconfirmed release or placeholder"
+  },
+  {
+    "system": "switch2",
+    "sourceRank": 54,
+    "record": [
+      "FIFA / EA Sports FC Switch 2 (TBA)",
+      "Sports",
+      2025
+    ],
+    "reason": "Unconfirmed release or placeholder"
+  },
+  {
+    "system": "switch2",
+    "sourceRank": 55,
+    "record": [
+      "NBA 2K Switch 2 (TBA)",
+      "Sports",
+      2025
+    ],
+    "reason": "Unconfirmed release or placeholder"
+  },
+  {
+    "system": "switch2",
+    "sourceRank": 56,
+    "record": [
+      "WWE 2K Switch 2 (TBA)",
+      "Sports / Wrestling",
+      2025
+    ],
+    "reason": "Unconfirmed release or placeholder"
+  },
+  {
+    "system": "switch2",
+    "sourceRank": 68,
+    "record": [
+      "Balatro Switch 2 alt",
+      "Card / Roguelike",
+      2025
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "switch2",
+    "sourceRank": 69,
+    "record": [
+      "Hades II Switch 2 alt",
+      "Roguelike Action RPG",
+      2025
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "switch2",
+    "sourceRank": 82,
+    "record": [
+      "Among Us 2 Switch 2 (TBA)",
+      "Social Deduction",
+      2025
+    ],
+    "reason": "Unconfirmed release or placeholder"
+  },
+  {
+    "system": "switch2",
+    "sourceRank": 84,
+    "record": [
+      "Lethal Company Switch 2 (TBA)",
+      "Horror / Co-op",
+      2025
+    ],
+    "reason": "Unconfirmed release or placeholder"
+  },
+  {
+    "system": "switch2",
+    "sourceRank": 85,
+    "record": [
+      "Content Warning Switch 2 (TBA)",
+      "Horror / Co-op",
+      2025
+    ],
+    "reason": "Unconfirmed release or placeholder"
+  },
+  {
+    "system": "switch2",
+    "sourceRank": 89,
+    "record": [
+      "Ultrakill Switch 2 (TBA)",
+      "First-Person Shooter",
+      2025
+    ],
+    "reason": "Unconfirmed release or placeholder"
+  },
+  {
+    "system": "switch2",
+    "sourceRank": 95,
+    "record": [
+      "Donkey Kong Bananza alt",
+      "Platformer",
+      2025
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "switch2",
+    "sourceRank": 96,
+    "record": [
+      "Metroid Prime 4 alt",
+      "First-Person Adventure",
+      2025
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "switch2",
+    "sourceRank": 97,
+    "record": [
+      "Mario Kart World alt",
+      "Kart Racing",
+      2025
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "switch2",
+    "sourceRank": 99,
+    "record": [
+      "Europa Universalis V Switch 2 (TBA)",
+      "Strategy",
+      2025
+    ],
+    "reason": "Unconfirmed release or placeholder"
+  },
+  {
+    "system": "switch2",
+    "sourceRank": 100,
+    "record": [
+      "Warhammer 40K Switch 2 (TBA)",
+      "Strategy",
+      2025
+    ],
+    "reason": "Unconfirmed release or placeholder"
+  },
+  {
+    "system": "sg1000",
+    "sourceRank": 26,
+    "record": [
+      "Sega Galaga (alt)",
+      "Shoot em Up",
+      1983
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "saturn",
+    "sourceRank": 89,
+    "record": [
+      "Sexy Parodius (alt) Saturn",
+      "Shoot em Up",
+      1996
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "saturn",
+    "sourceRank": 97,
+    "record": [
+      "Shining the Holy Ark (alt) Saturn",
+      "Action RPG",
+      1997
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "dc",
+    "sourceRank": 90,
+    "record": [
+      "Jet Grind Radio (alt)",
+      "Action / Platformer",
+      2000
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "dc",
+    "sourceRank": 95,
+    "record": [
+      "The House of the Dead 2 (alt) DC",
+      "Rail Shooter",
+      1998
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "dc",
+    "sourceRank": 97,
+    "record": [
+      "Skies of Arcadia (alt) DC",
+      "RPG",
+      2000
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "ps1",
+    "sourceRank": 100,
+    "record": [
+      "Dino Crisis",
+      "Survival Horror",
+      1999
+    ],
+    "reason": "Duplicate or regional title alias",
+    "mergedInto": "ps1-90962cecdf8eb6e7"
+  },
+  {
+    "system": "ps3",
+    "sourceRank": 99,
+    "record": [
+      "Scott Pilgrim vs The World (alt)",
+      "Beat em Up",
+      2010
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "ps3",
+    "sourceRank": 100,
+    "record": [
+      "3D Dot Game Heroes (alt)",
+      "Action / Adventure",
+      2009
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "ps4",
+    "sourceRank": 100,
+    "record": [
+      "Sekiro alt",
+      "Action / Stealth",
+      2019
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "ps5",
+    "sourceRank": 19,
+    "record": [
+      "Returnal alt",
+      "Roguelike / Third-Person Shooter",
+      2021
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "ps5",
+    "sourceRank": 40,
+    "record": [
+      "Hogwarts Legacy alt",
+      "Action RPG",
+      2023
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "ps5",
+    "sourceRank": 50,
+    "record": [
+      "Ghostwire alt",
+      "Action / Adventure",
+      2022
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "ps5",
+    "sourceRank": 51,
+    "record": [
+      "Kena alt",
+      "Action / Adventure",
+      2021
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "ps5",
+    "sourceRank": 52,
+    "record": [
+      "God of War Ragnarok alt",
+      "Action / Adventure",
+      2022
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "ps5",
+    "sourceRank": 53,
+    "record": [
+      "Elden Ring alt",
+      "Action RPG",
+      2022
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "ps5",
+    "sourceRank": 65,
+    "record": [
+      "Forza Horizon 5 (PS5 alt note)",
+      "Racing",
+      2021
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "ps5",
+    "sourceRank": 94,
+    "record": [
+      "Stellar Blade alt",
+      "Action",
+      2024
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "ps5",
+    "sourceRank": 95,
+    "record": [
+      "Astro Bot alt",
+      "Platformer",
+      2024
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "ps5",
+    "sourceRank": 96,
+    "record": [
+      "Balatro alt",
+      "Card / Roguelike",
+      2024
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "ps5",
+    "sourceRank": 97,
+    "record": [
+      "Black Myth: Wukong alt",
+      "Action RPG",
+      2024
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "ps5",
+    "sourceRank": 98,
+    "record": [
+      "Elden Ring: Shadow of the Erdtree alt",
+      "Action RPG",
+      2024
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "ps5",
+    "sourceRank": 99,
+    "record": [
+      "Persona 3 Reload alt",
+      "RPG",
+      2024
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "ps5",
+    "sourceRank": 100,
+    "record": [
+      "Astro Bot (2024) alt",
+      "Platformer",
+      2024
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "atari2600",
+    "sourceRank": 65,
+    "record": [
+      "Pitfall! (alt)",
+      "Platformer / Action",
+      1982
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "lynx",
+    "sourceRank": 69,
+    "record": [
+      "Todd's Adventures (alt) Lynx",
+      "Action / Adventure",
+      1990
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "lynx",
+    "sourceRank": 75,
+    "record": [
+      "Chip's Challenge (alt) Lynx",
+      "Puzzle",
+      1989
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "jaguar",
+    "sourceRank": 53,
+    "record": [
+      "Wolfenstein 3D (alt) Jaguar",
+      "First-Person Shooter",
+      1994
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "jaguar",
+    "sourceRank": 54,
+    "record": [
+      "Doom (alt) Jaguar",
+      "First-Person Shooter",
+      1994
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "jaguar",
+    "sourceRank": 55,
+    "record": [
+      "Tempest 2000 (alt) Jaguar",
+      "Shoot em Up",
+      1994
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "jaguar",
+    "sourceRank": 56,
+    "record": [
+      "Alien vs. Predator (alt) Jaguar",
+      "First-Person Shooter",
+      1994
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "jaguar",
+    "sourceRank": 65,
+    "record": [
+      "Dino Dudes (alt) Jaguar",
+      "Platformer",
+      1994
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "jaguar",
+    "sourceRank": 66,
+    "record": [
+      "Crescent Galaxy (alt) Jaguar",
+      "Shoot em Up",
+      1993
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "jaguar",
+    "sourceRank": 67,
+    "record": [
+      "Cannon Fodder (alt) Jaguar",
+      "Strategy / Action",
+      1995
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "jaguar",
+    "sourceRank": 68,
+    "record": [
+      "Super Burnout (alt) Jaguar",
+      "Racing",
+      1995
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "pcecd",
+    "sourceRank": 52,
+    "record": [
+      "Dracula X (alt) PCECD",
+      "Platformer / Action",
+      1993
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "pcecd",
+    "sourceRank": 53,
+    "record": [
+      "Ys I and II (alt) PCECD",
+      "Action RPG",
+      1989
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "pcecd",
+    "sourceRank": 78,
+    "record": [
+      "Snatcher (alt) PCECD",
+      "Visual Novel / Adventure",
+      1992
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "pcecd",
+    "sourceRank": 97,
+    "record": [
+      "Tengai Makyou (alt) PCECD",
+      "RPG",
+      1989
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "pcecd",
+    "sourceRank": 98,
+    "record": [
+      "Ys IV (alt) PCECD",
+      "Action RPG",
+      1993
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "pcecd",
+    "sourceRank": 99,
+    "record": [
+      "Akumajo Dracula X (alt 2) PCECD",
+      "Platformer / Action",
+      1993
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "neogeo",
+    "sourceRank": 55,
+    "record": [
+      "Blazing Star (alt)",
+      "Shoot em Up",
+      1998
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "neogeo",
+    "sourceRank": 64,
+    "record": [
+      "Garou (alt)",
+      "Fighting",
+      1999
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "neogeo",
+    "sourceRank": 65,
+    "record": [
+      "The King of Fighters 98 (alt)",
+      "Fighting",
+      1998
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "neogeo",
+    "sourceRank": 66,
+    "record": [
+      "Samurai Shodown II (alt)",
+      "Fighting",
+      1994
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "neogeo",
+    "sourceRank": 67,
+    "record": [
+      "Windjammers (alt)",
+      "Sports / Action",
+      1994
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "ngpc",
+    "sourceRank": 63,
+    "record": [
+      "Neo Geo Pocket Color selection (alt)",
+      "Fighting",
+      1999
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "ngpc",
+    "sourceRank": 64,
+    "record": [
+      "Metal Slug 1st Mission (alt) NGPC",
+      "Run & Gun",
+      1999
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "ngpc",
+    "sourceRank": 65,
+    "record": [
+      "SNK vs Capcom (alt) NGPC",
+      "Fighting",
+      1999
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "ngpc",
+    "sourceRank": 66,
+    "record": [
+      "Sonic Pocket Adventure (alt) NGPC",
+      "Platformer",
+      1999
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "ngpc",
+    "sourceRank": 67,
+    "record": [
+      "Faselei! (alt) NGPC",
+      "Strategy / RPG",
+      1999
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "ngpc",
+    "sourceRank": 68,
+    "record": [
+      "Biomotor Unitron (alt) NGPC",
+      "RPG / Mech",
+      1999
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "ngpc",
+    "sourceRank": 69,
+    "record": [
+      "Dark Arms (alt) NGPC",
+      "Shoot em Up / RPG",
+      1999
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "ngpc",
+    "sourceRank": 70,
+    "record": [
+      "Baseball Stars Color (alt) NGPC",
+      "Sports",
+      1999
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "ngpc",
+    "sourceRank": 71,
+    "record": [
+      "Big Tournament Golf (alt) NGPC",
+      "Sports / Golf",
+      1999
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "ngpc",
+    "sourceRank": 72,
+    "record": [
+      "Fatal Fury First Contact (alt) NGPC",
+      "Fighting",
+      1999
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "ngpc",
+    "sourceRank": 73,
+    "record": [
+      "Card Fighters Clash (alt) NGPC",
+      "Card / Strategy",
+      1999
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "ngpc",
+    "sourceRank": 74,
+    "record": [
+      "Rockman Battle and Fighters (alt) NGPC",
+      "Platformer / Action",
+      2000
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "ngpc",
+    "sourceRank": 75,
+    "record": [
+      "Cotton NGPC (alt)",
+      "Shoot em Up",
+      2000
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "ngpc",
+    "sourceRank": 76,
+    "record": [
+      "Last Blade Beyond the Destiny (alt) NGPC",
+      "Fighting",
+      2000
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "ngpc",
+    "sourceRank": 77,
+    "record": [
+      "Gals Fighters (alt) NGPC",
+      "Fighting",
+      2000
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "ngpc",
+    "sourceRank": 78,
+    "record": [
+      "Pocket Tennis Color (alt) NGPC",
+      "Sports",
+      1999
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "ngpc",
+    "sourceRank": 79,
+    "record": [
+      "Puzzle Bobble Mini (alt) NGPC",
+      "Puzzle",
+      1999
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "ngpc",
+    "sourceRank": 80,
+    "record": [
+      "Magical Drop Pocket (alt) NGPC",
+      "Puzzle",
+      1999
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "ngpc",
+    "sourceRank": 81,
+    "record": [
+      "Puyo Pop NGPC (alt)",
+      "Puzzle",
+      1999
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "ngpc",
+    "sourceRank": 82,
+    "record": [
+      "Dynamite Slugger (alt) NGPC",
+      "Sports",
+      2000
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "ngpc",
+    "sourceRank": 83,
+    "record": [
+      "Neo Mr. Do! (alt) NGPC",
+      "Arcade",
+      1999
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "ngpc",
+    "sourceRank": 84,
+    "record": [
+      "Ms. Pac-Man (alt) NGPC",
+      "Arcade",
+      1999
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "ngpc",
+    "sourceRank": 85,
+    "record": [
+      "Pac-Man (alt) NGPC",
+      "Arcade",
+      1999
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "ngpc",
+    "sourceRank": 86,
+    "record": [
+      "Crush Roller (alt) NGPC",
+      "Arcade",
+      1999
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "ngpc",
+    "sourceRank": 87,
+    "record": [
+      "Cool Cool Jam (alt) NGPC",
+      "Puzzle",
+      2000
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "ngpc",
+    "sourceRank": 88,
+    "record": [
+      "Shanghai Mini (alt) NGPC",
+      "Board Game / Mahjong",
+      1998
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "ngpc",
+    "sourceRank": 89,
+    "record": [
+      "Othello (alt) NGPC",
+      "Board Game",
+      1998
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "ngpc",
+    "sourceRank": 90,
+    "record": [
+      "Pocket Bowling (alt) NGPC",
+      "Sports",
+      1999
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "ngpc",
+    "sourceRank": 91,
+    "record": [
+      "Pocket Billiards (alt) NGPC",
+      "Sports / Arcade",
+      2000
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "ngpc",
+    "sourceRank": 92,
+    "record": [
+      "Battle Tennis (alt) NGPC",
+      "Sports",
+      2000
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "ngpc",
+    "sourceRank": 93,
+    "record": [
+      "GunGun Pixel (alt) NGPC",
+      "Puzzle",
+      2000
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "ngpc",
+    "sourceRank": 94,
+    "record": [
+      "Neo Geo Cup 98 Plus Color (alt) NGPC",
+      "Sports",
+      1999
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "ngpc",
+    "sourceRank": 95,
+    "record": [
+      "Bishi Bashi Pocket (alt) NGPC",
+      "Party / Mini-Games",
+      1999
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "ngpc",
+    "sourceRank": 96,
+    "record": [
+      "Dive Alert Matt (alt) NGPC",
+      "Shoot em Up",
+      1999
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "ngpc",
+    "sourceRank": 97,
+    "record": [
+      "Dive Alert Beck (alt) NGPC",
+      "Shoot em Up",
+      1999
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "ngpc",
+    "sourceRank": 98,
+    "record": [
+      "Faselei! (alt 2) NGPC",
+      "Strategy / RPG",
+      1999
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "ngpc",
+    "sourceRank": 99,
+    "record": [
+      "Metal Slug 2nd Mission (alt) NGPC",
+      "Run & Gun",
+      2000
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "ngpc",
+    "sourceRank": 100,
+    "record": [
+      "SNK vs Capcom Card Fighters 2 (alt) NGPC",
+      "Card / Strategy",
+      2000
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "cps",
+    "sourceRank": 40,
+    "record": [
+      "Captain Commando CPS2",
+      "Beat em Up",
+      1991
+    ],
+    "reason": "Duplicate or regional title alias",
+    "mergedInto": "cps-e7516cece45e1ee9"
+  },
+  {
+    "system": "cps",
+    "sourceRank": 69,
+    "record": [
+      "Slam Masters CPS3",
+      "Fighting / Sports",
+      1993
+    ],
+    "reason": "Duplicate or regional title alias",
+    "mergedInto": "cps-c1c805dbcd0b1764"
+  },
+  {
+    "system": "cps",
+    "sourceRank": 72,
+    "record": [
+      "Three Wonders (alt) CPS1",
+      "Shoot em Up / Action",
+      1991
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "cave",
+    "sourceRank": 43,
+    "record": [
+      "DOJ: DoDonPachi DaiOuJou (alt) Cave",
+      "Shoot em Up",
+      2002
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "cave",
+    "sourceRank": 44,
+    "record": [
+      "Ketsui (alt) Cave",
+      "Shoot em Up",
+      2003
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "cave",
+    "sourceRank": 45,
+    "record": [
+      "DoDonPachi (alt) Cave",
+      "Shoot em Up",
+      1997
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "cave",
+    "sourceRank": 46,
+    "record": [
+      "Mushihimesama (alt) Cave",
+      "Shoot em Up",
+      2004
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "cave",
+    "sourceRank": 47,
+    "record": [
+      "Espgaluda (alt) Cave",
+      "Shoot em Up",
+      2003
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "cave",
+    "sourceRank": 48,
+    "record": [
+      "Deathsmiles (alt) Cave",
+      "Shoot em Up",
+      2007
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "cave",
+    "sourceRank": 49,
+    "record": [
+      "Ibara (alt) Cave",
+      "Shoot em Up",
+      2005
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "cave",
+    "sourceRank": 50,
+    "record": [
+      "Guwange (alt) Cave",
+      "Shoot em Up",
+      1999
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "cave",
+    "sourceRank": 51,
+    "record": [
+      "Progear (alt) Cave",
+      "Shoot em Up",
+      2001
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "cave",
+    "sourceRank": 52,
+    "record": [
+      "DoDonPachi DaiFukkatsu (alt) Cave",
+      "Shoot em Up",
+      2008
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "cave",
+    "sourceRank": 53,
+    "record": [
+      "Akai Katana (alt) Cave",
+      "Shoot em Up",
+      2010
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "cave",
+    "sourceRank": 54,
+    "record": [
+      "Muchi Muchi Pork (alt) Cave",
+      "Shoot em Up",
+      2007
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "cave",
+    "sourceRank": 55,
+    "record": [
+      "Pink Sweets (alt) Cave",
+      "Shoot em Up",
+      2006
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "cave",
+    "sourceRank": 56,
+    "record": [
+      "Dangun Feveron (alt) Cave",
+      "Shoot em Up",
+      1998
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "cave",
+    "sourceRank": 57,
+    "record": [
+      "Espgaluda II (alt) Cave",
+      "Shoot em Up",
+      2005
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "cave",
+    "sourceRank": 58,
+    "record": [
+      "Mushihimesama Futari (alt) Cave",
+      "Shoot em Up",
+      2006
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "cave",
+    "sourceRank": 59,
+    "record": [
+      "Deathsmiles IIX (alt) Cave",
+      "Shoot em Up",
+      2010
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "cave",
+    "sourceRank": 60,
+    "record": [
+      "Dodonpachi Saidaioujou (alt) Cave",
+      "Shoot em Up",
+      2012
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "cave",
+    "sourceRank": 61,
+    "record": [
+      "Ketsui Arrange (alt) Cave",
+      "Shoot em Up",
+      2003
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "cave",
+    "sourceRank": 62,
+    "record": [
+      "DoDonPachi DaiFukkatsu BL (alt) Cave",
+      "Shoot em Up",
+      2009
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "cave",
+    "sourceRank": 63,
+    "record": [
+      "Mushihimesama Futari BL (alt) Cave",
+      "Shoot em Up",
+      2009
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "cave",
+    "sourceRank": 64,
+    "record": [
+      "Deathsmiles II (alt) Cave",
+      "Shoot em Up",
+      2009
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "cave",
+    "sourceRank": 89,
+    "record": [
+      "Batsugun (alt ver) Cave",
+      "Shoot em Up",
+      1993
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "cave",
+    "sourceRank": 93,
+    "record": [
+      "Out Zone (alt) Cave",
+      "Run & Gun",
+      1990
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "c64",
+    "sourceRank": 62,
+    "record": [
+      "Ghosts n Goblins C64 (alt)",
+      "Platformer / Action",
+      1986
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "spectrum",
+    "sourceRank": 96,
+    "record": [
+      "Chuckie Egg (alt) ZX Spectrum",
+      "Platformer",
+      1983
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "spectrum",
+    "sourceRank": 97,
+    "record": [
+      "Manic Miner (alt) ZX Spectrum",
+      "Platformer",
+      1983
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "spectrum",
+    "sourceRank": 98,
+    "record": [
+      "Knight Lore (alt) ZX Spectrum",
+      "Isometric Adventure",
+      1984
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "spectrum",
+    "sourceRank": 99,
+    "record": [
+      "Sabre Wulf (alt) ZX Spectrum",
+      "Action / Adventure",
+      1984
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "spectrum",
+    "sourceRank": 100,
+    "record": [
+      "Matchday ZX Spectrum (alt)",
+      "Sports / Soccer",
+      1985
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "msx",
+    "sourceRank": 9,
+    "record": [
+      "Nemesis MSX",
+      "Shoot em Up",
+      1985
+    ],
+    "reason": "Duplicate or regional title alias",
+    "mergedInto": "msx-0b9f344897e0a0cb"
+  },
+  {
+    "system": "msx",
+    "sourceRank": 10,
+    "record": [
+      "Nemesis 2 MSX",
+      "Shoot em Up",
+      1987
+    ],
+    "reason": "Duplicate or regional title alias",
+    "mergedInto": "msx-751a6037bc54d3ed"
+  },
+  {
+    "system": "msx",
+    "sourceRank": 13,
+    "record": [
+      "Castlevania MSX",
+      "Platformer / Action",
+      1986
+    ],
+    "reason": "Duplicate or regional title alias",
+    "mergedInto": "msx-c716f97400d92dee"
+  },
+  {
+    "system": "msx",
+    "sourceRank": 69,
+    "record": [
+      "Knightmare II: The Maze of Galious MSX",
+      "Action / Adventure",
+      1987
+    ],
+    "reason": "Duplicate or regional title alias",
+    "mergedInto": "msx-9a4f0b0beee620b0"
+  },
+  {
+    "system": "msx",
+    "sourceRank": 99,
+    "record": [
+      "Eggerland Mystery (alt) MSX",
+      "Puzzle",
+      1985
+    ],
+    "reason": "Unspecified alternate edition"
+  },
+  {
+    "system": "msx",
+    "sourceRank": 100,
+    "record": [
+      "Metal Gear (alt) MSX",
+      "Action / Stealth",
+      1987
+    ],
+    "reason": "Unspecified alternate edition"
+  }
+]
