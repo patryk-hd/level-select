@@ -115,7 +115,10 @@ export function createPhoneAccess({ root, port, handle, interfaces = () => os.ne
     const device = deviceFromCookie(req.headers.cookie, settings.secret, settings.devices);
     if (!device) { html(401, 'Pair this phone first', PAIR_HELP); return; }
     if (now() - (seen.get(device) ?? 0) > 60_000) { seen.set(device, now()); settings.devices[device].lastSeen = new Date(now()).toISOString(); save(); }
-    if (url.pathname.startsWith('/__retro_library/') && !PHONE_ROUTES.some(route => route.test(url.pathname))) {
+    // The app reads the address decoded (serve.mjs), so this does too: %5F%5Fretro_library is the same address.
+    let route;
+    try { route = decodeURIComponent(url.pathname); } catch { res.writeHead(400, { 'Content-Type': 'text/plain' }); res.end('Bad request'); return; }
+    if (route.startsWith('/__retro_library/') && !PHONE_ROUTES.some(allowed => allowed.test(route))) {
       res.writeHead(403, { 'Content-Type': 'application/json', 'Cache-Control': 'no-store' }); res.end(JSON.stringify({ error: 'Do this on your computer: importing, updating and adding games happen there.' })); return;
     }
     await handle(req, res, { hosts: allowedHosts, canWrite, phone: true });

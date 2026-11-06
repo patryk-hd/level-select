@@ -161,6 +161,9 @@ test('phone access: off until turned on, pairs once per code, then serves only w
   assert.equal((await get(new URL(url).pathname + new URL(url).search)).status, 403); // used once
   assert.equal((await get('/library/index.html', { Cookie: cookie })).body, 'app');
   assert.equal((await get('/__retro_library/sources', { Cookie: cookie })).status, 403);
+  // Nor spelled another way: the app reads the address decoded.
+  for (const spelled of ['/%5F%5Fretro_library/sources', '/__retro_library%2Fsources', '/__retro_library/%73ources', '/__retro_library/tracking%2F..%2Fsources', '/%E0%A4%A'])
+    assert.equal((await get(spelled, { Cookie: cookie })).status, spelled === '/%E0%A4%A' ? 400 : 403, spelled);
   assert.equal((await get('/__retro_library/tracking?namespace=personal', { Cookie: cookie })).body, 'app');
   await get('/__retro_library/tracking', { Cookie: cookie, Origin: `http://192.168.7.9:${port}`, 'X-Retro-Library': '1', 'Content-Type': 'application/json' }, 'POST');
   await get('/__retro_library/tracking', { Cookie: cookie, Origin: 'http://attacker.example', 'X-Retro-Library': '1', 'Content-Type': 'application/json' }, 'POST');

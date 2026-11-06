@@ -78,7 +78,7 @@ export async function handleSources(req, res, { root, port, startUpdate }) {
   }
 
   if (route === '/__retro_library/upload') {
-    const kind = url.searchParams.get('kind'), upload = UPLOADS[kind];
+    const kind = url.searchParams.get('kind'), upload = Object.hasOwn(UPLOADS, kind) ? UPLOADS[kind] : null;
     if (!localRequestAllowed(req, port, { json: false }) || !upload) { send(res, 403, { error: 'Forbidden' }); return true; }
     const target = path.join(root, upload.file), temporary = `${target}.upload`;
     try {

@@ -1,4 +1,4 @@
 {
   "node": { "version": "22.23.4" },
-  "python": { "version": "3.14.3", "sha256": "ad4961a479dedbeb7c7d113253f8db1b1935586b73c27488712beec4f2c894e6" }
+  "python": { "version": "3.14.10", "sha256": "90905e64a840557d8c1bc4f5b74db3d7ee85e3ffb217611cac1c7813acea4159" }
 }
