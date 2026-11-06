@@ -5,6 +5,9 @@
 import { readdir, stat } from 'node:fs/promises';
 import path from 'node:path';
 import { createHash } from 'node:crypto';
+import { gzip } from 'node:zlib';
+import { promisify } from 'node:util';
+const gzipped = promisify(gzip);
 
 export const WATCHED = ['data', 'library/data', 'library/data/sources', 'library/sample'];
 
@@ -41,10 +44,39 @@ export function responseCache(root, { dirs = WATCHED } = {}) {
 }
 
 // The browser keeps a copy but asks before each use; unchanged answers are a bodiless 304.
-export function sendEntity(req, res, { body, etag }, type) {
-  const headers = { 'Content-Type': type, 'Cache-Control': 'no-cache', ETag: etag };
-  if (matches(req, etag)) { res.writeHead(304, headers); res.end(); return; }
+// With compression (a paired phone), text goes gzipped, under a tag of its own.
+export async function sendEntity(req, res, { body, etag }, type, compress = null) {
+  const packed = Boolean(compress?.wanted(req, type, body.length)), tag = packed ? compress.tag(etag) : etag;
+  const headers = { 'Content-Type': type, 'Cache-Control': 'no-cache', ETag: tag, ...(compress && { Vary: 'Accept-Encoding' }) };
+  if (matches(req, tag)) { res.writeHead(304, headers); res.end(); return; }
+  if (packed) { const zipped = await compress.body(tag, () => body); res.writeHead(200, { ...headers, 'Content-Encoding': 'gzip' }); res.end(zipped); return; }
   res.writeHead(200, headers); res.end(body);
+}
+
+// Over Wi-Fi, a paired phone gets text compressed: the catalog, a library and its scores shrink
+// to a tenth or less. On this computer it would only add time, so only phones are sent it.
+// Each body is compressed once and kept by its tag (the newest few).
+const COMPRESSIBLE = /^(?:text\/|application\/(?:json|manifest\+json)|image\/svg\+xml)/;
+export const acceptsGzip = req => String(req.headers['accept-encoding'] ?? '').toLowerCase().split(',').some(part => {
+  const [name, ...params] = part.split(';').map(item => item.trim());
+  return name === 'gzip' && !params.some(param => /^q=0(?:\.0*)?$/.test(param));
+});
+export function compression({ keep = 32 } = {}) {
+  const kept = new Map();
+  return {
+    wanted: (req, type, size) => size >= 1024 && COMPRESSIBLE.test(type) && acceptsGzip(req),
+    tag: etag => etag.replace(/"$/, '-gz"'),
+    body(tag, read) {
+      let found = kept.get(tag);
+      if (!found) {
+        found = Promise.resolve().then(read).then(body => gzipped(body));
+        kept.set(tag, found);
+        found.catch(() => { if (kept.get(tag) === found) kept.delete(tag); });
+        while (kept.size > keep) kept.delete(kept.keys().next().value);
+      }
+      return found;
+    },
+  };
 }
 
 export const matches = (req, etag) => Boolean(req.headers['if-none-match']?.split(',').map(tag => tag.trim().replace(/^W\//, '')).some(tag => tag === etag || tag === '*'));

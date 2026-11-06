@@ -3,7 +3,8 @@ import assert from 'node:assert/strict';
 import { mkdtemp, mkdir, writeFile, rename, rm } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
-import { responseCache, entity, sendEntity } from '../scripts/serve-cache.mjs';
+import { responseCache, entity, sendEntity, compression, acceptsGzip } from '../scripts/serve-cache.mjs';
+import { gunzipSync } from 'node:zlib';
 
 async function fixture(t) {
   const root = await mkdtemp(path.join(tmpdir(), 'serve-cache-'));
@@ -48,4 +49,31 @@ test('an unchanged response is answered with a bodiless 304', () => {
   assert.deepEqual(sent.map(item => item.status), [200, 304, 200]);
   assert.equal(sent[0].headers['Cache-Control'], 'no-cache');
   assert.equal(sent[1].body, undefined);
+});
+
+test('a paired phone gets text compressed, under its own tag, compressed once', async () => {
+  const sent = [], res = { writeHead: (status, headers) => sent.push({ status, headers }), end: body => { sent.at(-1).body = body; } };
+  const text = JSON.stringify({ games: Array.from({ length: 200 }, (_, id) => ({ id, title: `Game ${id}` })) }), page = entity(text), gzip = compression();
+  const phone = headers => ({ headers: { 'accept-encoding': 'gzip, deflate, br', ...headers } });
+  await sendEntity(phone(), res, page, 'application/json', gzip);
+  assert.equal(sent[0].headers['Content-Encoding'], 'gzip');
+  assert.equal(sent[0].headers.Vary, 'Accept-Encoding');
+  assert.equal(gunzipSync(sent[0].body).toString(), text);
+  assert.ok(sent[0].body.length < text.length / 3);
+  assert.notEqual(sent[0].headers.ETag, page.etag);
+  await sendEntity(phone({ 'if-none-match': sent[0].headers.ETag }), res, page, 'application/json', gzip);
+  assert.equal(sent[1].status, 304);
+  // Its plain copy's tag is a different version: the phone is sent the compressed one again.
+  await sendEntity(phone({ 'if-none-match': page.etag }), res, page, 'application/json', gzip);
+  assert.equal(sent[2].status, 200);
+  assert.equal(sent[2].body, sent[0].body, 'compressed once');
+  // Not compressed: a browser that doesn't take gzip, a small answer, a picture, or no compression (this computer).
+  await sendEntity({ headers: {} }, res, page, 'application/json', gzip);
+  await sendEntity(phone(), res, entity('{"games":[]}'), 'application/json', gzip);
+  await sendEntity(phone(), res, entity('x'.repeat(4096)), 'image/png', gzip);
+  await sendEntity(phone(), res, page, 'application/json');
+  assert.deepEqual(sent.slice(3).map(item => [item.headers['Content-Encoding'], item.headers.ETag === page.etag || item.headers.ETag.endsWith('-gz"') === false]), [[undefined, true], [undefined, true], [undefined, true], [undefined, true]]);
+  assert.equal(sent.at(-1).headers.Vary, undefined);
+  assert.equal(acceptsGzip({ headers: { 'accept-encoding': 'br, gzip;q=0' } }), false);
+  assert.equal(acceptsGzip({ headers: { 'accept-encoding': 'GZIP;q=0.5' } }), true);
 });

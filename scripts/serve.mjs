@@ -12,7 +12,7 @@ import { readFolders, readRoms } from './roms.mjs';
 import { romScan } from './rom-scan.mjs';
 import { handleSources } from './sources-api.mjs';
 import { handleGames } from './games-api.mjs';
-import { responseCache, entity, sendEntity, matches, fileTag } from './serve-cache.mjs';
+import { responseCache, entity, sendEntity, matches, fileTag, compression } from './serve-cache.mjs';
 import { commandLine, isProjectCommand } from './platform.mjs';
 import { handleTracking } from './tracking-store.mjs';
 import { createPhoneAccess, handlePhone, iconVersion } from './phone-access.mjs';
@@ -26,6 +26,8 @@ let updateChild = null, updateQueued = null;
 // Your phone copy (phone-copy.mjs), when you keep one in a folder: rewritten after changes.
 const keeper = copyKeeper(root);
 const cached = responseCache(root);
+// Text sent to a paired phone goes compressed (serve-cache.mjs compression).
+const gzip = compression();
 // Is this process one of the update's own commands (a script in this project)? Guards
 // against a reused process id before anything is stopped.
 const isOurCommand = async pid => isProjectCommand(await commandLine(pid));
@@ -62,8 +64,10 @@ async function handle(req, res, context = LOCAL) {
   res.setHeader('Cross-Origin-Resource-Policy', 'same-origin');
   res.setHeader('X-Content-Type-Options', 'nosniff');
   res.setHeader('X-Frame-Options', 'DENY');
-  res.setHeader('Content-Security-Policy', "frame-ancestors 'none'");
+  // No plugins, no <base> redirecting the page's own links, and forms only back to Level Select.
+  res.setHeader('Content-Security-Policy', "frame-ancestors 'none'; object-src 'none'; base-uri 'none'; form-action 'self'");
   res.setHeader('Referrer-Policy', 'no-referrer');
+  const compress = context.phone ? gzip : null;
   try {
     const pathname = decodeURIComponent(new URL(req.url,'http://localhost').pathname);
     if (pathname === '/__retro_library_health') {
@@ -145,11 +149,11 @@ async function handle(req, res, context = LOCAL) {
     if (pathname.split('/').some(part => part.startsWith('.')) || pathname.includes('..')) throw new Error('Invalid path');
     if (pathname === '/library/data/ratings.json') {
       const local = new URL(req.url, 'http://localhost').searchParams.get('workspace') !== 'sample';
-      sendEntity(req, res, await cached(`ratings:${local}`, async () => entity(JSON.stringify(await readRatingsSnapshot(root, { local })))), 'application/json; charset=utf-8');
+      await sendEntity(req, res, await cached(`ratings:${local}`, async () => entity(JSON.stringify(await readRatingsSnapshot(root, { local })))), 'application/json; charset=utf-8', compress);
       return;
     }
     if (pathname === '/data/catalog.json') {
-      sendEntity(req, res, await cached('catalog', async () => entity(JSON.stringify(await readCatalog(root, { local: true })))), 'application/json; charset=utf-8');
+      await sendEntity(req, res, await cached('catalog', async () => entity(JSON.stringify(await readCatalog(root, { local: true })))), 'application/json; charset=utf-8', compress);
       return;
     }
     const snapshotFiles = ['/library/data/library-data.js', '/library/data/wishlist-data.js', '/library/data/connections.json'];
@@ -159,7 +163,7 @@ async function handle(req, res, context = LOCAL) {
         const { owned, wishlist, connections } = await readSnapshot(root, { local: true });
         return { 'library-data.js': entity(owned.source), 'wishlist-data.js': entity(wishlist.source), 'connections.json': entity(JSON.stringify(connections)) };
       });
-      sendEntity(req, res, snapshot[path.basename(pathname)], `${types[path.extname(pathname)]}; charset=utf-8`);
+      await sendEntity(req, res, snapshot[path.basename(pathname)], `${types[path.extname(pathname)]}; charset=utf-8`, compress);
       return;
     }
     // Only serve the app, not exports, backup databases, source tools or local builds.
@@ -172,13 +176,14 @@ async function handle(req, res, context = LOCAL) {
     // every use, so a change is always picked up and an unchanged file costs a 304.
     // A page shown on a paired phone says so (lib.js onPhone), so it can leave out what only
     // this computer can do; its cache tag differs from this computer's copy of the page.
-    const marked = context.phone && type === 'text/html';
-    const etag = marked ? fileTag(info).replace(/"$/, '-phone"') : fileTag(info);
-    const headers = { 'Content-Type': type, 'Cache-Control': type.startsWith('image/') ? 'private, max-age=86400' : 'no-cache', ETag: etag };
+    const marked = context.phone && type === 'text/html', packed = Boolean(compress?.wanted(req, type, info.size));
+    const tag = marked ? fileTag(info).replace(/"$/, '-phone"') : fileTag(info), etag = packed ? compress.tag(tag) : tag;
+    const headers = { 'Content-Type': type, 'Cache-Control': type.startsWith('image/') ? 'private, max-age=86400' : 'no-cache', ETag: etag, ...(compress && { Vary: 'Accept-Encoding' }) };
     if (matches(req, etag)) { res.writeHead(304, headers); res.end(); return; }
-    res.writeHead(200, headers);
-    const body = await readFile(file);
-    res.end(marked ? body.toString('utf8').replace('<head>', `<head>\n${PHONE_MARK}`) : body);
+    const read = async () => { const body = await readFile(file); return marked ? Buffer.from(body.toString('utf8').replace('<head>', `<head>\n${PHONE_MARK}`)) : body; };
+    const body = packed ? await compress.body(etag, read) : await read();
+    res.writeHead(200, packed ? { ...headers, 'Content-Encoding': 'gzip' } : headers);
+    res.end(body);
   } catch { res.writeHead(404, {'Content-Type':'text/plain'}); res.end('Not found'); }
 }
 const server = http.createServer((req, res) => handle(req, res)).listen(port, '127.0.0.1', async () => {

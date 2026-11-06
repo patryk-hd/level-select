@@ -508,7 +508,7 @@ function showDetails(appid) {
         <div class="kv">
           <span>Main genre</span><span>${escapeHtml(game.mainGenre)}</span>
           <span>Genres</span><span>${escapeHtml(game.genres.join(", ") || "Unknown")}</span>
-          <span>Imported Metacritic context</span><span>${game.metacritic ?? "—"} (platform/date unverified)</span>
+          <span>Imported Metacritic context</span><span>${escapeHtml(game.metacritic ?? "—")} (platform/date unverified)</span>
           <span>Released</span><span>${escapeHtml(game.releaseDate || "TBA")}</span>
           <span>Added</span><span>${escapeHtml(game.addedDate || "Unknown")}</span>
           <span>Developer</span><span>${escapeHtml(game.developers.join(", ") || "Unknown")}</span>
