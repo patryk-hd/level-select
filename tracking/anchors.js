@@ -30,9 +30,10 @@ export function ownedIndex(library) {
   for (const group of library) for (const copy of group.copies) {
     const igdb = copy.igdb ?? null, title = copy.name ?? group.name;
     const owned = { igdbId: igdb?.id ?? null, groupId: group.id, copyId: copy.id, title, key: sameGameKey(title), steamAppId: copy.steamAppId ? String(copy.steamAppId) : null, year: copy.year ?? group.year ?? null, platforms: copy.platforms ?? [], sources: copy.sources ?? [], igdb, hours: Math.round((copy.timePlayed ?? group.timePlayed ?? 0) / 3600), rating: igdb ? igdbRating(igdb) : null };
-    add(byApp, owned.steamAppId, owned);
+    // By title too when IGDB hasn't matched it (yet): a game you just added, a local backup.
+    add(byApp, owned.steamAppId, owned); add(byKey, owned.key, owned);
     if (!igdb?.id) continue;
-    add(byId, igdb.id, owned); add(byKey, owned.key, owned); add(byParent, igdb.versionParent, owned);
+    add(byId, igdb.id, owned); add(byParent, igdb.versionParent, owned);
     if (games.has(igdb.id)) continue;
     games.set(igdb.id, owned);
     for (const id of igdb.franchises ?? []) franchiseSize.set(id, (franchiseSize.get(id) ?? 0) + 1);
