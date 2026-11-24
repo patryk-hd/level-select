@@ -309,8 +309,51 @@ function renderSteamChecklist() {
 }
 document.getElementById('steamChecklistOpen').addEventListener('click', () => { renderSteamChecklist(); document.getElementById('steamChecklist').showModal(); });
 
+// Wishes you already own: bought elsewhere, a local backup, a physical copy. Removing them
+// here puts them on Remove on Steam (above). The same game or another edition of it is ticked;
+// owning a newer version (a remaster) leaves the choice to you.
+const OWNS = { same: 'You have it', edition: 'You have another edition', newer: 'You have a newer version' };
+function ownedWishes() {
+  return wishlist.filter(game => !isRemoved(game) && !isAcquired(game)).map(game => {
+    const copies = ownedCopiesOf(game, ownedGames).filter(copy => copy.owns !== 'original');
+    return copies.length ? { game, copies, owns: copies.some(copy => copy.owns === 'same') ? 'same' : copies.some(copy => copy.owns === 'edition') ? 'edition' : 'newer' } : null;
+  }).filter(Boolean).sort((a, b) => Object.keys(OWNS).indexOf(a.owns) - Object.keys(OWNS).indexOf(b.owns) || a.game.title.localeCompare(b.game.title));
+}
+function renderOwnedCleanup() {
+  const found = ownedWishes(), button = document.getElementById('ownedCleanupOpen');
+  button.hidden = !found.length;
+  button.textContent = `Games you already own (${formatNumber(found.length)})`;
+  return found;
+}
+function openOwnedCleanup() {
+  const found = renderOwnedCleanup(), dialog = document.getElementById('ownedCleanup');
+  const where = copy => [copy.platforms?.join(', '), copy.sources?.join(', ')].filter(Boolean).join(' · ');
+  document.getElementById('ownedCleanupItems').innerHTML = found.map(({ game, copies, owns }) => `<li><label class="history-check"><input type="checkbox" value="${escapeHtml(game.appid)}"${owns === 'newer' ? '' : ' checked'}>
+    <span><strong>${escapeHtml(game.title)}</strong><small>${escapeHtml(OWNS[owns])}: ${copies.slice(0, 2).map(copy => `${escapeHtml(copy.title)}${where(copy) ? ` (${escapeHtml(where(copy))})` : ''}`).join('; ')}${copies.length > 2 ? ` +${copies.length - 2}` : ''}</small></span></label></li>`).join('');
+  document.getElementById('ownedCleanupStatus').textContent = '';
+  syncOwnedCleanup();
+  dialog.showModal();
+}
+function syncOwnedCleanup() {
+  const count = document.querySelectorAll('#ownedCleanupItems input:checked').length, apply = document.getElementById('ownedCleanupApply');
+  apply.textContent = `Remove ${formatNumber(count)} from your wishlist`; apply.disabled = !count;
+}
+document.getElementById('ownedCleanupOpen').addEventListener('click', openOwnedCleanup);
+document.getElementById('ownedCleanupItems').addEventListener('change', syncOwnedCleanup);
+document.getElementById('ownedCleanupApply').addEventListener('click', async () => {
+  const ids = [...document.querySelectorAll('#ownedCleanupItems input:checked')].map(input => input.value), status = document.getElementById('ownedCleanupStatus');
+  if (!ids.length) return;
+  document.getElementById('ownedCleanupApply').disabled = true;
+  try { await tracking.removeWishlist(ids, true); }
+  catch (error) { status.textContent = error.message; syncOwnedCleanup(); return; }
+  document.getElementById('ownedCleanup').close();
+  syncTracking(); render();
+  document.getElementById('wishlistPlanningStatus').textContent = `Removed ${formatNumber(ids.length)} ${ids.length === 1 ? 'game you own' : 'games you own'} from your wishlist. To remove them on Steam too, see Remove on Steam.`;
+});
+
 function renderStats() {
   renderSteamChecklist();
+  renderOwnedCleanup();
   const removedCount = Object.keys(removedStore).length;
   const kept = wishlist.filter((game) => !isRemoved(game) && !isAcquired(game));
   const acquired = wishlist.filter(isAcquired).length;

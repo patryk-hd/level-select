@@ -113,6 +113,11 @@ test('same-named games stay separate: Steam apps and release years beat a shared
   // An Epic or PlayStation copy linked to a game released years before it came out: not proof.
   const epic = ownedIndex([{ id: 'g-e', name: 'Prey', copies: [{ id: 'e', name: 'Prey', sources: ['Epic'], platforms: [], year: 2017, igdb: igdb(99, { year: 2006 }) }] }]);
   assert.deepEqual(ownedCopiesOf({ appid: 3970, title: 'Prey', igdb: { id: 99, year: 2006 } }, epic), []);
+  // A local backup IGDB hasn't matched (just added, or unknown to it) is found by its title,
+  // with the same year checks.
+  const backup = ownedIndex([{ id: 'g-w', name: 'The Witcher 3: Wild Hunt', copies: [{ id: 'w', name: 'The Witcher 3: Wild Hunt', platforms: ['PC (Windows)'], sources: ['Local backup'], year: 2015 }] }]);
+  assert.deepEqual(ownedCopiesOf({ appid: 292030, title: 'The Witcher® 3: Wild Hunt', igdb: { id: 1942, year: 2015 } }, backup).map(item => [item.owns, item.sources]), [['same', ['Local backup']]]);
+  assert.deepEqual(ownedCopiesOf({ appid: 1, title: 'The Witcher 3: Wild Hunt', igdb: { id: 7, year: 2030 } }, backup), []);
 });
 
 // IGDB genres: 5 shooter, 8 platform, 10 racing, 12 RPG, 31 adventure, 32 indie, 33 arcade.
