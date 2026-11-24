@@ -69,3 +69,23 @@ dialog.add-game::backdrop { background: var(--overlay, #000a); backdrop-filter: 
 .add-game-imported { margin: 0; padding: 10px 12px; border: 1px solid var(--line); border-radius: var(--radius-sm, 6px); color: var(--muted); font-size: .8125rem; line-height: 1.5; }
 .add-game-imported strong { color: var(--text); }
 .add-game-find { justify-self: start; }
+
+/* Add a list of games (import-list.js). */
+.add-list-form { display: grid; gap: 16px; align-content: start; }
+.add-list-form textarea { width: 100%; min-height: 180px; resize: vertical; font: .875rem/1.5 ui-monospace, SFMono-Regular, Menlo, monospace; color: var(--text); }
+.add-list-form .field small, .add-list-file small { color: var(--muted); font-size: .8125rem; }
+.add-list-file { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.add-list-form .add-game-row { grid-template-columns: 1fr 1fr; }
+.add-list-form .field input, .add-list-form .field select { width: 100%; }
+.add-list-summary { margin: 0 0 12px; color: var(--muted); }
+.add-list-summary strong { color: var(--text); }
+.add-list-all { display: inline-flex; align-items: center; gap: 8px; margin: 0 0 10px 10px; color: var(--muted); font-size: .875rem; }
+.add-list-rows label { display: grid; grid-template-columns: auto 44px 1fr; align-items: center; gap: 12px; padding: 6px 12px 6px 10px; border-radius: var(--radius, 10px); cursor: pointer; }
+.add-list-rows label:hover { background: var(--raised); }
+.add-list-left { margin: 14px 0; color: var(--muted); font-size: .875rem; }
+.add-list-left summary { cursor: pointer; padding: 6px 0; }
+.add-list-left ul { margin: 6px 0 0; padding-left: 18px; display: grid; gap: 4px; }
+.add-list-left strong { color: var(--text); font-weight: 500; }
+@media (max-width: 560px) { .add-list-form .add-game-row { grid-template-columns: 1fr; } }
+.add-list input[type="checkbox"] { width: 18px; height: 18px; min-height: 0; margin: 0; flex: none; accent-color: var(--accent); }
+.add-list-all { align-self: flex-start; }
