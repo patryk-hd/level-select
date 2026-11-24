@@ -178,11 +178,21 @@ export async function updateAll(root, { log = () => {}, run = runCommand, signal
     });
     // New games always; wishlist and recent releases weekly, the rest monthly; 100 a request.
     await step('steam', 'Refresh Steam reviews', async () => {
-      const out = String(await exec(process.execPath, ['scripts/enrich-ratings.mjs', '--wishlist', '--owned-igdb', '--provider', 'steam', '--batch', '--max-requests', '50', '--drain'], root) ?? '');
+      // Exit 2: everything it got is saved, but Steam asked it to slow down and some games are
+      // waiting to be tried again. That's not a failure: the next update asks for them.
+      let out, waiting = null;
+      try { out = String(await exec(process.execPath, ['scripts/enrich-ratings.mjs', '--wishlist', '--owned-igdb', '--provider', 'steam', '--batch', '--max-requests', '50', '--drain'], root) ?? ''); }
+      catch (error) {
+        if (error.exitCode !== 2 || stopped()) throw error;
+        out = error.output ?? '';
+        try { const job = JSON.parse(String(await exec(process.execPath, ['scripts/enrich-ratings.mjs', '--status'], root) ?? '')); waiting = job.counts?.['retry-pending'] ?? job.total - job.processed; }
+        catch { waiting = 0; }
+      }
+      const later = waiting == null ? '' : waiting > 0 ? ` · ${waiting.toLocaleString()} waiting on Steam, tried again next update` : ' · some games are waiting on Steam, tried again next update';
       // The script's closing summary says how many were new, due or still fresh.
       const plan = [...out.matchAll(/"plan":\s*(\{[^{}]*\})/g)].at(-1)?.[1];
-      try { const { new: added, due, fresh } = JSON.parse(plan); return `${added.toLocaleString()} new, ${due.toLocaleString()} due for a check · ${fresh.toLocaleString()} still fresh`; }
-      catch { return ''; }
+      try { const { new: added, due, fresh } = JSON.parse(plan); return `${added.toLocaleString()} new, ${due.toLocaleString()} due for a check · ${fresh.toLocaleString()} still fresh${later}`; }
+      catch { return later.slice(3).replace(/^./, first => first.toUpperCase()); }
     });
     await step('awards', 'Refresh game awards (Wikidata)', async () => {
       const awards = await readAwards(root, { local: true });
@@ -210,7 +220,7 @@ export async function updateAll(root, { log = () => {}, run = runCommand, signal
 let activeChild = null;
 // If this update exits for any reason, the command it was running goes with it.
 process.on('exit', () => { try { activeChild?.kill('SIGINT'); } catch {} });
-function runCommand(command, args, cwd, env = {}, { onOutput, onSpawn, signal, idleMs } = {}) {
+export function runCommand(command, args, cwd, env = {}, { onOutput, onSpawn, signal, idleMs } = {}) {
   return new Promise((resolve, reject) => {
     if (signal?.aborted) { reject(new Error('Stopped.')); return; }
     const child = spawn(command, args, { cwd, env: { ...process.env, ...env, ...PYTHON_ENV }, stdio: ['ignore', 'pipe', 'pipe'], windowsHide: true });
@@ -229,7 +239,11 @@ function runCommand(command, args, cwd, env = {}, { onOutput, onSpawn, signal, i
       done();
       if (stuck) reject(new Error(`No progress for ${Math.round(idleMs / 60000)} minutes, so this step was stopped. Check your internet connection and choose Update data again; finished steps are kept.`));
       else if (code === 0) resolve(tail);
-      else reject(new Error(`${path.basename(args[0] ?? command)} stopped (exit ${code}): ${tail.trim().split('\n').at(-1) ?? ''}`));
+      else {
+        // The last line that says something (a closing "}" of a summary doesn't).
+        const last = tail.split('\n').map(line => line.trim()).filter(line => /[a-z0-9]/i.test(line)).at(-1) ?? '';
+        reject(Object.assign(new Error(`${path.basename(args[0] ?? command)} stopped (exit ${code})${last ? `: ${last}` : ''}`), { exitCode: code, output: tail }));
+      }
     });
   });
 }
