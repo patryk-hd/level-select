@@ -1,6 +1,5 @@
 import { escapeHtml as esc } from '../lib.js';
 import { continueList } from '../tracking/home.js';
-import { entryFor } from '../tracking/wishlist.js';
 
 const SECTIONS = ['home', 'plan', 'challenges', 'history', 'progress'];
 const platformLabel = name => String(name).replace(/^PC \(Windows\)$/, 'PC').replace(/^Sony /, '');
@@ -55,8 +54,12 @@ export function setupHome({ client, openTarget }) {
   // How many wishlist games still wait for a decision, and how many you already own.
   function renderWishPrompt() {
     const state = client.snapshot(), owned = new Set(client.library.flatMap(game => game.copies.map(copy => copy.igdb?.id).filter(Boolean)));
-    const open = client.wishlist.filter(game => !['archived', 'acquired'].includes(entryFor(state, { provider: 'steam', id: String(game.appid) })?.decision));
-    const unreviewed = open.filter(game => !entryFor(state, { provider: 'steam', id: String(game.appid) })?.decision).length;
+    // Each wish's decision, read in one pass (a Steam game has one target at most).
+    const decisions = new Map();
+    for (const target of Object.values(state.targets)) for (const ref of target.refs) if (ref.provider === 'steam') decisions.set(String(ref.id), state.wishlist[target.id]?.decision);
+    const decisionOf = game => decisions.get(String(game.appid));
+    const open = client.wishlist.filter(game => !['archived', 'acquired'].includes(decisionOf(game)));
+    const unreviewed = open.filter(game => !decisionOf(game)).length;
     const alreadyOwned = open.filter(game => game.igdb?.id && owned.has(game.igdb.id)).length;
     const goal = state.settings.wishlistGoal, goalText = Number.isInteger(goal) ? (open.length <= goal ? ` Goal of ${goal.toLocaleString()} reached.` : ` ${(open.length - goal).toLocaleString()} to go to your goal of ${goal.toLocaleString()}.`) : '';
     $('wishPromptSummary').textContent = open.length

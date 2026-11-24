@@ -154,9 +154,11 @@ const cache = new WeakMap();
 function prepared(catalog) {
   if (!cache.has(catalog)) {
     const listed = catalog.games.filter(game => !game.unlisted && game.rank != null);
-    const families = gameFamilies(listed), members = new Map();
+    const families = gameFamilies(listed), members = new Map(), byTitle = new Map();
     for (const game of listed) { const key = families.get(game.id); if (!members.has(key)) members.set(key, []); members.get(key).push(game); }
-    cache.set(catalog, { listed, families, members });
+    // Listed games by title key, in list order: the "shaped" lists look up dozens of titles.
+    for (const game of listed) { const key = titleKey(game.title); if (!byTitle.has(key)) byTitle.set(key, []); byTitle.get(key).push(game); }
+    cache.set(catalog, { listed, families, members, byTitle });
   }
   return cache.get(catalog);
 }
@@ -191,12 +193,12 @@ export function listFamilyKeys(catalog, spec) {
 // A list's entries, best first (genre history: in release order). Each entry is one game:
 // { position, title, games (every listed version), score?, year?, why? }.
 export function listEntries(catalog, spec) {
-  const { listed, families, members } = prepared(catalog), size = spec.size ?? 10;
+  const { listed, families, members, byTitle } = prepared(catalog), size = spec.size ?? 10;
   if (spec.shaped) {
     const shaped = SHAPED[spec.shaped]; if (!shaped) return [];
     const entries = [];
     for (const [title, year, why] of shaped.games) {
-      const key = titleKey(title), found = listed.filter(game => titleKey(game.title) === key && Number.isInteger(game.year) && Math.abs(game.year - year) <= 6)
+      const found = (byTitle.get(titleKey(title)) ?? []).filter(game => Number.isInteger(game.year) && Math.abs(game.year - year) <= 6)
         .sort((a, b) => Math.abs(a.year - year) - Math.abs(b.year - year))[0];
       if (found) entries.push({ position: entries.length + 1, title, year, why, games: members.get(families.get(found.id)) });
     }
