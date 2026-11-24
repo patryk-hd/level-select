@@ -9,7 +9,7 @@
 import http from 'node:http';
 import os from 'node:os';
 import path from 'node:path';
-import { readFile, writeFile, rename, mkdir } from 'node:fs/promises';
+import { readFile, writeFile, rename, mkdir, chmod } from 'node:fs/promises';
 import { randomBytes, randomUUID, createHmac, timingSafeEqual, createHash } from 'node:crypto';
 import { qrSvg } from './qr.mjs';
 
@@ -69,7 +69,8 @@ async function readSettings(root) {
 async function writeSettings(root, settings) {
   const file = path.join(root, PHONE_FILE);
   await mkdir(path.dirname(file), { recursive: true });
-  await writeFile(`${file}.tmp`, JSON.stringify(settings, null, 1)); await rename(`${file}.tmp`, file);
+  // It holds the secret that signs paired phones' cookies: readable by you only (as secrets.json).
+  await writeFile(`${file}.tmp`, JSON.stringify(settings, null, 1), { mode: 0o600 }); await rename(`${file}.tmp`, file); await chmod(file, 0o600);
 }
 
 const page = (title, text) => `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>${title} · Level Select</title>

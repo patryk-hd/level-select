@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { mkdtemp, rm, readFile } from 'node:fs/promises';
+import { mkdtemp, rm, readFile, stat } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import http from 'node:http';
@@ -176,6 +176,8 @@ test('phone access: off until turned on, pairs once per code, then serves only w
   await phone.disable();
   await assert.rejects(get('/'), /ECONNREFUSED/);
   assert.equal(JSON.parse(await readFile(path.join(root, 'library/data/phone.json'), 'utf8')).enabled, false);
+  // Its signing secret: readable by you only.
+  if (process.platform !== 'win32') assert.equal((await stat(path.join(root, 'library/data/phone.json'))).mode & 0o777, 0o600);
 });
 
 test('phone settings answer this computer only, through its own write check', async () => {

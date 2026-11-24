@@ -8,7 +8,7 @@
 // gzipped JSON payload, or of its AES-256-GCM encryption (ciphertext + 16-byte tag) with a key
 // from PBKDF2-SHA-256 over your passphrase (kdf: salt, iterations; iv). Browsers' Web Crypto
 // opens it as is (library/copy.js).
-import { readFile, writeFile, rename, mkdir, readdir, stat } from 'node:fs/promises';
+import { readFile, writeFile, rename, mkdir, readdir, stat, chmod } from 'node:fs/promises';
 import { gzipSync, gunzipSync } from 'node:zlib';
 import { randomBytes, pbkdf2Sync, createCipheriv, createDecipheriv } from 'node:crypto';
 import os from 'node:os';
@@ -115,7 +115,8 @@ async function saveCopySettings(root, change) {
   change(copy);
   const file = path.join(root, SETTINGS);
   await mkdir(path.dirname(file), { recursive: true });
-  await writeFile(`${file}.tmp`, JSON.stringify({ ...settings, copy }, null, 1)); await rename(`${file}.tmp`, file);
+  // phone.json also holds phone access's signing secret (phone-access.mjs): you only.
+  await writeFile(`${file}.tmp`, JSON.stringify({ ...settings, copy }, null, 1), { mode: 0o600 }); await rename(`${file}.tmp`, file); await chmod(file, 0o600);
   return copy;
 }
 export async function copyStatus(root, { clouds = cloudFolders } = {}) {
