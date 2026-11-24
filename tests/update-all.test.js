@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { mkdtemp, mkdir, writeFile, rm, readdir, readFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
-import { updateAll, checkLibraryCsv, checkWishlistJson } from '../scripts/update-all.mjs';
+import { updateAll, checkLibraryCsv, checkWishlistJson, runCommand } from '../scripts/update-all.mjs';
 
 test('export checks explain what is wrong', () => {
   assert.throws(() => checkLibraryCsv(Buffer.from('Name,Platforms\n')), /missing the Id, Sources/);
@@ -91,4 +91,39 @@ test('steps are planned up front, report progress, and a stop keeps finished ste
     assert.match(status.steps[3].note, /stopped the update/);
     assert.ok(status.updatedAt && status.finishedAt);
   } finally { await rm(root, { recursive: true, force: true }); }
+});
+
+test('Steam asking to slow down is not a failure: what was saved counts, the rest waits for the next update', async () => {
+  const root = await mkdtemp(path.join(tmpdir(), 'update-'));
+  try {
+    await mkdir(path.join(root, 'library/data'), { recursive: true }); await mkdir(path.join(root, 'data'), { recursive: true });
+    await writeFile(path.join(root, 'data/catalog.json'), JSON.stringify({ systems: [], games: [] }));
+    await writeFile(path.join(root, 'library/data/library-data.js'), 'window.PLAYNITE_LIBRARY = [];');
+    await writeFile(path.join(root, 'library/playnite_library.csv'), 'Id,Name,Platforms,Sources\n');
+    await writeFile(path.join(root, 'library/steam-wishlist.json'), '{"data":[{"gameid":"1"}]}');
+    const summary = '{\n  "plan": {"new": 3, "due": 40, "fresh": 2443},\n  "job": {"complete": false}\n}';
+    const steam = (status, exitCode) => async (command, args) => {
+      if (args[0] !== 'scripts/enrich-ratings.mjs') return '';
+      if (args.includes('--status')) return status;
+      throw Object.assign(new Error(`enrich-ratings.mjs stopped (exit ${exitCode})`), { exitCode, output: summary });
+    };
+    let status = await updateAll(root, { run: steam('{"total": 2486, "processed": 2460, "counts": {"retry-pending": 26}}', 2) });
+    let entry = status.steps.find(step => step.id === 'steam');
+    assert.equal(entry.state, 'done');
+    assert.equal(entry.note, '3 new, 40 due for a check · 2,443 still fresh · 26 waiting on Steam, tried again next update');
+    // Its saved status unreadable: still not a failure, said plainly.
+    status = await updateAll(root, { run: steam('not json', 2) });
+    entry = status.steps.find(step => step.id === 'steam');
+    assert.equal(entry.state, 'done'); assert.match(entry.note, /some games are waiting on Steam/);
+    // Any other exit is a failure.
+    status = await updateAll(root, { run: steam('', 1) });
+    assert.equal(status.steps.find(step => step.id === 'steam').state, 'failed');
+  } finally { await rm(root, { recursive: true, force: true }); }
+});
+
+test('a failed command says its last meaningful line, not the closing brace of its summary', async () => {
+  const failure = await runCommand(process.execPath, ['-e', 'console.log(JSON.stringify({ job: { complete: false } }, null, 2)); process.exit(2)'], process.cwd()).catch(error => error);
+  assert.equal(failure.message, '-e stopped (exit 2): "complete": false');
+  assert.equal(failure.exitCode, 2);
+  assert.match(failure.output, /"job"/);
 });

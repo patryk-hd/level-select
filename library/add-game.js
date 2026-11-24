@@ -6,8 +6,9 @@ import { escapeHtml as esc, demoHome, demoNote, onPhone, phoneNote } from '../li
 import { platformKey, ownedMatches } from './core.js';
 
 const HEADERS = { 'X-Retro-Library': '1' };
-// Store names match the ones imports use, so the Store filter puts them together.
-const OWNED_ON = [['Physical', 'Physical copy (cartridge, disc, box)'], ['Steam', 'Steam'], ['GOG', 'GOG'], ['Epic', 'Epic Games Store'], ['Nintendo', 'Nintendo eShop'],
+// Store names match the ones imports use, so the Store filter puts them together. A Local
+// backup is a copy you keep yourself: a GOG installer, a ROM, a game a friend gave you.
+export const OWNED_ON = [['Physical', 'Physical copy (cartridge, disc, box)'], ['Local backup', 'Local backup (installer or ROM you keep)'], ['Steam', 'Steam'], ['GOG', 'GOG'], ['Epic', 'Epic Games Store'], ['Nintendo', 'Nintendo eShop'],
   ['PlayStation', 'PlayStation Store'], ['Xbox', 'Xbox / Microsoft Store'], ['EA app', 'EA app'], ['Ubisoft Connect', 'Ubisoft Connect'], ['Battle.net', 'Battle.net'],
   ['itch.io', 'itch.io'], ['Humble', 'Humble'], ['Amazon', 'Amazon / Prime Gaming'], ['Other', 'Somewhere else']];
 const SOURCE_NAMES = { atlas: 'Game Atlas', igdb: 'IGDB', steam: 'Steam' };
