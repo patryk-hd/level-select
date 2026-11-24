@@ -23,7 +23,7 @@ export async function readManual(root) {
     return data?.schemaVersion === 1 && Array.isArray(data.games) ? data : { schemaVersion: 1, games: [] };
   } catch (error) { if (error.code === 'ENOENT') return { schemaVersion: 1, games: [] }; throw error; }
 }
-async function writeManual(root, data) {
+export async function writeManual(root, data) {
   const file = path.join(root, MANUAL_FILE);
   await mkdir(path.dirname(file), { recursive: true });
   await writeFile(`${file}.tmp`, JSON.stringify(data, null, 1)); await rename(`${file}.tmp`, file);

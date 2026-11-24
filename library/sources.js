@@ -228,6 +228,16 @@ function handCard(count) {
       <p class="data-note">Search covers the Game Atlas, and IGDB once your IGDB keys are set (Scores, below); without them, Steam’s store. Games you add stay on this computer, in <code>library/data/manual-games.json</code>.</p>` });
 }
 
+function listCard() {
+  return card({ id: 'game-list', icon: '📋', title: 'Add a list of games', label: 'From a list',
+    tagline: 'Installers you keep from GOG, ROMs, games a friend gave you: add a whole list at once, from a CSV file or cells copied from Excel or Google Sheets.',
+    body: `<ol class="source-steps">${step(false, 'Choose <strong>Add a list</strong>, then paste the list or choose its CSV file. One game per line; a System or Year column is used when there is one.')}
+      ${step(false, 'Pick the system for games whose row doesn’t name one, and where you own them: <strong>Local backup</strong>, a store, or physical copies.')}
+      ${step(false, 'Check what will be added (games you already have are left out), then choose <strong>Add</strong>.')}</ol>
+      <div class="source-actions">${button('add-list', 'Add a list')}</div>
+      <p class="data-note">Games the Game Atlas knows on that system come with their cover, year and scores; others are added by their name. They stay on this computer like any game you add by hand.</p>` });
+}
+
 async function render() {
   if (demoHome()) { $('sourcesBody').innerHTML = `<p class="source-blocked">${demoNote('Importing your games')} It reads Steam, GOG Galaxy (with Epic, Xbox, PlayStation and more), Playnite, ES-DE and your ROM folders, all on your own computer.</p>`; return; }
   if (onPhone()) { $('sourcesBody').innerHTML = `<p class="source-blocked">${esc(phoneNote('Importing games'))}</p>`; return; }
@@ -237,7 +247,7 @@ async function render() {
     <section id="steam" class="source-group"><header><h2>Steam</h2><p>Three short steps for your account, plus the games installed on this computer. Already use GOG Galaxy? It covers your Steam games too, but the wishlist only comes from here.</p></header><div class="source-grid">${steamCards(state.steam)}</div></section>
     <section id="launchers" class="source-group"><header><h2>GOG Galaxy &amp; Playnite</h2><p>Your whole PC library (and linked consoles) from an app you may already use. Pick either, or both.</p></header><div class="source-grid">${launcherCards(state.galaxy, state.playnite)}</div></section>
     <section id="roms" class="source-group"><header><h2>ROMs</h2><p>Retro games you play on emulators. Use ES-DE’s game lists, folders on your drive, or both.</p></header><div class="source-grid">${romCards(state.esde, state.romFolders ?? [], state.esdeRomDirectory, state.esdeRomsAvailable)}</div></section>
-    <section id="by-hand" class="source-group"><header><h2>By hand</h2><p>Physical copies, consoles no import reaches, or anything else you own.</p></header><div class="source-grid">${handCard(state.manualGames ?? 0)}</div></section>
+    <section id="by-hand" class="source-group"><header><h2>By hand</h2><p>Physical copies, local backups, consoles no import reaches, or anything else you own: one game at a time, or a whole list.</p></header><div class="source-grid">${handCard(state.manualGames ?? 0)}${listCard()}</div></section>
     <section id="scores" class="source-group"><header><h2>Scores for your games</h2><p>The Game Atlas comes with its scores, and Steam reviews need nothing. These two add scores for more of the games you own.</p></header><div class="source-grid">${scoreCards(state.scores)}</div></section>`;
 }
 
@@ -261,6 +271,7 @@ function describe(action, result) {
   if (action === 'esde') return `Imported ${n(result.count)} games from ES-DE${result.romsAvailable === false ? ' (its ROM drive isn’t connected, which is fine)' : ''}.${updating}`;
   if (action.startsWith('rom-')) return result.message ?? `Found ${n(result.games)} games${result.unrecognised ? `; ${n(result.unrecognised)} disc images or zips need a folder named after their system` : ''}${result.missing?.length ? `; not available right now: ${result.missing.join(', ')}` : ''}.${updating}`;
   if (action === 'python-check') return result.message;
+  if (action === 'add-list') return `Added ${n(result.added)} ${result.added === 1 ? 'game' : 'games'}.${updating.replace('Updating your library now', 'Fetching their scores now')}`;
   if (action === 'igdb-keys') return `Connected: Twitch accepted your keys.${updating.replace('Updating your library', 'Fetching IGDB scores for your games')}`;
   if (action === 'vgc-key') return `Connected: 5,000 lookups a day.${updating.replace('Updating your library', 'Fetching VGC scores')}`;
   if (action === 'igdb-forget' || action === 'vgc-forget') return 'Forgotten. Scores already fetched stay.';
@@ -275,6 +286,11 @@ document.addEventListener('click', async event => {
   const action = control.dataset.action, cardId = control.closest('.source-card')?.id.replace(/^card-/, '');
   if (action.startsWith('submit-')) return;
   if (action === 'add-game') { location.href = 'index.html#add-game'; return; }
+  if (action === 'add-list') {
+    const { openGameList } = await import('./import-list.js'), result = await openGameList();
+    if (!result) return;
+    messages['game-list'] = describe(action, result); if (result.update) progress.refresh(); await render(); return;
+  }
   if (action === 'steam-disconnect' && control.dataset.part === 'owned' && !confirm('Forget your Steam Web API key and the games it found? Games from other sources stay.')) return;
   if (action === 'igdb-forget' && !confirm('Forget your IGDB keys? Scores already fetched stay. You can delete the application on dev.twitch.tv too.')) return;
   if (action === 'vgc-forget' && !confirm('Forget your VideoGamesCritic key? Scores already fetched stay, and lookups go back to 60 an hour.')) return;

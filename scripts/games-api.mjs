@@ -6,6 +6,7 @@ import { scoreKeys, storeItems } from './sources.mjs';
 import { igdbClient } from '../ranking/igdb-client.mjs';
 import { readOwnedGroups } from './snapshot.mjs';
 import { correctionOf, saveCorrection, setCorrectionCover, resetCorrection } from './corrections.mjs';
+import { previewList, addList } from './game-list.mjs';
 import { readAtlas, systemName, searchAtlas, searchIgdb, searchSteam, combineResults, addGame, getGame, editGame, removeGame, setCover, readCover, COVER_ROUTE, COVER_LIMIT } from './manual-games.mjs';
 
 const send = (res, status, body) => { res.writeHead(status, { 'Content-Type': 'application/json', 'Cache-Control': 'no-store' }); res.end(JSON.stringify(body)); };
@@ -35,6 +36,8 @@ async function search(root, query, { fetchImpl = fetch } = {}) {
 
 // Your library with your fixes and added games (to spot duplicates), and as imported.
 const library = root => readOwnedGroups(root).catch(() => []);
+// Systems to suggest (and to read a list's System column against).
+const platformOptions = catalog => [...new Set([...catalog.systems.map(system => systemName(system.id, catalog)), 'macOS', 'Linux', 'iOS', 'Android'].filter(Boolean))];
 const imported = root => readOwnedGroups(root, { corrections: false }).catch(() => []);
 
 export async function handleGames(req, res, { root, port, startUpdate }) {
@@ -64,17 +67,25 @@ export async function handleGames(req, res, { root, port, startUpdate }) {
   if (route !== '/__retro_library/games') return false;
   if (!localRequestAllowed(req, port)) { send(res, 403, { error: 'Forbidden' }); return true; }
   try {
-    const body = JSON.parse((await readBody(req, 16384)).toString('utf8') || '{}');
+    // A list of games (list-preview, list-add) may run to a few thousand rows.
+    const body = JSON.parse((await readBody(req, 2e6)).toString('utf8') || '{}');
     switch (body.action) {
       case 'search': send(res, 200, await search(root, body.query)); break;
       // Platforms to suggest when typing one, and whether IGDB search is set up.
       case 'options': {
         const catalog = await readAtlas(root), keys = await scoreKeys(root);
-        const platforms = [...new Set([...catalog.systems.map(system => systemName(system.id, catalog)), 'macOS', 'Linux', 'iOS', 'Android'].filter(Boolean))];
-        send(res, 200, { platforms, igdb: Boolean(keys.igdb) }); break;
+        send(res, 200, { platforms: platformOptions(catalog), igdb: Boolean(keys.igdb) }); break;
       }
       // A new game may bring scores, Steam reviews and time to beat: the update fetches them.
       case 'add': { const game = await addGame(root, body.game, { owned: await library(root) }); send(res, 200, { game, update: startUpdate({ skipSync: true }) }); break; }
+      // A list of games at once (game-list.mjs): what would be added, then adding it.
+      case 'list-preview': case 'list-add': {
+        const catalog = await readAtlas(root), context = { catalog, owned: await library(root), systems: platformOptions(catalog) };
+        const input = { text: String(body.text ?? ''), platform: String(body.platform ?? ''), ownedOn: String(body.ownedOn ?? '') || 'Local backup', skip: body.skip };
+        if (body.action === 'list-preview') { send(res, 200, previewList(input, context)); break; }
+        const result = await addList(root, input, context);
+        send(res, 200, { ...result, update: result.added ? startUpdate({ skipSync: true }) : false }); break;
+      }
       case 'get': send(res, 200, { game: await getGame(root, body.id) }); break;
       case 'edit': send(res, 200, { game: await editGame(root, body.id, body.game, { owned: await library(root) }) }); break;
       // Fixes to imported games. A new title or year may match another IGDB game: the update
