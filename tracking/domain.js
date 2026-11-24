@@ -48,9 +48,14 @@ export function referenceKey(ref) {
   requireId(ref.id);
   return `${ref.provider}:${encodeURIComponent(ref.id)}`;
 }
+// A reference belongs to one target at most (backup.js checks it). Most targets were made for
+// it (ensureTarget's id); otherwise the same provider and id, compared directly: the stored
+// references were checked when tracking was loaded.
 export function findTarget(state, ref) {
-  const key = referenceKey(ref);
-  return Object.values(state.targets).find(target => target.refs.some(item => referenceKey(item) === key));
+  const key = referenceKey(ref), id = String(ref.id), same = item => item.provider === ref.provider && String(item.id) === id;
+  const own = state.targets[`target:${key}`];
+  if (own?.refs.some(same)) return own;
+  return Object.values(state.targets).find(target => target.refs.some(same));
 }
 export function ensureTarget(state, { ref, title, platforms = [], unresolved = false }) {
   const found = findTarget(state, ref);
